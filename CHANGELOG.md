@@ -21,6 +21,7 @@
 - 新增 `.gitignore`，排除依赖、构建产物和本地检查截图。
 - 新增文章页 `Short answer`、新玩家/回归玩家实用建议和 FAQ 模块。
 - 新增 `.env.example`，声明 Cloudflare Pages 构建变量 `PUBLIC_SITE_URL=`.
+- Cloudflare Pages 项目 `palworld-1-0-guide-hub` 已创建并直接部署上线。
 
 ### 修改
 
@@ -30,10 +31,18 @@
 - 统一文章 patch notes 提示为 `This guide will be updated when the full Palworld 1.0 patch notes are available.`
 - Astro 配置显式设置 `output: "static"`，便于 Cloudflare Pages 静态部署。
 - `.gitignore` 补充 `.env`、本地 env 文件和 `.wrangler/`。
+- `package.json` 的 `build` 脚本改为先生成自制 PNG 资产，再执行 Astro 构建，避免远端仓库必须提交生成图片。
 
 ### 修复
 
 - 修正 Astro endpoint 文件语法，确保 `robots.txt` 和 `sitemap.xml` 可构建。
+
+### 部署
+
+- Production: `https://palworld-1-0-guide-hub.pages.dev/`
+- Preview deployment: `https://123cf8c8.palworld-1-0-guide-hub.pages.dev/`
+- GitHub remote: `https://github.com/zsq378554827/palworld-1-0-guide-hub.git`
+- GitHub push 仍需补齐凭据或添加可写 deploy key。
 
 ### 文档
 

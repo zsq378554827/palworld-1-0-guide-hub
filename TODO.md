@@ -11,8 +11,8 @@
 
 ## 当前优先级
 
-1. 创建/连接 GitHub remote 并推送 `main` 分支。
-2. 部署到 Cloudflare Pages 并设置真实 `PUBLIC_SITE_URL`。
+1. 在 GitHub 仓库添加 deploy key 或完成 GitHub CLI 登录，然后 push `main`。
+2. 在 Cloudflare Pages 将项目连接到 GitHub 仓库，并设置 `PUBLIC_SITE_URL`。
 3. Palworld 1.0 正式发布后，更新所有预备内容。
 
 ## 待办列表
@@ -24,8 +24,9 @@
 | 已完成 | 本地 SEO 和移动端抽查 | 高 | Codex | SEO 字段无缺失；390px/1280px 无横向溢出 |
 | 已完成 | MVP 上线前质量复查 | 高 | Codex | 链接、SEO 去重、文章质量、390/768/1280 响应式、素材风险均通过 |
 | 已完成 | Cloudflare Pages 部署准备 | 高 | Codex | build/output/env/SEO/robots/sitemap/static assets/Git 提交准备 |
-| 未开始 | 创建或连接 GitHub remote | 高 | 用户/Codex | 当前不要乱创建仓库；等用户提供 remote |
-| 未开始 | 部署到 Cloudflare Pages | 高 | Codex | Framework preset Astro；build `npm run build`；output `dist` |
+| 已完成 | Cloudflare Pages 直接部署 | 高 | Codex | 已上线 `https://palworld-1-0-guide-hub.pages.dev/` |
+| 进行中 | 创建或连接 GitHub remote | 高 | 用户/Codex | remote 已添加；push 因 GitHub 凭据阻塞 |
+| 未开始 | Cloudflare Pages Git 集成 | 高 | 用户/Codex | 直接部署已可用；GitHub push 后再连接仓库 |
 | 未开始 | 1.0 正式 patch notes 发布后更新文章 | 高 | Codex | 不编造未确认内容 |
 | 未开始 | 接入 Analytics 和 Search Console | 中 | Codex | 部署后做 |
 
@@ -39,7 +40,7 @@
 
 ## 阻塞项
 
-- 生产 URL 未确定。
+- GitHub push 凭据未完成。可选方案：安装/登录 `gh`，或在 GitHub 仓库添加 `/Users/zousunquan/.ssh/palworld_guide_hub_deploy.pub` 为可写 deploy key。
 - Palworld 1.0 完整 patch notes 未发布。
 
 ## 下次打开项目先做

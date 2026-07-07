@@ -10,15 +10,15 @@
 
 ## Live URL
 
-- Production: 待部署
-- Preview: 本地 `http://127.0.0.1:4323/`
-- GitHub: 待创建
+- Production: `https://palworld-1-0-guide-hub.pages.dev/`
+- Preview: `https://123cf8c8.palworld-1-0-guide-hub.pages.dev/`
+- GitHub: `https://github.com/zsq378554827/palworld-1-0-guide-hub`（remote 已添加，本机尚未成功 push）
 - Local app repo: `/Users/zousunquan/Desktop/Codex/projects/Project_02_palworld_1_0_guide_hub`
 - Project docs: `/Users/zousunquan/Desktop/Codex/projects/Project_02_palworld_1_0_guide_hub`
 
 ## Current Stage
 
-- MVP 首版已完成，Cloudflare Pages 部署准备检查通过，等待连接 GitHub remote 并部署。
+- MVP 首版已通过 Cloudflare Pages 直接部署上线，等待 GitHub 凭据补齐后 push main 并改为 Git 集成部署。
 
 ## Completed
 
@@ -33,21 +33,24 @@
 - 390px 手机、768px 平板、1280px 桌面共 54 次页面 viewport 检查通过，无横向溢出。
 - 首页文章卡已改为整卡可点击，首页展示全部 10 篇 MVP 文章。
 - 2026-07-07 Cloudflare Pages 部署准备完成：`npm install` 和 `npm run build` 通过；`dist/` 输出 18 个页面；`.env.example` 已加入 `PUBLIC_SITE_URL=`；Astro 配置显式 `output: "static"`；产物无 localhost、本机绝对路径或官方素材引用。
+- 2026-07-07 Cloudflare Pages 直接部署完成：项目 `palworld-1-0-guide-hub`，正式域名 `https://palworld-1-0-guide-hub.pages.dev/`，预览部署 `https://123cf8c8.palworld-1-0-guide-hub.pages.dev/`。
+- 线上检查完成：首页 200；robots/sitemap 存在；canonical、Open Graph URL、Open Graph image 均指向 `https://palworld-1-0-guide-hub.pages.dev`。
 
 ## Current Priorities
 
-1. 创建/连接 GitHub remote 并推送 `main` 分支。
-2. 在 Cloudflare Pages 连接仓库，设置 `PUBLIC_SITE_URL`，并部署。
+1. 补齐 GitHub push 权限，把本地 `main` 推送到 `zsq378554827/palworld-1-0-guide-hub`。
+2. 在 Cloudflare Pages 将当前直接上传项目改为 GitHub 集成部署，并设置 `PUBLIC_SITE_URL=https://palworld-1-0-guide-hub.pages.dev`。
 3. Palworld 1.0 正式上线后更新完整内容事实。
 
 ## Current Blockers
 
 - Palworld 1.0 正式 patch notes 尚未可用，文章只能保持预备版本。
-- 生产域名和部署平台未配置。
+- GitHub push 仍被本机凭据阻塞：无 `gh`、无 `GITHUB_TOKEN/GH_TOKEN`、无 HTTPS credential，GitHub 连接器写入仓库返回 403。
+- 已生成仓库专用 deploy key，公钥路径：`/Users/zousunquan/.ssh/palworld_guide_hub_deploy.pub`。需要在 GitHub 仓库 Settings -> Deploy keys 添加并勾选 write access 后才能 SSH push。
 
 ## Current Env Vars
 
-- `PUBLIC_SITE_URL`: 未配置；本地默认使用 `https://palworld-1-0-guide-hub.pages.dev`
+- `PUBLIC_SITE_URL`: Cloudflare Pages Dashboard 后续应设置为 `https://palworld-1-0-guide-hub.pages.dev`
 - `PUBLIC_GA_MEASUREMENT_ID`: 未配置
 - `PUBLIC_CHECKOUT_URL`: 不适用
 
@@ -65,6 +68,7 @@
 - 18 个页面的 title 和 meta description 已检查无重复。
 - 当前 canonical/OG URL 使用默认 `https://palworld-1-0-guide-hub.pages.dev`；部署到正式域名时必须设置 `PUBLIC_SITE_URL`。
 - 部署产物检查通过：canonical、Open Graph、sitemap、robots 不指向 localhost。
+- 线上 `pages.dev` 域名检查通过。
 - Analytics 未接入。
 
 ## Do Not Do Now
