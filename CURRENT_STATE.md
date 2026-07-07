@@ -11,15 +11,15 @@
 ## Live URL
 
 - Production: `https://palworld-1-0-guide-hub.pages.dev/`
-- Preview: `https://123cf8c8.palworld-1-0-guide-hub.pages.dev/`
+- Latest production deployment: `https://930e27b2.palworld-1-0-guide-hub.pages.dev/`
 - GitHub: `https://github.com/zsq378554827/palworld-1-0-guide-hub`（`main` 已 push，当前远端为 SSH deploy key）
 - Local app repo: `/Users/zousunquan/Desktop/Codex/projects/Project_02_palworld_1_0_guide_hub`
 - Project docs: `/Users/zousunquan/Desktop/Codex/projects/Project_02_palworld_1_0_guide_hub`
 
 ## Current Stage
 
-- MVP 首版已通过 Cloudflare Pages 直接部署上线，GitHub `main` 已推送。
-- 当前 Cloudflare Pages 项目仍是 Direct Upload 项目；Cloudflare API 明确不允许把 Direct Upload 项目的 `source` 原地更新为 GitHub。
+- MVP 首版已通过 Cloudflare Pages Git Integration 部署上线，GitHub `main` 已推送。
+- 旧的 Direct Upload Pages 项目已删除，并已重建为同名 GitHub 集成 Pages 项目。
 
 ## Completed
 
@@ -38,17 +38,18 @@
 - 线上检查完成：首页 200；robots/sitemap 存在；canonical、Open Graph URL、Open Graph image 均指向 `https://palworld-1-0-guide-hub.pages.dev`。
 - 2026-07-07 GitHub push 完成：`main` 已推送到 `git@github.com:zsq378554827/palworld-1-0-guide-hub.git`。
 - 2026-07-07 Cloudflare Pages `PUBLIC_SITE_URL` 已通过 Pages Project API 设置为普通文本变量，production 和 preview 均为 `https://palworld-1-0-guide-hub.pages.dev`。
+- 2026-07-07 已删除旧 Direct Upload 项目并重建同名 Git Integration Pages 项目；Cloudflare 项目列表显示 `Git Provider: Yes`。
+- 2026-07-07 Git Integration 项目首次 production deployment 成功，deployment short id `930e27b2`。
 
 ## Current Priorities
 
-1. 决定 Cloudflare Pages Git 集成路径：删除/重建同名 Pages 项目，或新建另一个 Git 集成项目。
-2. Palworld 1.0 正式上线后更新完整内容事实。
-3. 后续接入 Analytics 和 Search Console。
+1. Palworld 1.0 正式上线后更新完整内容事实。
+2. 后续接入 Analytics 和 Search Console。
+3. 后续如果绑定自定义域名，需要同步更新 `PUBLIC_SITE_URL`。
 
 ## Current Blockers
 
 - Palworld 1.0 正式 patch notes 尚未可用，文章只能保持预备版本。
-- Cloudflare Pages Git 集成未完成：现有 `palworld-1-0-guide-hub` 是 Direct Upload 项目，API 返回 `You cannot update the source object in a Direct Uploads project.` 如需同名 Git 集成，需要先删除/重建该 Pages 项目；如不想影响当前线上站，可新建另一个 Git 集成项目。
 
 ## Current Env Vars
 
@@ -71,6 +72,7 @@
 - 当前 canonical/OG URL 使用默认 `https://palworld-1-0-guide-hub.pages.dev`；部署到正式域名时必须设置 `PUBLIC_SITE_URL`。
 - 部署产物检查通过：canonical、Open Graph、sitemap、robots 不指向 localhost。
 - 线上 `pages.dev` 域名检查通过。
+- Cloudflare Pages 当前为 GitHub 集成项目：Framework preset Astro，Build command `npm run build`，Output directory `dist`。
 - Analytics 未接入。
 
 ## Do Not Do Now

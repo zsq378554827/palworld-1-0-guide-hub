@@ -44,7 +44,9 @@
 - GitHub remote: `git@github.com:zsq378554827/palworld-1-0-guide-hub.git`
 - GitHub `main` 已成功 push。
 - Cloudflare Pages production/preview 已设置普通文本变量 `PUBLIC_SITE_URL=https://palworld-1-0-guide-hub.pages.dev`。
-- 当前 Cloudflare Pages 项目是 Direct Upload，Cloudflare API 不允许原地更新为 GitHub `source`；如需 Git 集成，需要删除/重建同名项目或新建另一个 Git 集成项目。
+- 已删除旧 Direct Upload Pages 项目，并重建同名 GitHub 集成 Pages 项目。
+- Cloudflare Pages 当前显示 `Git Provider: Yes`，source repo 为 `zsq378554827/palworld-1-0-guide-hub`。
+- Git 集成项目首次 production deployment 成功，deployment short id `930e27b2`。
 
 ### 文档
 
@@ -52,5 +54,5 @@
 
 ### 下一步
 
-- 决定 Cloudflare Pages Git 集成路径。
 - Palworld 1.0 正式发布后更新文章事实。
+- 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。

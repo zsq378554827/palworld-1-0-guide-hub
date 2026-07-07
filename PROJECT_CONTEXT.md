@@ -10,7 +10,7 @@ Palworld 1.0 Guide Hub 是一个面向英文用户的 Palworld Version 1.0 专�
 
 - 项目名称：Palworld 1.0 Guide Hub
 - 项目类型：英文游戏攻略内容站 / SEO 站
-- 项目状态：已上线，Cloudflare Pages Direct Upload 可访问；GitHub `main` 已 push；Git 集成待决策
+- 项目状态：已上线，Cloudflare Pages Git Integration 已配置；GitHub `main` 已 push
 - 目标用户：Palworld 1.0 新玩家、回归玩家、服务器服主、多人联机玩家、基地建设玩家
 - 使用场景：玩家在 1.0 正式发布前后搜索版本变化、新档建议、服务器设置、性能设置、FAQ 和补丁说明
 - 变现方式：首版不接变现；后续可接展示广告、游戏服务器 affiliate、工具/攻略包导流
@@ -55,7 +55,7 @@ Palworld 1.0 Guide Hub 是一个面向英文用户的 Palworld Version 1.0 专�
 - 前端：Astro
 - 后端：无
 - 数据库：无
-- 部署：Cloudflare Pages 静态站；当前为 Direct Upload 项目，Git Integration 需要删除/重建同名项目或新建另一个项目
+- 部署：Cloudflare Pages 静态站；当前为 GitHub 集成项目，构建命令 `npm run build`，输出目录 `dist`
 - 第三方服务：首版无
 
 ## 目录结构
@@ -87,11 +87,11 @@ Project_02_palworld_1_0_guide_hub/
 - 已上线到 `https://palworld-1-0-guide-hub.pages.dev/`。
 - 已将 GitHub `main` 推送到 `zsq378554827/palworld-1-0-guide-hub`。
 - 已在 Cloudflare Pages production/preview 设置 `PUBLIC_SITE_URL=https://palworld-1-0-guide-hub.pages.dev`。
+- 已删除旧 Direct Upload Pages 项目，并重建同名 GitHub 集成 Pages 项目。
 
 ## 待完成
 
 - Palworld 1.0 正式上线后，根据完整 patch notes 更新文章事实。
-- 决定 Cloudflare Pages Git 集成路径。
 - 后续接入 analytics、Search Console、广告或 affiliate。
 
 ## 开发记录
