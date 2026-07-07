@@ -11,9 +11,9 @@
 
 ## 当前优先级
 
-1. 在 GitHub 仓库添加 deploy key 或完成 GitHub CLI 登录，然后 push `main`。
-2. 在 Cloudflare Pages 将项目连接到 GitHub 仓库，并设置 `PUBLIC_SITE_URL`。
-3. Palworld 1.0 正式发布后，更新所有预备内容。
+1. 决定 Cloudflare Pages Git 集成路径：删除/重建同名 Pages 项目，或新建另一个 Git 集成项目。
+2. Palworld 1.0 正式发布后，更新所有预备内容。
+3. 后续接入 Analytics 和 Search Console。
 
 ## 待办列表
 
@@ -25,8 +25,8 @@
 | 已完成 | MVP 上线前质量复查 | 高 | Codex | 链接、SEO 去重、文章质量、390/768/1280 响应式、素材风险均通过 |
 | 已完成 | Cloudflare Pages 部署准备 | 高 | Codex | build/output/env/SEO/robots/sitemap/static assets/Git 提交准备 |
 | 已完成 | Cloudflare Pages 直接部署 | 高 | Codex | 已上线 `https://palworld-1-0-guide-hub.pages.dev/` |
-| 进行中 | 创建或连接 GitHub remote | 高 | 用户/Codex | remote 已添加；push 因 GitHub 凭据阻塞 |
-| 未开始 | Cloudflare Pages Git 集成 | 高 | 用户/Codex | 直接部署已可用；GitHub push 后再连接仓库 |
+| 已完成 | 创建或连接 GitHub remote | 高 | 用户/Codex | 已用可写 deploy key push `main` 到 GitHub |
+| 阻塞 | Cloudflare Pages Git 集成 | 高 | 用户/Codex | 现有 Pages 项目是 Direct Upload，Cloudflare 不允许原地更新 `source` |
 | 未开始 | 1.0 正式 patch notes 发布后更新文章 | 高 | Codex | 不编造未确认内容 |
 | 未开始 | 接入 Analytics 和 Search Console | 中 | Codex | 部署后做 |
 
@@ -40,7 +40,9 @@
 
 ## 阻塞项
 
-- GitHub push 凭据未完成。可选方案：安装/登录 `gh`，或在 GitHub 仓库添加 `/Users/zousunquan/.ssh/palworld_guide_hub_deploy.pub` 为可写 deploy key。
+- Cloudflare Pages Git 集成被项目类型阻塞。API 返回：`You cannot update the source object in a Direct Uploads project.`
+- 如要保留 `https://palworld-1-0-guide-hub.pages.dev/` 同名地址，需要删除当前 Direct Upload 项目后重新创建 Git 集成项目。
+- 如不想影响当前线上站，可以新建另一个 Git 集成项目，使用新的 `pages.dev` 地址。
 - Palworld 1.0 完整 patch notes 未发布。
 
 ## 下次打开项目先做

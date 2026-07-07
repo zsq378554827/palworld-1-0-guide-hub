@@ -12,13 +12,14 @@
 
 - Production: `https://palworld-1-0-guide-hub.pages.dev/`
 - Preview: `https://123cf8c8.palworld-1-0-guide-hub.pages.dev/`
-- GitHub: `https://github.com/zsq378554827/palworld-1-0-guide-hub`（remote 已添加，本机尚未成功 push）
+- GitHub: `https://github.com/zsq378554827/palworld-1-0-guide-hub`（`main` 已 push，当前远端为 SSH deploy key）
 - Local app repo: `/Users/zousunquan/Desktop/Codex/projects/Project_02_palworld_1_0_guide_hub`
 - Project docs: `/Users/zousunquan/Desktop/Codex/projects/Project_02_palworld_1_0_guide_hub`
 
 ## Current Stage
 
-- MVP 首版已通过 Cloudflare Pages 直接部署上线，等待 GitHub 凭据补齐后 push main 并改为 Git 集成部署。
+- MVP 首版已通过 Cloudflare Pages 直接部署上线，GitHub `main` 已推送。
+- 当前 Cloudflare Pages 项目仍是 Direct Upload 项目；Cloudflare API 明确不允许把 Direct Upload 项目的 `source` 原地更新为 GitHub。
 
 ## Completed
 
@@ -35,22 +36,23 @@
 - 2026-07-07 Cloudflare Pages 部署准备完成：`npm install` 和 `npm run build` 通过；`dist/` 输出 18 个页面；`.env.example` 已加入 `PUBLIC_SITE_URL=`；Astro 配置显式 `output: "static"`；产物无 localhost、本机绝对路径或官方素材引用。
 - 2026-07-07 Cloudflare Pages 直接部署完成：项目 `palworld-1-0-guide-hub`，正式域名 `https://palworld-1-0-guide-hub.pages.dev/`，预览部署 `https://123cf8c8.palworld-1-0-guide-hub.pages.dev/`。
 - 线上检查完成：首页 200；robots/sitemap 存在；canonical、Open Graph URL、Open Graph image 均指向 `https://palworld-1-0-guide-hub.pages.dev`。
+- 2026-07-07 GitHub push 完成：`main` 已推送到 `git@github.com:zsq378554827/palworld-1-0-guide-hub.git`，远端 commit 为 `54cc016`。
+- 2026-07-07 Cloudflare Pages `PUBLIC_SITE_URL` 已通过 Pages Project API 设置为普通文本变量，production 和 preview 均为 `https://palworld-1-0-guide-hub.pages.dev`。
 
 ## Current Priorities
 
-1. 补齐 GitHub push 权限，把本地 `main` 推送到 `zsq378554827/palworld-1-0-guide-hub`。
-2. 在 Cloudflare Pages 将当前直接上传项目改为 GitHub 集成部署，并设置 `PUBLIC_SITE_URL=https://palworld-1-0-guide-hub.pages.dev`。
-3. Palworld 1.0 正式上线后更新完整内容事实。
+1. 决定 Cloudflare Pages Git 集成路径：删除/重建同名 Pages 项目，或新建另一个 Git 集成项目。
+2. Palworld 1.0 正式上线后更新完整内容事实。
+3. 后续接入 Analytics 和 Search Console。
 
 ## Current Blockers
 
 - Palworld 1.0 正式 patch notes 尚未可用，文章只能保持预备版本。
-- GitHub push 仍被本机凭据阻塞：无 `gh`、无 `GITHUB_TOKEN/GH_TOKEN`、无 HTTPS credential，GitHub 连接器写入仓库返回 403。
-- 已生成仓库专用 deploy key，公钥路径：`/Users/zousunquan/.ssh/palworld_guide_hub_deploy.pub`。需要在 GitHub 仓库 Settings -> Deploy keys 添加并勾选 write access 后才能 SSH push。
+- Cloudflare Pages Git 集成未完成：现有 `palworld-1-0-guide-hub` 是 Direct Upload 项目，API 返回 `You cannot update the source object in a Direct Uploads project.` 如需同名 Git 集成，需要先删除/重建该 Pages 项目；如不想影响当前线上站，可新建另一个 Git 集成项目。
 
 ## Current Env Vars
 
-- `PUBLIC_SITE_URL`: Cloudflare Pages Dashboard 后续应设置为 `https://palworld-1-0-guide-hub.pages.dev`
+- `PUBLIC_SITE_URL`: Cloudflare Pages production/preview 已设置为 `https://palworld-1-0-guide-hub.pages.dev`
 - `PUBLIC_GA_MEASUREMENT_ID`: 未配置
 - `PUBLIC_CHECKOUT_URL`: 不适用
 
