@@ -1,0 +1,19 @@
+{
+  "name": "palworld-1-0-guide-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "generate:assets": "node scripts/generate-assets.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
+

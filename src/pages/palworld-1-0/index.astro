@@ -1,0 +1,59 @@
+---
+import GuideCard from "../../components/GuideCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getGuidesByCategory, guides } from "../../data/guides";
+
+const versionGuides = getGuidesByCategory("palworld-1-0");
+const supporting = guides.filter((guide) => guide.category !== "palworld-1-0").slice(0, 4);
+---
+
+<BaseLayout
+  title="Palworld 1.0 Hub"
+  description="A focused Palworld Version 1.0 hub for release date, patch notes, World Tree, new Pals, beginner prep, returning players, and launch-week FAQ."
+  canonical="/palworld-1-0/"
+>
+  <section class="page-hero compact">
+    <p class="eyebrow">Version 1.0</p>
+    <h1>Palworld 1.0 Hub</h1>
+    <p>
+      Release date, patch notes, World Tree, new Pals, save planning, and the guides that matter most
+      before the full 1.0 notes are available.
+    </p>
+  </section>
+
+  <section class="section-wrap">
+    <div class="info-strip">
+      <strong>Content status</strong>
+      <span>This hub is a pre-release structure. Confirmed details will be expanded when Palworld 1.0 is live and the full patch notes are published.</span>
+    </div>
+    <div class="card-grid">
+      {versionGuides.map((guide) => <GuideCard guide={guide} />)}
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-grid">
+      <div>
+        <h2>What to watch first</h2>
+        <p>When 1.0 launches, the first updates here should be save compatibility, server behavior, performance notes, and confirmed changes that affect early progression.</p>
+      </div>
+      <ul class="check-list">
+        <li>Full official patch notes</li>
+        <li>Known issues and hotfix notes</li>
+        <li>Server and multiplayer changes</li>
+        <li>World Tree and new region details</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-heading">
+      <h2>Supporting guides</h2>
+      <p>Use these while the full version notes are still being checked.</p>
+    </div>
+    <div class="card-grid">
+      {supporting.map((guide) => <GuideCard guide={guide} />)}
+    </div>
+  </section>
+</BaseLayout>
+

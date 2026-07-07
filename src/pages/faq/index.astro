@@ -1,0 +1,57 @@
+---
+import GuideCard from "../../components/GuideCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getGuideBySlug } from "../../data/guides";
+
+const faqGuide = getGuideBySlug("guides/palworld-1-0-faq");
+const faqs = [
+  {
+    question: "Is this an official Palworld site?",
+    answer: "No. This is an unofficial fan-made guide site and is not affiliated with or endorsed by Pocketpair.",
+  },
+  {
+    question: "Does this site include every Pal, item, and map location?",
+    answer: "No. The MVP is a focused Palworld 1.0 guide hub, not a full database or Wiki.",
+  },
+  {
+    question: "Will the guides include exact 1.0 changes?",
+    answer: "Yes, but only after Palworld 1.0 is live and the full official patch notes are available.",
+  },
+  {
+    question: "Should I start a new save for Palworld 1.0?",
+    answer: "A fresh save is usually the cleanest way to experience a major release, but old-world decisions should wait for official compatibility notes.",
+  },
+];
+---
+
+<BaseLayout
+  title="Palworld 1.0 Questions and Answers"
+  description="Frequently asked questions about Palworld Version 1.0, including release timing, fresh saves, patch notes, servers, and site scope."
+  canonical="/faq/"
+>
+  <section class="page-hero compact">
+    <p class="eyebrow">FAQ</p>
+    <h1>Palworld 1.0 FAQ</h1>
+    <p>Short answers for players who want clear guidance without unconfirmed launch-week speculation.</p>
+  </section>
+
+  <section class="faq-list">
+    {faqs.map((item) => (
+      <details>
+        <summary>{item.question}</summary>
+        <p>{item.answer}</p>
+      </details>
+    ))}
+  </section>
+
+  {faqGuide && (
+    <section class="section-wrap">
+      <div class="section-heading">
+        <h2>Full FAQ article</h2>
+      </div>
+      <div class="card-grid single">
+        <GuideCard guide={faqGuide} />
+      </div>
+    </section>
+  )}
+</BaseLayout>

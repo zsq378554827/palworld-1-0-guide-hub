@@ -1,0 +1,22 @@
+---
+import type { Guide } from "../data/guides";
+
+type Props = {
+  guide: Guide;
+};
+
+const { guide } = Astro.props;
+---
+
+<a class="guide-card" href={`/${guide.slug}/`} aria-label={`Read ${guide.title}`}>
+  <div class="card-meta">
+    <span>{guide.categoryLabel}</span>
+    <span>{guide.readingTime}</span>
+  </div>
+  <h3>{guide.title}</h3>
+  <p>{guide.description}</p>
+  <div class="tag-row">
+    {guide.tags.slice(0, 3).map((tag) => <span>{tag}</span>)}
+  </div>
+  <div class="updated">Last Updated: {guide.lastUpdated}</div>
+</a>

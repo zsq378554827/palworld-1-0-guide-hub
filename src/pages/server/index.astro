@@ -1,0 +1,30 @@
+---
+import GuideCard from "../../components/GuideCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getGuidesByCategory } from "../../data/guides";
+
+const serverGuides = getGuidesByCategory("server");
+---
+
+<BaseLayout
+  title="Palworld 1.0 Server Guides"
+  description="Server setup, multiplayer planning, and cautious launch settings for Palworld Version 1.0."
+  canonical="/server/"
+>
+  <section class="page-hero compact">
+    <p class="eyebrow">Server</p>
+    <h1>Palworld 1.0 Server Guides</h1>
+    <p>Plan a stable launch world with backups, clear rules, conservative settings, and multiplayer expectations before players invest serious time.</p>
+  </section>
+
+  <section class="section-wrap">
+    <div class="info-strip">
+      <strong>Server owner note</strong>
+      <span>Keep launch settings conservative until 1.0 performance, balance, and compatibility are known.</span>
+    </div>
+    <div class="card-grid">
+      {serverGuides.map((guide) => <GuideCard guide={guide} />)}
+    </div>
+  </section>
+</BaseLayout>
+

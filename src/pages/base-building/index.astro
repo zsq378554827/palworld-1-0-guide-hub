@@ -1,0 +1,50 @@
+---
+import GuideCard from "../../components/GuideCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getGuidesByTag } from "../../data/guides";
+
+const baseRelated = getGuidesByTag("base-building");
+---
+
+<BaseLayout
+  title="Palworld 1.0 Base Building"
+  description="Base planning guidance for Palworld 1.0 players, focused on stable layouts, storage habits, server-safe decisions, and launch-week caution."
+  canonical="/base-building/"
+>
+  <section class="page-hero compact">
+    <p class="eyebrow">Base Building</p>
+    <h1>Palworld 1.0 Base Building</h1>
+    <p>Build bases that are easy to adjust after the final Version 1.0 notes are confirmed. The first rule is flexibility, not perfect launch-day optimization.</p>
+  </section>
+
+  <section class="section-wrap two-column">
+    <div>
+      <h2>Launch-safe base habits</h2>
+      <ul class="check-list">
+        <li>Keep early bases small and easy to relocate.</li>
+        <li>Separate storage by function before the base becomes crowded.</li>
+        <li>Leave walking space for Pals instead of packing stations tightly.</li>
+        <li>Back up important worlds before major updates.</li>
+        <li>Wait for 1.0 notes before committing to permanent late-game layouts.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>What this section will add later</h2>
+      <p>
+        After Palworld 1.0 is live, this section can expand into dedicated guides for base locations,
+        production flow, raid pressure, storage systems, Pal assignments, and server-friendly layouts.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-heading">
+      <h2>Related starter guides</h2>
+      <p>These MVP articles include base planning advice while dedicated base guides are still being prepared.</p>
+    </div>
+    <div class="card-grid">
+      {baseRelated.map((guide) => <GuideCard guide={guide} />)}
+    </div>
+  </section>
+</BaseLayout>
+

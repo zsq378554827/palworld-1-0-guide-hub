@@ -1,0 +1,74 @@
+---
+import GuideCard from "../components/GuideCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { featuredGuides, guides } from "../data/guides";
+import { site } from "../data/site";
+
+const featured = featuredGuides();
+const latest = guides;
+---
+
+<BaseLayout
+  title="Palworld 1.0 Guide Hub"
+  description="Updated English guides for Palworld Version 1.0, including beginner tips, returning player prep, server setup, base building, World Tree, new Pals, and FAQ."
+  canonical="/"
+>
+  <section class="hero">
+    <img src={site.heroImage} alt="Fan-made Palworld 1.0 guide hub fantasy island map artwork" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Unofficial fan-made guide site</p>
+      <h1>Palworld 1.0 Guide Hub</h1>
+      <p>
+        Updated guides for new players, returning players, server setup, base building,
+        Version 1.0 changes, new Pals, World Tree, and FAQ.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="/palworld-1-0/">Start with the 1.0 Hub</a>
+        <a class="button secondary" href="/guides/">Browse guides</a>
+      </div>
+      <p class="hero-note">Launch content is cautious until the full Palworld 1.0 patch notes are available.</p>
+    </div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-heading">
+      <p class="eyebrow">Start here</p>
+      <h2>Most useful launch-week guides</h2>
+      <p>These pages are designed for decisions players need to make before or during the first Palworld 1.0 sessions.</p>
+    </div>
+    <div class="card-grid">
+      {featured.map((guide) => <GuideCard guide={guide} />)}
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-grid">
+      <div>
+        <p class="eyebrow">Not a full wiki</p>
+        <h2>Focused guides, not a database dump</h2>
+        <p>
+          This MVP keeps the scope narrow: practical articles for version changes, save planning,
+          multiplayer, server setup, base habits, performance, and FAQ. Detailed databases can come later
+          if search demand proves it is worth maintaining.
+        </p>
+      </div>
+      <div class="quick-links">
+        <a href="/server/">Server setup</a>
+        <a href="/base-building/">Base building</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/palworld-1-0/palworld-1-0-patch-notes-explained/">Patch notes explained</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-wrap">
+    <div class="section-heading">
+      <p class="eyebrow">First batch</p>
+      <h2>All MVP articles</h2>
+    </div>
+    <div class="card-grid">
+      {latest.map((guide) => <GuideCard guide={guide} />)}
+    </div>
+  </section>
+</BaseLayout>

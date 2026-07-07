@@ -1,0 +1,97 @@
+---
+import type { Guide } from "../data/guides";
+import { guides } from "../data/guides";
+
+type Props = {
+  guide: Guide;
+};
+
+const { guide } = Astro.props;
+const related = guides
+  .filter((item) => item.slug !== guide.slug && (item.category === guide.category || item.tags.some((tag) => guide.tags.includes(tag))))
+  .slice(0, 3);
+---
+
+<article class="article-shell">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href={`/${guide.category === "palworld-1-0" ? "palworld-1-0" : guide.category}/`}>{guide.categoryLabel}</a>
+  </nav>
+
+  <header class="article-header">
+    <p class="eyebrow">{guide.categoryLabel}</p>
+    <h1>{guide.title}</h1>
+    <p class="lede">{guide.description}</p>
+    <div class="article-meta">
+      <span>Last Updated: {guide.lastUpdated}</span>
+      <span>{guide.readingTime}</span>
+    </div>
+  </header>
+
+  <aside class="notice-box">
+    <strong>Pre-release note</strong>
+    <p>{guide.statusNotice}</p>
+  </aside>
+
+  <section class="short-answer">
+    <h2>Short answer</h2>
+    <p>{guide.shortAnswer}</p>
+  </section>
+
+  <section class="advice-box">
+    <h2>Practical advice for new and returning players</h2>
+    <ul>
+      {guide.playerAdvice.map((advice) => <li>{advice}</li>)}
+    </ul>
+  </section>
+
+  <div class="article-content">
+    {guide.sections.map((section) => (
+      <section>
+        <h2>{section.heading}</h2>
+        {section.paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
+        {section.bullets && (
+          <ul>
+            {section.bullets.map((bullet) => <li>{bullet}</li>)}
+          </ul>
+        )}
+      </section>
+    ))}
+  </div>
+
+  <section class="article-faq">
+    <h2>FAQ</h2>
+    {guide.faqs.map((item) => (
+      <details>
+        <summary>{item.question}</summary>
+        <p>{item.answer}</p>
+      </details>
+    ))}
+  </section>
+
+  {guide.sourceLinks && (
+    <section class="source-box">
+      <h2>Sources</h2>
+      <ul>
+        {guide.sourceLinks.map((source) => (
+          <li><a href={source.href} rel="nofollow noopener" target="_blank">{source.label}</a></li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {related.length > 0 && (
+    <section class="related-guides">
+      <h2>Related guides</h2>
+      <div class="compact-link-grid">
+        {related.map((item) => (
+          <a href={`/${item.slug}/`}>
+            <span>{item.categoryLabel}</span>
+            <strong>{item.title}</strong>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</article>

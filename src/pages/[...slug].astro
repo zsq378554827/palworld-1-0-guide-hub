@@ -1,0 +1,19 @@
+---
+import ArticleTemplate from "../components/ArticleTemplate.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { guides } from "../data/guides";
+
+export function getStaticPaths() {
+  return guides.map((guide) => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+---
+
+<BaseLayout title={guide.title} description={guide.description} canonical={`/${guide.slug}/`} type="article">
+  <ArticleTemplate guide={guide} />
+</BaseLayout>
+

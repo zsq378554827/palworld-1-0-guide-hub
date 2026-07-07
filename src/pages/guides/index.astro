@@ -1,0 +1,26 @@
+---
+import GuideCard from "../../components/GuideCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getGuidesByCategory } from "../../data/guides";
+
+const pageGuides = getGuidesByCategory("guides");
+---
+
+<BaseLayout
+  title="Palworld 1.0 Guides"
+  description="Beginner, returning player, performance, save planning, and FAQ guides for Palworld Version 1.0."
+  canonical="/guides/"
+>
+  <section class="page-hero compact">
+    <p class="eyebrow">Guides</p>
+    <h1>Palworld 1.0 Guides</h1>
+    <p>Practical launch-ready guides for new players, returning players, save decisions, performance tuning, and common Version 1.0 questions.</p>
+  </section>
+
+  <section class="section-wrap">
+    <div class="card-grid">
+      {pageGuides.map((guide) => <GuideCard guide={guide} />)}
+    </div>
+  </section>
+</BaseLayout>
+

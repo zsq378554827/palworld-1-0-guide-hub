@@ -1,0 +1,20 @@
+---
+const navItems = [
+  { href: "/palworld-1-0/", label: "1.0 Hub" },
+  { href: "/guides/", label: "Guides" },
+  { href: "/server/", label: "Server" },
+  { href: "/base-building/", label: "Base Building" },
+  { href: "/faq/", label: "FAQ" },
+];
+---
+
+<header class="site-header">
+  <a class="text-logo" href="/" aria-label="Palworld 1.0 Guide Hub home">
+    <span>Palworld 1.0</span>
+    <strong>Guide Hub</strong>
+  </a>
+  <nav class="site-nav" aria-label="Primary navigation">
+    {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+  </nav>
+</header>
+
