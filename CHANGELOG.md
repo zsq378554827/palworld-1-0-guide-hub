@@ -47,6 +47,7 @@
 - 已删除旧 Direct Upload Pages 项目，并重建同名 GitHub 集成 Pages 项目。
 - Cloudflare Pages 当前显示 `Git Provider: Yes`，source repo 为 `zsq378554827/palworld-1-0-guide-hub`。
 - Git 集成项目首次 production deployment 成功，deployment short id `930e27b2`。
+- 真实文档变更 commit `36838ad` 已 push，但 Cloudflare 未自动生成对应 deployment；自动 GitHub push 部署仍需通过 Dashboard 登录后修复 webhook。
 
 ### 文档
 
@@ -55,4 +56,5 @@
 ### 下一步
 
 - Palworld 1.0 正式发布后更新文章事实。
+- 登录 Cloudflare Dashboard，用 Connect to Git 流程修复/重建 GitHub 自动部署 webhook。
 - 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。

@@ -18,8 +18,9 @@
 
 ## Current Stage
 
-- MVP 首版已通过 Cloudflare Pages Git Integration 部署上线，GitHub `main` 已推送。
-- 旧的 Direct Upload Pages 项目已删除，并已重建为同名 GitHub 集成 Pages 项目。
+- MVP 首版已通过 Cloudflare Pages 上线，GitHub `main` 已推送。
+- 旧的 Direct Upload Pages 项目已删除，并已重建为同名 GitHub 集成 Pages 项目；Cloudflare 显示 `Git Provider: Yes`。
+- 通过 API 创建的 Git 集成项目尚未验证出 GitHub push 自动部署，需用户登录 Cloudflare Dashboard 后用 Connect to Git 流程修复/重建 webhook。
 
 ## Completed
 
@@ -38,18 +39,20 @@
 - 线上检查完成：首页 200；robots/sitemap 存在；canonical、Open Graph URL、Open Graph image 均指向 `https://palworld-1-0-guide-hub.pages.dev`。
 - 2026-07-07 GitHub push 完成：`main` 已推送到 `git@github.com:zsq378554827/palworld-1-0-guide-hub.git`。
 - 2026-07-07 Cloudflare Pages `PUBLIC_SITE_URL` 已通过 Pages Project API 设置为普通文本变量，production 和 preview 均为 `https://palworld-1-0-guide-hub.pages.dev`。
-- 2026-07-07 已删除旧 Direct Upload 项目并重建同名 Git Integration Pages 项目；Cloudflare 项目列表显示 `Git Provider: Yes`。
-- 2026-07-07 Git Integration 项目首次 production deployment 成功，deployment short id `930e27b2`。
+- 2026-07-07 已删除旧 Direct Upload 项目并重建同名 GitHub source Pages 项目；Cloudflare 项目列表显示 `Git Provider: Yes`。
+- 2026-07-07 重建项目首次 production deployment 成功，deployment short id `930e27b2`。
+- 2026-07-07 推送真实文档变更 commit `36838ad` 后，Cloudflare 未自动生成对应 deployment；自动 Git push 部署仍需 Dashboard 登录后修复。
 
 ## Current Priorities
 
-1. Palworld 1.0 正式上线后更新完整内容事实。
-2. 后续接入 Analytics 和 Search Console。
-3. 后续如果绑定自定义域名，需要同步更新 `PUBLIC_SITE_URL`。
+1. 登录 Cloudflare Dashboard，用 Connect to Git 流程修复/重建 GitHub webhook，确保后续 push 自动部署。
+2. Palworld 1.0 正式上线后更新完整内容事实。
+3. 后续接入 Analytics 和 Search Console。
 
 ## Current Blockers
 
 - Palworld 1.0 正式 patch notes 尚未可用，文章只能保持预备版本。
+- Chrome 中 Cloudflare Dashboard 停在登录页；自动 Git push 部署需要用户完成 Cloudflare Dashboard 登录后继续。
 
 ## Current Env Vars
 
@@ -72,7 +75,8 @@
 - 当前 canonical/OG URL 使用默认 `https://palworld-1-0-guide-hub.pages.dev`；部署到正式域名时必须设置 `PUBLIC_SITE_URL`。
 - 部署产物检查通过：canonical、Open Graph、sitemap、robots 不指向 localhost。
 - 线上 `pages.dev` 域名检查通过。
-- Cloudflare Pages 当前为 GitHub 集成项目：Framework preset Astro，Build command `npm run build`，Output directory `dist`。
+- Cloudflare Pages 当前显示 Git Provider Yes：Framework preset Astro，Build command `npm run build`，Output directory `dist`。
+- 注意：GitHub push 自动触发尚未生效，需要 Dashboard 流程完成 webhook。
 - Analytics 未接入。
 
 ## Do Not Do Now
