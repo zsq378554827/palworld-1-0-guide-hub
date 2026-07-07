@@ -42,7 +42,7 @@
 - Production: `https://palworld-1-0-guide-hub.pages.dev/`
 - Preview deployment: `https://123cf8c8.palworld-1-0-guide-hub.pages.dev/`
 - GitHub remote: `git@github.com:zsq378554827/palworld-1-0-guide-hub.git`
-- GitHub `main` 已成功 push，当前远端 commit 为 `54cc016`。
+- GitHub `main` 已成功 push。
 - Cloudflare Pages production/preview 已设置普通文本变量 `PUBLIC_SITE_URL=https://palworld-1-0-guide-hub.pages.dev`。
 - 当前 Cloudflare Pages 项目是 Direct Upload，Cloudflare API 不允许原地更新为 GitHub `source`；如需 Git 集成，需要删除/重建同名项目或新建另一个 Git 集成项目。
 
