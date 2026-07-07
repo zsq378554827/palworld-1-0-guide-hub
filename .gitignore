@@ -9,3 +9,4 @@ output/
 .wrangler/
 .DS_Store
 *.log
+public/assets/*.png

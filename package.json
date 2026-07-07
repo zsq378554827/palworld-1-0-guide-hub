@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run generate:assets && astro build",
     "preview": "astro preview",
     "generate:assets": "node scripts/generate-assets.mjs"
   },
@@ -16,4 +16,3 @@
     "typescript": "^5.8.3"
   }
 }
-
