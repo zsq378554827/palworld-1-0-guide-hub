@@ -11,7 +11,7 @@
 ## Live URL
 
 - Production: `https://palworld-1-0-guide-hub.pages.dev/`
-- Latest production deployment: `https://930e27b2.palworld-1-0-guide-hub.pages.dev/`
+- Production deployments are tracked in Cloudflare Pages Dashboard.
 - GitHub: `https://github.com/zsq378554827/palworld-1-0-guide-hub`（`main` 已 push，当前远端为 SSH deploy key）
 - Local app repo: `/Users/zousunquan/Desktop/Codex/projects/Project_02_palworld_1_0_guide_hub`
 - Project docs: `/Users/zousunquan/Desktop/Codex/projects/Project_02_palworld_1_0_guide_hub`
