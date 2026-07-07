@@ -20,7 +20,7 @@
 
 - MVP 首版已通过 Cloudflare Pages 上线，GitHub `main` 已推送。
 - 旧的 Direct Upload Pages 项目已删除，并已重建为同名 GitHub 集成 Pages 项目；Cloudflare 显示 `Git Provider: Yes`。
-- 通过 API 创建的 Git 集成项目尚未验证出 GitHub push 自动部署，需用户登录 Cloudflare Dashboard 后用 Connect to Git 流程修复/重建 webhook。
+- GitHub App 已授权 `zsq378554827/palworld-1-0-guide-hub`，Cloudflare Pages GitHub push 自动部署已验证成功。
 
 ## Completed
 
@@ -41,18 +41,18 @@
 - 2026-07-07 Cloudflare Pages `PUBLIC_SITE_URL` 已通过 Pages Project API 设置为普通文本变量，production 和 preview 均为 `https://palworld-1-0-guide-hub.pages.dev`。
 - 2026-07-07 已删除旧 Direct Upload 项目并重建同名 GitHub source Pages 项目；Cloudflare 项目列表显示 `Git Provider: Yes`。
 - 2026-07-07 重建项目首次 production deployment 成功，deployment short id `930e27b2`。
-- 2026-07-07 推送真实文档变更 commit `36838ad` 后，Cloudflare 未自动生成对应 deployment；自动 Git push 部署仍需 Dashboard 登录后修复。
+- 2026-07-07 GitHub App 已加入 `zsq378554827/palworld-1-0-guide-hub` 仓库授权。
+- 2026-07-07 GitHub push 自动部署验证成功：commit `4028de7` 自动触发 Cloudflare Pages production deployment，trigger 为 `github:push`，deployment short id `266a3200`。
 
 ## Current Priorities
 
-1. 登录 Cloudflare Dashboard，用 Connect to Git 流程修复/重建 GitHub webhook，确保后续 push 自动部署。
-2. Palworld 1.0 正式上线后更新完整内容事实。
-3. 后续接入 Analytics 和 Search Console。
+1. Palworld 1.0 正式上线后更新完整内容事实。
+2. 后续接入 Analytics 和 Search Console。
+3. 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。
 
 ## Current Blockers
 
 - Palworld 1.0 正式 patch notes 尚未可用，文章只能保持预备版本。
-- Chrome 中 Cloudflare Dashboard 停在登录页；自动 Git push 部署需要用户完成 Cloudflare Dashboard 登录后继续。
 
 ## Current Env Vars
 
@@ -76,7 +76,7 @@
 - 部署产物检查通过：canonical、Open Graph、sitemap、robots 不指向 localhost。
 - 线上 `pages.dev` 域名检查通过。
 - Cloudflare Pages 当前显示 Git Provider Yes：Framework preset Astro，Build command `npm run build`，Output directory `dist`。
-- 注意：GitHub push 自动触发尚未生效，需要 Dashboard 流程完成 webhook。
+- GitHub push 自动触发已验证成功，最新生产部署由 Cloudflare Pages Dashboard 记录。
 - Analytics 未接入。
 
 ## Do Not Do Now

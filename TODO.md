@@ -11,9 +11,9 @@
 
 ## 当前优先级
 
-1. 登录 Cloudflare Dashboard，用 Connect to Git 流程修复/重建 GitHub webhook，确保后续 push 自动部署。
-2. Palworld 1.0 正式发布后，更新所有预备内容。
-3. 后续接入 Analytics 和 Search Console。
+1. Palworld 1.0 正式发布后，更新所有预备内容。
+2. 后续接入 Analytics 和 Search Console。
+3. 后续如绑定自定义域名，同步更新 Cloudflare Pages `PUBLIC_SITE_URL`。
 
 ## 待办列表
 
@@ -26,7 +26,7 @@
 | 已完成 | Cloudflare Pages 部署准备 | 高 | Codex | build/output/env/SEO/robots/sitemap/static assets/Git 提交准备 |
 | 已完成 | Cloudflare Pages 直接部署 | 高 | Codex | 已上线 `https://palworld-1-0-guide-hub.pages.dev/` |
 | 已完成 | 创建或连接 GitHub remote | 高 | 用户/Codex | 已用可写 deploy key push `main` 到 GitHub |
-| 进行中 | Cloudflare Pages Git 集成 | 高 | 用户/Codex | Cloudflare 显示 Git Provider Yes，production 已部署；GitHub push 自动部署仍需 Dashboard 登录修复 webhook |
+| 已完成 | Cloudflare Pages Git 集成 | 高 | 用户/Codex | Cloudflare 显示 Git Provider Yes；GitHub App 仓库授权已补齐；GitHub push 自动部署已验证 |
 | 未开始 | 1.0 正式 patch notes 发布后更新文章 | 高 | Codex | 不编造未确认内容 |
 | 未开始 | 接入 Analytics 和 Search Console | 中 | Codex | 部署后做 |
 
@@ -41,7 +41,7 @@
 ## 阻塞项
 
 - Palworld 1.0 完整 patch notes 未发布。
-- Cloudflare Dashboard 需要用户登录；当前 API 创建的 Git source 项目未自动响应 GitHub push。
+- 无 Cloudflare 部署阻塞；GitHub push 已可自动触发 Cloudflare Pages production deployment。
 
 ## 下次打开项目先做
 
