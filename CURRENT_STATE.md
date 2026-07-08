@@ -47,6 +47,8 @@
 - 2026-07-08 Google Search Console URL-prefix 资源 `https://palworld-1-0-guide-hub.pages.dev/` 已通过 HTML 文件验证。
 - 2026-07-08 Google Search Console 已提交 `https://palworld-1-0-guide-hub.pages.dev/sitemap.xml`；GSC 当前即时状态显示“无法抓取”，但终端检查该 URL 对 Googlebot UA 返回 200、`Content-Type: application/xml`，且 robots 正确声明 sitemap，需稍后复查 GSC 后台状态。
 - 2026-07-08 已完成 7 月 10 日 Palworld 1.0 patch notes 更新准备：`guides.ts` 为每篇文章预留 `confirmedChanges`、`pendingUpdates`、`sourceNotes`、`lastVerified` 字段；文章模板新增 Update Notice；新增内部 `UPDATE_DAY_CHECKLIST.md`；`npm run build` 通过，仍输出 18 个页面。
+- 2026-07-08 patch notes 更新准备已推送 commit `49001c5` 并由 Cloudflare Pages 自动部署，production deployment short id `8d4703b3`；线上 Patch Notes 文章已确认显示 Update Notice 和 `lastVerified`。
+- 2026-07-08 已在 Google Search Console 重新提交 `sitemap.xml`，GSC 返回“已成功提交站点地图”；提交后表格即时状态仍显示“无法抓取”，站点端 Googlebot 检查继续返回 200 和 `application/xml`，需要稍后复查 Google 后台处理结果。
 
 ## Current Priorities
 
@@ -85,7 +87,7 @@
 - GitHub push 自动触发已验证成功，最新生产部署由 Cloudflare Pages Dashboard 记录。
 - Cloudflare Web Analytics 已接入，Cloudflare Web Analytics site hostname 为 `palworld-1-0-guide-hub.pages.dev`。
 - Google Search Console 已添加 URL-prefix 资源并通过 HTML 文件验证。
-- Google Search Console 已提交 `https://palworld-1-0-guide-hub.pages.dev/sitemap.xml`；当前 GSC 表格即时状态为“无法抓取”，需稍后复查。
+- Google Search Console 已提交并重新提交 `https://palworld-1-0-guide-hub.pages.dev/sitemap.xml`；GSC 弹窗确认提交成功，但当前表格即时状态仍为“无法抓取”，站点端检查正常，需稍后复查。
 
 ## Do Not Do Now
 

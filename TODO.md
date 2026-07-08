@@ -13,7 +13,7 @@
 
 1. Palworld 1.0 正式发布后，更新所有预备内容。
 2. 按 `UPDATE_DAY_CHECKLIST.md` 优先更新 Patch Notes、Save、Server Setup、Best Server Settings。
-3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功。
+3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功；`sitemap.xml` 已重新提交，站点端检查正常。
 4. 后续如绑定自定义域名，同步更新 Cloudflare Pages `PUBLIC_SITE_URL`。
 
 ## 待办列表
@@ -30,7 +30,7 @@
 | 已完成 | Cloudflare Pages Git 集成 | 高 | 用户/Codex | Cloudflare 显示 Git Provider Yes；GitHub App 仓库授权已补齐；GitHub push 自动部署已验证 |
 | 未开始 | 1.0 正式 patch notes 发布后更新文章 | 高 | Codex | 不编造未确认内容 |
 | 已完成 | 接入 Analytics 和 Search Console | 中 | Codex | Cloudflare Web Analytics 已接入；GSC URL-prefix 资源已通过 HTML 文件验证；sitemap 已提交 |
-| 未开始 | 复查 GSC sitemap 抓取状态 | 中 | Codex | 当前 GSC 即时状态为“无法抓取”；站点端检查 `/sitemap.xml` 对 Googlebot 返回 200 和 `application/xml` |
+| 未开始 | 复查 GSC sitemap 抓取状态 | 中 | Codex | 已重新提交 `sitemap.xml`，GSC 返回提交成功；表格即时状态仍为“无法抓取”；站点端检查 `/sitemap.xml` 对 Googlebot 返回 200 和 `application/xml` |
 | 已完成 | Palworld 1.0 patch notes 更新日准备 | 高 | Codex | 已预留文章更新字段；文章页新增 Update Notice；已创建 `UPDATE_DAY_CHECKLIST.md`；build 通过 |
 | 暂缓 | 新建 New Pals List / World Tree Guide 独立页面 | 中 | Codex | 本轮用户要求不要新增页面；当前只在清单中记录为后续候选页面 |
 
@@ -46,7 +46,7 @@
 
 - Palworld 1.0 完整 patch notes 未发布。
 - 无 Cloudflare 部署阻塞；GitHub push 已可自动触发 Cloudflare Pages production deployment。
-- Search Console sitemap 已提交，但 GSC 当前显示“无法抓取”；站点端无明显阻塞，需稍后复查 Google 后台状态。
+- Search Console sitemap 已提交并重新提交，GSC 返回提交成功；表格即时状态仍显示“无法抓取”，站点端无明显阻塞，需稍后复查 Google 后台状态。
 
 ## 下次打开项目先做
 

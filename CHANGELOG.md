@@ -26,11 +26,14 @@
 ### 验证
 
 - Patch notes 更新准备完成后已运行 `npm run build`，构建通过，仍输出 18 个页面。
+- 线上 Patch Notes 文章已确认显示 Update Notice 和 `lastVerified`。
 
 ### 部署
 
 - GitHub `main` 已推送 commit `aee749d`。
 - Cloudflare Pages 自动部署成功，production deployment short id `6aeb7ca0`。
+- Patch notes 更新准备已推送 commit `49001c5`。
+- Cloudflare Pages 已自动部署 commit `49001c5`，production deployment short id `8d4703b3`。
 - 线上验证文件 `https://palworld-1-0-guide-hub.pages.dev/google188a703d2dd73306.html` 返回正确内容。
 - 线上首页已包含 Cloudflare Web Analytics 脚本。
 
@@ -39,6 +42,7 @@
 - Google Search Console URL-prefix 资源 `https://palworld-1-0-guide-hub.pages.dev/` 已通过 HTML 文件验证。
 - 已提交 `https://palworld-1-0-guide-hub.pages.dev/sitemap.xml`。
 - GSC 当前即时状态显示“无法抓取”；站点端复查显示 sitemap 对 Googlebot UA 返回 200、`Content-Type: application/xml`，robots 正确声明 sitemap，需稍后复查 GSC 后台状态。
+- 已重新提交 `sitemap.xml`，GSC 返回“已成功提交站点地图”；提交后表格即时状态仍显示“无法抓取”，继续等待 Google 后台重新处理。
 
 ## 2026-07-07
 
