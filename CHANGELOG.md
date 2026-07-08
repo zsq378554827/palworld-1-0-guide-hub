@@ -14,6 +14,18 @@
 
 - 接入 Cloudflare Web Analytics，全站页面加载 Cloudflare beacon。
 - 新增 Google Search Console HTML 验证文件 `google188a703d2dd73306.html`。
+- 新增文章更新预留字段：`confirmedChanges`、`pendingUpdates`、`sourceNotes`、`lastVerified`。
+- 新增文章页 `Update Notice` 区块，用于 1.0 正式 patch notes 发布前后的更新提示。
+- 新增内部更新日清单 `UPDATE_DAY_CHECKLIST.md`，记录官方来源检查、优先更新页面、不能猜测的内容、构建部署和 Search Console 后续步骤。
+
+### 修改
+
+- 10 篇现有文章均挂载 7 月 10 日 patch notes 更新准备字段。
+- 保持 `Palworld 1.0 New Pals List` 和 `Palworld 1.0 World Tree Guide` 不新增公开页面，仅在内部清单中标记为后续候选页面。
+
+### 验证
+
+- Patch notes 更新准备完成后已运行 `npm run build`，构建通过，仍输出 18 个页面。
 
 ### 部署
 

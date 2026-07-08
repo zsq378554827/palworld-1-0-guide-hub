@@ -24,13 +24,35 @@ export type Guide = {
   featured?: boolean;
   tags: string[];
   statusNotice: string;
+  updateNotice: string;
+  confirmedChanges: string[];
+  pendingUpdates: string[];
+  sourceNotes: string[];
+  lastVerified: string;
   sections: GuideSection[];
   faqs: GuideFaq[];
   sourceLinks?: { label: string; href: string }[];
 };
 
-export const updateNotice =
+export const preReleaseNotice =
   "This guide will be updated when the full Palworld 1.0 patch notes are available.";
+
+export const updateNotice =
+  "This guide is being updated for Palworld 1.0. Details will be revised once the full official patch notes are available.";
+
+const launchUpdateFields = {
+  confirmedChanges: [],
+  pendingUpdates: [
+    "Review the official Palworld 1.0 patch notes before adding or changing any detailed recommendations.",
+    "Replace cautious pre-release wording with confirmed information only after the official notes are live.",
+  ],
+  sourceNotes: [
+    "Use Pocketpair official patch notes, official Palworld news, and verified in-game testing before marking changes as confirmed.",
+    "Do not use rumors, trailer speculation, scraped databases, or community claims as confirmed source material.",
+  ],
+  lastVerified: "July 8, 2026",
+  updateNotice,
+} satisfies Pick<Guide, "confirmedChanges" | "pendingUpdates" | "sourceNotes" | "lastVerified" | "updateNotice">;
 
 export const guides: Guide[] = [
   {
@@ -51,7 +73,8 @@ export const guides: Guide[] = [
     readingTime: "6 min read",
     featured: true,
     tags: ["new players", "starter path", "base-building"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "Start with a simple first objective",
@@ -120,7 +143,8 @@ export const guides: Guide[] = [
     readingTime: "5 min read",
     featured: true,
     tags: ["release date", "1.0 changes", "World Tree"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "Confirmed release timing",
@@ -194,7 +218,8 @@ export const guides: Guide[] = [
     readingTime: "6 min read",
     featured: true,
     tags: ["returning players", "save prep", "base-building"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "Treat 1.0 as a reset of assumptions",
@@ -265,7 +290,8 @@ export const guides: Guide[] = [
     lastUpdated: "July 7, 2026",
     readingTime: "5 min read",
     tags: ["fresh save", "save compatibility", "returning players"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "The short answer",
@@ -334,7 +360,8 @@ export const guides: Guide[] = [
     readingTime: "7 min read",
     featured: true,
     tags: ["dedicated server", "multiplayer", "backups"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "Decide the server goal first",
@@ -407,7 +434,8 @@ export const guides: Guide[] = [
     lastUpdated: "July 7, 2026",
     readingTime: "6 min read",
     tags: ["server settings", "balance", "multiplayer"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "Best means best for your group",
@@ -474,7 +502,8 @@ export const guides: Guide[] = [
     lastUpdated: "July 7, 2026",
     readingTime: "5 min read",
     tags: ["multiplayer", "co-op", "server"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "Pick the right multiplayer format",
@@ -549,7 +578,8 @@ export const guides: Guide[] = [
     lastUpdated: "July 7, 2026",
     readingTime: "5 min read",
     tags: ["performance", "settings", "troubleshooting"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "Start with stability, then improve visuals",
@@ -616,7 +646,8 @@ export const guides: Guide[] = [
     lastUpdated: "July 7, 2026",
     readingTime: "4 min read",
     tags: ["faq", "release", "fresh save"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "When does Palworld 1.0 release?",
@@ -692,7 +723,8 @@ export const guides: Guide[] = [
     readingTime: "4 min read",
     featured: true,
     tags: ["patch notes", "1.0 changes", "confirmed updates"],
-    statusNotice: updateNotice,
+    statusNotice: preReleaseNotice,
+    ...launchUpdateFields,
     sections: [
       {
         heading: "Current status",
