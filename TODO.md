@@ -1,6 +1,6 @@
 # TODO
 
-更新时间：2026-07-07
+更新时间：2026-07-08
 
 ## 工作模式
 
@@ -12,7 +12,7 @@
 ## 当前优先级
 
 1. Palworld 1.0 正式发布后，更新所有预备内容。
-2. 后续接入 Analytics 和 Search Console。
+2. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功。
 3. 后续如绑定自定义域名，同步更新 Cloudflare Pages `PUBLIC_SITE_URL`。
 
 ## 待办列表
@@ -28,7 +28,8 @@
 | 已完成 | 创建或连接 GitHub remote | 高 | 用户/Codex | 已用可写 deploy key push `main` 到 GitHub |
 | 已完成 | Cloudflare Pages Git 集成 | 高 | 用户/Codex | Cloudflare 显示 Git Provider Yes；GitHub App 仓库授权已补齐；GitHub push 自动部署已验证 |
 | 未开始 | 1.0 正式 patch notes 发布后更新文章 | 高 | Codex | 不编造未确认内容 |
-| 未开始 | 接入 Analytics 和 Search Console | 中 | Codex | 部署后做 |
+| 已完成 | 接入 Analytics 和 Search Console | 中 | Codex | Cloudflare Web Analytics 已接入；GSC URL-prefix 资源已通过 HTML 文件验证；sitemap 已提交 |
+| 未开始 | 复查 GSC sitemap 抓取状态 | 中 | Codex | 当前 GSC 即时状态为“无法抓取”；站点端检查 `/sitemap.xml` 对 Googlebot 返回 200 和 `application/xml` |
 
 ## 状态说明
 
@@ -42,6 +43,7 @@
 
 - Palworld 1.0 完整 patch notes 未发布。
 - 无 Cloudflare 部署阻塞；GitHub push 已可自动触发 Cloudflare Pages production deployment。
+- Search Console sitemap 已提交，但 GSC 当前显示“无法抓取”；站点端无明显阻塞，需稍后复查 Google 后台状态。
 
 ## 下次打开项目先做
 

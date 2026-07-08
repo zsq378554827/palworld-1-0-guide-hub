@@ -1,12 +1,32 @@
 # CHANGELOG
 
-更新时间：2026-07-07
+更新时间：2026-07-08
 
 ## 记录规则
 
 - 每完成一个阶段就追加记录。
 - 记录用户能理解的变化，不只写代码文件名。
 - 重要决策同步到 `PROJECT_CONTEXT.md`。
+
+## 2026-07-08
+
+### 新增
+
+- 接入 Cloudflare Web Analytics，全站页面加载 Cloudflare beacon。
+- 新增 Google Search Console HTML 验证文件 `google188a703d2dd73306.html`。
+
+### 部署
+
+- GitHub `main` 已推送 commit `aee749d`。
+- Cloudflare Pages 自动部署成功，production deployment short id `6aeb7ca0`。
+- 线上验证文件 `https://palworld-1-0-guide-hub.pages.dev/google188a703d2dd73306.html` 返回正确内容。
+- 线上首页已包含 Cloudflare Web Analytics 脚本。
+
+### Search Console
+
+- Google Search Console URL-prefix 资源 `https://palworld-1-0-guide-hub.pages.dev/` 已通过 HTML 文件验证。
+- 已提交 `https://palworld-1-0-guide-hub.pages.dev/sitemap.xml`。
+- GSC 当前即时状态显示“无法抓取”；站点端复查显示 sitemap 对 Googlebot UA 返回 200、`Content-Type: application/xml`，robots 正确声明 sitemap，需稍后复查 GSC 后台状态。
 
 ## 2026-07-07
 
