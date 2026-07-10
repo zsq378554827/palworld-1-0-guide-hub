@@ -1,6 +1,6 @@
 # CURRENT_STATE
 
-更新时间：2026-07-08
+更新时间：2026-07-10
 
 ## Project
 
@@ -49,17 +49,20 @@
 - 2026-07-08 已完成 7 月 10 日 Palworld 1.0 patch notes 更新准备：`guides.ts` 为每篇文章预留 `confirmedChanges`、`pendingUpdates`、`sourceNotes`、`lastVerified` 字段；文章模板新增 Update Notice；新增内部 `UPDATE_DAY_CHECKLIST.md`；`npm run build` 通过，仍输出 18 个页面。
 - 2026-07-08 patch notes 更新准备已推送 commit `49001c5` 并由 Cloudflare Pages 自动部署，production deployment short id `8d4703b3`；线上 Patch Notes 文章已确认显示 Update Notice 和 `lastVerified`。
 - 2026-07-08 已在 Google Search Console 重新提交 `sitemap.xml`，GSC 返回“已成功提交站点地图”；提交后表格即时状态仍显示“无法抓取”，站点端 Googlebot 检查继续返回 200 和 `application/xml`，需要稍后复查 Google 后台处理结果。
+- 2026-07-10 已确认 Pocketpair 在 Steam 官方公告发布 `Palworld v1.0 - Official Release Changelog`：`https://store.steampowered.com/news/app/1623730/view/1837955055355658`；版本标识为 `v1.0`，发布时间为 2026-07-10 03:09 UTC（北京时间 11:09，日本时间 12:09）。
+- 2026-07-10 已将首页、1.0 Hub、Release、Patch Notes、Save、Server Setup、Best Server Settings、FAQ 从预发布状态切换为 release/live 状态；只写入官方确认事实，最佳数值、路线、排名、实际性能和平台稳定性继续等待玩家实测。
+- 2026-07-10 `npm run build` 通过，Astro 仍报告构建 18 个页面；构建产物未检出旧的 “patch notes unavailable” 或 pre-release 状态文案。
 
 ## Current Priorities
 
-1. Palworld 1.0 正式上线后更新完整内容事实。
-2. 按 `UPDATE_DAY_CHECKLIST.md` 在官方 patch notes 发布后优先更新 Patch Notes、Save、Server Setup、Best Server Settings 相关内容。
+1. 继续按官方 changelog 更新 Returning、Multiplayer、Performance 等仍含谨慎通用建议的页面，并深化 Beginner 的实测型建议。
+2. 跟踪 Pocketpair 官方 known issues / hotfix 公告，不用媒体或玩家传闻替代官方事实。
 3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功。
 4. 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。
 
 ## Current Blockers
 
-- Palworld 1.0 正式 patch notes 尚未可用，文章只能保持预备版本。
+- 完整官方 changelog 已发布，不再受 patch notes 缺失阻塞；实测型建议仍需可靠玩家测试或后续官方说明。
 - `Palworld 1.0 New Pals List` 和 `Palworld 1.0 World Tree Guide` 当前不是独立文章页；本轮按用户要求未新增页面，只在更新日清单中标记为候选后续页面。
 
 ## Current Env Vars

@@ -17,14 +17,14 @@ const supporting = guides.filter((guide) => guide.category !== "palworld-1-0").s
     <h1>Palworld 1.0 Hub</h1>
     <p>
       Release date, patch notes, World Tree, new Pals, save planning, and the guides that matter most
-      before the full 1.0 notes are available.
+      after the official 1.0 release changelog.
     </p>
   </section>
 
   <section class="section-wrap">
     <div class="info-strip">
       <strong>Content status</strong>
-      <span>This hub is a pre-release structure. Confirmed details will be expanded when Palworld 1.0 is live and the full patch notes are published.</span>
+      <span>Palworld 1.0 is live, and Pocketpair's official release changelog is published. Testing-dependent recommendations remain provisional.</span>
     </div>
     <div class="card-grid">
       {versionGuides.map((guide) => <GuideCard guide={guide} />)}
@@ -35,7 +35,7 @@ const supporting = guides.filter((guide) => guide.category !== "palworld-1-0").s
     <div class="band-grid">
       <div>
         <h2>What to watch first</h2>
-        <p>When 1.0 launches, the first updates here should be save compatibility, server behavior, performance notes, and confirmed changes that affect early progression.</p>
+        <p>The first updates here cover official save guidance, server behavior, performance notes, and confirmed changes that affect early progression.</p>
       </div>
       <ul class="check-list">
         <li>Full official patch notes</li>
@@ -49,11 +49,10 @@ const supporting = guides.filter((guide) => guide.category !== "palworld-1-0").s
   <section class="section-wrap">
     <div class="section-heading">
       <h2>Supporting guides</h2>
-      <p>Use these while the full version notes are still being checked.</p>
+      <p>Use these alongside the official changelog while practical launch-build details are being tested.</p>
     </div>
     <div class="card-grid">
       {supporting.map((guide) => <GuideCard guide={guide} />)}
     </div>
   </section>
 </BaseLayout>
-

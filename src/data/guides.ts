@@ -34,23 +34,23 @@ export type Guide = {
   sourceLinks?: { label: string; href: string }[];
 };
 
-export const preReleaseNotice =
-  "This guide will be updated when the full Palworld 1.0 patch notes are available.";
+export const liveReleaseNotice =
+  "Palworld Version 1.0 is live, and Pocketpair has published the official release changelog.";
 
 export const updateNotice =
-  "This guide is being updated for Palworld 1.0. Details will be revised once the full official patch notes are available.";
+  "The official 1.0 changelog is available. This page keeps cautious guidance where exact recommendations still need launch-build testing.";
 
 const launchUpdateFields = {
   confirmedChanges: [],
   pendingUpdates: [
-    "Review the official Palworld 1.0 patch notes before adding or changing any detailed recommendations.",
-    "Replace cautious pre-release wording with confirmed information only after the official notes are live.",
+    "Review the official Palworld 1.0 changelog before adding or changing detailed recommendations.",
+    "Keep balance-sensitive advice provisional until it has been checked in the launch build.",
   ],
   sourceNotes: [
-    "Use Pocketpair official patch notes, official Palworld news, and verified in-game testing before marking changes as confirmed.",
+    "Use Pocketpair's official Steam changelog, official Palworld news, and verified in-game testing before marking changes as confirmed.",
     "Do not use rumors, trailer speculation, scraped databases, or community claims as confirmed source material.",
   ],
-  lastVerified: "July 8, 2026",
+  lastVerified: "July 10, 2026",
   updateNotice,
 } satisfies Pick<Guide, "confirmedChanges" | "pendingUpdates" | "sourceNotes" | "lastVerified" | "updateNotice">;
 
@@ -61,20 +61,30 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Beginner Guide",
     description:
-      "A cautious starter roadmap for new Palworld 1.0 players, covering early goals, base basics, multiplayer choices, and what to avoid before full patch notes are available.",
+      "A cautious starter roadmap for new Palworld 1.0 players, covering early goals, base basics, multiplayer choices, and advice that still needs launch-build testing.",
     shortAnswer:
-      "New players should start Palworld 1.0 with a small, flexible first base, learn the core survival loop, and avoid chasing launch-week tier lists until the full patch notes are available.",
+      "New players should start Palworld 1.0 with a small, flexible first base, learn the core survival loop, and avoid chasing launch-week tier lists until they are tested against the release build.",
     playerAdvice: [
       "If you are new, spend the first session learning gathering, crafting, catching, food, and base assignments instead of rushing a permanent base.",
       "If you are returning, treat old Early Access habits as useful background, not confirmed 1.0 optimization.",
       "If you are playing with friends, agree on hosting and save rules before anyone invests heavily in a shared world.",
     ],
-    lastUpdated: "July 7, 2026",
+    lastUpdated: "July 10, 2026",
     readingTime: "6 min read",
     featured: true,
     tags: ["new players", "starter path", "base-building"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    confirmedChanges: [
+      "Palworld Version 1.0 is live and the official release changelog is published.",
+      "The official changelog confirms a reworked world, mission flow, progression, Pal balance, and a level cap of 80.",
+    ],
+    pendingUpdates: [
+      "Exact beginner routes, early Pal rankings, base locations, and progression optimizations still need release-build testing.",
+    ],
+    sourceNotes: [
+      "Release and progression facts were checked against Pocketpair's official v1.0 Steam changelog.",
+    ],
     sections: [
       {
         heading: "Start with a simple first objective",
@@ -111,7 +121,7 @@ export const guides: Guide[] = [
       {
         question: "Is this beginner guide final for Palworld 1.0?",
         answer:
-          "No. It is a safe pre-release starter guide. Exact best routes, best Pals, and balance-sensitive recommendations should wait for the full patch notes.",
+          "Not yet. It is a safe launch starter guide. Exact best routes, best Pals, and balance-sensitive recommendations still need release-build testing.",
       },
       {
         question: "Should a new player start solo or multiplayer?",
@@ -121,7 +131,7 @@ export const guides: Guide[] = [
       {
         question: "What should I avoid on day one?",
         answer:
-          "Avoid permanent base commitments, extreme server settings, and guides that claim exact 1.0 best-in-slot answers before the full patch notes are available.",
+          "Avoid permanent base commitments, extreme server settings, and guides that claim exact 1.0 best-in-slot answers without verified release-build testing.",
       },
     ],
   },
@@ -131,33 +141,46 @@ export const guides: Guide[] = [
     category: "palworld-1-0",
     categoryLabel: "Version 1.0",
     description:
-      "The confirmed Palworld 1.0 release timing and a careful overview of what players should expect without inventing unconfirmed patch details.",
+      "The confirmed Palworld 1.0 release status and an official-source overview of the launch changelog, trailer, and next steps for players.",
     shortAnswer:
-      "Palworld Version 1.0 is planned for July 10, 2026. Expect official 1.0 themes such as new Pals, new regions, and World Tree coverage, but wait for the full patch notes before relying on detailed mechanical claims.",
+      "Palworld Version 1.0 is live. Pocketpair published the official release changelog on July 10, 2026, confirming the launch content and broad system overhauls.",
     playerAdvice: [
       "New players should use the release window to prepare a clean first save and read basic system guides, not to memorize speculative endgame routes.",
       "Returning players should back up saves and make a short checklist of old worlds, mods, and server settings before updating.",
-      "Server owners should avoid setting permanent rules until the launch build and official notes are available.",
+      "Server owners should read the official multiplayer, optimization, mod, and bug-fix sections before changing a live world.",
     ],
-    lastUpdated: "July 7, 2026",
+    lastUpdated: "July 10, 2026",
     readingTime: "5 min read",
     featured: true,
     tags: ["release date", "1.0 changes", "World Tree"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    confirmedChanges: [
+      "Palworld left Early Access and Version 1.0 is live.",
+      "Pocketpair published the full official release changelog on July 10, 2026.",
+      "The changelog covers new areas, story, Pals, combat, equipment, building, raids, multiplayer, balance, presentation, optimization, bug fixes, and mods.",
+    ],
+    pendingUpdates: [
+      "Platform-specific rollout and launch issues should be checked against later official notices.",
+      "Exact routes, tier lists, performance gains, and best settings still require launch-build testing.",
+    ],
+    sourceNotes: [
+      "Release status and update categories were verified against Pocketpair's official Steam changelog.",
+      "The official launch trailer was checked for launch messaging only; it was not used to infer mechanics absent from the changelog.",
+    ],
     sections: [
       {
-        heading: "Confirmed release timing",
+        heading: "Confirmed release status",
         paragraphs: [
-          "Pocketpair has announced that Palworld Version 1.0 is planned for July 10, 2026. Exact storefront rollout timing can still vary by platform, region, and patch distribution.",
-          "If you are planning a server, group session, or fresh save, treat the release date as the target window and wait for the final patch notes before locking in long-term settings.",
+          "Palworld Version 1.0 is now live. Pocketpair's official Steam changelog states that the game has exited Early Access, and the Steam store now lists the full release.",
+          "The official changelog was published on July 10, 2026 at 03:09 UTC, which is 11:09 in China and 12:09 in Japan. Steam may display July 9 in some regions because of local time zones.",
         ],
       },
       {
-        heading: "What has been publicly signaled",
+        heading: "What the official changelog confirms",
         paragraphs: [
-          "Official messaging has pointed toward new Pals, new regions, and the World Tree as major Version 1.0 topics.",
-          "Those are broad confirmed themes, not a complete mechanical breakdown. The safe approach is to separate official themes from speculation until the full notes are live.",
+          "The official changelog confirms major additions and overhauls across the world, missions and story, Pals, combat, equipment and items, base building, raids, multiplayer, balance, UI, graphics, sound, optimization, and bug fixes.",
+          "Detailed recommendations still need testing where the changelog does not provide enough evidence for a best route, best build, exact performance gain, or ideal server value.",
         ],
       },
       {
@@ -166,13 +189,13 @@ export const guides: Guide[] = [
           "Back up important saves before updating.",
           "Record current server settings if you run a world.",
           "Avoid installing major mod changes immediately before launch day.",
-          "Wait for the full patch notes before publishing definitive tier lists or progression routes.",
+          "Use the official changelog as the baseline, then test balance-sensitive advice in the launch build.",
         ],
       },
       {
-        heading: "What this page will add after launch",
+        heading: "What still needs launch testing",
         paragraphs: [
-          "After Palworld 1.0 is live, this guide will be updated with the confirmed release state, patch note highlights, known save compatibility notes, and links to the most important updated guides.",
+          "Player testing is still needed for practical performance gains, stable server capacity under real load, exact best settings, progression routes, Pal rankings, and any platform-specific launch issues not covered by the official changelog.",
         ],
       },
     ],
@@ -180,23 +203,31 @@ export const guides: Guide[] = [
       {
         question: "Is the Palworld 1.0 release date confirmed?",
         answer:
-          "Pocketpair has announced July 10, 2026 for Palworld Version 1.0. Platform rollout timing and detailed patch behavior should still be checked against official launch information.",
+          "Yes. Palworld Version 1.0 is live, and Pocketpair published the official release changelog on July 10, 2026.",
       },
       {
         question: "Are new Pals and World Tree details fully known?",
         answer:
-          "No. They are part of official 1.0 messaging, but exact mechanics, locations, stats, and progression details need the full patch notes or verified launch testing.",
+          "The official changelog now confirms their main launch roles and mechanics. Exact player routes, rankings, and optimization advice still need verified launch testing.",
       },
       {
-        question: "What should I do before release day?",
+        question: "What should I do before loading an important save?",
         answer:
-          "Back up saves, record server settings, pause risky mods, and avoid treating pre-release speculation as confirmed guidance.",
+          "Back up saves, record server settings, remove old mods, verify game files, and read the official changelog before making irreversible changes.",
       },
     ],
     sourceLinks: [
       {
         label: "Pocketpair official Palworld 1.0 announcement",
         href: "https://www.pocketpair.jp/en/game-news/palworld-1-0-july-10-cinematic-trailer-revealed/",
+      },
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+      {
+        label: "Palworld 1.0 official launch trailer",
+        href: "https://youtu.be/1fpGg9wNM9A",
       },
     ],
   },
@@ -218,7 +249,7 @@ export const guides: Guide[] = [
     readingTime: "6 min read",
     featured: true,
     tags: ["returning players", "save prep", "base-building"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
     sections: [
       {
@@ -259,7 +290,7 @@ export const guides: Guide[] = [
       {
         question: "Can returning players rely on old Palworld guides?",
         answer:
-          "Use them as background only. Any guide that depends on exact balance, routes, base locations, or Pal rankings should be rechecked after the full 1.0 patch notes are available.",
+          "Use them as background only. Any guide that depends on exact balance, routes, base locations, or Pal rankings should be rechecked against the official changelog and release build.",
       },
       {
         question: "Should I delete my old save?",
@@ -279,25 +310,37 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Save Planning",
     description:
-      "A balanced guide to choosing between a fresh Palworld 1.0 save and continuing an existing world without guessing at unconfirmed compatibility details.",
+      "Officially confirmed guidance for choosing between a fresh Palworld 1.0 character and continuing an existing save.",
     shortAnswer:
-      "Start a new save if you want the cleanest Palworld 1.0 experience. Keep and back up old worlds if you are attached to them, then wait for official compatibility details before committing.",
+      "A fresh save is not required. Pocketpair says existing save data can continue, but recommends a new character for the reworked 1.0 experience. Back up important saves first, especially if mods were used.",
     playerAdvice: [
       "New players should start fresh because they have no old progression to protect.",
       "Returning players should preserve old saves and use a short fresh run to compare the 1.0 opening experience.",
       "Multiplayer groups should agree on the wipe or continue policy before the first shared session.",
     ],
-    lastUpdated: "July 7, 2026",
+    lastUpdated: "July 10, 2026",
     readingTime: "5 min read",
     tags: ["fresh save", "save compatibility", "returning players"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    confirmedChanges: [
+      "Pocketpair says existing save data can be continued in Version 1.0.",
+      "Pocketpair recommends starting fresh with a new character for the reworked experience.",
+      "Old or mod-dependent data may fail to load or behave incorrectly after mods are removed.",
+    ],
+    pendingUpdates: [
+      "Track later official known-issue or hotfix notices for platform-specific save problems.",
+      "Do not generalize isolated player save reports into universal compatibility claims.",
+    ],
+    sourceNotes: [
+      "Save guidance was verified against Pocketpair's official v1.0 changelog and official pre-launch mod warning on Steam.",
+    ],
     sections: [
       {
         heading: "The short answer",
         paragraphs: [
-          "If you want the cleanest Palworld 1.0 experience, a new save is usually the safest choice. If you are attached to an existing world, wait for official compatibility notes and back up everything first.",
-          "This is not a claim that old saves will or will not work. It is a practical recommendation for avoiding launch-day frustration.",
+          "Pocketpair says existing save data can continue in Version 1.0, so a wipe is not required. The developer also recommends a fresh character because 1.0 substantially reworks the game experience.",
+          "Back up important saves before updating. If a save depended on mods, remove old mod files carefully and expect that mod-added content may not work correctly without a compatible 1.0 version.",
         ],
       },
       {
@@ -328,7 +371,7 @@ export const guides: Guide[] = [
       {
         question: "Is a fresh save required for Palworld 1.0?",
         answer:
-          "This guide does not claim that. It recommends a fresh save for the cleanest experience while old-save compatibility details remain dependent on official notes.",
+          "No. Pocketpair says you can continue existing save data, while recommending a new character for the full reworked experience.",
       },
       {
         question: "What is the safest option for an old world?",
@@ -339,6 +382,16 @@ export const guides: Guide[] = [
         question: "What should a server group do?",
         answer:
           "Pick one policy before launch: fresh wipe, continue old world, or temporary test world. The worst option is changing the policy after players invest time.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+      {
+        label: "Pocketpair official mod and save warning on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1836506165582004",
       },
     ],
   },
@@ -356,12 +409,23 @@ export const guides: Guide[] = [
       "Returning server owners should copy current settings into a plain-text checklist before updating.",
       "Players joining a server should ask whether the world is permanent, temporary, fresh, or continuing from Early Access.",
     ],
-    lastUpdated: "July 7, 2026",
+    lastUpdated: "July 10, 2026",
     readingTime: "7 min read",
     featured: true,
     tags: ["dedicated server", "multiplayer", "backups"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    confirmedChanges: [
+      "The official changelog includes dedicated-server processing optimization and multiplayer bug fixes.",
+      "Pocketpair warns server owners and players to remove old mods before updating and to back up important saves.",
+    ],
+    pendingUpdates: [
+      "Test restart, persistence, player joining, and real performance under the server's expected load.",
+      "Wait for mod and server-tool maintainers to confirm Version 1.0 compatibility.",
+    ],
+    sourceNotes: [
+      "Server facts were checked against the official v1.0 Optimization, Multiplayer, bug-fix, and About Mods sections.",
+    ],
     sections: [
       {
         heading: "Decide the server goal first",
@@ -408,12 +472,18 @@ export const guides: Guide[] = [
       {
         question: "What is the most important server setup step?",
         answer:
-          "Backups. A simple, tested backup routine is more important than fine-tuning every setting before the full patch notes are available.",
+          "Backups. A simple, tested backup routine is more important than fine-tuning every setting before real 1.0 server behavior is measured.",
       },
       {
         question: "Should I run mods on day one?",
         answer:
           "Only after compatibility is confirmed. Unverified mods can make launch issues much harder to isolate.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
       },
     ],
   },
@@ -423,7 +493,7 @@ export const guides: Guide[] = [
     category: "server",
     categoryLabel: "Server Settings",
     description:
-      "A practical framework for choosing Palworld 1.0 server settings without pretending exact launch balance is known before the full patch notes.",
+      "A practical framework for choosing Palworld 1.0 server settings without pretending the official changelog defines universal best values.",
     shortAnswer:
       "The best Palworld 1.0 server settings for launch are close to default, easy to document, and adjusted slowly after your group understands the final 1.0 balance.",
     playerAdvice: [
@@ -431,16 +501,27 @@ export const guides: Guide[] = [
       "Returning players should not assume old grind or balance preferences still fit 1.0.",
       "Server owners should change one major setting category at a time and keep a visible settings changelog.",
     ],
-    lastUpdated: "July 7, 2026",
+    lastUpdated: "July 10, 2026",
     readingTime: "6 min read",
     tags: ["server settings", "balance", "multiplayer"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    confirmedChanges: [
+      "The official changelog confirms broad balance, base, raid, multiplayer, and server optimization changes.",
+      "The official notes do not prescribe one universal best server-settings profile.",
+    ],
+    pendingUpdates: [
+      "Exact recommended multipliers still require testing with different group sizes and play styles.",
+      "Measure performance and progression before changing several server values at once.",
+    ],
+    sourceNotes: [
+      "This page keeps close-to-default advice because the official changelog confirms broad rebalancing but does not define universal best values.",
+    ],
     sections: [
       {
         heading: "Best means best for your group",
         paragraphs: [
-          "There is no single best Palworld 1.0 server settings profile before launch data is available. The best profile depends on your group size, session length, tolerance for grind, and whether you want a long-term world.",
+          "There is no single best Palworld 1.0 server settings profile in the official changelog. The best profile depends on your group size, session length, tolerance for grind, and whether you want a long-term world.",
         ],
       },
       {
@@ -471,7 +552,7 @@ export const guides: Guide[] = [
       {
         question: "Can this page give exact best 1.0 numbers now?",
         answer:
-          "No. Exact recommendations would be unreliable before the full Palworld 1.0 patch notes and real launch testing are available.",
+          "Not yet. The official changelog is available, but exact best values depend on group size, progression goals, and verified launch performance.",
       },
       {
         question: "What setting style is safest for a first server?",
@@ -482,6 +563,12 @@ export const guides: Guide[] = [
         question: "When should I change server settings?",
         answer:
           "Change settings after the group can explain the problem. Avoid changing multiple rates at once because it becomes hard to know what helped.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
       },
     ],
   },
@@ -502,7 +589,7 @@ export const guides: Guide[] = [
     lastUpdated: "July 7, 2026",
     readingTime: "5 min read",
     tags: ["multiplayer", "co-op", "server"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
     sections: [
       {
@@ -578,7 +665,7 @@ export const guides: Guide[] = [
     lastUpdated: "July 7, 2026",
     readingTime: "5 min read",
     tags: ["performance", "settings", "troubleshooting"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
     sections: [
       {
@@ -637,34 +724,44 @@ export const guides: Guide[] = [
     description:
       "Short answers to common Palworld 1.0 questions about release timing, fresh saves, servers, patch notes, World Tree, and what is not confirmed yet.",
     shortAnswer:
-      "Palworld 1.0 is planned for July 10, 2026, but detailed recommendations should wait for the full patch notes. Back up saves, keep launch plans flexible, and avoid treating speculation as confirmed.",
+      "Palworld 1.0 is live and the official changelog is published, but detailed recommendations still need release-build testing. Back up saves and avoid treating early anecdotes as confirmed.",
     playerAdvice: [
       "New players should start with beginner and save-planning guides rather than trying to read every possible 1.0 rumor.",
       "Returning players should protect old worlds first, then test the release build before rebuilding routines.",
       "Server players should ask hosts about backups, wipe policy, and settings before committing to a multiplayer world.",
     ],
-    lastUpdated: "July 7, 2026",
+    lastUpdated: "July 10, 2026",
     readingTime: "4 min read",
     tags: ["faq", "release", "fresh save"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    confirmedChanges: [
+      "Palworld Version 1.0 is live and the official release changelog is published.",
+      "Existing saves can continue, while Pocketpair recommends a fresh character for the reworked experience.",
+    ],
+    pendingUpdates: [
+      "Answers about best routes, builds, settings, and practical performance still need release-build testing.",
+    ],
+    sourceNotes: [
+      "Release and save answers were checked against Pocketpair's official v1.0 Steam changelog.",
+    ],
     sections: [
       {
         heading: "When does Palworld 1.0 release?",
         paragraphs: [
-          "Pocketpair has announced Palworld Version 1.0 for July 10, 2026. Check official channels for exact platform rollout timing.",
+          "Palworld Version 1.0 is live. Pocketpair published the official release changelog on July 10, 2026.",
         ],
       },
       {
         heading: "Should I start a new save?",
         paragraphs: [
-          "A fresh save is the cleanest way to experience 1.0 from the beginning. If you want to keep an old world, back it up and wait for official compatibility notes.",
+          "A fresh save is not required. Pocketpair says existing save data can continue, but recommends a new character for the reworked 1.0 experience. Back up important data first, especially if mods were used.",
         ],
       },
       {
-        heading: "Are all 1.0 patch details known?",
+        heading: "Are the official 1.0 patch notes published?",
         paragraphs: [
-          "No. Broad themes have been announced, but the full patch notes are needed before reliable detailed guides can be written.",
+          "Yes. The full official release changelog is published. Best routes, builds, settings, and real-world performance still need verified player testing.",
         ],
       },
       {
@@ -685,7 +782,7 @@ export const guides: Guide[] = [
       {
         question: "Is every answer on this FAQ final?",
         answer:
-          "No. Answers that depend on exact Palworld 1.0 mechanics will be updated after the full patch notes are available.",
+          "No. Answers that depend on exact Palworld 1.0 mechanics will be updated after official-source review and release-build testing.",
       },
       {
         question: "Does this FAQ replace official patch notes?",
@@ -703,6 +800,10 @@ export const guides: Guide[] = [
         label: "Pocketpair official Palworld 1.0 announcement",
         href: "https://www.pocketpair.jp/en/game-news/palworld-1-0-july-10-cinematic-trailer-revealed/",
       },
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
     ],
   },
   {
@@ -711,57 +812,77 @@ export const guides: Guide[] = [
     category: "palworld-1-0",
     categoryLabel: "Patch Notes",
     description:
-      "A placeholder explainer for the Palworld 1.0 patch notes that will be updated with confirmed changes once the official notes are live.",
+      "An official-source summary of the Palworld v1.0 release changelog, its major update categories, and the details that still need player testing.",
     shortAnswer:
-      "The full Palworld 1.0 patch notes are not available yet, so this page is a readiness explainer: it tells you what to check first and avoids claiming exact changes before they are confirmed.",
+      "Yes. Pocketpair published the full Palworld v1.0 official release changelog on July 10, 2026. It confirms broad content additions and system overhauls, while best builds, routes, settings, and real-world performance still need testing.",
     playerAdvice: [
       "New players should look for changes that affect early progression, tutorials, survival pacing, and performance.",
       "Returning players should scan for save compatibility, base behavior, balance changes, and known issues before loading important worlds.",
       "Server owners should read multiplayer, dedicated server, and settings notes before opening a permanent 1.0 world.",
     ],
-    lastUpdated: "July 7, 2026",
-    readingTime: "4 min read",
+    lastUpdated: "July 10, 2026",
+    readingTime: "6 min read",
     featured: true,
     tags: ["patch notes", "1.0 changes", "confirmed updates"],
-    statusNotice: preReleaseNotice,
+    statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    updateNotice:
+      "Official patch notes verified. This summary covers confirmed categories and high-impact facts without reproducing the full changelog.",
+    confirmedChanges: [
+      "Version 1.0 is live and Palworld has exited Early Access.",
+      "The official changelog confirms new areas and world changes, story updates, 72 added Pals, and new Awakening and Mutation systems.",
+      "Pocketpair documents major changes to combat, equipment, base building, raids, multiplayer, balance, UI, graphics, sound, optimization, and bug fixes.",
+      "Existing save data can be continued, although Pocketpair recommends a fresh character for the new experience.",
+      "Pocketpair warns that old mods can cause crashes, progression problems, or save corruption and recommends backing up saves and removing old mod files.",
+    ],
+    pendingUpdates: [
+      "Verify platform-specific known issues and any launch hotfixes in later official notices.",
+      "Test real dedicated-server performance and multiplayer stability under load.",
+      "Test balance-sensitive routes, Pal rankings, builds, base layouts, and server setting recommendations before publishing them as best choices.",
+      "Measure practical performance changes across hardware instead of inferring FPS gains from general optimization notes.",
+    ],
+    sourceNotes: [
+      "Primary source: Pocketpair's official Steam release changelog, published July 10, 2026 at 03:09 UTC.",
+      "Launch trailer and Pocketpair news pages were used to confirm launch messaging, not to infer undocumented mechanics.",
+    ],
     sections: [
       {
-        heading: "Current status",
+        heading: "Official patch notes status",
         paragraphs: [
-          "The full Palworld 1.0 patch notes are not available yet. This page is prepared as an explainer hub so it can be updated quickly when the official notes are published.",
+          "The full Palworld v1.0 release changelog is published on Palworld's official Steam news channel. The announcement states that Palworld has exited Early Access and Version 1.0 is live.",
+          "The official version label is v1.0. The announcement does not present a more specific public build number in its title or opening release information.",
         ],
       },
       {
-        heading: "How this explainer will work",
+        heading: "Major official update categories",
         bullets: [
-          "Separate confirmed changes from community speculation.",
-          "Summarize player-impacting changes in plain English.",
-          "Flag changes that affect new saves, old saves, servers, base building, performance, and multiplayer.",
-          "Link to deeper guides only after the details are confirmed.",
+          "New Areas & World Improvements; Missions & Story; Pals; Combat.",
+          "New Equipment & Items; Base & Building; Raids & Base Defense; Multiplayer.",
+          "Balance Overhaul; UI / UX Adjustments; Graphics; Sound.",
+          "Optimization; Other Main Bug Fixes; About Mods.",
         ],
       },
       {
-        heading: "What will not be included",
+        heading: "High-impact confirmed facts",
         paragraphs: [
-          "This page will not invent exact numbers, hidden mechanics, tier lists, or drop locations before they are confirmed in official notes or verified after launch.",
+          "Pocketpair confirms the new Sunreach area, the World Tree's role in the story, a reworked world and mission flow, 72 added Pals, and the new Awakening and Mutation systems. The player level cap is now 80.",
+          "The changelog also confirms broad base-building, raid, multiplayer, balance, presentation, optimization, and bug-fix work. These are official change categories; they do not by themselves prove a specific best build, route, server value, or hardware performance gain.",
         ],
       },
       {
-        heading: "What to check first on patch day",
+        heading: "Save and mod guidance",
         bullets: [
-          "Save compatibility notes.",
-          "Server and multiplayer changes.",
-          "Performance and crash fixes.",
-          "Progression, base, and Pal balance changes.",
-          "Known issues listed by the developer.",
+          "Pocketpair says players can continue with existing save data.",
+          "Pocketpair recommends starting fresh with a new character to experience the reworked game.",
+          "Back up important saves before updating or using mods.",
+          "Remove old mod files and verify the game launches unmodded before reinstalling 1.0-compatible mods.",
         ],
       },
       {
-        heading: "How to read the patch notes",
+        heading: "What still needs player testing",
         paragraphs: [
-          "Start with changes that can affect your existing progress: save behavior, server rules, base systems, multiplayer issues, and known problems. Those items matter before build routes, tier lists, or detailed farming plans.",
-          "After that, separate confirmed developer notes from launch-week player discoveries. Community testing is useful, but this site should not turn early anecdotes into permanent advice without verification.",
+          "Real server capacity under load, platform-specific stability, mod compatibility, practical performance changes, exact progression routes, best Pal or equipment rankings, optimal base layouts, and recommended server multipliers all require verified launch-build testing.",
+          "Later hotfixes and known-issue notices may also change launch advice, so official follow-up announcements should remain the first source checked.",
         ],
       },
     ],
@@ -769,23 +890,31 @@ export const guides: Guide[] = [
       {
         question: "Are the Palworld 1.0 patch notes published?",
         answer:
-          "Not in this MVP content pass. This guide will be updated when the full Palworld 1.0 patch notes are available.",
+          "Yes. Pocketpair published the official Palworld v1.0 release changelog on July 10, 2026.",
       },
       {
         question: "Will this page summarize every line of the patch notes?",
         answer:
-          "It will prioritize player-impacting changes: saves, servers, performance, progression, base building, multiplayer, and confirmed new content.",
+          "No. It summarizes the player-impacting categories and links to the complete official changelog rather than copying it.",
       },
       {
-        question: "Why not add predicted changes now?",
+        question: "What information is still provisional?",
         answer:
-          "Predictions are risky for a launch guide. This site avoids exact unconfirmed claims so the MVP can be trusted when 1.0 information changes.",
+          "Best routes, tier lists, exact server recommendations, hardware performance gains, and platform-specific stability claims remain provisional until verified in the launch build.",
       },
     ],
     sourceLinks: [
       {
-        label: "Pocketpair official Palworld news",
-        href: "https://www.pocketpair.jp/en/news",
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+      {
+        label: "Pocketpair official Palworld game news",
+        href: "https://www.pocketpair.jp/en/game-news/",
+      },
+      {
+        label: "Palworld 1.0 official launch trailer",
+        href: "https://youtu.be/1fpGg9wNM9A",
       },
     ],
   },

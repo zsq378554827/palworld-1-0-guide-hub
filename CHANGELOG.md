@@ -1,12 +1,32 @@
 # CHANGELOG
 
-更新时间：2026-07-08
+更新时间：2026-07-10
 
 ## 记录规则
 
 - 每完成一个阶段就追加记录。
 - 记录用户能理解的变化，不只写代码文件名。
 - 重要决策同步到 `PROJECT_CONTEXT.md`。
+
+## 2026-07-10
+
+### 官方来源核查
+
+- 确认 Pocketpair 已在 Steam 官方公告发布 `Palworld v1.0 - Official Release Changelog`。
+- 确认官方版本标识为 `v1.0`，公告发布时间为 2026-07-10 03:09 UTC。
+- 核对 Pocketpair 官方游戏新闻页、Steam 官方公告、Steam 商店正式发布状态和 Palworld 1.0 官方 launch trailer。
+
+### 修改
+
+- 首页、1.0 Hub 和文章状态提示由 pre-release 切换为 release/live。
+- 更新 Release、Patch Notes、Save、Server Setup、Best Server Settings、FAQ 现有页面，只写入官方确认事实。
+- 保留最佳数值、路线、Pal 排名、实际性能、服务器负载和平台稳定性为待玩家实测内容。
+- 未新增页面、功能、设计或广告。
+
+### 验证
+
+- `npm run build` 通过，Astro 仍构建 18 个页面。
+- 构建产物未检出旧的 patch-notes-unavailable 或 pre-release 状态文案。
 
 ## 2026-07-08
 
