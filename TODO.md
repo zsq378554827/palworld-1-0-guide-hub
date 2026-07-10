@@ -11,7 +11,7 @@
 
 ## 当前优先级
 
-1. 继续更新 Returning、Multiplayer、Performance 等页面，并深化 Beginner 的实测型建议；只加入官方确认事实或明确标记的实测结论。
+1. 继续深化 Multiplayer、Performance 和 Beginner 页面；只加入官方确认事实或明确标记的实测结论。
 2. 跟踪 Pocketpair 官方 known issues / hotfix 公告，并同步受影响页面。
 3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功；`sitemap.xml` 已重新提交，站点端检查正常。
 4. 后续如绑定自定义域名，同步更新 Cloudflare Pages `PUBLIC_SITE_URL`。
@@ -28,7 +28,8 @@
 | 已完成 | Cloudflare Pages 直接部署 | 高 | Codex | 已上线 `https://palworld-1-0-guide-hub.pages.dev/` |
 | 已完成 | 创建或连接 GitHub remote | 高 | 用户/Codex | 已用可写 deploy key push `main` 到 GitHub |
 | 已完成 | Cloudflare Pages Git 集成 | 高 | 用户/Codex | Cloudflare 显示 Git Provider Yes；GitHub App 仓库授权已补齐；GitHub push 自动部署已验证 |
-| 进行中 | 1.0 正式 patch notes 发布后更新文章 | 高 | Codex | 已完成 Release、Patch Notes、Save、Server Setup、Best Server Settings、FAQ 和全站 live 状态；其余现有攻略继续核查更新 |
+| 进行中 | 1.0 正式 patch notes 发布后更新文章 | 高 | Codex | 第二轮已深化 Patch Notes、Save、Returning、Server Setup、Best Server Settings、FAQ；下一步为 Multiplayer、Performance、Beginner |
+| 已完成 | 1.0 官方 changelog 重点页第二轮深化与 QA | 高 | Codex | 6 个重点页完成正式发布 SEO 内容；21 个内部链接无缺失；390px/1280px 无横向溢出；build 通过 |
 | 已完成 | 接入 Analytics 和 Search Console | 中 | Codex | Cloudflare Web Analytics 已接入；GSC URL-prefix 资源已通过 HTML 文件验证；sitemap 已提交 |
 | 未开始 | 复查 GSC sitemap 抓取状态 | 中 | Codex | 已重新提交 `sitemap.xml`，GSC 返回提交成功；表格即时状态仍为“无法抓取”；站点端检查 `/sitemap.xml` 对 Googlebot 返回 200 和 `application/xml` |
 | 已完成 | Palworld 1.0 patch notes 更新日准备 | 高 | Codex | 已预留文章更新字段；文章页新增 Update Notice；已创建 `UPDATE_DAY_CHECKLIST.md`；build 通过 |

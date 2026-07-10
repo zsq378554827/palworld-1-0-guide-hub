@@ -237,52 +237,109 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Returning Players",
     description:
-      "A practical checklist for Early Access players coming back for Palworld 1.0, with save prep, server checks, and expectations to reset.",
+      "A Palworld 1.0 returning player guide covering the biggest Early Access changes, first 30 minutes, save backups, MOD cleanup, bases, Pals, and servers.",
     shortAnswer:
-      "Returning players should back up old worlds, test Palworld 1.0 with a short fresh save, and re-check Early Access assumptions against the full patch notes before rebuilding long-term plans.",
+      "Back up your save, remove old MOD files, inspect the mission log, check every important base and Pal, and review server settings before resuming an Early Access world in Palworld 1.0.",
     playerAdvice: [
-      "If you stopped playing months ago, relearn the opening loop before jumping straight into old late-game goals.",
-      "If you have a long-running world, make backups and screenshots before updating or changing mods.",
-      "If you run a group world, decide whether the group is continuing, wiping, or testing temporarily before launch day.",
+      "Do not delete an Early Access world: Pocketpair says existing saves can continue, and a separate backup gives you a safe point to return to.",
+      "Treat old builds, Pal rankings, resource routes, and base assumptions as historical until they are checked against Version 1.0.",
+      "If you run a group world, use a private test copy before reopening the main server to returning players.",
     ],
-    lastUpdated: "July 7, 2026",
-    readingTime: "6 min read",
+    lastUpdated: "July 10, 2026",
+    readingTime: "9 min read",
     featured: true,
     tags: ["returning players", "save prep", "base-building"],
     statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    confirmedChanges: [
+      "Existing saves can continue, while Pocketpair recommends a fresh character for the reworked experience.",
+      "Main and sub-mission progress was reset, with some tutorial and Tower Boss progress restored from recorded boss defeats.",
+      "Pal skills, Work Suitability, progression, bases, raids, multiplayer, crafting, and world content received official changes.",
+      "Pocketpair tells players to remove old MOD files and back up important saves before updating.",
+    ],
+    pendingUpdates: [
+      "The condition of individual Early Access worlds, bases, MOD-dependent data, and server tools needs in-game verification.",
+      "Old tier lists, routes, and optimization advice need in-game verification before reuse.",
+    ],
+    sourceNotes: [
+      "Returning-player facts were checked against Pocketpair's official v1.0 Steam changelog and official MOD warning.",
+    ],
     sections: [
       {
-        heading: "Treat 1.0 as a reset of assumptions",
+        heading: "What changed since Early Access",
         paragraphs: [
-          "If you played Palworld during Early Access, the most useful mindset is not to remember every old optimization. It is to relearn what changed after the final 1.0 patch notes are available.",
-          "Old base habits, route priorities, Pal choices, and server settings may still help, but they should be checked against the launch version before you build a long-term plan.",
+          "Version 1.0 adds Sunreach, the World Tree, seven smaller islands, renewed sanctuaries, settlements, ancient ruins, watchtowers, 72 Pals, a level cap of 80, and a reworked story path. It also changes combat, Pal skills, breeding, work, capture progression, crafting, bases, raids, multiplayer, UI, and balance.",
+          "Main-mission and sub-mission progress was reset because the flow and rewards changed. Some tutorial and Tower Boss missions can be recognized from existing Tower Boss defeat history, so inspect the mission log before repeating old objectives.",
         ],
       },
       {
-        heading: "Before updating an old world",
+        heading: "First 30 minutes checklist",
         bullets: [
-          "Back up local saves and server files.",
-          "Write down important server settings.",
-          "Remove or pause mods until compatibility is confirmed.",
-          "Take screenshots of key base layouts if you may rebuild.",
-          "Tell multiplayer members whether the group is continuing or starting fresh.",
+          "Confirm the game is running Version 1.0 and that old MOD files are removed.",
+          "Load a backed-up copy or start a temporary fresh character before changing the only important world.",
+          "Open the mission log and map to review reset objectives, watchtowers, and changed progression markers.",
+          "Visit one important base and inspect boundaries, structures, storage, power, and Pal assignments.",
+          "Open the Pal Box and review Partner Skills, Active Skills, Work Suitability, ranks, and favorites.",
+          "For multiplayer, test saving, logout, restart, and reconnect before a long session.",
         ],
       },
       {
-        heading: "What to relearn first",
+        heading: "Save backup",
         paragraphs: [
-          "Start with systems that affect every session: capture flow, base production, food, transport, combat feel, multiplayer stability, and performance settings.",
-          "Then move into 1.0-specific content after the community has had time to separate confirmed discoveries from launch-week rumors.",
+          "Pocketpair says existing saves can continue, but a backup should be created before the first Version 1.0 load. Keep the backup outside the active save folder and label it with the world name, date, platform, and pre-update version.",
+          "For a dedicated server, preserve world data, player data, settings, startup arguments, and the MOD or plugin list together. The ability to continue a save does not prove that every complex world will be unaffected. Needs in-game verification.",
         ],
       },
       {
-        heading: "Good returning-player goals",
+        heading: "MOD cleanup",
         bullets: [
-          "Clean up one existing base instead of rebuilding everything on day one.",
-          "Test a short new save to feel the updated early game.",
-          "Review server settings with your group before opening the world.",
-          "Keep notes on confirmed differences for your own playstyle.",
+          "Remove MOD files and MOD loaders manually; disabling them in a manager may not be enough.",
+          "Unsubscribe from Steam Workshop MODs and use Steam's file-integrity check.",
+          "Launch Version 1.0 without MODs before restoring anything.",
+          "Only reinstall MODs whose creators confirm 1.0 compatibility, one at a time.",
+          "Assume MOD-added items, Pals, quests, or structures may not survive removal. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Base check",
+        paragraphs: [
+          "Inspect base boundaries, structure alignment, storage access, power, Pal assignments, work priorities, farming, ranching, and defensive structures. Aquatic Construction changed some outer playable boundaries; Pocketpair notes that saves from v0.7.3 or earlier can spawn outside the updated boundary and can use Emergency Escape from the Options menu.",
+          "Work Suitability now extends to 10 levels and all Pals were rebalanced for work. Raid behavior is wave-based, raid levels scale with assigned Work Pals, and defense structures no longer consume ammunition. Old base layouts and defense plans need in-game verification.",
+        ],
+      },
+      {
+        heading: "Pal check",
+        bullets: [
+          "Review Partner Skill descriptions because more than 200 were reworked and many no longer stack across duplicate Pals.",
+          "Review Active Skills because power, cooldown, behavior, and usability changed across nearly the entire skill set.",
+          "Check Work Suitability, ranks, Souls, condensation plans, and breeding goals before spending rare resources.",
+          "Do not assume an old best Pal, mount, worker, or breeding combination is still optimal. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Server check",
+        bullets: [
+          "Confirm the dedicated server and clients are on matching Version 1.0 builds.",
+          "Review changed default world settings and compare them with the saved configuration.",
+          "Test login, password restoration, saving, restart persistence, guild permissions, chat, and connection warnings.",
+          "Enable voice chat only if the server needs it and the platform supports it.",
+          "Measure stability with the real world and expected player load. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "What not to assume yet",
+        bullets: [
+          "Do not assume old Pal, weapon, accessory, or Partner Skill tier lists remain accurate.",
+          "Do not assume familiar resource routes, boss locations, base spots, or progression paths are unchanged.",
+          "Do not assume the official optimization list guarantees a specific FPS or server-capacity improvement.",
+          "Do not assume a disabled MOD is removed or compatible with Version 1.0.",
+          "Do not publish universal best settings without testing. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This returning-player guide is based on Pocketpair's official Palworld v1.0 Steam changelog and official MOD warning. It converts confirmed changes into a cautious return checklist while marking world-specific, hardware-specific, and balance-sensitive outcomes as needing gameplay verification.",
         ],
       },
     ],
@@ -290,17 +347,32 @@ export const guides: Guide[] = [
       {
         question: "Can returning players rely on old Palworld guides?",
         answer:
-          "Use them as background only. Any guide that depends on exact balance, routes, base locations, or Pal rankings should be rechecked against the official changelog and release build.",
+          "Use them as historical background. Balance, routes, base locations, Pal skills, progression, and server behavior should be rechecked against Version 1.0. Needs in-game verification.",
       },
       {
         question: "Should I delete my old save?",
         answer:
-          "No. Back it up first. You can test a fresh save without giving up an existing world you care about.",
+          "No. Pocketpair says existing saves can continue. Back it up before loading Version 1.0, and keep that backup while testing.",
       },
       {
         question: "What should I check first after updating?",
         answer:
-          "Check save loading, base behavior, server settings, performance, and any official known issues before making irreversible changes.",
+          "Check mission progress, bases, Pal skills, MOD cleanup, server settings, saving, and official known issues before making irreversible changes.",
+      },
+      {
+        question: "Should I start a fresh character anyway?",
+        answer:
+          "Pocketpair recommends a fresh character for the reworked experience, but it is optional. Keep your old save and decide after a safe test.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+      {
+        label: "Pocketpair official MOD warning for Version 1.0",
+        href: "https://store.steampowered.com/news/app/1623730/view/1836506165582004",
       },
     ],
   },
@@ -310,16 +382,16 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Save Planning",
     description:
-      "Officially confirmed guidance for choosing between a fresh Palworld 1.0 character and continuing an existing save.",
+      "Should you start a new Palworld 1.0 save? Official guidance on existing saves, fresh characters, backups, server worlds, and MOD cleanup before updating.",
     shortAnswer:
       "A fresh save is not required. Pocketpair says existing save data can continue, but recommends a new character for the reworked 1.0 experience. Back up important saves first, especially if mods were used.",
     playerAdvice: [
-      "New players should start fresh because they have no old progression to protect.",
-      "Returning players should preserve old saves and use a short fresh run to compare the 1.0 opening experience.",
-      "Multiplayer groups should agree on the wipe or continue policy before the first shared session.",
+      "New players can begin with a fresh character and experience the reworked mission and progression flow as designed for Version 1.0.",
+      "Returning players can keep an existing save, but should create a verified backup before the first Version 1.0 load.",
+      "Server owners should back up the full world, remove unsupported MODs, document settings, and test a private copy before reopening access.",
     ],
     lastUpdated: "July 10, 2026",
-    readingTime: "5 min read",
+    readingTime: "8 min read",
     tags: ["fresh save", "save compatibility", "returning players"],
     statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
@@ -330,6 +402,7 @@ export const guides: Guide[] = [
     ],
     pendingUpdates: [
       "Track later official known-issue or hotfix notices for platform-specific save problems.",
+      "Old-world behavior after large base, mission, and map changes needs in-game verification.",
       "Do not generalize isolated player save reports into universal compatibility claims.",
     ],
     sourceNotes: [
@@ -337,33 +410,69 @@ export const guides: Guide[] = [
     ],
     sections: [
       {
-        heading: "The short answer",
+        heading: "Existing saves can continue",
         paragraphs: [
-          "Pocketpair says existing save data can continue in Version 1.0, so a wipe is not required. The developer also recommends a fresh character because 1.0 substantially reworks the game experience.",
-          "Back up important saves before updating. If a save depended on mods, remove old mod files carefully and expect that mod-added content may not work correctly without a compatible 1.0 version.",
+          "Pocketpair's official Version 1.0 changelog says players can continue their adventures with existing save data. A mandatory wipe is not part of the official release guidance.",
+          "That confirmation does not guarantee that every MOD-dependent item, Pal, quest state, base layout, or server tool will behave exactly as it did in Early Access. Back up first. Old-world behavior after the reworked systems needs in-game verification.",
         ],
       },
       {
-        heading: "Reasons to start fresh",
-        bullets: [
-          "You want to experience any updated early-game pacing naturally.",
-          "You are returning after a long break and need to relearn systems.",
-          "Your old world has outdated base layouts or mod history.",
-          "Your group wants everyone to progress together from day one.",
-        ],
-      },
-      {
-        heading: "Reasons to continue an old world",
-        bullets: [
-          "You have builds, collections, or multiplayer memories you care about.",
-          "Your server group mainly wants to explore new content from an established base.",
-          "You are willing to troubleshoot if old assumptions conflict with 1.0 changes.",
-        ],
-      },
-      {
-        heading: "Best compromise",
+        heading: "Pocketpair recommends a new character",
         paragraphs: [
-          "Keep your old world backed up, then make a short fresh save for the first few hours of 1.0. After the patch notes and early stability reports are clear, decide whether to continue fresh or return to the old save.",
+          "Pocketpair recommends starting fresh to experience the Version 1.0 changes more fully. The main story, mission flow, world progression, Pal balance, capture systems, bases, raids, and other systems were revised together, so a new character encounters those changes in their intended order.",
+          "This is a recommendation, not a requirement. Players who value an established collection or shared world can preserve it and decide after testing a backup.",
+        ],
+      },
+      {
+        heading: "When to keep your old save",
+        bullets: [
+          "You want to preserve long-built bases, collections, breeding work, or multiplayer history.",
+          "Your save did not depend on unsupported MOD content, or you have a safe test copy.",
+          "Your group understands that missions, rewards, Pal skills, base work, map boundaries, and raid behavior changed.",
+          "You are willing to inspect the world carefully before making irreversible changes.",
+        ],
+      },
+      {
+        heading: "When to start fresh",
+        bullets: [
+          "You want to follow the reworked story and progression from the beginning.",
+          "You have not played for a long time and want to relearn combat, capture, Pal, and base systems.",
+          "Your old save contains MOD-created Pals, items, structures, quests, or other dependencies.",
+          "Your multiplayer group wants one clear ruleset and equal progression from the start.",
+        ],
+      },
+      {
+        heading: "What server owners should do before updating",
+        bullets: [
+          "Stop the server cleanly and copy the full save and configuration to a separate backup location.",
+          "Record the current game build, server build, world settings, startup arguments, MODs, plugins, and management tools.",
+          "Remove old MOD files and loaders rather than only disabling them.",
+          "Update the server and confirm that clients use the matching Version 1.0 build.",
+          "Test login, saving, restart persistence, one base, and one multiplayer session before reopening the main world.",
+        ],
+      },
+      {
+        heading: "MOD warning",
+        paragraphs: [
+          "Pocketpair warns that old MOD files can cause crashes, save corruption or loss, failed loading, and blocked quests or events. Disabling a MOD in a manager may leave files or loaders in the game directory, so the official pre-update guidance calls for manual removal and a clean, unmodded launch test.",
+          "Save data containing MOD-dependent content may not work correctly after those MODs are removed. Only reinstall a MOD after its creator confirms Version 1.0 compatibility, then test one MOD at a time.",
+        ],
+      },
+      {
+        heading: "Backup checklist",
+        bullets: [
+          "Create a backup before the first Version 1.0 load, not after a problem appears.",
+          "Keep at least one copy outside the active game or server folder.",
+          "Label the backup with the date, platform, world name, and pre-update version.",
+          "For servers, save the world data, player data, configuration, startup command, and MOD list together.",
+          "Confirm that the backup is present and readable before updating.",
+          "Do not overwrite the only backup during early testing.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This guide is based on Pocketpair's official Palworld v1.0 Steam changelog and official Version 1.0 MOD warning. It separates the confirmed ability to continue existing saves from recommendations that still depend on a player's platform, MOD history, and world state. Those practical outcomes need in-game verification.",
         ],
       },
     ],
@@ -376,12 +485,22 @@ export const guides: Guide[] = [
       {
         question: "What is the safest option for an old world?",
         answer:
-          "Back it up, do not overwrite it with risky mod changes, and test the 1.0 update before making permanent base or server decisions.",
+          "Create a separate verified backup, remove unsupported MODs, and test Version 1.0 before making permanent base, mission, or server decisions.",
       },
       {
         question: "What should a server group do?",
         answer:
-          "Pick one policy before launch: fresh wipe, continue old world, or temporary test world. The worst option is changing the policy after players invest time.",
+          "Choose a clear policy: continue a backed-up old world, start fresh, or use a temporary test copy. Document the decision before players invest more time.",
+      },
+      {
+        question: "Will every old save work without problems?",
+        answer:
+          "The official notes allow existing saves to continue, but MOD dependencies and the behavior of heavily developed worlds need in-game verification.",
+      },
+      {
+        question: "Should I delete my Early Access save after starting fresh?",
+        answer:
+          "No. Keep the old save and its backup until you are certain you no longer need the world or anything stored in it.",
       },
     ],
     sourceLinks: [
@@ -401,22 +520,23 @@ export const guides: Guide[] = [
     category: "server",
     categoryLabel: "Server Setup",
     description:
-      "A launch-ready planning guide for setting up a Palworld 1.0 server with conservative settings, backups, player expectations, and update-day precautions.",
+      "Palworld 1.0 server setup guide for backups, version checks, MOD cleanup, multiplayer testing, changed settings, and a safe dedicated-server update checklist.",
     shortAnswer:
-      "Set up a Palworld 1.0 server with conservative defaults, documented settings, scheduled backups, and clear player expectations before launch-day traffic arrives.",
+      "Before opening a Palworld 1.0 server, back up the complete world, remove unsupported MODs, update the server and clients to matching builds, review changed defaults, and test saving, restart persistence, and multiplayer privately.",
     playerAdvice: [
-      "New server owners should avoid public launch promises until they have tested restarts, backups, and basic player access.",
-      "Returning server owners should copy current settings into a plain-text checklist before updating.",
-      "Players joining a server should ask whether the world is permanent, temporary, fresh, or continuing from Early Access.",
+      "New server owners should begin close to official defaults and change one category only after they can describe the problem it solves.",
+      "Returning server owners should preserve the world, configuration, startup command, and MOD list before updating.",
+      "Players should know whether a server is permanent, temporary, fresh, or continuing an Early Access world before investing time.",
     ],
     lastUpdated: "July 10, 2026",
-    readingTime: "7 min read",
+    readingTime: "9 min read",
     featured: true,
     tags: ["dedicated server", "multiplayer", "backups"],
     statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
     confirmedChanges: [
-      "The official changelog includes dedicated-server processing optimization and multiplayer bug fixes.",
+      "The official changelog includes dedicated-server processing optimization, multiplayer stability work, server joining improvements, and save-process changes.",
+      "Dedicated-server default world settings were adjusted to more closely match single-player Normal difficulty.",
       "Pocketpair warns server owners and players to remove old mods before updating and to back up important saves.",
     ],
     pendingUpdates: [
@@ -428,38 +548,69 @@ export const guides: Guide[] = [
     ],
     sections: [
       {
-        heading: "Decide the server goal first",
+        heading: "Backup before updating",
         paragraphs: [
-          "A Palworld 1.0 server for close friends should make different choices than a public community server. Before changing settings, decide whether the goal is relaxed co-op, long-term progression, fast testing, or a temporary launch weekend world.",
+          "Stop the server cleanly and copy the complete world, player data, configuration, startup arguments, and management files before installing Version 1.0. Keep the backup outside the active server directory and label it with the date and pre-update build.",
+          "Do not use the only production world as the first test. Restore or copy it into a private environment when possible, then verify login, saving, restart persistence, and base access before reopening the main server.",
         ],
       },
       {
-        heading: "Use conservative launch settings",
+        heading: "Remove or test MODs",
         paragraphs: [
-          "Until Version 1.0 stability and balance are clear, avoid extreme multipliers. Conservative settings make bugs easier to diagnose and reduce the chance that players feel the world has been distorted by launch-week guesses.",
+          "Pocketpair warns that old MOD files and MOD loaders can still affect the game after being disabled. Remove them manually, unsubscribe from Workshop MODs, verify game files, and confirm the server and a client can run unmodded.",
+          "Only restore a MOD after its creator confirms Version 1.0 compatibility. Add MODs back one at a time so crashes, save failures, or blocked progression can be isolated. Compatibility needs in-game verification.",
         ],
       },
       {
-        heading: "Minimum launch checklist",
+        heading: "Check server version",
+        paragraphs: [
+          "Confirm the dedicated server has updated to the current Version 1.0 release and that every joining client uses a compatible build. A mismatch can look like a password, connection, or server-list problem when the real issue is version alignment.",
+          "Record the server build and update time in the operator log. If Pocketpair publishes a hotfix, compare the server and client builds again before changing unrelated settings.",
+        ],
+      },
+      {
+        heading: "Check multiplayer stability",
         bullets: [
-          "Confirm who owns the server files and billing.",
-          "Set a backup schedule before inviting players.",
-          "Document all settings in a shared note.",
-          "Test restart behavior before launch day.",
-          "Announce whether the server will wipe, continue, or stay temporary.",
+          "Join with more than one client and confirm character loading and spawn behavior.",
+          "Place or access a small test base, move items, assign a Pal, and verify permissions.",
+          "Log out, save, restart the server, reconnect, and confirm persistence.",
+          "Check guild roles, chat, server password behavior, and unstable-connection indicators.",
+          "Run a longer private session before advertising production stability. Needs in-game verification.",
         ],
       },
       {
-        heading: "Mod and plugin caution",
+        heading: "Review server settings after 1.0",
         paragraphs: [
-          "If your group uses mods or server tools, wait for maintainers to confirm 1.0 compatibility. Running unverified launch-day mods can make troubleshooting much harder.",
+          "Pocketpair changed dedicated-server defaults to align more closely with single-player Normal difficulty, while progression, capture rates, crafting, Pal work, raids, death behavior, and other systems were rebalanced. Compare the actual Version 1.0 configuration with the old server file rather than assuming unchanged defaults.",
+          "Start close to default values, document every deviation, and review settings with the group after a controlled test. A universal best preset is not provided by the official changelog.",
         ],
       },
       {
-        heading: "Before inviting players",
+        heading: "What not to change without testing",
+        bullets: [
+          "Do not raise player or base load because the changelog says server processing was optimized; real capacity needs in-game verification.",
+          "Do not change several progression, capture, resource, and damage multipliers at the same time.",
+          "Do not enable old MODs, loaders, plugins, or management tools without a confirmed Version 1.0 release.",
+          "Do not overwrite the last pre-update backup after a successful first login.",
+          "Do not treat one short session as proof of long-term multiplayer stability.",
+        ],
+      },
+      {
+        heading: "Server owner checklist",
+        bullets: [
+          "Back up world data, player data, settings, startup arguments, and MOD lists.",
+          "Remove old MOD files and confirm a clean unmodded launch.",
+          "Update server and clients, then verify matching versions.",
+          "Compare old settings with the Version 1.0 configuration and changed defaults.",
+          "Test login, saving, restart persistence, guild permissions, chat, and one representative base.",
+          "Document whether the world is fresh, continuing, temporary, or subject to rollback.",
+          "Keep monitoring official hotfix and known-issue announcements.",
+        ],
+      },
+      {
+        heading: "Source note",
         paragraphs: [
-          "Run a private smoke test before the server becomes a real group world. Join the server, create a character, place a small starter base, restart the server, and confirm that progress remains available afterward.",
-          "For public or semi-public servers, write a short rules page before launch. It should explain whether the world may reset, how backups work, who can change settings, and what players should do if something breaks.",
+          "This server guide is based on Pocketpair's official Palworld v1.0 Steam changelog and official MOD warning. It uses confirmed server, multiplayer, save-process, default-setting, optimization, and MOD information without claiming unverified player capacity or performance gains.",
         ],
       },
     ],
@@ -467,17 +618,22 @@ export const guides: Guide[] = [
       {
         question: "Should I use aggressive server settings at launch?",
         answer:
-          "No. Start conservative so balance, bugs, and performance are easier to diagnose after Palworld 1.0 goes live.",
+          "No. Start close to official defaults so balance, bugs, and performance are easier to diagnose, then change one category at a time.",
       },
       {
         question: "What is the most important server setup step?",
         answer:
-          "Backups. A simple, tested backup routine is more important than fine-tuning every setting before real 1.0 server behavior is measured.",
+          "A complete, restorable backup made before the update. It protects the world while settings, MODs, and persistence are tested.",
       },
       {
         question: "Should I run mods on day one?",
         answer:
-          "Only after compatibility is confirmed. Unverified mods can make launch issues much harder to isolate.",
+          "Only after the creator confirms Version 1.0 compatibility. Test MODs individually on a backed-up or temporary world.",
+      },
+      {
+        question: "Does Version 1.0 guarantee better performance for my server?",
+        answer:
+          "No. Pocketpair confirms dedicated-server optimization, but actual capacity, memory behavior, and long-session stability need in-game verification.",
       },
     ],
     sourceLinks: [
@@ -493,21 +649,22 @@ export const guides: Guide[] = [
     category: "server",
     categoryLabel: "Server Settings",
     description:
-      "A practical framework for choosing Palworld 1.0 server settings without pretending the official changelog defines universal best values.",
+      "A safe Palworld 1.0 server settings framework for casual worlds, small groups, and long-term survival servers without inventing exact best multipliers.",
     shortAnswer:
-      "The best Palworld 1.0 server settings for launch are close to default, easy to document, and adjusted slowly after your group understands the final 1.0 balance.",
+      "There is no official universal best Palworld 1.0 server preset. Start close to Version 1.0 defaults, protect backups, choose a clear server goal, and change one setting category at a time after controlled testing.",
     playerAdvice: [
-      "New players should choose servers that explain their settings plainly instead of advertising extreme rates.",
-      "Returning players should not assume old grind or balance preferences still fit 1.0.",
-      "Server owners should change one major setting category at a time and keep a visible settings changelog.",
+      "Casual groups should reduce frustration through a few understandable policy choices rather than extreme multipliers.",
+      "Small groups should prioritize predictable uptime, backups, and progression pacing that matches how often the group plays.",
+      "Long-term servers should preserve stability and progression value by testing changes privately and maintaining a settings changelog.",
     ],
     lastUpdated: "July 10, 2026",
-    readingTime: "6 min read",
+    readingTime: "8 min read",
     tags: ["server settings", "balance", "multiplayer"],
     statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
     confirmedChanges: [
       "The official changelog confirms broad balance, base, raid, multiplayer, and server optimization changes.",
+      "Dedicated-server defaults were adjusted to more closely match single-player Normal difficulty.",
       "The official notes do not prescribe one universal best server-settings profile.",
     ],
     pendingUpdates: [
@@ -519,32 +676,52 @@ export const guides: Guide[] = [
     ],
     sections: [
       {
-        heading: "Best means best for your group",
+        heading: "Safe starter settings framework",
         paragraphs: [
-          "There is no single best Palworld 1.0 server settings profile in the official changelog. The best profile depends on your group size, session length, tolerance for grind, and whether you want a long-term world.",
+          "Begin with the Version 1.0 defaults or a documented copy of them. Pocketpair changed dedicated-server defaults to align more closely with single-player Normal difficulty, so an old configuration should be compared rather than copied blindly.",
+          "Define the server's purpose, keep a restorable backup, test privately, and adjust one category at a time. Categories include progression pace, gathering, capture, death behavior, Pal work, bases, raids, PvP or access rules, and multiplayer communication.",
+          "The practical effect of any non-default combination needs in-game verification.",
         ],
       },
       {
-        heading: "Recommended launch philosophy",
+        heading: "Casual server setting approach",
         bullets: [
-          "Start close to default settings.",
-          "Change one major category at a time.",
-          "Keep a written changelog for server tweaks.",
-          "Avoid extreme rates until the group understands 1.0 balance.",
-          "Schedule setting reviews instead of changing rules every session.",
+          "Keep combat and Pal balance close to default so official progression remains recognizable.",
+          "Use clear death and rollback rules that reduce arguments after disconnects or mistakes.",
+          "Review grind-related settings only after the group experiences Version 1.0 crafting and capture balance.",
+          "Enable dedicated-server voice chat only if the group wants it and uses a supported platform.",
+          "Treat any easier or faster profile as a group preference, not an official best configuration. Needs in-game verification.",
         ],
       },
       {
-        heading: "Settings categories to review",
+        heading: "Small group server approach",
         paragraphs: [
-          "Focus on broad categories first: gathering pace, experience pace, death penalties, Pal work pressure, base limits, raid pressure, and multiplayer access rules.",
-          "Do not publish exact numbers as final recommendations until the 1.0 patch notes and real launch performance are available.",
+          "For a small group, match progression to actual session frequency rather than copying a public-server preset. A group that plays together weekly has different needs from players who join independently every day.",
+          "Keep base and player load conservative until the real world is tested. Version 1.0 includes dedicated-server optimization, but a safe capacity or object limit cannot be inferred from the changelog alone. Needs in-game verification.",
         ],
       },
       {
-        heading: "Server owner rule of thumb",
+        heading: "Long-term survival server approach",
         paragraphs: [
-          "The more public your server is, the more conservative you should be. Players can adapt to slower changes, but sudden rule swings can damage trust quickly.",
+          "Long-term worlds benefit from stable rules, scheduled backups, documented changes, and a rollback policy. Avoid large progression boosts or sudden difficulty changes that can permanently distort an established economy or invalidate player effort.",
+          "Before changing bases, raids, resource availability, Pal work, or death behavior, test the change on a copy and announce it in advance. Keep the pre-change configuration with the backup.",
+        ],
+      },
+      {
+        heading: "Settings that need testing after 1.0",
+        bullets: [
+          "Player and base load under the expected concurrent population. Needs in-game verification.",
+          "Experience and capture pacing after the official balance overhaul. Needs in-game verification.",
+          "Gathering and crafting rates with new recipes, ores, tools, and resource distribution. Needs in-game verification.",
+          "Raid pressure after the new wave-based system and scaling behavior. Needs in-game verification.",
+          "Pal work pressure after Work Suitability and base behavior changes. Needs in-game verification.",
+          "Memory use, stuttering, restart frequency, and long-session stability. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This framework is based on Pocketpair's official Palworld v1.0 Steam changelog, including changed dedicated-server defaults, balance revisions, raid changes, multiplayer updates, and optimization work. Pocketpair does not publish a universal best preset, so this page avoids unsupported exact values and marks real-world recommendations for gameplay testing.",
         ],
       },
     ],
@@ -552,17 +729,22 @@ export const guides: Guide[] = [
       {
         question: "Can this page give exact best 1.0 numbers now?",
         answer:
-          "Not yet. The official changelog is available, but exact best values depend on group size, progression goals, and verified launch performance.",
+          "No. Pocketpair does not provide a universal best preset, and exact values depend on group size, goals, world age, and real performance. Needs in-game verification.",
       },
       {
         question: "What setting style is safest for a first server?",
         answer:
-          "Close-to-default settings with clear backups and scheduled review points. This keeps the world stable while players learn the release build.",
+          "A documented profile close to Version 1.0 defaults, with backups and scheduled review points, is the safest starting framework.",
       },
       {
         question: "When should I change server settings?",
         answer:
-          "Change settings after the group can explain the problem. Avoid changing multiple rates at once because it becomes hard to know what helped.",
+          "Change a setting after the group can explain the problem and after a private test. Avoid changing several categories at once.",
+      },
+      {
+        question: "Does server optimization mean I should raise player or base limits?",
+        answer:
+          "Not automatically. The changelog confirms optimization work, but safe capacity for a specific host and world needs in-game verification.",
       },
     ],
     sourceLinks: [
@@ -722,22 +904,23 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "FAQ",
     description:
-      "Short answers to common Palworld 1.0 questions about release timing, fresh saves, servers, patch notes, World Tree, and what is not confirmed yet.",
+      "Palworld 1.0 FAQ with official answers about release status, old saves, new characters, MOD cleanup, Sunreach, the World Tree, new Pals, servers, and multiplayer.",
     shortAnswer:
-      "Palworld 1.0 is live and the official changelog is published, but detailed recommendations still need release-build testing. Back up saves and avoid treating early anecdotes as confirmed.",
+      "Palworld 1.0 is live. Existing saves can continue, Pocketpair recommends a fresh character for the reworked experience, old MOD files should be removed, and the update adds Sunreach, the World Tree, 72 Pals, revised servers, and multiplayer changes.",
     playerAdvice: [
-      "New players should start with beginner and save-planning guides rather than trying to read every possible 1.0 rumor.",
-      "Returning players should protect old worlds first, then test the release build before rebuilding routines.",
-      "Server players should ask hosts about backups, wipe policy, and settings before committing to a multiplayer world.",
+      "New players should follow the revised main mission and learn the new progression before relying on tier lists.",
+      "Returning players should back up saves, remove old MOD files, and inspect missions, bases, Pals, and server settings.",
+      "Server players should confirm the world policy, backups, version, and settings before committing to a long-term multiplayer world.",
     ],
     lastUpdated: "July 10, 2026",
-    readingTime: "4 min read",
+    readingTime: "7 min read",
     tags: ["faq", "release", "fresh save"],
     statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
     confirmedChanges: [
       "Palworld Version 1.0 is live and the official release changelog is published.",
       "Existing saves can continue, while Pocketpair recommends a fresh character for the reworked experience.",
+      "Sunreach, the World Tree, 72 additional Pals, changed dedicated-server defaults, and multiplayer improvements are official Version 1.0 features.",
     ],
     pendingUpdates: [
       "Answers about best routes, builds, settings, and practical performance still need release-build testing.",
@@ -747,52 +930,74 @@ export const guides: Guide[] = [
     ],
     sections: [
       {
-        heading: "When does Palworld 1.0 release?",
+        heading: "Release-day answers from official sources",
         paragraphs: [
-          "Palworld Version 1.0 is live. Pocketpair published the official release changelog on July 10, 2026.",
+          "Pocketpair published the Palworld v1.0 official release changelog through Steam on July 10, 2026. The answers below summarize confirmed release information and separate it from recommendations that require actual gameplay testing.",
         ],
       },
       {
-        heading: "Should I start a new save?",
+        heading: "What still needs verification",
         paragraphs: [
-          "A fresh save is not required. Pocketpair says existing save data can continue, but recommends a new character for the reworked 1.0 experience. Back up important data first, especially if mods were used.",
+          "The official changelog confirms features and categories, but it does not establish the best Pal rankings, fastest routes, exact server preset, hardware-specific FPS change, or universal multiplayer stability. Those claims need in-game verification.",
         ],
       },
       {
-        heading: "Are the official 1.0 patch notes published?",
+        heading: "Source note",
         paragraphs: [
-          "Yes. The full official release changelog is published. Best routes, builds, settings, and real-world performance still need verified player testing.",
-        ],
-      },
-      {
-        heading: "Will this site cover every Pal and item?",
-        paragraphs: [
-          "Not in the MVP. This site is a focused guide hub, not a full database or Wiki.",
-        ],
-      },
-      {
-        heading: "What should I read first?",
-        paragraphs: [
-          "New players should start with the beginner guide, then read the fresh save guide if they are unsure how to begin. Returning players should read the returning player guide before loading an important old world.",
-          "Server owners should read the setup and settings guides before inviting players. The most useful launch-week prep is usually backups, conservative settings, and clear group expectations.",
+          "This FAQ is based on Pocketpair's official Palworld v1.0 Steam changelog and official MOD warning. The answers are paraphrased for clarity and do not reproduce the full announcement. Testing-dependent answers are labeled accordingly.",
         ],
       },
     ],
     faqs: [
       {
-        question: "Is every answer on this FAQ final?",
+        question: "Is Palworld 1.0 live?",
         answer:
-          "No. Answers that depend on exact Palworld 1.0 mechanics will be updated after official-source review and release-build testing.",
+          "Yes. Palworld Version 1.0 is live, and Pocketpair has published the official release changelog through Steam.",
       },
       {
-        question: "Does this FAQ replace official patch notes?",
+        question: "Do I need to start a new save?",
         answer:
-          "No. It summarizes player decisions and points readers toward cautious next steps. Official notes remain the source for exact changes.",
+          "No. Starting fresh is not required. Pocketpair recommends a new character to experience the reworked game, but the choice remains with the player.",
       },
       {
-        question: "What is the safest launch-day plan?",
+        question: "Can I continue my old save?",
         answer:
-          "Back up saves, keep server settings conservative, start fresh if you want a clean experience, and wait before trusting detailed tier lists.",
+          "Yes. Pocketpair says existing save data can continue. Back it up before loading Version 1.0, especially if the world used MODs.",
+      },
+      {
+        question: "Should I remove MODs before updating?",
+        answer:
+          "Yes. Pocketpair warns that disabling MODs may leave files or loaders active. Remove old MOD files manually, verify game files, and test the game unmodded before restoring compatible MODs.",
+      },
+      {
+        question: "What is Sunreach?",
+        answer:
+          "Sunreach is a new group of floating islands with a distinct civilization, new Pals, tower bosses, and Soralite-based resource progression. Best routes and recommended entry preparation need in-game verification.",
+      },
+      {
+        question: "What is the World Tree?",
+        answer:
+          "The World Tree is the central destination of the reworked story and a major challenge. It is linked to Awakening, Radiant Gems, Paloxite, Ancient Civilization Relics, new Pals, and special passive skills.",
+      },
+      {
+        question: "Are there new Pals?",
+        answer:
+          "Yes. Version 1.0 adds 47 new Pals and 25 variants, for 72 additions and an official total of 287 Pals.",
+      },
+      {
+        question: "Are server settings changed?",
+        answer:
+          "Yes. Pocketpair adjusted dedicated-server defaults to more closely match single-player Normal difficulty, while balance, progression, raids, and other systems also changed. Exact best settings need in-game verification.",
+      },
+      {
+        question: "Is multiplayer improved?",
+        answer:
+          "The official changelog confirms voice chat for supported dedicated-server setups, guild roles and permissions, improved chat, server joining and saving changes, connection indicators, and stability work. Real results under a specific workload need in-game verification.",
+      },
+      {
+        question: "What should returning players do first?",
+        answer:
+          "Back up the save, remove old MOD files, verify a clean Version 1.0 launch, inspect mission progress, check important bases and Pals, and review server settings before resuming long-term play.",
       },
     ],
     sourceLinks: [
@@ -812,16 +1017,16 @@ export const guides: Guide[] = [
     category: "palworld-1-0",
     categoryLabel: "Patch Notes",
     description:
-      "An official-source summary of the Palworld v1.0 release changelog, its major update categories, and the details that still need player testing.",
+      "Palworld 1.0 patch notes explained with official details on Sunreach, the World Tree, 72 new Pals, combat, bases, raids, multiplayer, performance, saves, and MODs.",
     shortAnswer:
-      "Yes. Pocketpair published the full Palworld v1.0 official release changelog on July 10, 2026. It confirms broad content additions and system overhauls, while best builds, routes, settings, and real-world performance still need testing.",
+      "Palworld 1.0 is live. Pocketpair's official release changelog confirms Sunreach, the World Tree, 72 additional Pals, a level cap of 80, reworked missions, combat and base systems, wave-based raids, multiplayer upgrades, optimization work, and a large bug-fix pass.",
     playerAdvice: [
-      "New players should look for changes that affect early progression, tutorials, survival pacing, and performance.",
-      "Returning players should scan for save compatibility, base behavior, balance changes, and known issues before loading important worlds.",
-      "Server owners should read multiplayer, dedicated server, and settings notes before opening a permanent 1.0 world.",
+      "New players should follow the main mission flow, use watchtowers and settlements to orient themselves, and learn the revised capture, Pal, and base systems before chasing endgame builds.",
+      "Returning players should back up saves, remove old MOD files, review mission progress, inspect every important base, and re-read Pal skills before resuming long-term plans.",
+      "Server owners should verify the server build, back up world data, review changed defaults, and test multiplayer stability privately before reopening a permanent world.",
     ],
     lastUpdated: "July 10, 2026",
-    readingTime: "6 min read",
+    readingTime: "14 min read",
     featured: true,
     tags: ["patch notes", "1.0 changes", "confirmed updates"],
     statusNotice: liveReleaseNotice,
@@ -830,8 +1035,9 @@ export const guides: Guide[] = [
       "Official patch notes verified. This summary covers confirmed categories and high-impact facts without reproducing the full changelog.",
     confirmedChanges: [
       "Version 1.0 is live and Palworld has exited Early Access.",
-      "The official changelog confirms new areas and world changes, story updates, 72 added Pals, and new Awakening and Mutation systems.",
-      "Pocketpair documents major changes to combat, equipment, base building, raids, multiplayer, balance, UI, graphics, sound, optimization, and bug fixes.",
+      "Sunreach, the World Tree, seven smaller islands, renewed sanctuaries, settlements, ancient ruins, and watchtowers expand or revise exploration.",
+      "The update adds 47 new Pals and 25 variants, for 72 additions and 287 Pals in total, alongside Awakening, Mutation, and broad skill rebalancing.",
+      "Pocketpair documents major changes to missions, combat, equipment, base building, raids, multiplayer, balance, UI, graphics, sound, optimization, and bug fixes.",
       "Existing save data can be continued, although Pocketpair recommends a fresh character for the new experience.",
       "Pocketpair warns that old mods can cause crashes, progression problems, or save corruption and recommends backing up saves and removing old mod files.",
     ],
@@ -847,42 +1053,151 @@ export const guides: Guide[] = [
     ],
     sections: [
       {
-        heading: "Official patch notes status",
+        heading: "Palworld 1.0 is live",
         paragraphs: [
-          "The full Palworld v1.0 release changelog is published on Palworld's official Steam news channel. The announcement states that Palworld has exited Early Access and Version 1.0 is live.",
-          "The official version label is v1.0. The announcement does not present a more specific public build number in its title or opening release information.",
+          "Palworld left Early Access with Version 1.0 on July 10, 2026. Pocketpair published the full official release changelog through Palworld's Steam news channel, and this page summarizes the player-facing changes without reproducing the announcement line by line.",
+          "The public release label in the official announcement is v1.0. Platform-specific hotfixes or later build identifiers should be checked against newer official notices before troubleshooting a current installation.",
         ],
       },
       {
-        heading: "Major official update categories",
+        heading: "Biggest changes in Palworld 1.0",
         bullets: [
-          "New Areas & World Improvements; Missions & Story; Pals; Combat.",
-          "New Equipment & Items; Base & Building; Raids & Base Defense; Multiplayer.",
-          "Balance Overhaul; UI / UX Adjustments; Graphics; Sound.",
-          "Optimization; Other Main Bug Fixes; About Mods.",
+          "Sunreach and the World Tree add major destinations, while ancient ruins, watchtowers, settlements, sanctuaries, and smaller islands reshape the wider world.",
+          "The main story and mission flow now connect exploration, tower bosses, and the route toward the World Tree more directly.",
+          "Seventy-two Pals were added, and Pal progression now includes Awakening, Mutation, revised Partner Skills, expanded Work Suitability, and broad balance changes.",
+          "Combat movement, equipment progression, bases, raids, multiplayer, UI, graphics, sound, optimization, and bug fixes all received substantial official changes.",
         ],
       },
       {
-        heading: "High-impact confirmed facts",
+        heading: "New Areas & World Improvements",
         paragraphs: [
-          "Pocketpair confirms the new Sunreach area, the World Tree's role in the story, a reworked world and mission flow, 72 added Pals, and the new Awakening and Mutation systems. The player level cap is now 80.",
-          "The changelog also confirms broad base-building, raid, multiplayer, balance, presentation, optimization, and bug-fix work. These are official change categories; they do not by themselves prove a specific best build, route, server value, or hardware performance gain.",
+          "Version 1.0 changes more than the endgame. Seven smaller islands were added across volcano, desert, and ruins biomes. New settlements appear in established regions and Sunreach, while ancient ruins provide exploration activities and schematic rewards.",
+          "Watchtowers reveal nearby map areas and become fast-travel points. Wildlife Sanctuaries were rebuilt with distinct environments, exclusive encounters, rare materials, bosses, and active defenses. Pal habitats and spawn levels were also reviewed across the map.",
+          "The player level cap increased from 65 to 80. Exact best leveling routes and the most efficient order for visiting revised areas need testing. Needs in-game verification.",
         ],
       },
       {
-        heading: "Save and mod guidance",
+        heading: "Sunreach explained",
+        paragraphs: [
+          "Sunreach is a new group of floating islands above Palpagos. The official notes describe a civilization shaped by this airborne environment and confirm new Pals, tower bosses, and resources that require specialized equipment to mine.",
+          "Soralite is tied to Sunreach and supports new crafting and building progression. The official changelog confirms the destination and its systems, but the safest access route, recommended entry level, fastest resource loop, and best tower order need gameplay testing. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "World Tree explained",
+        paragraphs: [
+          "The World Tree is the central destination for Palworld's reworked story and the place Pocketpair frames as the player's greatest challenge. It is connected to the mystery of the towers and the conflicts between the factions of Palpagos.",
+          "Officially confirmed World Tree rewards and systems include Paloxite, Ancient Civilization Relics, Radiant Gems used for Awakening, special passive skills, and encounters with new Pals. Exact access requirements, route difficulty, boss tactics, and farming efficiency need in-game verification.",
+        ],
+      },
+      {
+        heading: "New Pals overview",
+        paragraphs: [
+          "Version 1.0 adds 47 new Pals and 25 variant Pals, bringing the official total to 287. They are distributed across Sunreach, the World Tree, and other regions rather than belonging to one destination alone.",
+          "Pal progression also changed around the entire roster. Awakening uses Radiant Gems to strengthen Pals, Mutation can occur during breeding, more than 200 Partner Skills were reworked, and Work Suitability now extends to 10 levels. Capture Bonuses require five captures instead of twelve, while maximum condensation requires 48 Pals instead of 116.",
+          "A definitive best-Pal tier list, exact spawn route, mutation rate, and optimal breeding strategy need in-game verification.",
+        ],
+      },
+      {
+        heading: "Story and quests",
+        paragraphs: [
+          "The main mission structure now links exploration, tower bosses, and the journey to the World Tree more clearly. Version 1.0 also adds connected sub-missions, NPCs, and Journals across the world.",
+          "Main-mission and sub-mission progress was reset because rewards and progression changed. The official notes say some tutorial and Tower Boss missions may be marked complete automatically based on existing Tower Boss defeat records. Returning players should inspect the mission log before assuming progress was lost or preserved incorrectly.",
+        ],
+      },
+      {
+        heading: "Combat changes",
+        paragraphs: [
+          "Player movement and weapon handling were reworked for responsiveness. The official notes include dash behavior while attacking or aiming, attacks during dashes, reload continuation through dodges, and more responsive directional control while rolling.",
+          "Almost all Pal Active Skills were rebalanced for power, behavior, cooldown, and usability. Tower Boss arenas and encounters were revised, the standard Tower Boss time limit became five minutes, and players can issue a direct attack command to an active Pal.",
+          "Old damage rankings, boss strategies, and best combat builds should not be treated as current without testing. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "New equipment and items",
+        paragraphs: [
+          "Major additions include the Wing Pack, which uses Wing Cells for Pal-free flight, and the Plasma Multicutter, which gathers ore and wood and can be used while mounted. The update also adds 13 weapons, expands weapon slots, and introduces 44 accessories.",
+          "Soralite from Sunreach and Paloxite from the World Tree support new crafting and building content. Ancient Civilization Relics can be converted into enhancement or crafting materials, while Nutrient temporarily prevents hunger loss.",
+          "Exact weapon rankings, accessory combinations, resource-per-minute routes, and endgame loadouts need in-game verification.",
+        ],
+      },
+      {
+        heading: "Base building changes",
+        paragraphs: [
+          "Aquatic Construction allows shoreline and offshore building, while new structural parts, furniture, greenery, and ancient-civilization pieces expand creative options. The official changelog also adjusts building alignment, replacement behavior, work priorities, resource distribution, and several Base Pal work issues.",
+          "Work Suitability levels now extend to 10 and all Pals were rebalanced for work. Because work values, Pal skills, resource distribution, and raid behavior changed together, old base tier lists and ideal layouts need in-game verification.",
+        ],
+      },
+      {
+        heading: "Raids and base defense",
+        paragraphs: [
+          "Base raids now use successive waves and award completion rewards after all waves are defeated. Raid enemy types depend on the surrounding environment, defense structures operate without consuming ammunition, and raid enemy levels scale with the Work Pals assigned to the base.",
+          "A visiting Negotiator can prevent an upcoming raid in exchange for gold. The Gold Coin Assembly Line can also trigger a dedicated raid event. The strongest defensive layout and the practical value of each defense structure need in-game verification.",
+        ],
+      },
+      {
+        heading: "Multiplayer and server changes",
+        paragraphs: [
+          "Dedicated servers can enable in-game voice chat through world settings, although the official notes exclude WinGDK support. Guilds receive roles, permissions, markers, login notifications, and access restrictions for certain structures. Chat gained clearer system messages, anti-impersonation measures, and up to 200 lines of history.",
+          "Server joining, password handling, IP entry, the server list, and save processing were improved. Steam and Mac versions can optionally link Discord accounts. Pocketpair also reports improved stability for dedicated servers, co-op, and supported platforms.",
+          "The official changelog does not define a universal safe player count or prove stability under every workload. Server capacity and long-session stability need in-game verification.",
+        ],
+      },
+      {
+        heading: "UI / UX changes",
+        paragraphs: [
+          "The Pal Box now has search and additional sorting, crafting screens add name and category filters, and the Paldeck can filter by capture-bonus status and elements. Status screens expose more bonuses, while Partner Skill descriptions show clearer effect values.",
+          "Map zooming and icon selection were improved, guild markers can be shared, bases under raid are marked, and cave or cliff locations receive clearer map indicators. Other quality-of-life changes include an inventory hotkey, loading-screen tips, weapon-list display, conversation skipping, and vertical FOV support.",
+        ],
+      },
+      {
+        heading: "Performance improvements",
+        paragraphs: [
+          "Pocketpair lists optimization work for dedicated-server processing, equipment and weapons, foliage and gatherable objects, dense placed-object or spawn-point situations, high-load processes, memory handling, and data searches used by items and work states.",
+          "These notes confirm engineering work, not a guaranteed FPS increase or a specific server-capacity gain on every system. Hardware results, frame-time improvements, memory use, and real server load need in-game verification.",
+        ],
+      },
+      {
+        heading: "Bug fixes",
+        paragraphs: [
+          "The official list covers progression blockers, infinite loading, login and respawn issues, stuck Pals and NPCs, Base Pal work problems, riding and camera problems, multiplayer synchronization, crashes, memory leaks, terrain clipping, dedicated-server failures, and many smaller issues.",
+          "A listed fix should not be treated as proof that every related issue is eliminated on every platform. Reproducibility after the launch build and later hotfixes needs in-game verification.",
+        ],
+      },
+      {
+        heading: "MOD warning",
         bullets: [
-          "Pocketpair says players can continue with existing save data.",
-          "Pocketpair recommends starting fresh with a new character to experience the reworked game.",
-          "Back up important saves before updating or using mods.",
-          "Remove old mod files and verify the game launches unmodded before reinstalling 1.0-compatible mods.",
+          "Back up important save data before updating or changing MODs.",
+          "Remove old MOD files and MOD loaders manually; disabling a MOD manager entry may not remove files that still load.",
+          "Unsubscribe from Steam Workshop MODs and verify the integrity of the game files.",
+          "Launch the game in an unmodded state before adding anything back.",
+          "Only reinstall MODs after their creators confirm 1.0 compatibility, then test them one at a time.",
         ],
       },
       {
-        heading: "What still needs player testing",
+        heading: "What new players should do first",
+        bullets: [
+          "Follow the reworked main mission instead of relying on an Early Access route.",
+          "Build a flexible starter base and learn the revised Work Suitability and assignment systems.",
+          "Use watchtowers, settlements, and nearby objectives to understand the new world flow.",
+          "Capture a varied early team before committing resources to a long-term build.",
+          "Delay tier-list decisions until official changes have been tested in normal play. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "What returning players should check first",
+        bullets: [
+          "Back up every important local or server save before loading it in Version 1.0.",
+          "Remove old MOD files and confirm the game launches cleanly.",
+          "Inspect the mission log because mission progress and rewards were reworked.",
+          "Check base boundaries, Pal assignments, Work Suitability, Partner Skills, and stored equipment.",
+          "Review server settings and changed defaults before reopening multiplayer access.",
+        ],
+      },
+      {
+        heading: "Source note",
         paragraphs: [
-          "Real server capacity under load, platform-specific stability, mod compatibility, practical performance changes, exact progression routes, best Pal or equipment rankings, optimal base layouts, and recommended server multipliers all require verified launch-build testing.",
-          "Later hotfixes and known-issue notices may also change launch advice, so official follow-up announcements should remain the first source checked.",
+          "This guide is based on Pocketpair's official Palworld v1.0 release changelog published through Steam. It paraphrases and organizes confirmed changes for players instead of reproducing the full announcement. Any claim about best routes, rankings, performance, stability, or ideal settings that is not established by the official notes is marked as needing gameplay verification.",
         ],
       },
     ],
@@ -895,12 +1210,22 @@ export const guides: Guide[] = [
       {
         question: "Will this page summarize every line of the patch notes?",
         answer:
-          "No. It summarizes the player-impacting categories and links to the complete official changelog rather than copying it.",
+          "No. It organizes the highest-impact official changes and links to the complete changelog instead of copying the announcement line by line.",
       },
       {
-        question: "What information is still provisional?",
+        question: "Can I continue an Early Access save?",
         answer:
-          "Best routes, tier lists, exact server recommendations, hardware performance gains, and platform-specific stability claims remain provisional until verified in the launch build.",
+          "Pocketpair says existing save data can continue, while recommending a new character for the reworked experience. Back up the save first, especially if it used MODs.",
+      },
+      {
+        question: "Does the changelog prove performance is better on my PC or server?",
+        answer:
+          "No. It confirms optimization work, but exact FPS, frame-time, memory, and server-load results depend on the system and world. Needs in-game verification.",
+      },
+      {
+        question: "Are old tier lists and server presets still reliable?",
+        answer:
+          "Not automatically. Pal balance, progression, crafting, bases, raids, and server defaults changed. Recheck old advice against Version 1.0. Needs in-game verification.",
       },
     ],
     sourceLinks: [

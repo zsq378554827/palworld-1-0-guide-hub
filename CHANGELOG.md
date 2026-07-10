@@ -28,6 +28,21 @@
 - `npm run build` 通过，Astro 仍构建 18 个页面。
 - 构建产物未检出旧的 patch-notes-unavailable 或 pre-release 状态文案。
 
+### 第二轮内容深化
+
+- 将 `Palworld 1.0 Patch Notes Explained` 扩展为完整核心页，覆盖 Sunreach、World Tree、72 个新增 Pal、剧情、战斗、装备、基地、Raid、多人、UI、优化、Bug、MOD 和新老玩家清单。
+- 深化 New Save、Returning Player、Server Setup、Best Server Settings、FAQ 五个决策型页面。
+- 六个重点页均更新正式发布后的独立 meta description、Source note、内部相关链接和 July 10, 2026 更新时间。
+- 所有需要实际游玩、硬件或服务器负载验证的结论统一标注 `Needs in-game verification.`。
+- 未新增页面、复杂功能、设计改动、广告或未经授权素材。
+
+### 第二轮验证
+
+- `npm run build` 通过，继续构建 18 个页面。
+- 静态检查 21 个内部链接，未发现 broken link。
+- 六个重点页 title/meta 无重复，canonical、Source note 和非官方声明均正常。
+- Playwright 390px 手机端与 1280px 桌面端检查通过，六个重点页均无页面级横向溢出。
+
 ## 2026-07-08
 
 ### 新增

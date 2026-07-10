@@ -52,10 +52,12 @@
 - 2026-07-10 已确认 Pocketpair 在 Steam 官方公告发布 `Palworld v1.0 - Official Release Changelog`：`https://store.steampowered.com/news/app/1623730/view/1837955055355658`；版本标识为 `v1.0`，发布时间为 2026-07-10 03:09 UTC（北京时间 11:09，日本时间 12:09）。
 - 2026-07-10 已将首页、1.0 Hub、Release、Patch Notes、Save、Server Setup、Best Server Settings、FAQ 从预发布状态切换为 release/live 状态；只写入官方确认事实，最佳数值、路线、排名、实际性能和平台稳定性继续等待玩家实测。
 - 2026-07-10 `npm run build` 通过，Astro 仍报告构建 18 个页面；构建产物未检出旧的 “patch notes unavailable” 或 pre-release 状态文案。
+- 2026-07-10 第二轮内容深化完成：基于 Pocketpair 官方 Steam v1.0 changelog，扩展 Patch Notes、New Save、Returning Player、Server Setup、Best Server Settings、FAQ 六个重点英文页面；新增完整分节、发布日 FAQ、Source note、内部相关链接，并将实测型内容统一标注 `Needs in-game verification.`。
+- 2026-07-10 第二轮 QA 通过：`npm run build` 继续生成 18 个页面；静态检查 21 个内部链接无缺失；六个重点页 title/meta 独立、canonical 正确、Last Updated 均为 July 10, 2026；390px 与 1280px Playwright 检查均无横向溢出。
 
 ## Current Priorities
 
-1. 继续按官方 changelog 更新 Returning、Multiplayer、Performance 等仍含谨慎通用建议的页面，并深化 Beginner 的实测型建议。
+1. 继续按官方 changelog 深化 Multiplayer、Performance 和 Beginner 页面，只加入官方事实或明确标记的实测结论。
 2. 跟踪 Pocketpair 官方 known issues / hotfix 公告，不用媒体或玩家传闻替代官方事实。
 3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功。
 4. 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。
