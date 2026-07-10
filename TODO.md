@@ -30,10 +30,12 @@
 | 已完成 | Cloudflare Pages Git 集成 | 高 | 用户/Codex | Cloudflare 显示 Git Provider Yes；GitHub App 仓库授权已补齐；GitHub push 自动部署已验证 |
 | 进行中 | 1.0 正式 patch notes 发布后更新文章 | 高 | Codex | 第二轮已深化 Patch Notes、Save、Returning、Server Setup、Best Server Settings、FAQ；下一步为 Multiplayer、Performance、Beginner |
 | 已完成 | 1.0 官方 changelog 重点页第二轮深化与 QA | 高 | Codex | 6 个重点页完成正式发布 SEO 内容；21 个内部链接无缺失；390px/1280px 无横向溢出；build 通过 |
+| 已完成 | 第三轮新增 6 篇安全范围页面 | 高 | Codex | Sunreach、World Tree、New Pals Overview、MOD Warning、Server Owner Checklist、First Hour Checklist；24 个页面 build、链接、SEO、390px/1280px QA 通过 |
 | 已完成 | 接入 Analytics 和 Search Console | 中 | Codex | Cloudflare Web Analytics 已接入；GSC URL-prefix 资源已通过 HTML 文件验证；sitemap 已提交 |
 | 未开始 | 复查 GSC sitemap 抓取状态 | 中 | Codex | 已重新提交 `sitemap.xml`，GSC 返回提交成功；表格即时状态仍为“无法抓取”；站点端检查 `/sitemap.xml` 对 Googlebot 返回 200 和 `application/xml` |
 | 已完成 | Palworld 1.0 patch notes 更新日准备 | 高 | Codex | 已预留文章更新字段；文章页新增 Update Notice；已创建 `UPDATE_DAY_CHECKLIST.md`；build 通过 |
-| 暂缓 | 新建 New Pals List / World Tree Guide 独立页面 | 中 | Codex | 本轮用户要求不要新增页面；当前只在清单中记录为后续候选页面 |
+| 已完成 | 新建 New Pals Overview / World Tree Guide 独立页面 | 中 | Codex | 已按官方 changelog 创建安全概览，不写未验证完整名单、路线、Boss 或排名 |
+| 暂缓 | Best Pals / Best Weapons / Best Base Locations | 中 | Codex | 需要可靠玩家实测，发布日不写死 |
 
 ## 状态说明
 

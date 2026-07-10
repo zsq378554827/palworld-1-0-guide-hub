@@ -43,6 +43,24 @@
 - 六个重点页 title/meta 无重复，canonical、Source note 和非官方声明均正常。
 - Playwright 390px 手机端与 1280px 桌面端检查通过，六个重点页均无页面级横向溢出。
 
+### 第三轮新增页面
+
+- 新增 `Palworld 1.0 Sunreach Guide`。
+- 新增 `Palworld 1.0 World Tree Guide`。
+- 新增 `Palworld 1.0 New Pals Overview`。
+- 新增 `Palworld 1.0 MODs Warning and Compatibility Guide`。
+- 新增 `Palworld 1.0 Server Owner Checklist`。
+- 新增 `Palworld 1.0 First Hour Checklist`。
+- 所有新页复用现有文章模板、现有自制视觉资产和动态 sitemap，不新增设计、复杂功能、广告或未经授权素材。
+- Best Pals、Best Weapons、Best Base Locations 继续暂缓，避免把实测型结论写成官方事实。
+
+### 第三轮验证
+
+- `npm run build` 通过，页面总数由 18 个增加到 24 个。
+- 24 个页面 title/meta 均唯一；静态检查 27 个内部链接，未发现 broken link。
+- 6 个新 URL 均进入 sitemap，并包含正确 canonical、July 10, 2026、Source note、内部相关链接和非官方声明。
+- Playwright 390px 手机端与 1280px 桌面端检查通过，6 个新页面均无页面级横向溢出；Sunreach 首屏完成双 viewport 目视检查。
+
 ## 2026-07-08
 
 ### 新增

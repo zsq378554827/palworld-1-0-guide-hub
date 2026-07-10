@@ -1243,6 +1243,773 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    title: "Palworld 1.0 Sunreach Guide",
+    slug: "palworld-1-0/palworld-1-0-sunreach-guide",
+    category: "palworld-1-0",
+    categoryLabel: "Sunreach",
+    description:
+      "Official-source Palworld 1.0 Sunreach guide covering the floating islands, confirmed content, Soralite, towers, new Pals, and details that still need verification.",
+    shortAnswer:
+      "Sunreach is a new group of floating islands above Palpagos with its own long-established civilization, new Pals, tower bosses, settlements, and Soralite resources that require specialized mining equipment.",
+    playerAdvice: [
+      "Treat the official changelog as confirmation of Sunreach's features, not as a complete route or progression guide.",
+      "Bring flexible equipment and inventory space until the area's resource and combat demands are understood.",
+      "Do not rely on launch-day claims about the best access route, tower order, spawn map, or farming loop. Needs in-game verification.",
+    ],
+    lastUpdated: "July 10, 2026",
+    readingTime: "7 min read",
+    featured: true,
+    tags: ["Sunreach", "new regions", "Soralite"],
+    statusNotice: liveReleaseNotice,
+    ...launchUpdateFields,
+    confirmedChanges: [
+      "Sunreach is a new set of floating islands above Palpagos.",
+      "The region includes new Pals, tower bosses, a settlement, and Soralite that requires specialized equipment to mine.",
+      "Sunreach is connected to new crafting, building, story, expedition, and fishing content.",
+    ],
+    pendingUpdates: [
+      "Access requirements, recommended level, tower order, exact Pal spawns, and optimal Soralite routes need in-game verification.",
+    ],
+    sourceNotes: [
+      "Sunreach facts were checked against Pocketpair's official Palworld v1.0 Steam changelog.",
+    ],
+    sections: [
+      {
+        heading: "What is Sunreach?",
+        paragraphs: [
+          "Sunreach is a new airborne region made up of islands floating above Palpagos through the power of Paldium. Pocketpair describes it as an environment unlike the surface, with a distinct civilization that developed there over a long period.",
+          "It is one of Version 1.0's major destinations and supports new exploration, story, combat, Pal, resource, crafting, and building content.",
+        ],
+      },
+      {
+        heading: "Confirmed Sunreach content",
+        bullets: [
+          "New Pals and tower bosses.",
+          "A Sunreach settlement with NPCs and sub-missions.",
+          "Soralite deposits that require specialized mining equipment.",
+          "New expedition and high-difficulty fishing destinations.",
+          "Links to new technologies, weapons, accessories, structures, and progression systems.",
+        ],
+      },
+      {
+        heading: "Soralite and new progression",
+        paragraphs: [
+          "Soralite is an ore found only in Sunreach according to the official changelog. Soralite Ingots are used in new equipment, while the resource also supports additional crafting and building progression.",
+          "The Plasma Multicutter is confirmed as a new gathering tool, and Pocketpair says Sunreach ores require specialized equipment. The fastest tool progression and most efficient deposit route need in-game verification.",
+        ],
+      },
+      {
+        heading: "How Sunreach connects to Version 1.0",
+        paragraphs: [
+          "Sunreach is part of the reworked story path leading toward the World Tree. It also participates in the broader Version 1.0 progression changes, including a level cap of 80, new technologies, revised missions, new Pals, and rebalanced rewards.",
+          "The official notes confirm the content relationships but do not publish a mandatory route through every tower, settlement, or resource node.",
+        ],
+      },
+      {
+        heading: "What to prepare",
+        bullets: [
+          "Review the reworked main mission and map markers before choosing a route.",
+          "Carry equipment that supports exploration, combat, and resource gathering rather than a single specialized build.",
+          "Leave inventory space for unfamiliar ores, schematics, and rewards.",
+          "Use a backed-up save if exploring from a long-running Early Access world.",
+          "Treat exact preparation, difficulty, and route advice as provisional. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "What still needs in-game verification",
+        bullets: [
+          "The exact access path and any progression gates.",
+          "Recommended player level and equipment tier.",
+          "Tower order, boss strategies, and travel time.",
+          "Exact Pal spawn locations and capture routes.",
+          "Soralite density, respawn behavior, and efficient farming loops.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This guide is based on Pocketpair's official Palworld v1.0 Steam changelog. It summarizes confirmed Sunreach features without using trailer speculation, community maps, datamines, or unverified route claims.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Is Sunreach officially part of Palworld 1.0?",
+        answer:
+          "Yes. Pocketpair identifies Sunreach as a major new Version 1.0 region made up of floating islands above Palpagos.",
+      },
+      {
+        question: "What can players find in Sunreach?",
+        answer:
+          "The official changelog confirms new Pals, tower bosses, a settlement, Soralite, sub-missions, expeditions, and high-difficulty fishing content.",
+      },
+      {
+        question: "What level should I be before entering Sunreach?",
+        answer:
+          "The official changelog does not provide a universal recommended level. Needs in-game verification.",
+      },
+      {
+        question: "Is Soralite exclusive to Sunreach?",
+        answer:
+          "Yes. The official changelog says Soralite can only be mined in Sunreach.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+    ],
+  },
+  {
+    title: "Palworld 1.0 World Tree Guide",
+    slug: "palworld-1-0/palworld-1-0-world-tree-guide",
+    category: "palworld-1-0",
+    categoryLabel: "World Tree",
+    description:
+      "Official-source Palworld 1.0 World Tree guide covering its story role, confirmed rewards, Awakening, Radiant Gems, Paloxite, relics, and unverified details.",
+    shortAnswer:
+      "The World Tree is the central destination of Palworld 1.0's reworked story and a major challenge connected to new Pals, Awakening, Radiant Gems, Paloxite, Ancient Civilization Relics, expeditions, and special passive skills.",
+    playerAdvice: [
+      "Follow the reworked main mission rather than assuming the World Tree works like a normal open-world landmark.",
+      "Keep important saves backed up before committing rare resources or changing a long-running character for World Tree progression.",
+      "Do not treat unverified access routes, boss lists, reward tables, or completion times as official. Needs in-game verification.",
+    ],
+    lastUpdated: "July 10, 2026",
+    readingTime: "7 min read",
+    featured: true,
+    tags: ["World Tree", "story", "Awakening"],
+    statusNotice: liveReleaseNotice,
+    ...launchUpdateFields,
+    confirmedChanges: [
+      "The World Tree is central to the reworked Palworld story and is presented as a major challenge.",
+      "Radiant Gems found there support Pal Awakening.",
+      "Paloxite and Ancient Civilization Relics are exclusive World Tree resources in the official changelog.",
+      "The area includes new Pals, special passive skills, expeditions, and high-difficulty fishing content.",
+    ],
+    pendingUpdates: [
+      "Access requirements, boss mechanics, exact rewards, route difficulty, and completion order need in-game verification.",
+    ],
+    sourceNotes: [
+      "World Tree facts were checked against Pocketpair's official Palworld v1.0 Steam changelog.",
+    ],
+    sections: [
+      {
+        heading: "What is the World Tree in Palworld 1.0?",
+        paragraphs: [
+          "Pocketpair describes the World Tree as the key to Palworld's story and the place where players face their greatest challenge. Version 1.0 reorganizes the main mission flow so exploration, tower bosses, and the path to the World Tree connect more naturally.",
+          "The official notes establish its importance but do not provide a full walkthrough or every access condition.",
+        ],
+      },
+      {
+        heading: "Confirmed World Tree systems",
+        bullets: [
+          "Radiant Gems used to Awaken Pals.",
+          "Paloxite used in new crafting and building progression.",
+          "Ancient Civilization Relics that can be converted into useful enhancement or crafting items.",
+          "New Pals and World Tree passive skills.",
+          "World Tree expedition and high-difficulty fishing destinations.",
+        ],
+      },
+      {
+        heading: "Awakening and Radiant Gems",
+        paragraphs: [
+          "Awakening is a new Pal-strengthening system. The official changelog says Radiant Gems are hidden in the World Tree and can be used to reveal more of a Pal's potential.",
+          "The most efficient Gem route, total investment, best Awakening targets, and relative power gains need in-game verification.",
+        ],
+      },
+      {
+        heading: "Paloxite and Ancient Civilization Relics",
+        paragraphs: [
+          "Paloxite can only be mined at the World Tree and is required for new crafting and building content. Ancient Civilization Relics are also exclusive to the area and can be converted with a special device into useful items.",
+          "Exact deposit locations, conversion priorities, and farming efficiency are not defined by the changelog. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Story preparation for returning players",
+        bullets: [
+          "Review the mission log because main and sub-mission progress was reset for Version 1.0.",
+          "Check which tutorial and Tower Boss missions were restored from recorded defeat progress.",
+          "Re-read Pal skills, equipment, and base production before spending rare World Tree resources.",
+          "Back up an important Early Access save before progressing through major new story content.",
+        ],
+      },
+      {
+        heading: "What still needs in-game verification",
+        bullets: [
+          "Exact entry requirements and mission prerequisites.",
+          "Boss identities, phases, tactics, and recommended builds.",
+          "Map layout, checkpoints, travel routes, and completion time.",
+          "Exact Pal spawns, drop rates, reward tables, and resource respawns.",
+          "Best Awakening targets and World Tree passive combinations.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This guide uses Pocketpair's official Palworld v1.0 Steam changelog as its factual source. It intentionally avoids datamined bosses, community reward tables, and speculative access instructions.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Is the World Tree accessible in Palworld 1.0?",
+        answer:
+          "The official changelog presents it as a Version 1.0 destination and central story challenge. Exact access requirements need in-game verification.",
+      },
+      {
+        question: "What resources are exclusive to the World Tree?",
+        answer:
+          "The official notes identify Paloxite and Ancient Civilization Relics as World Tree resources and connect Radiant Gems to Awakening there.",
+      },
+      {
+        question: "Does the official changelog list every World Tree boss?",
+        answer:
+          "No. This guide does not publish an unverified boss list.",
+      },
+      {
+        question: "Should I use Radiant Gems immediately?",
+        answer:
+          "The official notes confirm their Awakening purpose but not the best investment order. Needs in-game verification.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+    ],
+  },
+  {
+    title: "Palworld 1.0 New Pals Overview",
+    slug: "palworld-1-0/palworld-1-0-new-pals-overview",
+    category: "palworld-1-0",
+    categoryLabel: "New Pals",
+    description:
+      "Official Palworld 1.0 new Pals overview covering the 47 new Pals, 25 variants, Awakening, Mutation, skill changes, work updates, and facts still needing testing.",
+    shortAnswer:
+      "Palworld 1.0 adds 47 new Pals and 25 variant Pals, bringing the official total to 287, while also introducing Awakening, Mutation, new Active and Passive Skills, revised Partner Skills, and expanded Work Suitability.",
+    playerAdvice: [
+      "Use the official totals as confirmed, but avoid assuming a complete spawn map or tier list is settled on release day.",
+      "Re-read the skills of existing Pals because Version 1.0 changes far more than the newly added roster.",
+      "Save rare breeding and enhancement resources until their practical value is understood. Needs in-game verification.",
+    ],
+    lastUpdated: "July 10, 2026",
+    readingTime: "8 min read",
+    featured: true,
+    tags: ["new Pals", "Awakening", "Mutation"],
+    statusNotice: liveReleaseNotice,
+    ...launchUpdateFields,
+    confirmedChanges: [
+      "Version 1.0 adds 47 new Pals and 25 variants, for 72 additions and 287 Pals in total.",
+      "New Pals appear across Sunreach, the World Tree, and other regions.",
+      "Awakening, Mutation, Partner Skill reworks, new skills, new motions, and expanded Work Suitability affect Pal progression.",
+    ],
+    pendingUpdates: [
+      "Complete spawn locations, capture routes, mutation rates, breeding priorities, and tier rankings need in-game verification.",
+    ],
+    sourceNotes: [
+      "Roster totals and system changes were checked against Pocketpair's official Palworld v1.0 Steam changelog.",
+    ],
+    sections: [
+      {
+        heading: "How many new Pals are in Palworld 1.0?",
+        paragraphs: [
+          "Pocketpair confirms 47 new Pals and 25 variant Pals in Version 1.0. Together they add 72 entries and bring the official total number of Pals to 287.",
+          "This overview focuses on confirmed roster and system information rather than reproducing an unverified database or ranking every new Pal.",
+        ],
+      },
+      {
+        heading: "Where the new Pals appear",
+        paragraphs: [
+          "The official changelog places new encounters across Sunreach, the World Tree, and other regions. Wildlife Sanctuaries were also rebuilt, Pal habitats and spawn levels were rebalanced, and seven smaller islands were added.",
+          "Exact coordinates, time conditions, rarity, capture routes, and region-by-region checklists need in-game verification.",
+        ],
+      },
+      {
+        heading: "Awakening",
+        paragraphs: [
+          "Awakening strengthens Pals with Radiant Gems found at the World Tree. It adds a new enhancement path beyond familiar Early Access progression systems.",
+          "The exact gains, total resource costs, and best Pals to Awaken need in-game verification.",
+        ],
+      },
+      {
+        heading: "Mutation and breeding",
+        paragraphs: [
+          "Mutation gives breeding a low chance to produce a Pal with higher stats and a unique passive skill. New cakes can influence outcomes such as stats, egg count, mutation likelihood, or passive inheritance.",
+          "The official notes confirm these functions but do not establish practical mutation rates or an optimal breeding method. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Existing Pals also changed",
+        bullets: [
+          "More than 200 Partner Skills were reworked, and duplicate Pal effects generally no longer stack.",
+          "Almost all Active Skills were reviewed for power, behavior, cooldown, or usability.",
+          "New Passive Skills and World Tree Passive Skills expand build options.",
+          "More than 100 new motions were added to existing Pals, with additional unique animations for new Pals.",
+          "Work Suitability now extends to 10 levels and every Pal's work values were rebalanced.",
+        ],
+      },
+      {
+        heading: "Progression changes that affect collecting",
+        bullets: [
+          "Capture Bonuses now require five captures instead of twelve.",
+          "Maximum condensation now requires 48 Pals instead of 116.",
+          "Some Partner Skills no longer require Pal Gear before use.",
+          "Pal habitats, merchant pricing, breeding combinations, and progression rewards were reviewed.",
+        ],
+      },
+      {
+        heading: "What still needs in-game verification",
+        bullets: [
+          "Complete new-Pal names and spawn maps beyond official summaries.",
+          "Capture difficulty, encounter rarity, and efficient routes.",
+          "Mutation probability and breeding-resource efficiency.",
+          "Best combat Pals, workers, mounts, Partner Skills, and teams.",
+          "Exact Awakening priority and endgame tier rankings.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This overview is based on Pocketpair's official Palworld v1.0 Steam changelog. It reports confirmed roster totals and system changes without using datamined stats, scraped spawn databases, or unverified tier lists.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How many Pals were added in Palworld 1.0?",
+        answer:
+          "Version 1.0 adds 47 new Pals and 25 variants, for 72 additions and an official total of 287 Pals.",
+      },
+      {
+        question: "Are all new Pals located in Sunreach?",
+        answer:
+          "No. Pocketpair says new Pals can be found in Sunreach, the World Tree, and various other regions.",
+      },
+      {
+        question: "What is Pal Mutation?",
+        answer:
+          "Mutation is a breeding outcome that can produce a Pal with higher stats and a unique passive skill. Practical rates need in-game verification.",
+      },
+      {
+        question: "Which new Pal is best?",
+        answer:
+          "The official changelog does not establish a best new Pal. Combat, work, and team rankings need in-game verification.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+    ],
+  },
+  {
+    title: "Palworld 1.0 MODs Warning and Compatibility Guide",
+    slug: "guides/palworld-1-0-mods-warning-compatibility-guide",
+    category: "guides",
+    categoryLabel: "MOD Safety",
+    description:
+      "Official Palworld 1.0 MOD warning and compatibility guide covering backups, manual cleanup, Workshop MODs, file verification, clean launch testing, and safe reinstallation.",
+    shortAnswer:
+      "Back up important saves, manually remove old MOD files and loaders, unsubscribe from Workshop MODs, verify game files, launch Palworld 1.0 unmodded, and only reinstall MODs whose creators confirm Version 1.0 compatibility.",
+    playerAdvice: [
+      "Do not assume a disabled MOD is removed; files and loaders can remain active in the game folder.",
+      "Keep a pre-update backup because MOD-dependent Pals, items, quests, or structures may not work after cleanup.",
+      "Restore compatible MODs one at a time so problems can be isolated.",
+    ],
+    lastUpdated: "July 10, 2026",
+    readingTime: "7 min read",
+    featured: true,
+    tags: ["MODs", "save safety", "compatibility"],
+    statusNotice: liveReleaseNotice,
+    ...launchUpdateFields,
+    confirmedChanges: [
+      "Pocketpair warns that old MODs can cause crashes, save corruption or loss, failed loading, and blocked progression.",
+      "Disabling a MOD may not remove files or loaders that still run.",
+      "Pocketpair recommends backups, manual removal, Workshop unsubscription, file verification, and an unmodded launch test.",
+    ],
+    pendingUpdates: [
+      "Compatibility for every individual MOD, loader, plugin, platform, and MOD-dependent save needs verification from its creator and in-game testing.",
+    ],
+    sourceNotes: [
+      "MOD safety steps were checked against Pocketpair's official Version 1.0 MOD warning and release changelog.",
+    ],
+    sections: [
+      {
+        heading: "Why Pocketpair issued a MOD warning",
+        paragraphs: [
+          "Version 1.0 changes many Palworld systems. Pocketpair warns that old MOD data can cause launch or gameplay crashes, corrupted or unloadable saves, and quests or events that cannot progress.",
+          "Problems may come from MOD files or loaders left in the game directory even when a management tool shows the MOD as disabled.",
+        ],
+      },
+      {
+        heading: "Back up before changing anything",
+        bullets: [
+          "Copy every important local or server save before the first Version 1.0 load.",
+          "Keep at least one backup outside the active game or server directory.",
+          "Label the backup with the date, platform, world name, and pre-update version.",
+          "Preserve the MOD list and configuration beside MOD-dependent saves.",
+          "Do not overwrite the only pre-update backup during testing.",
+        ],
+      },
+      {
+        heading: "Remove old MOD files manually",
+        paragraphs: [
+          "Pocketpair's warning says simply switching a MOD off may not be enough. Remove or move old MOD files and loaders from the game directory according to the official MOD guideline.",
+          "If you are not sure which files belong to a MOD, use the official guideline and the MOD creator's documentation instead of deleting unrelated game data.",
+        ],
+      },
+      {
+        heading: "Steam Workshop and file verification",
+        bullets: [
+          "Unsubscribe from installed Steam Workshop MODs.",
+          "Remember that unsubscribing may not remove every remaining file or loader.",
+          "Use Steam's Verify integrity of game files option after cleanup.",
+          "Confirm Palworld launches and loads an appropriate test save without MODs.",
+        ],
+      },
+      {
+        heading: "When to reinstall MODs",
+        paragraphs: [
+          "Wait until the MOD creator confirms a Version 1.0-compatible release. Reinstall one MOD at a time, start the game, and test before adding another.",
+          "A creator update does not guarantee compatibility with every other MOD or existing save. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "MOD-dependent save risks",
+        paragraphs: [
+          "A save containing MOD-added Pals, items, structures, quests, or other data may behave incorrectly or fail to load after those MODs are removed. Pocketpair does not cover problems caused by modified game data through normal support.",
+          "Keep the original backup and test a copy. Compatibility for a specific save needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Safe compatibility checklist",
+        bullets: [
+          "Back up the save and record the old MOD list.",
+          "Remove old MOD files and loaders manually.",
+          "Unsubscribe from Workshop MODs and verify game files.",
+          "Launch and test Version 1.0 unmodded.",
+          "Confirm each MOD has a creator-supported 1.0 release.",
+          "Reinstall and test one MOD at a time on a backed-up save copy.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This guide paraphrases Pocketpair's official Palworld 1.0 MOD warning, release changelog, and MOD guideline. It does not certify any third-party MOD as compatible.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Is disabling a MOD enough for Palworld 1.0?",
+        answer:
+          "Not necessarily. Pocketpair warns that MOD files and loaders can remain in the game folder and still be loaded.",
+      },
+      {
+        question: "Should I unsubscribe from Workshop MODs?",
+        answer:
+          "Yes, as part of cleanup, but Pocketpair notes that unsubscribing alone may not remove every remaining MOD file.",
+      },
+      {
+        question: "Can my MODded save continue in Version 1.0?",
+        answer:
+          "MOD-dependent content may fail or prevent the save from loading after cleanup. Compatibility needs in-game verification on a backup copy.",
+      },
+      {
+        question: "When can I reinstall a MOD?",
+        answer:
+          "After its creator confirms Version 1.0 compatibility. Add it back individually and test before installing another MOD.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official MOD warning for Palworld 1.0",
+        href: "https://store.steampowered.com/news/app/1623730/view/1836506165582004",
+      },
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+      {
+        label: "Pocketpair official Palworld MOD guideline",
+        href: "https://guideline.palworldgame.com/palworld-mod-guideline",
+      },
+    ],
+  },
+  {
+    title: "Palworld 1.0 Server Owner Checklist",
+    slug: "server/palworld-1-0-server-owner-checklist",
+    category: "server",
+    categoryLabel: "Server Checklist",
+    description:
+      "Palworld 1.0 server owner checklist for backups, MOD cleanup, version matching, settings review, save testing, guild permissions, voice chat, and safe reopening.",
+    shortAnswer:
+      "Before reopening a Palworld 1.0 server, back up the complete world, remove unsupported MODs, update server and clients, review changed defaults, test saving and restart persistence, verify guild permissions, and document rollback rules.",
+    playerAdvice: [
+      "Use a copy of the production world for the first Version 1.0 test whenever possible.",
+      "Do not raise capacity or base load only because the changelog mentions optimization.",
+      "Tell players whether the world is continuing, fresh, temporary, or subject to rollback before they join.",
+    ],
+    lastUpdated: "July 10, 2026",
+    readingTime: "7 min read",
+    featured: true,
+    tags: ["server owner", "dedicated server", "backups"],
+    statusNotice: liveReleaseNotice,
+    ...launchUpdateFields,
+    confirmedChanges: [
+      "Version 1.0 includes dedicated-server optimization, multiplayer stability work, joining and saving improvements, and changed defaults.",
+      "Dedicated-server voice chat is optional through world settings and is not supported on WinGDK.",
+      "Guild roles, permissions, access restrictions, notifications, and markers were expanded.",
+    ],
+    pendingUpdates: [
+      "Safe capacity, long-session stability, real memory use, MOD compatibility, and performance under a specific world load need in-game verification.",
+    ],
+    sourceNotes: [
+      "Server checklist facts were checked against Pocketpair's official Palworld v1.0 Steam changelog and MOD warning.",
+    ],
+    sections: [
+      {
+        heading: "Before the update",
+        bullets: [
+          "Stop the server cleanly.",
+          "Back up world data, player data, configuration, startup arguments, and management files.",
+          "Record the current build, MODs, plugins, and server tools.",
+          "Store the backup outside the active server directory.",
+          "Announce the maintenance window and rollback policy.",
+        ],
+      },
+      {
+        heading: "MOD cleanup",
+        bullets: [
+          "Remove old MOD files and loaders manually rather than only disabling them.",
+          "Unsubscribe from Workshop MODs and verify game files where applicable.",
+          "Confirm the server and a test client run unmodded.",
+          "Restore only creator-confirmed Version 1.0 MODs, one at a time.",
+        ],
+      },
+      {
+        heading: "Version and configuration check",
+        bullets: [
+          "Update the dedicated server and confirm clients use a compatible Version 1.0 build.",
+          "Compare the old configuration with the current file and changed defaults.",
+          "Review progression, capture, death, base, raid, PvP, access, and communication settings.",
+          "Keep the original configuration with the pre-update backup.",
+        ],
+      },
+      {
+        heading: "Private smoke test",
+        bullets: [
+          "Join with at least two test clients.",
+          "Confirm character loading, spawn location, password behavior, and guild membership.",
+          "Access a representative base, move items, assign a Pal, and verify role permissions.",
+          "Save, log out, restart the server, reconnect, and confirm persistence.",
+          "Run a longer session before calling the server stable. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Multiplayer features to review",
+        paragraphs: [
+          "Version 1.0 adds optional dedicated-server voice chat, expanded guild roles and permissions, guild markers, improved chat, server-list changes, password and IP-entry improvements, unstable-connection indicators, and optional Discord integration on supported versions.",
+          "Enable only the features the community needs, then test permissions and platform support before public access.",
+        ],
+      },
+      {
+        heading: "Do not assume optimization equals capacity",
+        paragraphs: [
+          "Pocketpair confirms optimization for dedicated servers, memory, dense placed objects, spawn points, and other high-load processing. It does not publish a universal safe player count, base count, or object limit.",
+          "Capacity, restart frequency, long-session memory behavior, and stability need in-game verification on the real host and world.",
+        ],
+      },
+      {
+        heading: "Reopening checklist",
+        bullets: [
+          "Keep the pre-update backup and tested rollback steps available.",
+          "Publish the world policy, settings summary, MOD status, and known limitations.",
+          "Confirm who can change settings or restore backups.",
+          "Monitor official hotfix and known-issue announcements.",
+          "Record every post-launch setting or MOD change.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This checklist is based on Pocketpair's official Palworld v1.0 Steam changelog and official MOD warning. Operational tests are intentionally marked as verification steps rather than claimed server results.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Should a server owner wipe for Palworld 1.0?",
+        answer:
+          "Pocketpair says existing saves can continue. A wipe is optional, but the existing world should be backed up and tested before reopening.",
+      },
+      {
+        question: "Did dedicated-server defaults change?",
+        answer:
+          "Yes. Pocketpair says Version 1.0 defaults were adjusted to more closely match single-player Normal difficulty.",
+      },
+      {
+        question: "Can I increase the player limit after the optimization update?",
+        answer:
+          "The changelog does not define a safe increase. Capacity needs in-game verification on the actual host and world.",
+      },
+      {
+        question: "Is voice chat available on every server platform?",
+        answer:
+          "No. It must be enabled in dedicated-server world settings, and Pocketpair says it is not supported on WinGDK.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+      {
+        label: "Pocketpair official MOD warning for Palworld 1.0",
+        href: "https://store.steampowered.com/news/app/1623730/view/1836506165582004",
+      },
+    ],
+  },
+  {
+    title: "Palworld 1.0 First Hour Checklist",
+    slug: "guides/palworld-1-0-first-hour-checklist",
+    category: "guides",
+    categoryLabel: "First Hour",
+    description:
+      "A cautious Palworld 1.0 first-hour checklist for new and returning players covering missions, capture, a starter base, Pals, settings, saves, MODs, and multiplayer.",
+    shortAnswer:
+      "In your first Palworld 1.0 hour, follow the reworked main mission, learn the revised capture and Pal systems, build a flexible starter base, check settings and saves, and avoid committing to unverified tier lists or permanent routes.",
+    playerAdvice: [
+      "New players should use the first hour to learn systems rather than rush a permanent build.",
+      "Returning players should begin with backup and MOD checks before loading an important Early Access world.",
+      "Multiplayer groups should confirm host, world policy, backups, and settings before splitting up.",
+    ],
+    lastUpdated: "July 10, 2026",
+    readingTime: "7 min read",
+    featured: true,
+    tags: ["first hour", "beginner", "checklist"],
+    statusNotice: liveReleaseNotice,
+    ...launchUpdateFields,
+    confirmedChanges: [
+      "Version 1.0 reworks the main mission flow, capture progression, Pal skills, Work Suitability, bases, raids, balance, and UI.",
+      "Capture Bonuses now require five captures, the player level cap is 80, and watchtowers reveal map areas and become fast-travel points.",
+      "Existing saves can continue, while Pocketpair recommends a fresh character for the reworked experience.",
+    ],
+    pendingUpdates: [
+      "Exact first-hour timing, best starter Pals, fastest routes, permanent base locations, and ideal settings need in-game verification.",
+    ],
+    sourceNotes: [
+      "First-hour guidance uses confirmed system changes from Pocketpair's official Palworld v1.0 Steam changelog.",
+    ],
+    sections: [
+      {
+        heading: "Before you start",
+        bullets: [
+          "Choose a fresh character or back up an existing save before loading it in Version 1.0.",
+          "Remove old MOD files and confirm a clean unmodded launch.",
+          "For multiplayer, confirm the host, world policy, backups, and whether the server is permanent or temporary.",
+          "Start close to default settings unless the group has tested a documented alternative.",
+        ],
+      },
+      {
+        heading: "First 10 minutes",
+        bullets: [
+          "Read the reworked main mission prompts instead of relying on an Early Access route.",
+          "Check controls, graphics, sound, and accessibility options before combat becomes busy.",
+          "Gather basic materials and learn the current crafting flow.",
+          "Capture several early Pals to understand the revised capture and Partner Skill information.",
+        ],
+      },
+      {
+        heading: "Minutes 10 to 30",
+        bullets: [
+          "Place a small, flexible starter base rather than a permanent optimized layout.",
+          "Assign a few Pals and inspect their Work Suitability and Partner Skills.",
+          "Organize storage so the base can be moved or rebuilt without losing track of materials.",
+          "Follow nearby mission and map guidance toward exploration tools such as watchtowers.",
+        ],
+      },
+      {
+        heading: "Minutes 30 to 60",
+        bullets: [
+          "Continue the mission flow and unlock technologies that solve immediate needs.",
+          "Compare several Pals for combat and work roles without declaring a permanent tier list.",
+          "Check food, inventory weight, base production, and one reliable travel option.",
+          "If playing online, confirm saving, logout, restart, and reconnect behavior before a long session.",
+        ],
+      },
+      {
+        heading: "What not to optimize in the first hour",
+        bullets: [
+          "A permanent best base location.",
+          "A final combat or worker Pal tier list.",
+          "Exact breeding, Mutation, or Awakening investments.",
+          "Extreme server multipliers or public capacity claims.",
+          "A fastest route to Sunreach or the World Tree.",
+          "Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Returning-player variation",
+        paragraphs: [
+          "Returning players should spend the first session checking the mission log, bases, Pal skills, Work Suitability, storage, server settings, and MOD cleanup before pursuing new regions. Pocketpair recommends a fresh character, but existing saves can continue.",
+          "If the old world matters, use a backup or test copy and keep the original untouched until Version 1.0 behavior is understood.",
+        ],
+      },
+      {
+        heading: "First-hour success check",
+        bullets: [
+          "You understand the current mission objective and next local goal.",
+          "Your starter base can gather, store, and craft basic materials.",
+          "You have a small Pal team with understood combat and work roles.",
+          "Your save or server persistence has been checked.",
+          "You have not spent rare resources based on an unverified ranking.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This checklist is organized around confirmed Version 1.0 changes in Pocketpair's official Steam changelog. Exact timing, routes, Pal choices, and permanent base decisions depend on the player's world and need in-game verification.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Should a new player start fresh in Palworld 1.0?",
+        answer:
+          "Yes. A new player has no old progress to preserve and can follow the reworked mission flow from the beginning.",
+      },
+      {
+        question: "Should a returning player use an old save in the first hour?",
+        answer:
+          "Existing saves can continue, but back up first and remove old MOD files. Pocketpair recommends a fresh character for the reworked experience.",
+      },
+      {
+        question: "What is the best first-hour Pal?",
+        answer:
+          "The official changelog does not define one. Early combat and work choices need in-game verification.",
+      },
+      {
+        question: "Should I build a permanent base immediately?",
+        answer:
+          "A flexible starter base is safer while learning Version 1.0. Permanent location and layout advice needs in-game verification.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+      {
+        label: "Pocketpair official MOD warning for Palworld 1.0",
+        href: "https://store.steampowered.com/news/app/1623730/view/1836506165582004",
+      },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {

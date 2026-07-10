@@ -54,6 +54,9 @@
 - 2026-07-10 `npm run build` 通过，Astro 仍报告构建 18 个页面；构建产物未检出旧的 “patch notes unavailable” 或 pre-release 状态文案。
 - 2026-07-10 第二轮内容深化完成：基于 Pocketpair 官方 Steam v1.0 changelog，扩展 Patch Notes、New Save、Returning Player、Server Setup、Best Server Settings、FAQ 六个重点英文页面；新增完整分节、发布日 FAQ、Source note、内部相关链接，并将实测型内容统一标注 `Needs in-game verification.`。
 - 2026-07-10 第二轮 QA 通过：`npm run build` 继续生成 18 个页面；静态检查 21 个内部链接无缺失；六个重点页 title/meta 独立、canonical 正确、Last Updated 均为 July 10, 2026；390px 与 1280px Playwright 检查均无横向溢出。
+- 2026-07-10 第三轮新增 6 篇安全范围页面：Sunreach Guide、World Tree Guide、New Pals Overview、MODs Warning and Compatibility Guide、Server Owner Checklist、First Hour Checklist；文章总数由 10 篇增至 16 篇，未新增组件、设计、广告或图片。
+- 2026-07-10 第三轮初步 QA 通过：`npm run build` 构建页面由 18 个增至 24 个；24 个 title/meta 均唯一；27 个内部链接无缺失；6 个新 URL 均进入 sitemap，并包含 canonical、July 10、Source note、内部相关链接、非官方声明和实测边界。
+- 2026-07-10 第三轮 Playwright QA 通过：6 个新页面在 390px 手机端和 1280px 桌面端均无页面级横向溢出；H1、更新时间、Source note 和 `Needs in-game verification.` 均正常，Sunreach 首屏已完成手机/桌面目视检查。
 
 ## Current Priorities
 
@@ -65,7 +68,7 @@
 ## Current Blockers
 
 - 完整官方 changelog 已发布，不再受 patch notes 缺失阻塞；实测型建议仍需可靠玩家测试或后续官方说明。
-- `Palworld 1.0 New Pals List` 和 `Palworld 1.0 World Tree Guide` 当前不是独立文章页；本轮按用户要求未新增页面，只在更新日清单中标记为候选后续页面。
+- 无内容发布阻塞；Best Pals、Best Weapons、Best Base Locations 等排名型页面继续等待可靠玩家实测，不在发布日写死。
 
 ## Current Env Vars
 
