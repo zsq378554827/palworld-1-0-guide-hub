@@ -72,16 +72,16 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Beginner Guide",
     description:
-      "A cautious starter roadmap for new Palworld 1.0 players, covering early goals, base basics, multiplayer choices, and advice that still needs launch-build testing.",
+      "Practical Palworld 1.0 beginner guide with a first-hour route, starter-base checklist, capture and mission priorities, technology decisions, multiplayer advice, and safe next steps.",
     shortAnswer:
-      "New players should start Palworld 1.0 with a small, flexible first base, learn the core survival loop, and avoid chasing launch-week tier lists until they are tested against the release build.",
+      "Follow the reworked main mission, gather only what solves the next problem, capture a varied early team, build a small flexible base, activate watchtowers as you explore, and delay permanent builds or rare-resource spending until you understand Version 1.0's systems.",
     playerAdvice: [
       "If you are new, spend the first session learning gathering, crafting, catching, food, and base assignments instead of rushing a permanent base.",
       "If you are returning, treat old Early Access habits as useful background, not confirmed 1.0 optimization.",
       "If you are playing with friends, agree on hosting and save rules before anyone invests heavily in a shared world.",
     ],
-    lastUpdated: "July 10, 2026",
-    readingTime: "6 min read",
+    lastUpdated: "July 11, 2026",
+    readingTime: "11 min read",
     featured: true,
     tags: ["new players", "starter path", "base-building"],
     statusNotice: liveReleaseNotice,
@@ -96,43 +96,118 @@ export const guides: Guide[] = [
     sourceNotes: [
       "Release and progression facts were checked against Pocketpair's official v1.0 Steam changelog.",
     ],
+    visual: {
+      src: "/assets/palworld-1-0-beginner-starter-journey.webp",
+      alt: "Original Palworld 1.0 beginner journey illustration showing a flexible campsite, organized crafting area, path, and distant watchtower",
+      caption: "Original fan-made starter-journey illustration; it is not an official map or recommended base location.",
+    },
+    relatedLinks: [
+      { label: "First Hour Checklist", href: "/guides/palworld-1-0-first-hour-checklist/" },
+      { label: "Should You Start a New Save?", href: "/guides/should-you-start-a-new-save-in-palworld-1-0/" },
+      { label: "Palworld 1.0 FAQ", href: "/faq/" },
+      { label: "Base Building Changes", href: "/base-building/" },
+    ],
     sections: [
       {
-        heading: "Start with a simple first objective",
+        heading: "Your first session priorities",
         paragraphs: [
-          "For a first Palworld 1.0 save, keep the opening hours focused: learn movement, gather basic materials, place a starter base, catch a few early Pals, and understand how work assignments feel.",
-          "Do not treat the first base as permanent. Early bases are for learning resource flow, crafting stations, storage habits, and Pal management before you commit to a long-term layout.",
+          "Version 1.0 reworks mission flow, capture progression, Pal skills, Work Suitability, bases, raids, and exploration. Use the main mission as your navigation spine instead of following an Early Access speed route.",
+          "The goal of the first session is not maximum level. It is a stable loop: gather, craft, capture, assign work, store resources, travel safely, and return with enough information to choose the next upgrade.",
         ],
       },
       {
-        heading: "Choose solo or multiplayer before you invest",
-        paragraphs: [
-          "Solo play is the cleanest way to learn survival, combat, crafting, and base systems without server rules changing the pace.",
-          "Multiplayer is better if your group already knows who will host, how often the world stays online, and whether the server will use conservative settings until 1.0 stability is clear.",
-        ],
+        heading: "Beginner roadmap",
+        table: {
+          headers: ["Stage", "Main objective", "Useful actions", "Avoid for now"],
+          rows: [
+            ["First 10 minutes", "Learn the current mission and controls", "Gather basic materials; check settings; capture several early Pals", "Skipping prompts because an old route looks familiar"],
+            ["10–30 minutes", "Create a working starter base", "Place storage near crafting; leave Pal paths open; assign varied work", "Treating the first base as permanent"],
+            ["30–60 minutes", "Stabilize food, equipment, and travel", "Follow missions; inspect Pal skills; activate useful map guidance", "Spending rare items on an untested build"],
+            ["Next sessions", "Expand only when a need is clear", "Add production, defenses, exploration gear, and backups", "Copying tier lists or best-location claims without verification"],
+          ],
+        },
       },
       {
-        heading: "Build habits that survive balance changes",
+        heading: "Build a starter base that teaches you the game",
         bullets: [
-          "Keep spare materials instead of spending everything immediately.",
-          "Label or separate storage by purpose so future base moves are less painful.",
-          "Avoid over-optimizing around Early Access balance assumptions.",
-          "Read the full 1.0 patch notes before committing to late-game routes or heavy breeding plans.",
+          "Choose accessible ground with room to walk; this is a learning base, not a Best Base Location claim.",
+          "Put frequently used storage close to the stations that consume those materials.",
+          "Leave open paths around beds, food, storage, and production so Base Pals can reach work.",
+          "Assign a mixed group and inspect Work Suitability instead of filling every slot with one job type.",
+          "Check food supply and stalled work before adding more stations.",
+          "Keep the layout easy to move because Aquatic Construction and later production needs may change your plans.",
         ],
       },
       {
-        heading: "What not to assume yet",
+        heading: "Capture and Pal-management priorities",
+        paragraphs: [
+          "Capture Bonuses now require five captures rather than twelve, while the maximum condensation requirement is lower than in Early Access. These official changes make repeated captures useful, but they do not make every nearby Pal equally valuable for your team.",
+          "Build variety first: one dependable combat option, useful movement or Partner Skills, and several work roles. Re-read descriptions because more than 200 Partner Skills and almost all Active Skills were reviewed for Version 1.0.",
+        ],
+        bullets: [
+          "Check elements, Active Skills, Partner Skills, and Work Suitability before dismissing a duplicate.",
+          "Keep useful workers even if they are not part of the current combat party.",
+          "Delay heavy condensation, Awakening, Mutation, or breeding investments until the resource cost is understood.",
+          "Best starter Pal rankings still need in-game verification.",
+        ],
+      },
+      {
+        heading: "Technology and resource decisions",
+        paragraphs: [
+          "Unlock technology that removes an immediate bottleneck: food, storage, gathering, crafting, survival, travel, or defense. A long list of unlocked stations is not useful when the base cannot supply or operate them.",
+          "Keep a reserve of basic materials and label rare resources before experimenting. Version 1.0 adds new ores, equipment, accessories, structures, and progression systems, so old spending priorities should not be treated as current by default.",
+        ],
+      },
+      {
+        heading: "Exploration habits that prevent wasted trips",
+        bullets: [
+          "Follow the main mission and use watchtowers to reveal nearby map areas and unlock fast travel.",
+          "Carry food, basic repair or replacement supplies, capture items, and free inventory space.",
+          "Mark or remember caves, cliffs, settlements, resources, and return routes before pushing farther.",
+          "Deposit valuable materials before testing unfamiliar high-risk content.",
+          "Do not rush Sunreach or the World Tree based on an unverified shortcut. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Solo or multiplayer?",
+        table: {
+          headers: ["Format", "Best for", "Before investing", "Main risk"],
+          rows: [
+            ["Solo", "Learning systems at your own pace", "Choose a backed-up world and comfortable settings", "No shared help when a route or base fails"],
+            ["Small co-op group", "Shared exploration and divided base jobs", "Agree on host, uptime, progression pace, and shared storage", "Players progressing at different speeds"],
+            ["Dedicated server", "Persistent group worlds", "Confirm backups, version, settings, MOD policy, and rollback rules", "Host load, MOD problems, or unclear permissions"],
+          ],
+        },
+      },
+      {
+        heading: "Before ending the first session",
+        bullets: [
+          "Confirm the current mission objective and one next-session goal.",
+          "Check food, storage, production queues, and Pal assignments.",
+          "Store rare materials instead of carrying them into an unknown fight.",
+          "For multiplayer, verify saving and reconnect behavior.",
+          "Back up an important world before adding MODs or making irreversible changes.",
+        ],
+      },
+      {
+        heading: "What not to trust yet",
         paragraphs: [
           "The official v1.0 changelog is available, but exact stat priorities, best Pals, best base locations, fastest routes, and definitive endgame recommendations still need player testing.",
-          "This beginner guide is intentionally stable: it focuses on habits that are likely to remain useful even if 1.0 changes balance, progression, and content placement.",
+          "Use player-tested advice only when it explains the build, platform, settings, route, and evidence. A claim that simply says best, fastest, or mandatory is not enough.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This beginner guide uses Pocketpair's official Palworld v1.0 Steam changelog for mission, map, Pal, capture, base, raid, progression, multiplayer, and MOD facts. Route timing, rankings, permanent base decisions, and optimized builds remain marked for player verification.",
         ],
       },
     ],
     faqs: [
       {
-        question: "Is this beginner guide final for Palworld 1.0?",
+        question: "What should a Palworld 1.0 beginner do first?",
         answer:
-          "Not yet. It is a safe launch starter guide. Exact best routes, best Pals, and balance-sensitive recommendations still need release-build testing.",
+          "Follow the current main mission, gather basic supplies, capture a varied early team, and create a small flexible base before chasing permanent builds.",
       },
       {
         question: "Should a new player start solo or multiplayer?",
@@ -140,9 +215,20 @@ export const guides: Guide[] = [
           "Solo is easier for learning systems. Multiplayer is better if your group already knows who hosts, when the world is online, and how settings will be handled.",
       },
       {
-        question: "What should I avoid on day one?",
+        question: "When should I choose a permanent base?",
         answer:
-          "Avoid permanent base commitments, extreme server settings, and guides that claim exact 1.0 best-in-slot answers without verified release-build testing.",
+          "After you understand travel, production, Pal pathing, raids, and the resources your group actually needs. Best Base Locations still need in-game verification.",
+      },
+      {
+        question: "Should beginners use tier lists?",
+        answer:
+          "Use them as ideas, not rules. Version 1.0 changed Pal skills, work values, progression, combat, and resources, so rankings need release-build evidence.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
       },
     ],
   },
@@ -809,55 +895,120 @@ export const guides: Guide[] = [
     category: "server",
     categoryLabel: "Multiplayer",
     description:
-      "How to plan a Palworld 1.0 multiplayer group, including hosting choices, expectations, backups, voice chat, and launch-week ground rules.",
+      "Practical Palworld 1.0 multiplayer guide covering co-op formats, host decisions, guild roles, voice chat, backups, clean connection testing, group rules, and troubleshooting.",
     shortAnswer:
-      "A good Palworld 1.0 multiplayer launch depends less on perfect settings and more on clear hosting, backup, reset, and base-location rules before the group starts.",
+      "Choose the right host format, agree on world and progression rules, keep backups, match game versions, test the server unmodded, and verify joining, saving, restart persistence, guild permissions, and chat before treating a multiplayer world as stable.",
     playerAdvice: [
       "New players should join smaller groups first if they want to learn without pressure.",
       "Returning players should explain old-world expectations clearly instead of assuming everyone wants the same pace.",
       "Hosts should document reset rules and rollback rules before reopening an updated world, even for friend groups.",
     ],
-    lastUpdated: "July 7, 2026",
-    readingTime: "5 min read",
+    lastUpdated: "July 11, 2026",
+    readingTime: "10 min read",
     tags: ["multiplayer", "co-op", "server"],
     statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    confirmedChanges: [
+      "Version 1.0 adds optional dedicated-server voice chat, except on WinGDK.",
+      "Guild roles, permissions, structure access, markers, and login notifications were expanded.",
+      "Chat, server joining, password entry, IP entry, server lists, save processing, and unstable-connection indicators received official changes.",
+      "Pocketpair lists dedicated-server, co-op, memory, and high-load optimization and stability work.",
+    ],
+    pendingUpdates: [
+      "Safe player capacity, long-session stability, latency under load, platform-specific issues, and MOD compatibility need in-game verification.",
+    ],
+    sourceNotes: [
+      "Multiplayer facts were checked against Pocketpair's official Palworld v1.0 Steam changelog and official MOD warning.",
+    ],
+    visual: {
+      src: "/assets/palworld-1-0-multiplayer-setup-map.webp",
+      alt: "Palworld 1.0 multiplayer setup map showing host choice, shared rules, clean test, guild permissions, and stable reopening",
+      caption: "A reliable multiplayer world starts with ownership and backups, then moves through clean testing and shared rules.",
+    },
+    relatedLinks: [
+      { label: "Server Setup Guide", href: "/server/palworld-1-0-server-setup-guide/" },
+      { label: "Best Server Settings", href: "/server/palworld-1-0-best-server-settings/" },
+      { label: "Server Owner Checklist", href: "/server/palworld-1-0-server-owner-checklist/" },
+      { label: "MOD Warning", href: "/guides/palworld-1-0-mods-warning-compatibility-guide/" },
+    ],
     sections: [
       {
-        heading: "Pick the right multiplayer format",
+        heading: "Choose the right multiplayer format",
         paragraphs: [
-          "Small friend groups can usually keep rules simple. Larger communities need clearer expectations around uptime, resets, PvE etiquette, griefing, and who can change server settings.",
+          "A locally hosted co-op world is simple for a small group but depends on the host being online. A dedicated server supports persistent access but adds backups, configuration, version control, permissions, and performance monitoring.",
+          "Choose based on ownership and uptime before comparing settings. Moving a committed group later is more disruptive than starting with conservative rules.",
         ],
+        table: {
+          headers: ["Format", "Good fit", "Required decision", "Main risk"],
+          rows: [
+            ["Host-based co-op", "Friends playing together on a schedule", "Who owns the save and when the host is online", "Progress stops when the host is unavailable"],
+            ["Private dedicated server", "Small groups needing persistent access", "Who maintains backups, updates, and settings", "Configuration or host failures affect everyone"],
+            ["Community server", "Larger groups with rules and moderation", "Roles, permissions, resets, support, and enforcement", "Griefing, uneven progression, and heavier workload"],
+          ],
+        },
       },
       {
-        heading: "Set expectations before reopening",
+        heading: "Group decisions to make before playing",
         bullets: [
-          "Who hosts the world?",
-          "Will the server run 24/7 or only during sessions?",
-          "Will players progress separately or together?",
-          "Are base locations reserved?",
-          "What happens if 1.0 launch issues require a rollback?",
+          "Who owns the world and who can restore a backup?",
+          "Will the server run continuously or only during shared sessions?",
+          "Can players progress missions and bosses independently?",
+          "Are storage, rare resources, base zones, and captured Pals shared or personal?",
+          "Who can change settings, roles, permissions, or MODs?",
+          "What triggers a rollback, reset, or maintenance window?",
         ],
       },
       {
-        heading: "Avoid launch-week friction",
+        heading: "Official Version 1.0 multiplayer changes",
         paragraphs: [
-          "Most multiplayer problems are not technical. They come from mismatched expectations. Decide the reset policy, backup policy, and rule-change policy before people invest hours into the world.",
+          "Pocketpair confirms expanded guild roles and permissions, guild markers, login notifications, clearer chat system messages, anti-impersonation measures, longer chat history, server-list improvements, password and IP-entry changes, save-process work, and unstable-connection indicators.",
+          "Dedicated servers can enable voice chat through world settings, but Pocketpair states that WinGDK does not support it. Steam and Mac versions can optionally link Discord accounts. These features should be tested with the actual platform combination before a community depends on them.",
         ],
       },
       {
-        heading: "Simple group rules that help",
+        heading: "Clean multiplayer smoke test",
         bullets: [
-          "Pick one shared voice or text channel for server announcements.",
-          "Agree on whether rare resources and base spots are first-come or coordinated.",
-          "Do not change progression settings mid-session unless the group agrees.",
-          "Keep a rollback policy ready in case launch issues affect the world.",
+          "Back up the complete world and remove unsupported MOD files or loaders.",
+          "Confirm the host/server and every test client use compatible Version 1.0 builds.",
+          "Join with at least two clients and check spawn, character data, password behavior, and guild membership.",
+          "Access a representative base, move items, assign a Pal, and test structure permissions.",
+          "Save, log out, restart the host/server, reconnect, and confirm persistence.",
+          "Run a longer private session before calling capacity or stability verified.",
         ],
       },
       {
-        heading: "After 1.0 is live",
+        heading: "How to diagnose multiplayer problems",
+        table: {
+          headers: ["Symptom", "Check first", "Next action"],
+          rows: [
+            ["Cannot join", "Server/client version, password, IP entry, server status", "Test a clean unmodded client and confirm the address"],
+            ["One player stutters", "That client's FPS, drivers, background apps, and connection", "Compare in the same area with another client"],
+            ["Everyone delays", "Host/server load, connection indicators, world simulation", "Restart privately and inspect server resources"],
+            ["Progress disappears", "Save completion, shutdown method, restart persistence", "Stop access and restore only from a verified backup"],
+            ["Permissions fail", "Guild role and structure access settings", "Test with a temporary role before changing production access"],
+          ],
+        },
+      },
+      {
+        heading: "Rules that keep a long-term group healthy",
+        bullets: [
+          "Use one announcement channel for maintenance, settings, MODs, and rollback notices.",
+          "Document world purpose, progression pace, PvP/PvE policy, shared resources, and reserved zones.",
+          "Do not change several progression or difficulty categories at once.",
+          "Keep the pre-change configuration beside the matching world backup.",
+          "Use guild permissions for responsibility, then test them before restricting important structures.",
+        ],
+      },
+      {
+        heading: "What still needs in-game verification",
         paragraphs: [
-          "This guide will add confirmed notes about multiplayer stability, server behavior, and any official changes that affect co-op planning.",
+          "The official changelog confirms engineering and feature changes, not a universal safe player count or proof of stable long sessions on every host. Capacity, latency, memory use, cross-platform behavior, voice quality, MOD combinations, and world-specific problems need in-game verification.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This guide uses Pocketpair's official Palworld v1.0 Steam changelog and official MOD warning. It separates confirmed multiplayer features from host-specific performance and stability claims.",
         ],
       },
     ],
@@ -868,15 +1019,24 @@ export const guides: Guide[] = [
           "It can be, but solo is easier for learning. Multiplayer works best when hosting, progression pace, and reset rules are already agreed.",
       },
       {
-        question: "What causes the most multiplayer problems?",
+        question: "What should a multiplayer group test first?",
         answer:
-          "Unclear expectations: who hosts, when the world is online, whether bases are reserved, and what happens if the server rolls back.",
+          "Joining, character loading, a representative base, guild permissions, saving, restart persistence, and reconnect behavior on a backed-up unmodded world.",
       },
       {
         question: "Should groups start fresh?",
         answer:
-          "Many groups will prefer a fresh shared start, but the final choice should wait for official save and server notes if an old world matters.",
+          "Pocketpair says existing saves can continue and recommends a fresh character for the reworked experience. Back up and privately test any important old group world.",
       },
+      {
+        question: "Does Version 1.0 guarantee a higher server capacity?",
+        answer:
+          "No. The official changelog confirms optimization and stability work, but safe capacity depends on the host, world, settings, uptime, and player behavior. Needs in-game verification.",
+      },
+    ],
+    sourceLinks: [
+      { label: "Pocketpair official Palworld v1.0 release changelog on Steam", href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658" },
+      { label: "Pocketpair official MOD warning for Palworld 1.0", href: "https://store.steampowered.com/news/app/1623730/view/1836506165582004" },
     ],
   },
   {
@@ -885,47 +1045,117 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Performance",
     description:
-      "A safe performance tuning checklist for Palworld 1.0 players, focused on stable troubleshooting rather than unconfirmed launch-specific tweaks.",
+      "Palworld 1.0 performance troubleshooting guide with a repeatable benchmark method, symptom diagnosis, safe graphics-setting order, multiplayer separation, and crash checklist.",
     shortAnswer:
-      "For Palworld 1.0 performance, start with stable moderate settings, change one option at a time, and separate client FPS issues from server or network problems.",
+      "Create a repeatable test scene, record the symptom, separate FPS from server or network delay, change one graphics category at a time, and keep the change only when the same test shows a measurable improvement without new instability.",
     playerAdvice: [
       "New players should prioritize smooth play over max visuals during the first session.",
       "Returning players should retest old graphics presets because 1.0 performance may differ from Early Access builds.",
       "Multiplayer players should check whether lag is happening to everyone before assuming their own PC settings are the cause.",
     ],
-    lastUpdated: "July 7, 2026",
-    readingTime: "5 min read",
+    lastUpdated: "July 11, 2026",
+    readingTime: "10 min read",
     tags: ["performance", "settings", "troubleshooting"],
     statusNotice: liveReleaseNotice,
     ...launchUpdateFields,
+    confirmedChanges: [
+      "Pocketpair lists optimization for equipment, weapons, foliage, gatherable objects, dense placed objects, spawn points, high-load processing, memory, item searches, and Base Pal work-state searches.",
+      "The changelog also lists crash, memory leak, infinite loading, multiplayer synchronization, dedicated-server, camera, riding, and terrain-related fixes.",
+      "Vertical field-of-view adjustment is officially included in Version 1.0.",
+    ],
+    pendingUpdates: [
+      "Hardware-specific FPS, frame-time gains, ideal presets, driver behavior, memory use, and long-session stability need measured testing.",
+    ],
+    sourceNotes: [
+      "Optimization and bug-fix statements were checked against Pocketpair's official Palworld v1.0 Steam changelog.",
+    ],
+    visual: {
+      src: "/assets/palworld-1-0-performance-troubleshooting.webp",
+      alt: "Palworld 1.0 performance troubleshooting flow showing symptom identification, repeatable test, one-setting change, comparison, and keep-or-revert decision",
+      caption: "Performance tuning should be a repeatable comparison, not a list of copied settings without hardware context.",
+    },
+    relatedLinks: [
+      { label: "Patch Notes Explained", href: "/palworld-1-0/palworld-1-0-patch-notes-explained/" },
+      { label: "Multiplayer Guide", href: "/server/palworld-1-0-multiplayer-guide/" },
+      { label: "Server Setup Guide", href: "/server/palworld-1-0-server-setup-guide/" },
+      { label: "MOD Warning", href: "/guides/palworld-1-0-mods-warning-compatibility-guide/" },
+    ],
     sections: [
       {
-        heading: "Start with stability, then improve visuals",
+        heading: "Identify the problem before changing settings",
         paragraphs: [
-          "On a new major release, the first goal is stable frame pacing and crash-free play. Do not chase maximum visuals until you know how Palworld 1.0 behaves on your hardware.",
+          "Low average FPS, uneven frame pacing, traversal stutter, crashes, input delay, network latency, and server simulation delay are different problems. A graphics preset cannot solve all of them.",
+          "Write down where the problem happens, whether it affects solo and multiplayer, whether other players feel it, and whether it begins immediately or after a long session.",
         ],
       },
       {
-        heading: "Basic troubleshooting order",
+        heading: "Symptom diagnosis",
+        table: {
+          headers: ["Symptom", "Likely category", "First controlled check", "Do not assume"],
+          rows: [
+            ["Consistently low FPS", "GPU/CPU load or resolution", "Test the same scene with a lower render load", "One copied preset fits every PC"],
+            ["Uneven motion despite acceptable FPS", "Frame pacing or streaming", "Use a stable frame cap and repeat the same route", "Average FPS tells the whole story"],
+            ["Stutter near dense bases", "World/object simulation or rendering", "Compare away from the base and after restart", "Only graphics settings are responsible"],
+            ["All players delay together", "Host/server/network", "Compare client FPS with server behavior", "Each player's GPU is the cause"],
+            ["Crash or infinite load", "Files, MODs, driver, memory, or save state", "Back up; remove MODs; verify files; test clean", "A quality slider alone will fix it"],
+          ],
+        },
+      },
+      {
+        heading: "Create a repeatable benchmark",
         bullets: [
-          "Update GPU drivers before troubleshooting Version 1.0 performance if you are comfortable doing so.",
-          "Close heavy background apps while testing.",
-          "Start with moderate graphics settings.",
-          "Change one setting at a time and test the same area again.",
-          "Check official notes before assuming a performance issue is local.",
+          "Choose one save, location, route, weather condition, and camera direction.",
+          "Close unnecessary background workloads and note the current game build and driver.",
+          "Test long enough to include movement, combat effects, foliage, and a representative base if relevant.",
+          "Change one category, repeat the same route, and compare smoothness, image quality, temperatures, and crashes.",
+          "Revert changes that do not produce a clear benefit.",
         ],
       },
       {
-        heading: "Settings to review first",
+        heading: "Safe graphics-setting order",
         paragraphs: [
-          "Resolution, upscaling options, shadow quality, view distance, effects, foliage, frame rate caps, and VSync are usually the first places to look in a survival game performance pass.",
-          "Exact best settings can only be recommended after the 1.0 build is available and tested across hardware.",
+          "Start with display behavior and render load, then move to scene complexity. This order makes it easier to tell which change helped instead of replacing the entire preset at once.",
+        ],
+        table: {
+          headers: ["Order", "Category", "What to observe"],
+          rows: [
+            ["1", "Resolution, display mode, upscaling", "Image clarity, GPU load, UI readability"],
+            ["2", "Frame cap and VSync", "Frame pacing, tearing, input feel"],
+            ["3", "Shadows and effects", "Combat dips and GPU-heavy scenes"],
+            ["4", "View distance and foliage", "Traversal, dense areas, object visibility"],
+            ["5", "Remaining quality options", "Small visual gains versus measurable cost"],
+          ],
+        },
+      },
+      {
+        heading: "Client FPS versus server or network delay",
+        paragraphs: [
+          "A client can render smoothly while interactions, Pals, or other players update late. If multiple players experience the same delay at the same time, inspect the host, server workload, connection indicators, world simulation, and restart behavior before reducing every client's graphics quality.",
+          "Pocketpair confirms dedicated-server optimization and stability work, but it does not publish a universal capacity increase. Real player count, base load, memory behavior, and long-session stability need in-game verification.",
         ],
       },
       {
-        heading: "Server performance is separate",
+        heading: "Crash and loading checklist",
+        bullets: [
+          "Back up the affected save before repeated testing.",
+          "Remove old MOD files and loaders manually; disabling them may not be enough.",
+          "Verify game files and reproduce on a clean unmodded launch.",
+          "Check available storage, background memory pressure, and driver stability.",
+          "Compare a new or test save with the important world to separate installation issues from world-specific issues.",
+          "Check later official hotfix and known-issue notices before applying unrelated fixes.",
+        ],
+      },
+      {
+        heading: "What the official optimization notes do and do not prove",
         paragraphs: [
-          "If multiplayer feels unstable, separate client performance from server performance. A player can have high FPS while the server still struggles with simulation, backups, or network conditions.",
+          "The official changelog confirms engineering work in several high-load areas and a large bug-fix pass. It does not guarantee a specific FPS increase, eliminate every crash, or establish the best preset for a particular CPU, GPU, resolution, platform, save, or server.",
+          "Any exact recommendation should state the hardware, resolution, build, test location, target frame rate, and measured result. Needs in-game verification.",
+        ],
+      },
+      {
+        heading: "Source note",
+        paragraphs: [
+          "This guide uses Pocketpair's official v1.0 optimization and bug-fix sections as the factual baseline. The troubleshooting order is a cautious testing framework and does not claim universal performance gains.",
         ],
       },
     ],
@@ -933,7 +1163,7 @@ export const guides: Guide[] = [
       {
         question: "Can this guide name the best Palworld 1.0 performance settings now?",
         answer:
-          "Not exactly. It can give a safe troubleshooting order, but exact best settings require testing the 1.0 build on real hardware.",
+          "No universal preset is official. Exact settings depend on hardware, resolution, target frame rate, location, save complexity, and image-quality preference. Needs in-game verification.",
       },
       {
         question: "What should I adjust first?",
@@ -945,6 +1175,15 @@ export const guides: Guide[] = [
         answer:
           "If multiple players feel delays at the same time while local FPS looks fine, investigate server performance, network conditions, or world simulation load.",
       },
+      {
+        question: "Does the Version 1.0 changelog guarantee higher FPS?",
+        answer:
+          "No. It confirms optimization work, but actual FPS, frame pacing, memory use, and stability must be measured on the specific system and world.",
+      },
+    ],
+    sourceLinks: [
+      { label: "Pocketpair official Palworld v1.0 release changelog on Steam", href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658" },
+      { label: "Pocketpair official MOD warning for Palworld 1.0", href: "https://store.steampowered.com/news/app/1623730/view/1836506165582004" },
     ],
   },
   {

@@ -60,8 +60,8 @@
 
 ## Current Priorities
 
-1. 继续按官方 changelog 深化 Multiplayer、Performance 和 Beginner 页面，只加入官方事实或明确标记的实测结论。
-2. 跟踪 Pocketpair 官方 known issues / hotfix 公告，不用媒体或玩家传闻替代官方事实。
+1. 跟踪 Pocketpair 官方 known issues / hotfix 公告，不用媒体或玩家传闻替代官方事实。
+2. 等可靠玩家实测后再评估 Best Pals、Best Weapons、Best Base Locations 和精确服务器倍率内容。
 3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功。
 4. 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。
 
@@ -100,6 +100,8 @@
 - 24 个构建页面 title/meta 无重复；23 个正式 canonical URL 进入 sitemap，内部链接检查无 broken link。
 - Patch Notes、Sunreach、World Tree、New Pals、MOD Warning、Server Setup、First Hour 已加入原创 WebP 插画或信息图及 alt text。
 - Patch Notes、Sunreach、World Tree、New Pals、Server Setup、Best Server Settings 已加入可操作表格或检查框架。
+- Beginner、Multiplayer、Performance 已完成正式深度更新，加入分阶段路线、决策表、故障诊断、Source note、内链和原创 WebP 视觉。
+- Guides、Server、About 三个入口页已更新正式发布后文案、阅读路径、入口导航和原创/自制配图。
 
 ## Do Not Do Now
 

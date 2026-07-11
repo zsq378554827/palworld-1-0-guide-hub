@@ -20,6 +20,14 @@
 - 24 个页面 title/meta 唯一，23 个正式 canonical URL 进入 sitemap，robots 指向线上 sitemap，内部链接检查无 broken link。
 - `npm run build` 通过；Patch Notes 页面在 390px 和 1280px 下无页面级横向溢出。
 
+### 剩余旧页面深化
+
+- 将 Beginner Guide 扩展为首小时路线、基地清单、Pal 管理、技术资源、探索习惯和 Solo/Multiplayer 决策攻略。
+- 将 Multiplayer Guide 扩展为托管方式选择、Version 1.0 官方多人变化、私服 smoke test、故障诊断、长期群组规则和容量验证边界。
+- 将 Performance Settings 扩展为症状诊断、可重复 benchmark、设置调整顺序、客户端/服务器问题区分及崩溃排查。
+- Guides、Server、About 入口页加入正式发布后文案、推荐阅读路径、内部链接和视觉内容。
+- 新增 Beginner 原创概念插画、Multiplayer setup map 和 Performance troubleshooting 信息图；均为 WebP 且包含 alt text。
+
 ## 2026-07-10
 
 ### 官方来源核查

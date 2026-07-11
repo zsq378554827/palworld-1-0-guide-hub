@@ -7,24 +7,38 @@ const serverGuides = getGuidesByCategory("server");
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Server Guides"
-  description="Server setup, multiplayer planning, and cautious launch settings for Palworld Version 1.0."
+  title="Palworld 1.0 Server Guides: Setup, Settings and Multiplayer"
+  description="Practical Palworld 1.0 server guides for backups, updates, multiplayer testing, safe settings frameworks, guild permissions, MOD cleanup, and server-owner checklists."
   canonical="/server/"
 >
   <section class="page-hero compact">
     <p class="eyebrow">Server</p>
     <h1>Palworld 1.0 Server Guides</h1>
-    <p>Plan a stable launch world with backups, clear rules, conservative settings, and multiplayer expectations before players invest serious time.</p>
+    <p>Protect the world, update cleanly, test persistence, document settings, and give players clear rules before reopening a long-term server.</p>
+  </section>
+
+  <section class="section-wrap guide-landing-intro">
+    <img src="/assets/palworld-1-0-server-update-checklist.webp" alt="Palworld 1.0 server update checklist covering backup, clean update, testing, and reopening" width="1440" height="810" loading="lazy" />
+    <div>
+      <p class="eyebrow">Server owner route</p>
+      <h2>Use the right guide for the current stage</h2>
+      <div class="quick-links">
+        <a href="/server/palworld-1-0-server-setup-guide/">Updating now: complete setup and smoke test</a>
+        <a href="/server/palworld-1-0-server-owner-checklist/">Reopening soon: use the owner checklist</a>
+        <a href="/server/palworld-1-0-best-server-settings/">Choosing rules: compare safe settings approaches</a>
+        <a href="/server/palworld-1-0-multiplayer-guide/">Managing players: plan hosting, guilds and group rules</a>
+      </div>
+    </div>
   </section>
 
   <section class="section-wrap">
     <div class="info-strip">
       <strong>Server owner note</strong>
-      <span>Keep launch settings conservative until 1.0 performance, balance, and compatibility are known.</span>
+      <span>Version 1.0 optimization does not prove a universal safe capacity. Keep backups and test the actual world under expected load.</span>
     </div>
+    <div class="section-heading"><h2>Server setup and multiplayer guides</h2><p>Each guide separates official changes from host-specific results that still need verification.</p></div>
     <div class="card-grid">
       {serverGuides.map((guide) => <GuideCard guide={guide} />)}
     </div>
   </section>
 </BaseLayout>
-

@@ -7,20 +7,41 @@ const pageGuides = getGuidesByCategory("guides");
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Guides"
-  description="Beginner, returning player, performance, save planning, and FAQ guides for Palworld Version 1.0."
+  title="Palworld 1.0 Player Guides: Beginner, Saves, MODs and Performance"
+  description="Browse practical Palworld 1.0 player guides for beginners, returning players, first-hour planning, saves, MOD cleanup, performance troubleshooting, and official changelog questions."
   canonical="/guides/"
 >
   <section class="page-hero compact">
     <p class="eyebrow">Guides</p>
     <h1>Palworld 1.0 Guides</h1>
-    <p>Practical launch-ready guides for new players, returning players, save decisions, performance tuning, and common Version 1.0 questions.</p>
+    <p>Choose the problem you need to solve now: starting safely, returning to an old world, cleaning MODs, improving performance, or planning the first hour.</p>
+  </section>
+
+  <section class="section-wrap guide-landing-intro">
+    <img src="/assets/palworld-1-0-beginner-starter-journey.webp" alt="Original beginner journey artwork with a flexible campsite, crafting area, route, and watchtower" width="1440" height="810" loading="lazy" />
+    <div>
+      <p class="eyebrow">Pick a starting path</p>
+      <h2>Get a useful answer before opening another tab</h2>
+      <div class="quick-links">
+        <a href="/guides/palworld-1-0-beginner-guide/">New player: build a safe first-session plan</a>
+        <a href="/guides/palworld-1-0-returning-player-guide/">Returning player: check saves, bases and Pals</a>
+        <a href="/guides/palworld-1-0-mods-warning-compatibility-guide/">MOD user: clean up before loading a world</a>
+        <a href="/guides/palworld-1-0-performance-settings/">Performance problem: diagnose before changing settings</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-grid">
+      <div><p class="eyebrow">Official facts first</p><h2>Confirmed changes are separated from player testing</h2><p>Pages use Pocketpair's official v1.0 changelog for facts. Routes, rankings, performance results and best settings remain labeled when they need in-game verification.</p></div>
+      <div class="quick-links"><a href="/faq/">Read the complete FAQ</a><a href="/palworld-1-0/palworld-1-0-patch-notes-explained/">Understand the official update</a></div>
+    </div>
   </section>
 
   <section class="section-wrap">
+    <div class="section-heading"><p class="eyebrow">All player guides</p><h2>Continue with a focused checklist</h2></div>
     <div class="card-grid">
       {pageGuides.map((guide) => <GuideCard guide={guide} />)}
     </div>
   </section>
 </BaseLayout>
-

@@ -277,4 +277,30 @@ await writeGraphic(
   "Exact timing, routes, starter Pals and permanent base choices depend on the world and need testing.",
 );
 
+await writeGraphic(
+  "palworld-1-0-multiplayer-setup-map.webp",
+  "Palworld 1.0 Multiplayer Setup",
+  "Protect the world first, then verify the group experience",
+  [
+    { title: "1. Ownership", line1: "Choose host and uptime", line2: "assign backup responsibility" },
+    { title: "2. Rules", line1: "Progression, storage and bases", line2: "roles, resets and rollback" },
+    { title: "3. Clean test", line1: "Match versions and remove MODs", line2: "join with multiple clients" },
+    { title: "4. Persistence", line1: "Save, restart and reconnect", line2: "verify guild permissions" },
+  ],
+  "Capacity, latency, voice quality and long-session stability still need testing on the actual host.",
+);
+
+await writeGraphic(
+  "palworld-1-0-performance-troubleshooting.webp",
+  "Palworld 1.0 Performance Test",
+  "Use one repeatable scene and change one category at a time",
+  [
+    { title: "1. Identify", line1: "FPS, frame pacing, crash", line2: "network or server delay" },
+    { title: "2. Baseline", line1: "Same save, route and scene", line2: "record build and hardware" },
+    { title: "3. Change one", line1: "Display, cap, shadows", line2: "effects, distance or foliage" },
+    { title: "4. Compare", line1: "Repeat the same test", line2: "keep only clear improvements" },
+  ],
+  "Official optimization work does not prove a universal preset or guaranteed FPS gain.",
+);
+
 console.log("Generated fan-made visual assets in public/assets.");
