@@ -13,7 +13,6 @@ export function getStaticPaths() {
 const { guide } = Astro.props;
 ---
 
-<BaseLayout title={guide.title} description={guide.description} canonical={`/${guide.slug}/`} type="article">
+<BaseLayout title={guide.title} description={guide.description} canonical={guide.canonical ?? `/${guide.slug}/`} type="article">
   <ArticleTemplate guide={guide} />
 </BaseLayout>
-

@@ -1,6 +1,6 @@
 # TODO
 
-更新时间：2026-07-10
+更新时间：2026-07-11
 
 ## 工作模式
 
@@ -31,6 +31,7 @@
 | 进行中 | 1.0 正式 patch notes 发布后更新文章 | 高 | Codex | 第二轮已深化 Patch Notes、Save、Returning、Server Setup、Best Server Settings、FAQ；下一步为 Multiplayer、Performance、Beginner |
 | 已完成 | 1.0 官方 changelog 重点页第二轮深化与 QA | 高 | Codex | 6 个重点页完成正式发布 SEO 内容；21 个内部链接无缺失；390px/1280px 无横向溢出；build 通过 |
 | 已完成 | 第三轮新增 6 篇安全范围页面 | 高 | Codex | Sunreach、World Tree、New Pals Overview、MOD Warning、Server Owner Checklist、First Hour Checklist；24 个页面 build、链接、SEO、390px/1280px QA 通过 |
+| 已完成 | 发布后文案、FAQ、配图和实用性优化 | 高 | Codex | 清除发布前措辞；完整 `/faq/`；7 个重点页原创视觉；重点页表格/checklist；重复 FAQ canonical 与 sitemap 去重 |
 | 已完成 | 接入 Analytics 和 Search Console | 中 | Codex | Cloudflare Web Analytics 已接入；GSC URL-prefix 资源已通过 HTML 文件验证；sitemap 已提交 |
 | 未开始 | 复查 GSC sitemap 抓取状态 | 中 | Codex | 已重新提交 `sitemap.xml`，GSC 返回提交成功；表格即时状态仍为“无法抓取”；站点端检查 `/sitemap.xml` 对 Googlebot 返回 200 和 `application/xml` |
 | 已完成 | Palworld 1.0 patch notes 更新日准备 | 高 | Codex | 已预留文章更新字段；文章页新增 Update Notice；已创建 `UPDATE_DAY_CHECKLIST.md`；build 通过 |

@@ -1,50 +1,28 @@
 ---
-import GuideCard from "../../components/GuideCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getGuideBySlug } from "../../data/guides";
 
 const faqGuide = getGuideBySlug("guides/palworld-1-0-faq");
-const faqs = [
-  {
-    question: "Is this an official Palworld site?",
-    answer: "No. This is an unofficial fan-made guide site and is not affiliated with or endorsed by Pocketpair.",
-  },
-  {
-    question: "Does this site include every Pal, item, and map location?",
-    answer: "No. The MVP is a focused Palworld 1.0 guide hub, not a full database or Wiki.",
-  },
-  {
-    question: "Is Palworld 1.0 live?",
-    answer: "Yes. Palworld Version 1.0 is live, and Pocketpair has published the official release changelog through Steam.",
-  },
-  {
-    question: "Should I start a new save for Palworld 1.0?",
-    answer: "A fresh save is not required. Pocketpair says existing saves can continue, but recommends a new character for the reworked experience.",
-  },
-  {
-    question: "Should I remove old MODs before updating?",
-    answer: "Yes. Remove old MOD files and loaders, verify game files, and test Version 1.0 unmodded before restoring compatible MODs.",
-  },
-  {
-    question: "What are Sunreach and the World Tree?",
-    answer: "Sunreach is a new floating-island region, while the World Tree is central to the reworked story and endgame challenge.",
-  },
-  {
-    question: "Are there new Pals?",
-    answer: "Yes. Version 1.0 adds 47 new Pals and 25 variants, for 72 additions and 287 Pals in total.",
-  },
-];
+const faqs = faqGuide?.faqs ?? [];
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Questions and Answers"
-  description="Official-source Palworld 1.0 FAQ covering release status, old saves, fresh characters, MOD cleanup, Sunreach, the World Tree, new Pals, and servers."
+  title="Palworld 1.0 FAQ: Saves, MODs, Sunreach, Pals and Servers"
+  description="Complete Palworld 1.0 FAQ based on Pocketpair's official changelog, covering release status, old saves, fresh characters, MODs, Sunreach, the World Tree, new Pals, servers, and returning players."
   canonical="/faq/"
 >
   <section class="page-hero compact">
-    <p class="eyebrow">FAQ</p>
+    <p class="eyebrow">Complete FAQ</p>
     <h1>Palworld 1.0 FAQ</h1>
-    <p>Official-source answers about Palworld 1.0 saves, MODs, new regions, Pals, servers, and what still needs in-game verification.</p>
+    <p>Palworld 1.0 is live and the official v1.0 changelog is available. These answers separate confirmed facts from recommendations that still need player testing.</p>
+  </section>
+
+  <section class="section-wrap">
+    <aside class="update-notice">
+      <strong>Official-source status</strong>
+      <p>Existing saves can continue, Pocketpair recommends a new character for the reworked experience, and old MOD files should be removed before testing Version 1.0.</p>
+      <span>Last Updated: July 10, 2026</span>
+    </aside>
   </section>
 
   <section class="faq-list">
@@ -56,14 +34,20 @@ const faqs = [
     ))}
   </section>
 
-  {faqGuide && (
-    <section class="section-wrap">
-      <div class="section-heading">
-        <h2>Full FAQ article</h2>
-      </div>
-      <div class="card-grid single">
-        <GuideCard guide={faqGuide} />
-      </div>
-    </section>
-  )}
+  <section class="section-wrap">
+    <div class="section-heading">
+      <h2>What remains player-tested</h2>
+      <p>Best Pals, exact routes, ideal server multipliers, hardware-specific performance, MOD compatibility, and long-session multiplayer stability still need in-game verification.</p>
+    </div>
+    <div class="compact-link-grid">
+      <a href="/palworld-1-0/palworld-1-0-patch-notes-explained/"><strong>Patch Notes Explained</strong></a>
+      <a href="/guides/should-you-start-a-new-save-in-palworld-1-0/"><strong>New Save Decision Guide</strong></a>
+      <a href="/guides/palworld-1-0-returning-player-guide/"><strong>Returning Player Guide</strong></a>
+    </div>
+  </section>
+
+  <section class="source-box section-wrap">
+    <h2>Source note</h2>
+    <p>This unofficial FAQ paraphrases Pocketpair's official Palworld v1.0 Steam changelog and MOD warning. It does not reproduce the announcements or certify untested rankings, routes, settings, or MODs.</p>
+  </section>
 </BaseLayout>

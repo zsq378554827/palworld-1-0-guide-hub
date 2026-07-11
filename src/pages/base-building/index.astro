@@ -7,44 +7,48 @@ const baseRelated = getGuidesByTag("base-building");
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Base Building"
-  description="Base planning guidance for Palworld 1.0 players, focused on stable layouts, storage habits, server-safe decisions, and launch-week caution."
+  title="Palworld 1.0 Base Building Changes Explained"
+  description="Official Palworld 1.0 base building changes explained, including Aquatic Construction, Work Suitability level 10, wave raids, ammunition-free defenses, Base Pal work changes, and an old-base checklist."
   canonical="/base-building/"
 >
   <section class="page-hero compact">
     <p class="eyebrow">Base Building</p>
-    <h1>Palworld 1.0 Base Building</h1>
-    <p>Build bases that are easy to adjust after the final Version 1.0 notes are confirmed. The first rule is flexibility, not perfect launch-day optimization.</p>
+    <h1>Palworld 1.0 Base Building Changes Explained</h1>
+    <p>Palworld 1.0 is live. The official changelog confirms major changes to construction, Base Pal work and raids; optimized layouts and best locations still need player testing.</p>
   </section>
 
   <section class="section-wrap two-column">
     <div>
-      <h2>Launch-safe base habits</h2>
+      <h2>Confirmed Version 1.0 changes</h2>
       <ul class="check-list">
-        <li>Keep early bases small and easy to relocate.</li>
-        <li>Separate storage by function before the base becomes crowded.</li>
-        <li>Leave walking space for Pals instead of packing stations tightly.</li>
-        <li>Back up important worlds before major updates.</li>
-        <li>Wait for 1.0 notes before committing to permanent late-game layouts.</li>
+        <li><strong>Aquatic Construction:</strong> players can build along shorelines and offshore areas.</li>
+        <li><strong>Work Suitability level 10:</strong> suitability now extends to ten levels and Pal work values were rebalanced.</li>
+        <li><strong>Wave-based raids:</strong> raids arrive in successive waves and provide completion rewards.</li>
+        <li><strong>Ammunition-free defenses:</strong> defense structures no longer consume ammunition while operating.</li>
+        <li><strong>Base Pal work changes:</strong> work priorities, resource distribution, pathing-related behavior and multiple work issues were adjusted.</li>
       </ul>
     </div>
     <div>
-      <h2>What this section will add later</h2>
-      <p>
-        After Palworld 1.0 is live, this section can expand into dedicated guides for base locations,
-        production flow, raid pressure, storage systems, Pal assignments, and server-friendly layouts.
-      </p>
+      <h2>What old base owners should check first</h2>
+      <ul class="check-list">
+        <li>Back up the world before restructuring an important base.</li>
+        <li>Inspect every assigned Pal's current Work Suitability and priorities.</li>
+        <li>Check paths, storage access and production queues after loading the base.</li>
+        <li>Review defenses before the first wave-based raid reaches the base.</li>
+        <li>Keep old layouts flexible until throughput and raid pressure are measured.</li>
+      </ul>
     </div>
   </section>
 
   <section class="section-wrap">
     <div class="section-heading">
-      <h2>Related starter guides</h2>
-      <p>These MVP articles include base planning advice while dedicated base guides are still being prepared.</p>
-    </div>
-    <div class="card-grid">
-      {baseRelated.map((guide) => <GuideCard guide={guide} />)}
+      <h2>What still needs in-game verification</h2>
+      <p>Best Base Locations, optimal Pal assignments, highest-throughput layouts, defense placement and raid scaling depend on real worlds and should not be treated as settled yet.</p>
     </div>
   </section>
-</BaseLayout>
 
+  <section class="section-wrap">
+    <div class="section-heading"><h2>Related guides</h2></div>
+    <div class="card-grid">{baseRelated.map((guide) => <GuideCard guide={guide} />)}</div>
+  </section>
+</BaseLayout>

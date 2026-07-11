@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { deflateSync } from "node:zlib";
+import sharp from "sharp";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, "public", "assets");
@@ -172,5 +173,108 @@ function drawImage(width, height, fileName) {
 drawImage(1600, 900, "palworld-guide-hero.png");
 drawImage(1200, 630, "palworld-guide-og.png");
 
-console.log("Generated fan-made visual assets in public/assets.");
+const escapeXml = (value) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 
+async function writeGraphic(fileName, title, subtitle, cards, footer) {
+  const width = 1440;
+  const height = 810;
+  const columns = cards.length <= 4 ? 2 : 3;
+  const cardWidth = columns === 2 ? 590 : 380;
+  const cardHeight = cards.length <= 4 ? 178 : 150;
+  const startX = columns === 2 ? 110 : 90;
+  const gapX = columns === 2 ? 40 : 60;
+  const startY = 245;
+  const gapY = 28;
+  const cardSvg = cards.map((card, index) => {
+    const col = index % columns;
+    const row = Math.floor(index / columns);
+    const x = startX + col * (cardWidth + gapX);
+    const y = startY + row * (cardHeight + gapY);
+    return `<g>
+      <rect x="${x}" y="${y}" width="${cardWidth}" height="${cardHeight}" rx="20" fill="#102b3b" stroke="#35c9b5" stroke-opacity=".55"/>
+      <circle cx="${x + 44}" cy="${y + 46}" r="18" fill="#f5c766"/>
+      <text x="${x + 78}" y="${y + 52}" fill="#eef7f4" font-size="28" font-weight="800">${escapeXml(card.title)}</text>
+      <text x="${x + 34}" y="${y + 102}" fill="#b8d2ce" font-size="21">${escapeXml(card.line1)}</text>
+      ${card.line2 ? `<text x="${x + 34}" y="${y + 134}" fill="#b8d2ce" font-size="21">${escapeXml(card.line2)}</text>` : ""}
+    </g>`;
+  }).join("");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+    <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071522"/><stop offset="1" stop-color="#123b3b"/></linearGradient></defs>
+    <rect width="1440" height="810" fill="url(#bg)"/>
+    <path d="M0 160 C300 220 530 85 800 145 S1180 220 1440 105" fill="none" stroke="#35c9b5" stroke-opacity=".18" stroke-width="3"/>
+    <text x="90" y="92" fill="#f5c766" font-size="24" font-weight="800" letter-spacing="3">UNOFFICIAL PLAYER GUIDE</text>
+    <text x="90" y="152" fill="#eef7f4" font-size="48" font-weight="900">${escapeXml(title)}</text>
+    <text x="90" y="196" fill="#b8d2ce" font-size="24">${escapeXml(subtitle)}</text>
+    ${cardSvg}
+    <text x="90" y="765" fill="#8eb2ad" font-size="21">${escapeXml(footer)}</text>
+  </svg>`;
+  await sharp(Buffer.from(svg)).webp({ quality: 86 }).toFile(join(outDir, fileName));
+}
+
+await writeGraphic(
+  "palworld-1-0-update-categories-infographic.webp",
+  "Palworld 1.0 Update Categories",
+  "Official changelog coverage, organized for practical follow-up",
+  [
+    { title: "World", line1: "Sunreach, World Tree, islands", line2: "settlements and exploration" },
+    { title: "Pals", line1: "47 new Pals + 25 variants", line2: "Awakening, Mutation and skills" },
+    { title: "Combat", line1: "Movement, equipment and bosses", line2: "require build rechecking" },
+    { title: "Bases", line1: "Aquatic building and work", line2: "wave raids and defenses" },
+    { title: "Multiplayer", line1: "Servers, guilds, chat and saves", line2: "need workload testing" },
+    { title: "Quality", line1: "UI, performance and bug fixes", line2: "results vary by system" },
+  ],
+  "Confirmed categories are official; best routes, builds and settings still need in-game verification.",
+);
+
+await writeGraphic(
+  "palworld-1-0-new-pals-data-card.webp",
+  "Palworld 1.0 Pal Roster Totals",
+  "Official totals without unverified character art or spawn claims",
+  [
+    { title: "47", line1: "New Pals", line2: "confirmed in v1.0" },
+    { title: "25", line1: "Variant Pals", line2: "confirmed in v1.0" },
+    { title: "72", line1: "Total additions", line2: "new + variants" },
+    { title: "287", line1: "Total Pals", line2: "official roster total" },
+  ],
+  "Names, types, regions, roles and rankings remain pending player verification unless officially documented.",
+);
+
+await writeGraphic(
+  "palworld-1-0-mod-cleanup-flowchart.webp",
+  "Palworld 1.0 MOD Cleanup Flow",
+  "Use a backup copy and restore creator-confirmed MODs one at a time",
+  [
+    { title: "1. Back up", line1: "Save, world and MOD list", line2: "outside the active folder" },
+    { title: "2. Remove", line1: "Old files and loaders", line2: "manual cleanup matters" },
+    { title: "3. Verify", line1: "Unsubscribe and verify files", line2: "then launch unmodded" },
+    { title: "4. Restore", line1: "Creator-confirmed MODs only", line2: "test one at a time" },
+  ],
+  "A disabled MOD may still leave active files; compatibility always needs in-game verification.",
+);
+
+await writeGraphic(
+  "palworld-1-0-server-update-checklist.webp",
+  "Palworld 1.0 Server Update Checklist",
+  "A controlled sequence for protecting persistent worlds",
+  [
+    { title: "Before", line1: "Stop cleanly and back up", line2: "record config and MODs" },
+    { title: "Update", line1: "Remove unsupported MODs", line2: "match server and clients" },
+    { title: "Test", line1: "Join, save, restart, reconnect", line2: "check bases and permissions" },
+    { title: "Reopen", line1: "Publish world and rollback rules", line2: "monitor official hotfixes" },
+  ],
+  "Optimization does not prove safe capacity; test the real host and world under expected load.",
+);
+
+await writeGraphic(
+  "palworld-1-0-first-hour-timeline.webp",
+  "Palworld 1.0 First Hour",
+  "Learn the release build before optimizing permanent choices",
+  [
+    { title: "0–10 min", line1: "Mission, controls and basics", line2: "learn revised capture flow" },
+    { title: "10–30 min", line1: "Flexible starter base", line2: "inspect Pal work and storage" },
+    { title: "30–60 min", line1: "Progression and persistence", line2: "avoid unverified tier lists" },
+  ],
+  "Exact timing, routes, starter Pals and permanent base choices depend on the world and need testing.",
+);
+
+console.log("Generated fan-made visual assets in public/assets.");

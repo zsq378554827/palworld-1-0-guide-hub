@@ -40,6 +40,13 @@ const related = guides
     <span>Last verified: {guide.lastVerified}</span>
   </aside>
 
+  {guide.visual && (
+    <figure class="article-visual">
+      <img src={guide.visual.src} alt={guide.visual.alt} width="1440" height="810" loading="lazy" decoding="async" />
+      <figcaption>{guide.visual.caption}</figcaption>
+    </figure>
+  )}
+
   <section class="short-answer">
     <h2>Short answer</h2>
     <p>{guide.shortAnswer}</p>
@@ -61,6 +68,20 @@ const related = guides
           <ul>
             {section.bullets.map((bullet) => <li>{bullet}</li>)}
           </ul>
+        )}
+        {section.table && (
+          <div class="table-scroll" tabindex="0" aria-label={`${section.heading} table`}>
+            <table class="guide-table">
+              <thead>
+                <tr>{section.table.headers.map((header) => <th scope="col">{header}</th>)}</tr>
+              </thead>
+              <tbody>
+                {section.table.rows.map((row) => (
+                  <tr>{row.map((cell) => <td>{cell}</td>)}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
       </section>
     ))}
@@ -84,6 +105,17 @@ const related = guides
           <li><a href={source.href} rel="nofollow noopener" target="_blank">{source.label}</a></li>
         ))}
       </ul>
+    </section>
+  )}
+
+  {guide.relatedLinks && guide.relatedLinks.length > 0 && (
+    <section class="related-guides">
+      <h2>Continue with related guides</h2>
+      <div class="compact-link-grid">
+        {guide.relatedLinks.map((item) => (
+          <a href={item.href}><strong>{item.label}</strong></a>
+        ))}
+      </div>
     </section>
   )}
 

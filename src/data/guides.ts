@@ -4,6 +4,10 @@ export type GuideSection = {
   heading: string;
   paragraphs?: string[];
   bullets?: string[];
+  table?: {
+    headers: string[];
+    rows: string[][];
+  };
 };
 
 export type GuideFaq = {
@@ -32,13 +36,20 @@ export type Guide = {
   sections: GuideSection[];
   faqs: GuideFaq[];
   sourceLinks?: { label: string; href: string }[];
+  canonical?: string;
+  visual?: {
+    src: string;
+    alt: string;
+    caption: string;
+  };
+  relatedLinks?: { label: string; href: string }[];
 };
 
 export const liveReleaseNotice =
-  "Palworld Version 1.0 is live, and Pocketpair has published the official release changelog.";
+  "Palworld 1.0 is live. The official v1.0 changelog is available. Detailed player-tested recommendations are still being verified.";
 
 export const updateNotice =
-  "The official 1.0 changelog is available. This page keeps cautious guidance where exact recommendations still need launch-build testing.";
+  "The official v1.0 changelog is available. Detailed player-tested recommendations are still being verified.";
 
 const launchUpdateFields = {
   confirmedChanges: [],
@@ -112,7 +123,7 @@ export const guides: Guide[] = [
       {
         heading: "What not to assume yet",
         paragraphs: [
-          "Until the final Palworld 1.0 patch notes are available, avoid relying on exact stat priorities, best Pals, best base locations, fastest routes, or definitive endgame recommendations.",
+          "The official v1.0 changelog is available, but exact stat priorities, best Pals, best base locations, fastest routes, and definitive endgame recommendations still need player testing.",
           "This beginner guide is intentionally stable: it focuses on habits that are likely to remain useful even if 1.0 changes balance, progression, and content placement.",
         ],
       },
@@ -188,7 +199,7 @@ export const guides: Guide[] = [
         bullets: [
           "Back up important saves before updating.",
           "Record current server settings if you run a world.",
-          "Avoid installing major mod changes immediately before launch day.",
+          "Avoid installing major MOD changes until their creators confirm Version 1.0 compatibility.",
           "Use the official changelog as the baseline, then test balance-sensitive advice in the launch build.",
         ],
       },
@@ -263,6 +274,12 @@ export const guides: Guide[] = [
     ],
     sourceNotes: [
       "Returning-player facts were checked against Pocketpair's official v1.0 Steam changelog and official MOD warning.",
+    ],
+    relatedLinks: [
+      { label: "Should You Start a New Save?", href: "/guides/should-you-start-a-new-save-in-palworld-1-0/" },
+      { label: "First Hour Checklist", href: "/guides/palworld-1-0-first-hour-checklist/" },
+      { label: "MOD Warning", href: "/guides/palworld-1-0-mods-warning-compatibility-guide/" },
+      { label: "Server Owner Checklist", href: "/server/palworld-1-0-server-owner-checklist/" },
     ],
     sections: [
       {
@@ -546,6 +563,16 @@ export const guides: Guide[] = [
     sourceNotes: [
       "Server facts were checked against the official v1.0 Optimization, Multiplayer, bug-fix, and About Mods sections.",
     ],
+    visual: {
+      src: "/assets/palworld-1-0-server-update-checklist.webp",
+      alt: "Palworld 1.0 server update checklist showing backup, update, private testing, and reopening stages",
+      caption: "A safe server update moves from backup to a clean update, private verification, and controlled reopening.",
+    },
+    relatedLinks: [
+      { label: "Best Server Settings Framework", href: "/server/palworld-1-0-best-server-settings/" },
+      { label: "Server Owner Checklist", href: "/server/palworld-1-0-server-owner-checklist/" },
+      { label: "MOD Cleanup Guide", href: "/guides/palworld-1-0-mods-warning-compatibility-guide/" },
+    ],
     sections: [
       {
         heading: "Backup before updating",
@@ -553,6 +580,17 @@ export const guides: Guide[] = [
           "Stop the server cleanly and copy the complete world, player data, configuration, startup arguments, and management files before installing Version 1.0. Keep the backup outside the active server directory and label it with the date and pre-update build.",
           "Do not use the only production world as the first test. Restore or copy it into a private environment when possible, then verify login, saving, restart persistence, and base access before reopening the main server.",
         ],
+      },
+      {
+        heading: "Before, during, and after the update",
+        table: {
+          headers: ["Stage", "Required checks", "Do not proceed until"],
+          rows: [
+            ["Before update", "Stop cleanly; copy world, players, config, startup arguments, and MOD list", "The backup is stored outside the active server directory"],
+            ["During update", "Remove unsupported MODs; update server and clients; compare configuration", "Server and test clients run matching Version 1.0 builds"],
+            ["After update", "Test join, base access, saving, restart persistence, permissions, and chat", "A private test survives restart without data loss"],
+          ],
+        },
       },
       {
         heading: "Remove or test MODs",
@@ -684,6 +722,17 @@ export const guides: Guide[] = [
         ],
       },
       {
+        heading: "Server approach comparison",
+        table: {
+          headers: ["Approach", "Main priority", "Safe starting point", "Needs testing"],
+          rows: [
+            ["Casual", "Low friction and clear group rules", "Stay near defaults; review grind only after playing", "Death policy, progression feel, and raid pressure"],
+            ["Small group", "Pacing that matches shared sessions", "Conservative load with documented backups", "Offline progress, base load, and session cadence"],
+            ["Long-term survival", "Stability and preserved progression value", "Stable rules, scheduled backups, one change at a time", "Economy impact, long-session memory, and rollback needs"],
+          ],
+        },
+      },
+      {
         heading: "Casual server setting approach",
         bullets: [
           "Keep combat and Pal balance close to default so official progression remains recognizable.",
@@ -766,7 +815,7 @@ export const guides: Guide[] = [
     playerAdvice: [
       "New players should join smaller groups first if they want to learn without pressure.",
       "Returning players should explain old-world expectations clearly instead of assuming everyone wants the same pace.",
-      "Hosts should write down reset rules and rollback rules before launch day, even for friend groups.",
+      "Hosts should document reset rules and rollback rules before reopening an updated world, even for friend groups.",
     ],
     lastUpdated: "July 7, 2026",
     readingTime: "5 min read",
@@ -781,7 +830,7 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "Set expectations before launch",
+        heading: "Set expectations before reopening",
         bullets: [
           "Who hosts the world?",
           "Will the server run 24/7 or only during sessions?",
@@ -859,7 +908,7 @@ export const guides: Guide[] = [
       {
         heading: "Basic troubleshooting order",
         bullets: [
-          "Update GPU drivers before launch if you are comfortable doing so.",
+          "Update GPU drivers before troubleshooting Version 1.0 performance if you are comfortable doing so.",
           "Close heavy background apps while testing.",
           "Start with moderate graphics settings.",
           "Change one setting at a time and test the same area again.",
@@ -916,6 +965,7 @@ export const guides: Guide[] = [
     readingTime: "7 min read",
     tags: ["faq", "release", "fresh save"],
     statusNotice: liveReleaseNotice,
+    canonical: "/faq/",
     ...launchUpdateFields,
     confirmedChanges: [
       "Palworld Version 1.0 is live and the official release changelog is published.",
@@ -955,7 +1005,7 @@ export const guides: Guide[] = [
           "Yes. Palworld Version 1.0 is live, and Pocketpair has published the official release changelog through Steam.",
       },
       {
-        question: "Do I need to start a new save?",
+        question: "Should I start a new character?",
         answer:
           "No. Starting fresh is not required. Pocketpair recommends a new character to experience the reworked game, but the choice remains with the player.",
       },
@@ -980,7 +1030,7 @@ export const guides: Guide[] = [
           "The World Tree is the central destination of the reworked story and a major challenge. It is linked to Awakening, Radiant Gems, Paloxite, Ancient Civilization Relics, new Pals, and special passive skills.",
       },
       {
-        question: "Are there new Pals?",
+        question: "How many new Pals are there?",
         answer:
           "Yes. Version 1.0 adds 47 new Pals and 25 variants, for 72 additions and an official total of 287 Pals.",
       },
@@ -1051,6 +1101,18 @@ export const guides: Guide[] = [
       "Primary source: Pocketpair's official Steam release changelog, published July 10, 2026 at 03:09 UTC.",
       "Launch trailer and Pocketpair news pages were used to confirm launch messaging, not to infer undocumented mechanics.",
     ],
+    visual: {
+      src: "/assets/palworld-1-0-update-categories-infographic.webp",
+      alt: "Palworld 1.0 update categories infographic covering world, Pals, combat, bases, multiplayer, interface, performance, and fixes",
+      caption: "The official v1.0 changelog spans eight player-facing categories; testing-dependent recommendations remain separate.",
+    },
+    relatedLinks: [
+      { label: "Sunreach Guide", href: "/palworld-1-0/palworld-1-0-sunreach-guide/" },
+      { label: "World Tree Guide", href: "/palworld-1-0/palworld-1-0-world-tree-guide/" },
+      { label: "New Pals Overview", href: "/palworld-1-0/palworld-1-0-new-pals-overview/" },
+      { label: "Server Setup Guide", href: "/server/palworld-1-0-server-setup-guide/" },
+      { label: "MOD Warning", href: "/guides/palworld-1-0-mods-warning-compatibility-guide/" },
+    ],
     sections: [
       {
         heading: "Palworld 1.0 is live",
@@ -1067,6 +1129,20 @@ export const guides: Guide[] = [
           "Seventy-two Pals were added, and Pal progression now includes Awakening, Mutation, revised Partner Skills, expanded Work Suitability, and broad balance changes.",
           "Combat movement, equipment progression, bases, raids, multiplayer, UI, graphics, sound, optimization, and bug fixes all received substantial official changes.",
         ],
+      },
+      {
+        heading: "What changed and what to do now",
+        table: {
+          headers: ["Category", "What changed", "What players should do now", "Needs verification?"],
+          rows: [
+            ["World", "Sunreach, World Tree, smaller islands, settlements, ruins, sanctuaries, and watchtowers", "Follow the revised mission and reveal the map before committing to routes", "Routes, gates, and farming loops: Yes"],
+            ["Pals", "47 new Pals, 25 variants, Awakening, Mutation, skills, and Work Suitability changes", "Re-read skills and delay tier-list investments", "Rankings and spawn routes: Yes"],
+            ["Combat and gear", "Movement, weapons, accessories, skills, bosses, and equipment progression changed", "Recheck old builds before spending rare resources", "Best builds and boss tactics: Yes"],
+            ["Bases and raids", "Aquatic Construction, work changes, wave raids, and ammunition-free defenses", "Inspect old bases, assignments, paths, and defenses", "Optimal layouts and raid scaling: Yes"],
+            ["Multiplayer", "Server defaults, joining, guilds, chat, saves, voice chat, and stability work", "Back up, match versions, and run a private smoke test", "Capacity and long-session stability: Yes"],
+            ["UI and performance", "Search, filters, maps, status details, optimization, and bug fixes", "Reset assumptions and test on the actual hardware/world", "FPS and memory gains: Yes"],
+          ],
+        },
       },
       {
         heading: "New Areas & World Improvements",
@@ -1255,7 +1331,7 @@ export const guides: Guide[] = [
     playerAdvice: [
       "Treat the official changelog as confirmation of Sunreach's features, not as a complete route or progression guide.",
       "Bring flexible equipment and inventory space until the area's resource and combat demands are understood.",
-      "Do not rely on launch-day claims about the best access route, tower order, spawn map, or farming loop. Needs in-game verification.",
+      "Do not rely on unverified claims about the best access route, tower order, spawn map, or farming loop. Needs in-game verification.",
     ],
     lastUpdated: "July 10, 2026",
     readingTime: "7 min read",
@@ -1274,6 +1350,11 @@ export const guides: Guide[] = [
     sourceNotes: [
       "Sunreach facts were checked against Pocketpair's official Palworld v1.0 Steam changelog.",
     ],
+    visual: {
+      src: "/assets/palworld-1-0-sunreach-floating-islands.webp",
+      alt: "Original concept illustration of Sunreach-inspired floating islands above clouds with bridges, waterfalls, and glowing minerals",
+      caption: "Original fan-made concept illustration; it is not an official map or route reference.",
+    },
     sections: [
       {
         heading: "What is Sunreach?",
@@ -1284,13 +1365,16 @@ export const guides: Guide[] = [
       },
       {
         heading: "Confirmed Sunreach content",
-        bullets: [
-          "New Pals and tower bosses.",
-          "A Sunreach settlement with NPCs and sub-missions.",
-          "Soralite deposits that require specialized mining equipment.",
-          "New expedition and high-difficulty fishing destinations.",
-          "Links to new technologies, weapons, accessories, structures, and progression systems.",
-        ],
+        table: {
+          headers: ["Officially confirmed", "What it means", "Verification status"],
+          rows: [
+            ["Floating-island region", "A major airborne destination above Palpagos", "Confirmed by official changelog"],
+            ["New Pals and tower bosses", "New encounters and combat progression", "Identities, locations, and tactics need testing"],
+            ["Settlement and sub-missions", "NPC services and regional mission content", "Exact unlock order needs testing"],
+            ["Soralite", "Exclusive ore requiring specialized mining equipment", "Deposit routes and respawns need testing"],
+            ["Expedition and fishing destinations", "Additional high-difficulty activities", "Rewards and efficiency need testing"],
+          ],
+        },
       },
       {
         heading: "Soralite and new progression",
@@ -1394,6 +1478,11 @@ export const guides: Guide[] = [
     sourceNotes: [
       "World Tree facts were checked against Pocketpair's official Palworld v1.0 Steam changelog.",
     ],
+    visual: {
+      src: "/assets/palworld-1-0-world-tree-progression.webp",
+      alt: "Original concept illustration of a monumental glowing World Tree beyond layered wilderness and ancient ruins",
+      caption: "Original fan-made progression concept; it does not depict an official route, boss, or map layout.",
+    },
     sections: [
       {
         heading: "What is the World Tree in Palworld 1.0?",
@@ -1404,13 +1493,16 @@ export const guides: Guide[] = [
       },
       {
         heading: "Confirmed World Tree systems",
-        bullets: [
-          "Radiant Gems used to Awaken Pals.",
-          "Paloxite used in new crafting and building progression.",
-          "Ancient Civilization Relics that can be converted into useful enhancement or crafting items.",
-          "New Pals and World Tree passive skills.",
-          "World Tree expedition and high-difficulty fishing destinations.",
-        ],
+        table: {
+          headers: ["Resource or system", "Official use", "What is not confirmed"],
+          rows: [
+            ["Radiant Gems", "Used for Pal Awakening", "Best targets, costs, and routes"],
+            ["Paloxite", "New crafting and building progression", "Deposit map and farming efficiency"],
+            ["Ancient Civilization Relics", "Converted into enhancement or crafting items", "Best conversion priorities"],
+            ["New Pals and passive skills", "World Tree encounters and build options", "Full roster, drop rates, and rankings"],
+            ["Expedition and fishing destinations", "High-difficulty activities", "Rewards, difficulty, and completion time"],
+          ],
+        },
       },
       {
         heading: "Awakening and Radiant Gems",
@@ -1512,6 +1604,11 @@ export const guides: Guide[] = [
     sourceNotes: [
       "Roster totals and system changes were checked against Pocketpair's official Palworld v1.0 Steam changelog.",
     ],
+    visual: {
+      src: "/assets/palworld-1-0-new-pals-data-card.webp",
+      alt: "Palworld 1.0 data card showing 47 new Pals, 25 variants, 72 additions, and 287 total Pals without character artwork",
+      caption: "Official changelog totals presented without unverified names, locations, or rankings.",
+    },
     sections: [
       {
         heading: "How many new Pals are in Palworld 1.0?",
@@ -1519,6 +1616,18 @@ export const guides: Guide[] = [
           "Pocketpair confirms 47 new Pals and 25 variant Pals in Version 1.0. Together they add 72 entries and bring the official total number of Pals to 287.",
           "This overview focuses on confirmed roster and system information rather than reproducing an unverified database or ranking every new Pal.",
         ],
+      },
+      {
+        heading: "New Pal tracking table",
+        paragraphs: [
+          "Pocketpair's changelog confirms totals but does not provide a complete, structured name-and-location database. This table stays intentionally unfilled until entries can be verified in game or in later official material.",
+        ],
+        table: {
+          headers: ["Pal name", "Type", "Region", "Role", "Verification status"],
+          rows: [
+            ["Pending player verification", "Not yet verified", "Sunreach / World Tree / other regions", "Not yet verified", "Pending player verification"],
+          ],
+        },
       },
       {
         heading: "Where the new Pals appear",
@@ -1637,6 +1746,11 @@ export const guides: Guide[] = [
     sourceNotes: [
       "MOD safety steps were checked against Pocketpair's official Version 1.0 MOD warning and release changelog.",
     ],
+    visual: {
+      src: "/assets/palworld-1-0-mod-cleanup-flowchart.webp",
+      alt: "Palworld 1.0 MOD cleanup flowchart showing backup, manual removal, file verification, clean launch, and one-by-one restoration",
+      caption: "Follow the cleanup sequence before testing any creator-confirmed Version 1.0 MOD release.",
+    },
     sections: [
       {
         heading: "Why Pocketpair issued a MOD warning",
@@ -1905,6 +2019,11 @@ export const guides: Guide[] = [
     sourceNotes: [
       "First-hour guidance uses confirmed system changes from Pocketpair's official Palworld v1.0 Steam changelog.",
     ],
+    visual: {
+      src: "/assets/palworld-1-0-first-hour-timeline.webp",
+      alt: "Palworld 1.0 first-hour timeline divided into 0 to 10, 10 to 30, and 30 to 60 minute stages",
+      caption: "A flexible first-hour sequence for learning the release build without relying on unverified speed routes.",
+    },
     sections: [
       {
         heading: "Before you start",

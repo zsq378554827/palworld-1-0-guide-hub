@@ -1,6 +1,6 @@
 # CURRENT_STATE
 
-更新时间：2026-07-10
+更新时间：2026-07-11
 
 ## Project
 
@@ -96,6 +96,10 @@
 - Cloudflare Web Analytics 已接入，Cloudflare Web Analytics site hostname 为 `palworld-1-0-guide-hub.pages.dev`。
 - Google Search Console 已添加 URL-prefix 资源并通过 HTML 文件验证。
 - Google Search Console 已提交并重新提交 `https://palworld-1-0-guide-hub.pages.dev/sitemap.xml`；GSC 弹窗确认提交成功，但当前表格即时状态仍为“无法抓取”，站点端检查正常，需稍后复查。
+- `/faq/` 已升级为完整 FAQ 主页面；重复的 `/guides/palworld-1-0-faq/` canonical 到 `/faq/` 并从 sitemap 排除。
+- 24 个构建页面 title/meta 无重复；23 个正式 canonical URL 进入 sitemap，内部链接检查无 broken link。
+- Patch Notes、Sunreach、World Tree、New Pals、MOD Warning、Server Setup、First Hour 已加入原创 WebP 插画或信息图及 alt text。
+- Patch Notes、Sunreach、World Tree、New Pals、Server Setup、Best Server Settings 已加入可操作表格或检查框架。
 
 ## Do Not Do Now
 

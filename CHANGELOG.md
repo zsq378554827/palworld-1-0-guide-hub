@@ -1,12 +1,24 @@
 # CHANGELOG
 
-更新时间：2026-07-10
+更新时间：2026-07-11
 
 ## 记录规则
 
 - 每完成一个阶段就追加记录。
 - 记录用户能理解的变化，不只写代码文件名。
 - 重要决策同步到 `PROJECT_CONTEXT.md`。
+
+## 2026-07-11
+
+### 发布后内容与视觉优化
+
+- 全站清除 `coming soon`、`before launch`、`wait for 1.0 notes` 等发布前措辞，统一为正式发布和官方 changelog 已上线状态。
+- 将 `/faq/` 改为完整 FAQ 主页面；旧 FAQ 文章 canonical 到 `/faq/` 并从 sitemap 排除，避免重复收录。
+- 重写 Base Building 页面，加入 Aquatic Construction、Work Suitability level 10、wave-based raids、无需弹药的防御设施和旧基地检查清单。
+- Patch Notes、Sunreach、World Tree、New Pals、Server Setup、Best Server Settings 加入可操作表格；Returning、Patch Notes、Server Setup 加强定向内链。
+- 新增两张生成式原创概念插画和五张代码生成 WebP 信息图；无官方 Logo、主视觉、截图或角色素材。
+- 24 个页面 title/meta 唯一，23 个正式 canonical URL 进入 sitemap，robots 指向线上 sitemap，内部链接检查无 broken link。
+- `npm run build` 通过；Patch Notes 页面在 390px 和 1280px 下无页面级横向溢出。
 
 ## 2026-07-10
 

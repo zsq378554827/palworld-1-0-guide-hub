@@ -13,7 +13,12 @@ const staticPaths = [
 ];
 
 export function GET() {
-  const urls = [...staticPaths, ...guides.map((guide) => `/${guide.slug}/`)];
+  const urls = [
+    ...staticPaths,
+    ...guides
+      .filter((guide) => !guide.canonical || guide.canonical === `/${guide.slug}/`)
+      .map((guide) => `/${guide.slug}/`),
+  ];
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
