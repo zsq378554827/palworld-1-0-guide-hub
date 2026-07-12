@@ -1,89 +1,304 @@
 ---
-import GuideCard from "../components/GuideCard.astro";
-import VideoGuideCard from "../components/VideoGuideCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { featuredGuides, guides, videoGuides } from "../data/guides";
-import { site } from "../data/site";
+import { getGuideBySlug, videoGuides } from "../data/guides";
 
-const featured = featuredGuides();
-const latest = guides;
-const videos = videoGuides();
+const featuredVideo = videoGuides().find((guide) => guide.video?.featured) ?? videoGuides()[0];
+
+const taskLinks = [
+  {
+    number: "01",
+    title: "Start a New World",
+    description: "Follow a safe first-session route and build a flexible starter base.",
+    href: "/guides/palworld-1-0-beginner-guide/",
+  },
+  {
+    number: "02",
+    title: "Return Safely",
+    description: "Back up your save, remove MOD risks, and review the major changes.",
+    href: "/guides/palworld-1-0-returning-player-guide/",
+  },
+  {
+    number: "03",
+    title: "Understand v1.0",
+    description: "See the official changes and what still needs player verification.",
+    href: "/palworld-1-0/palworld-1-0-patch-notes-explained/",
+  },
+  {
+    number: "04",
+    title: "Set Up a Server",
+    description: "Update, validate, and reopen a dedicated server with fewer risks.",
+    href: "/server/palworld-1-0-server-setup-guide/",
+  },
+  {
+    number: "05",
+    title: "Fix Performance",
+    description: "Diagnose FPS, stutter, crashes, and multiplayer-specific issues.",
+    href: "/guides/palworld-1-0-performance-settings/",
+  },
+  {
+    number: "06",
+    title: "Clean Up MODs",
+    description: "Use a controlled cleanup and compatibility test before playing.",
+    href: "/guides/palworld-1-0-mods-warning-compatibility-guide/",
+  },
+];
+
+const categoryLinks = [
+  { label: "Getting Started", href: "/guides/" },
+  { label: "Version 1.0", href: "/palworld-1-0/" },
+  { label: "Regions", href: "/palworld-1-0/palworld-1-0-sunreach-guide/" },
+  { label: "Base Building", href: "/base-building/" },
+  { label: "Server", href: "/server/" },
+  { label: "Troubleshooting", href: "/guides/palworld-1-0-performance-settings/" },
+];
+
+const latestGuideSpecs = [
+  {
+    slug: "palworld-1-0/palworld-1-0-patch-notes-explained",
+    image: "/assets/palworld-1-0-update-categories-infographic.webp",
+    label: "Version 1.0",
+  },
+  {
+    slug: "guides/palworld-1-0-first-hour-checklist",
+    image: "/assets/palworld-1-0-first-hour-timeline.webp",
+    label: "Getting Started",
+  },
+  {
+    slug: "server/palworld-1-0-server-owner-checklist",
+    image: "/assets/palworld-1-0-server-update-checklist.webp",
+    label: "Server",
+  },
+  {
+    slug: "guides/palworld-1-0-mods-warning-compatibility-guide",
+    image: "/assets/palworld-1-0-mod-cleanup-flowchart.webp",
+    label: "MOD Safety",
+  },
+  {
+    slug: "palworld-1-0/palworld-1-0-sunreach-guide",
+    image: "/assets/palworld-1-0-sunreach-floating-islands.webp",
+    label: "Regions",
+  },
+  {
+    slug: "palworld-1-0/palworld-1-0-world-tree-guide",
+    image: "/assets/palworld-1-0-world-tree-progression.webp",
+    label: "World & Story",
+  },
+];
+
+const latestGuides = latestGuideSpecs
+  .map((item) => ({ ...item, guide: getGuideBySlug(item.slug) }))
+  .filter((item) => item.guide);
+
+const tools = [
+  {
+    number: "A",
+    title: "Save Backup Checklist",
+    label: "Checklist",
+    description: "Protect world, player, and server data before changing the game build.",
+    action: "Open checklist",
+    href: "/guides/should-you-start-a-new-save-in-palworld-1-0/",
+  },
+  {
+    number: "B",
+    title: "Server Update Checklist",
+    label: "Checklist",
+    description: "Move through backup, version checks, MOD cleanup, testing, and reopening.",
+    action: "Open checklist",
+    href: "/server/palworld-1-0-server-owner-checklist/",
+  },
+  {
+    number: "C",
+    title: "Server Settings Framework",
+    label: "Guide",
+    description: "Choose a safe approach for casual, small-group, or long-term worlds.",
+    action: "Compare approaches",
+    href: "/server/palworld-1-0-best-server-settings/",
+  },
+];
+
+const guideGroups = [
+  {
+    title: "New Players",
+    links: [
+      ["Beginner Guide", "/guides/palworld-1-0-beginner-guide/"],
+      ["First Hour Checklist", "/guides/palworld-1-0-first-hour-checklist/"],
+      ["Fast Early-Game Route", "/guides/palworld-1-0-fast-early-game-start-route/"],
+    ],
+    all: ["View new player guides", "/guides/"],
+  },
+  {
+    title: "Returning Players",
+    links: [
+      ["Returning Player Guide", "/guides/palworld-1-0-returning-player-guide/"],
+      ["Keep or Restart Your Save", "/guides/should-you-start-a-new-save-in-palworld-1-0/"],
+      ["MOD Cleanup Guide", "/guides/palworld-1-0-mods-warning-compatibility-guide/"],
+    ],
+    all: ["View returning player guides", "/guides/"],
+  },
+  {
+    title: "Server Owners",
+    links: [
+      ["Dedicated Server Setup", "/server/palworld-1-0-server-setup-guide/"],
+      ["Server Owner Checklist", "/server/palworld-1-0-server-owner-checklist/"],
+      ["Settings Framework", "/server/palworld-1-0-best-server-settings/"],
+    ],
+    all: ["View server guides", "/server/"],
+  },
+  {
+    title: "Version 1.0",
+    links: [
+      ["Patch Notes Explained", "/palworld-1-0/palworld-1-0-patch-notes-explained/"],
+      ["Sunreach Guide", "/palworld-1-0/palworld-1-0-sunreach-guide/"],
+      ["World Tree Guide", "/palworld-1-0/palworld-1-0-world-tree-guide/"],
+    ],
+    all: ["View all Version 1.0 guides", "/palworld-1-0/"],
+  },
+];
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Guide Hub"
-  description="Updated English guides for Palworld Version 1.0, including beginner tips, returning player prep, server setup, base building, World Tree, new Pals, and FAQ."
+  title="Palworld 1.0 Guides, Videos, Checklists & Server Help"
+  description="Choose the Palworld 1.0 help you need: a tested early-game video, beginner and returning-player guides, official changelog explanations, server checklists, MOD safety, performance fixes, and practical planning tools."
   canonical="/"
 >
-  <section class="hero">
-    <img src={site.heroImage} alt="Fan-made Palworld 1.0 guide hub fantasy island map artwork" />
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="eyebrow">Unofficial fan-made guide site</p>
-      <h1>Palworld 1.0 Guide Hub</h1>
-      <p>
-        Updated guides for new players, returning players, server setup, base building,
-        Version 1.0 changes, new Pals, World Tree, and FAQ.
-      </p>
-      <div class="hero-actions">
-        <a class="button primary" href="/palworld-1-0/">Start with the 1.0 Hub</a>
-        <a class="button secondary" href="/guides/">Browse guides</a>
+  <section class="home-dashboard" aria-labelledby="home-title">
+    <div class="home-task-panel">
+      <p class="home-kicker">Updated for Palworld 1.0</p>
+      <h1 id="home-title">What do you need help with?</h1>
+      <p class="home-intro">Choose a task and get to the right guide in seconds.</p>
+      <div class="task-grid">
+        {taskLinks.map((task) => (
+          <a class="task-card" href={task.href}>
+            <span class="task-number">{task.number}</span>
+            <span>
+              <strong>{task.title}</strong>
+              <small>{task.description}</small>
+            </span>
+            <span class="card-arrow">Open</span>
+          </a>
+        ))}
       </div>
-      <p class="hero-note">Palworld 1.0 is live. The official release changelog is published, and testing-dependent advice remains clearly marked.</p>
     </div>
+
+    {featuredVideo?.video && (
+      <a class="home-featured-video" href={`/${featuredVideo.slug}/`} aria-label={`Watch ${featuredVideo.title}`}>
+        <div class="featured-video-media">
+          <img
+            src={featuredVideo.video.thumbnail}
+            alt="Palworld 1.0 fast early-game route video thumbnail"
+            width="1280"
+            height="720"
+          />
+          <span class="video-duration">{featuredVideo.video.displayDuration}</span>
+        </div>
+        <div class="featured-video-copy">
+          <span class="content-label">Tested video guide</span>
+          <h2>{featuredVideo.title}</h2>
+          <p>{featuredVideo.video.description}</p>
+          <strong>Watch the route and open written steps</strong>
+        </div>
+      </a>
+    )}
   </section>
 
-  {videos.length > 0 && (
-    <section class="section-wrap">
-      <div class="section-heading">
-        <p class="eyebrow">Watch and follow</p>
-        <h2>Featured video guide</h2>
-        <p>Watch the full route, then use the written steps, coordinates, and verification notes on the guide page.</p>
-      </div>
-      <div class="video-card-grid">
-        {videos.filter((guide) => guide.video?.featured).slice(0, 1).map((guide) => <VideoGuideCard guide={guide} />)}
-      </div>
-    </section>
-  )}
+  <nav class="home-category-nav" aria-label="Browse guide categories">
+    {categoryLinks.map((item, index) => (
+      <a class:list={[index === 0 && "active"]} href={item.href}>{item.label}</a>
+    ))}
+  </nav>
 
-  <section class="section-wrap">
-    <div class="section-heading">
-      <p class="eyebrow">Start here</p>
-      <h2>Most useful Palworld 1.0 guides</h2>
-      <p>These pages are designed for decisions players need to make before or during the first Palworld 1.0 sessions.</p>
-    </div>
-    <div class="card-grid">
-      {featured.map((guide) => <GuideCard guide={guide} />)}
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="band-grid">
+  <section class="home-content-section" id="videos" aria-labelledby="latest-guides-title">
+    <div class="home-section-heading">
       <div>
-        <p class="eyebrow">Not a full wiki</p>
-        <h2>Focused guides, not a database dump</h2>
-        <p>
-          This MVP keeps the scope narrow: practical articles for version changes, save planning,
-          multiplayer, server setup, base habits, performance, and FAQ. Detailed databases can come later
-          if search demand proves it is worth maintaining.
-        </p>
+        <p class="home-kicker">Watch, then follow the written steps</p>
+        <h2 id="latest-guides-title">Latest video and guide updates</h2>
       </div>
-      <div class="quick-links">
-        <a href="/server/">Server setup</a>
-        <a href="/base-building/">Base building</a>
-        <a href="/faq/">FAQ</a>
-        <a href="/palworld-1-0/palworld-1-0-patch-notes-explained/">Patch notes explained</a>
+      <a href="/guides/">View all guides</a>
+    </div>
+
+    <div class="latest-content-grid">
+      {featuredVideo?.video && (
+        <a class="latest-lead" href={`/${featuredVideo.slug}/`}>
+          <div class="latest-lead-media">
+            <img
+              src={featuredVideo.video.thumbnail}
+              alt="Palworld 1.0 early-game route with route labels and English narration"
+              width="1280"
+              height="720"
+              loading="lazy"
+            />
+            <span class="video-duration">{featuredVideo.video.displayDuration}</span>
+          </div>
+          <span class="content-label">Video guide · Independently retested</span>
+          <h3>{featuredVideo.title}</h3>
+          <p>Watch the route, then use coordinates, timestamps, safety notes, and the current-release test record.</p>
+          <strong>Watch and read</strong>
+        </a>
+      )}
+
+      <div class="latest-guide-list">
+        {latestGuides.map(({ guide, image, label }) => guide && (
+          <a class="latest-guide-row" href={`/${guide.slug}/`}>
+            <img src={image} alt="" width="1440" height="810" loading="lazy" decoding="async" />
+            <span>
+              <small>{label}</small>
+              <strong>{guide.title}</strong>
+              <em>{guide.readingTime} · Updated {guide.lastUpdated}</em>
+            </span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-  <section class="section-wrap">
-    <div class="section-heading">
-      <p class="eyebrow">First batch</p>
-      <h2>All MVP articles</h2>
+  <section class="home-content-section home-tools" id="tools" aria-labelledby="tools-title">
+    <div class="home-section-heading">
+      <div>
+        <p class="home-kicker">Practical planning aids</p>
+        <h2 id="tools-title">Useful checklists and frameworks</h2>
+      </div>
     </div>
-    <div class="card-grid">
-      {latest.map((guide) => <GuideCard guide={guide} />)}
+    <div class="tool-grid">
+      {tools.map((tool) => (
+        <a class="tool-card" href={tool.href}>
+          <span class="tool-number">{tool.number}</span>
+          <span class="tool-copy">
+            <span class="tool-title-line">
+              <strong>{tool.title}</strong>
+              <small>{tool.label}</small>
+            </span>
+            <span>{tool.description}</span>
+            <em>{tool.action}</em>
+          </span>
+        </a>
+      ))}
     </div>
   </section>
+
+  <section class="home-content-section written-guide-section" aria-labelledby="written-guides-title">
+    <div class="home-section-heading">
+      <div>
+        <p class="home-kicker">Browse by player situation</p>
+        <h2 id="written-guides-title">Essential written guides</h2>
+      </div>
+    </div>
+    <div class="guide-group-grid">
+      {guideGroups.map((group, index) => (
+        <div class="guide-group">
+          <span class="group-number">0{index + 1}</span>
+          <h3>{group.title}</h3>
+          <ul>
+            {group.links.map(([label, href]) => <li><a href={href}>{label}</a></li>)}
+          </ul>
+          <a class="group-all-link" href={group.all[1]}>{group.all[0]}</a>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <aside class="home-release-note" aria-label="Content verification note">
+    <strong>Palworld 1.0 is live.</strong>
+    <span>The official v1.0 changelog is available. Player-tested recommendations are labeled separately from official facts.</span>
+    <a href="/palworld-1-0/palworld-1-0-patch-notes-explained/">Read the changelog guide</a>
+  </aside>
 </BaseLayout>

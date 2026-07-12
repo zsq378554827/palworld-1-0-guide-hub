@@ -1,9 +1,10 @@
 ---
 const navItems = [
-  { href: "/palworld-1-0/", label: "1.0 Hub" },
+  { href: "/", label: "Home" },
+  { href: "/#videos", label: "Videos" },
   { href: "/guides/", label: "Guides" },
+  { href: "/#tools", label: "Tools" },
   { href: "/server/", label: "Server" },
-  { href: "/base-building/", label: "Base Building" },
   { href: "/faq/", label: "FAQ" },
 ];
 ---
@@ -17,4 +18,3 @@ const navItems = [
     {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
   </nav>
 </header>
-
