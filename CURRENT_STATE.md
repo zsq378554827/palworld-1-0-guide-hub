@@ -77,6 +77,8 @@
 - 第二个页面本地未登录播放 QA 通过：时长 215.43 秒、`readyState=4`、1920×1080、播放时间从 0 增至 3.8 秒；126 秒章节跳转后播放到 127.8 秒；0 iframe；390px 无横向溢出。
 - 页面明确标注该流程由授权源视频展示，当前 1.0 独立复测仍待完成；没有把源片版本标记或第三方演示写成当前版本实测。
 - YouTube 备份 `ye8-_T6UVcY` 已上传并保持 Private，等待最终 Unlisted 保存；网站代码和公开页面不使用 YouTube 播放器或公开备份链接。
+- commit `67281ab` 已推送 `main` 并由 Cloudflare Pages 自动部署为 production deployment `c68c4a53`。
+- 线上未登录播放验收通过：HLS manifest 和首个 fMP4 分片均返回 200 与正确 Content-Type；视频 `readyState=4`、播放到 4.78 秒、时长 215.43 秒、1920×1080；126 秒章节跳转成功；0 iframe、0 控制台错误、390px 无横向溢出。
 
 ## Current Priorities
 

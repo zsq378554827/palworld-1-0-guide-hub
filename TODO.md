@@ -42,7 +42,7 @@
 | 进行中 | 视频攻略生产模板前向验证 | 中 | Codex | 本轮首个视频已完成；下个不同类型视频继续验证 Unlisted、SRT、站内嵌入和部署全链路 |
 | 已完成 | 修复 YouTube 嵌入登录要求 | 高 | Codex | 改为站内 H.264/AAC HLS 原生播放器；未登录播放、章节跳转、0 iframe 和移动端检查通过 |
 | 已完成 | 首页攻略站信息架构与 UI 重构 | 高 | Codex | 任务入口 + 真实视频主卡 + 分类导航 + 最新攻略 + 清单框架 + 分组攻略；1440/390 QA、链接、图片和 build 均通过 |
-| 进行中 | 第二个 Ultimate Worker Pal 视频攻略上线 | 高 | Codex | 英文攻略、1080p60 HLS、SEO、build 和本地未登录播放 QA 已完成；待 Cloudflare 生产部署、线上验收和 YouTube 最终 Unlisted 确认 |
+| 已完成 | 第二个 Ultimate Worker Pal 视频攻略上线 | 高 | Codex | commit `67281ab`、Cloudflare production `c68c4a53`；英文攻略、1080p60 HLS、SEO、线上未登录播放和章节跳转均通过；YouTube 最终 Unlisted 单独确认 |
 | 未开始 | 独立复测 Ultimate Worker Pal 精确机制 | 高 | 用户/Codex | 复测 Yakumo 概率、Technique book farming、精确数值和补丁敏感步骤；完成前页面保持 source-footage 标签 |
 
 ## 状态说明

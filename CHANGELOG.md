@@ -19,6 +19,8 @@
 - 页面明确披露 AI 英语配音和授权本地化，允许保留非关键游戏 UI 中文，但操作关键内容均由英文配音、字幕或调用卡覆盖。
 - `npm run build` 通过，页面总数由 25 增至 26；本地未登录播放、126 秒章节跳转、0 iframe、390px 无横向溢出和单个 VideoObject 均通过。
 - YouTube 备份 `ye8-_T6UVcY` 上传和版权检查完成，编辑阶段保持 Private；公开站点不展示其链接。
+- commit `67281ab` 已推送到 GitHub `main` 并触发 Cloudflare Pages production deployment `c68c4a53`。
+- 线上页面、HLS manifest、首个分片、canonical、sitemap 和单个 VideoObject 验收通过；未登录视频实际播放到 4.78 秒，126 秒章节跳转成功，0 iframe、0 控制台错误，390px 无横向溢出。
 
 ### 首页攻略站重构
 
