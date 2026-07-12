@@ -25,6 +25,9 @@
 - 新视频页在 390px 和 1280px 均无横向溢出；点击前无 iframe，点击后仅创建一个隐私增强 YouTube iframe，刷新后恢复无 iframe。
 - 首页在 390px 和 1280px 均无横向溢出，仅显示一个真实视频卡；旧 Beginner Guide 未注入视频播放器或 `VideoObject`。
 - 构建产物中的新 URL、canonical、OG 图、sitemap 和视频结构化数据检查通过。
+- commit `00232a7` 已推送到 GitHub `main`，Cloudflare Pages 自动部署后线上新攻略返回 200。
+- 线上静态验收通过：初始页面 0 个 iframe，点击后创建 1 个 `youtube-nocookie.com` iframe；VideoObject 1 个，sitemap 条目 1 个。
+- Playwright 内的 YouTube 播放器触发登录确认非机器人提示；已记录为 YouTube 自动化环境限制，不把视频改为 Public。
 
 ## 2026-07-11
 

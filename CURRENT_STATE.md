@@ -61,6 +61,8 @@
 - 视频采用站内缩略图和点击后加载的 `youtube-nocookie.com` iframe，访问页面时不会立即联系 YouTube；允许站内嵌入但不把视频设为 YouTube 公开内容。
 - 新页面加入 `VideoObject` JSON-LD、独立 canonical/OG 图和 sitemap；首页新增一个真实 Featured video guide 卡片，没有制造虚假视频数量。
 - 本地 `npm run build` 通过，页面总数由 24 增至 25；390px/1280px 首页与视频页无横向溢出，旧攻略未注入视频播放器或视频结构化数据。
+- 2026-07-12 commit `00232a7` 已推送到 GitHub `main` 并触发 Cloudflare Pages 自动部署；线上新攻略返回 200，视频 ID、canonical、站内缩略图、单个 `VideoObject` 和 sitemap 条目均验证通过。
+- 线上点击播放器会创建一个 `youtube-nocookie.com` iframe；Playwright 自动化环境被 YouTube 要求登录确认非机器人，此为 YouTube 自动化访问验证，不是视频被设为私享或禁止嵌入。
 
 ## Current Priorities
 
