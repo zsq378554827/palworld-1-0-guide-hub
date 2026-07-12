@@ -2562,6 +2562,194 @@ export const guides: Guide[] = [
       { label: "Palworld 1.0 First Hour Checklist", href: "/guides/palworld-1-0-first-hour-checklist/" },
     ],
   },
+  {
+    title: "Palworld 1.0 Ultimate Worker Pal Build Guide",
+    slug: "guides/palworld-1-0-ultimate-worker-pal-build",
+    category: "guides",
+    categoryLabel: "Video Guide",
+    description:
+      "Build a high-speed Palworld worker Pal with Work Suitability, condensation, Pal Souls, work-speed passives, labor research, Applied Technique books, and job-specific adjustments.",
+    shortAnswer:
+      "Start with a small Pal suited to the job, stack Work Suitability, four condensation stars, Pal Soul work-speed upgrades, four useful passives, and matching Pal Labor Research. Use Applied Technique books for the final job-level increase, prioritize movement speed for Transporting, and add Nocturnal or SAN support when the base must run through the night.",
+    playerAdvice: [
+      "Use the six-part stack as a planning framework; do not spend rare books, souls, or surgery resources until the Pal and job are worth the investment.",
+      "For Handiwork, the video demonstrates Depresso as a compact Dark base Pal and Yakumo as the passive-transfer route.",
+      "Transporting is the exception: movement-speed passives usually matter more than a pure work-speed setup.",
+    ],
+    lastUpdated: "July 12, 2026",
+    readingTime: "9 min read + 3:35 video",
+    tags: ["video guide", "worker Pal", "work speed", "base building", "Depresso", "Yakumo"],
+    statusNotice:
+      "This authorized localized video demonstrates the complete worker-Pal build in source footage. The exact passive-transfer odds, percentage bonuses, book locations, and patch-sensitive mechanics still need an independent current-release retest.",
+    updateNotice:
+      "Use the build order as a practical framework, but verify exact values and item availability after Palworld hotfixes or balance changes.",
+    confirmedChanges: [
+      "Pocketpair's official Version 1.0 changelog confirms that Pal Work Suitability values, base mechanics, and many Pal systems were reworked for release.",
+      "The localized source footage visibly demonstrates the Depresso, Yakumo, surgery, condensation, Pal Soul, labor-research, Applied Technique, Transporting, Nocturnal, and SAN-support steps described below.",
+    ],
+    pendingUpdates: [
+      "Independently retest the full build on the current Palworld 1.0 release.",
+      "Reconfirm exact percentages, passive-transfer behavior, Applied Technique book farming, and world-setting labels after major patches.",
+    ],
+    sourceNotes: [
+      "The embedded video is an authorized English localization with AI-generated English narration, burned-in English subtitles, and English action callouts.",
+      "Incidental non-English game-interface text may remain in the source footage; every action-critical step is translated or summarized in English on screen and in the written guide.",
+      "Claims shown in source footage are labeled separately from independent current-release testing.",
+    ],
+    lastVerified: "July 12, 2026",
+    video: {
+      provider: "self-hosted",
+      id: "palworld-worker-pal-7659780246475967794",
+      streamUrl: "/media/palworld-1-0-ultimate-worker-pal-build/master.m3u8",
+      title: "Palworld 1.0 Ultimate Worker Pal Build (English Video Guide)",
+      description:
+        "Watch the complete worker-Pal upgrade route with timestamp-aligned English narration, burned-in subtitles, passive names, work-speed factors, book-farming steps, and job-specific callouts.",
+      duration: "PT3M35S",
+      displayDuration: "3:35",
+      thumbnail: "/assets/video-guides/palworld-1-0-ultimate-worker-pal-build.jpg",
+      uploadDate: "2026-07-12T21:00:00+08:00",
+      chapters: [
+        { startSeconds: 0, label: "The six work-speed factors" },
+        { startSeconds: 27, label: "Choose the worker base Pal" },
+        { startSeconds: 59, label: "Transfer a passive with Yakumo" },
+        { startSeconds: 93, label: "Add passives and stack upgrades" },
+        { startSeconds: 126, label: "Farm Applied Technique books" },
+        { startSeconds: 150, label: "Adapt the build to other jobs" },
+        { startSeconds: 192, label: "Nocturnal workers and SAN support" },
+      ],
+    },
+    testing: {
+      gameVersion: "Authorized source footage; current 1.0 retest pending",
+      lastTested: "Not independently retested",
+      platform: "PC / Steam source footage",
+      mode: "Base-management demonstration",
+      mods: "Not documented in the source",
+      verification: "shown-in-source-footage",
+      note: "The page distinguishes what the video shows from what has been independently verified on the current release.",
+    },
+    sections: [
+      {
+        heading: "1. Stack all six worker-Pal speed factors",
+        paragraphs: [
+          "A complete worker build is not one passive or one high job level. The video combines six layers: Work Suitability, condensation stars, Pal Soul enhancements, work-speed passives, matching Pal Labor Research, and a base setup that keeps the Pal working.",
+          "Plan the full stack before spending rare resources. A Pal that still gets stuck, sleeps through the work cycle, or is assigned to the wrong job can waste an otherwise expensive build.",
+        ],
+        table: {
+          headers: ["Layer", "What it changes", "When to commit"],
+          rows: [
+            ["Work Suitability", "The Pal's level for a specific base job", "After choosing the exact job and Pal"],
+            ["Condensation", "Raises the Pal through four stars", "When you can supply enough duplicates"],
+            ["Pal Souls", "Adds a direct work-speed enhancement", "After the Pal is confirmed as a long-term worker"],
+            ["Passives", "Adds job-relevant work or movement bonuses", "After planning breeding, Yakumo, or surgery"],
+            ["Labor Research", "Adds base-wide bonuses for the matching job", "As the relevant research path becomes available"],
+            ["Base support", "Reduces sleeping, SAN, and pathing downtime", "Before calling the build complete"],
+          ],
+        },
+      },
+      {
+        heading: "2. Use a compact, night-capable base Pal",
+        paragraphs: [
+          "For the Handiwork example, the video starts with Depresso. Its compact body is less likely to jam narrow production lanes, and its Dark typing lets it continue working at night in the demonstrated setup.",
+          "The principle matters more than the name: choose a Pal that reaches the station reliably, has the correct Work Suitability, and fits the hours your base needs to operate.",
+        ],
+      },
+      {
+        heading: "3. Transfer Remarkable Craftsmanship with Yakumo",
+        bullets: [
+          "Obtain a Pal carrying Remarkable Craftsmanship; the video uses glowing fishing catches as the starting route.",
+          "Breed that passive onto Yakumo.",
+          "Keep Yakumo active while catching the target worker Pal so Birds of a Feather can pass an eligible passive.",
+          "Repeat catches until the target worker receives Remarkable Craftsmanship.",
+        ],
+        paragraphs: [
+          "The video states a 30% chance per eligible passive at maximum Yakumo rank. Treat that exact value and the eligible-passive list as patch-sensitive until independently retested on the current release.",
+        ],
+      },
+      {
+        heading: "4. Finish the four-passive work-speed set",
+        paragraphs: [
+          "The demonstrated Handiwork set combines Remarkable Craftsmanship with Artisan, Work Slave, and Serious. The Pal Surgery Table is used to replace the remaining passives rather than rebuilding the entire Pal through breeding.",
+          "If the worker is not naturally active at night, the video later replaces Serious with Nocturnal. That sacrifices one pure work-speed slot in exchange for a longer working window.",
+        ],
+      },
+      {
+        heading: "5. Add Souls, four stars, and Labor Research",
+        bullets: [
+          "Spend Pal Souls on the work-speed enhancement after the worker's passive set is settled.",
+          "Use the Pal Essence Condenser to reach four stars.",
+          "Complete the Pal Labor Research branch matching the worker's job.",
+          "Check the base assignment and path before investing in the final job-level books.",
+        ],
+        paragraphs: [
+          "The source footage presents these layers as cumulative. Exact caps and costs can change, so the page keeps the sequence while marking values for current-release verification.",
+        ],
+      },
+      {
+        heading: "6. Use Applied Technique books last",
+        paragraphs: [
+          "Applied Technique books raise an existing Work Suitability. The video farms them from supply drops around Emberstone Plateau in southwest Feybreak and lowers the Meteorite and Supply Drop interval in World Settings to repeat the route faster.",
+          "Use the matching book only after the target Pal and job are final. Farming locations, interval settings, and job-level caps are patch-sensitive and should be rechecked after updates.",
+        ],
+      },
+      {
+        heading: "7. Adapt the formula by job",
+        table: {
+          headers: ["Job type", "Main priority", "Adjustment"],
+          rows: [
+            ["Handiwork and stationary jobs", "Work speed and reliable station access", "Use the full work-speed stack"],
+            ["Kindling and other production jobs", "Correct base Pal and matching Technique book", "Repeat the Yakumo, surgery, Soul, star, and research route"],
+            ["Transporting", "Movement speed", "Prefer Swift, Runner, and Nimble over a pure work-speed set"],
+            ["Non-Dark night worker", "Uptime after dark", "Replace Serious with Nocturnal if the extra work window is worth it"],
+          ],
+        },
+      },
+      {
+        heading: "8. Protect SAN and real base uptime",
+        paragraphs: [
+          "A worker with maximum paper stats still stops when SAN falls or its route is blocked. The video recommends keeping Shroomer or Shroomer Noct at the base because their support slows SAN loss.",
+          "Leave clear paths, keep food and beds reachable, watch for stalled stations, and judge the build by completed production over time—not only the Work Speed number on the Pal screen.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What are the six parts of a maximum worker-Pal build?",
+        answer:
+          "Work Suitability, four condensation stars, Pal Soul work-speed enhancements, useful passives, matching Pal Labor Research, and base support that prevents sleep, SAN, or pathing downtime.",
+      },
+      {
+        question: "Why does the guide use Depresso?",
+        answer:
+          "The video uses Depresso as a compact Dark Handiwork base Pal that can fit tight production spaces and keep working at night.",
+      },
+      {
+        question: "Which passives does the video use for work speed?",
+        answer:
+          "Remarkable Craftsmanship, Artisan, Work Slave, and Serious. For a non-Dark Pal that must work at night, the video replaces Serious with Nocturnal.",
+      },
+      {
+        question: "Should a Transporting Pal use the same passives?",
+        answer:
+          "No. The video treats Transporting as movement-limited and recommends Swift, Runner, and Nimble before pure work-speed optimization.",
+      },
+      {
+        question: "Has every exact value been independently verified in Palworld 1.0?",
+        answer:
+          "No. The authorized source footage demonstrates the workflow, while exact percentages, farming behavior, and patch-sensitive mechanics still need an independent current-release retest.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+    ],
+    relatedLinks: [
+      { label: "Palworld 1.0 Base Building Changes", href: "/base-building/" },
+      { label: "Palworld 1.0 Beginner Guide", href: "/guides/palworld-1-0-beginner-guide/" },
+      { label: "Palworld 1.0 Fast Early-Game Route", href: "/guides/palworld-1-0-fast-early-game-start-route/" },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {

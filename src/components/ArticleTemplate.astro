@@ -43,7 +43,7 @@ const related = guides
 
   {guide.testing && (
     <aside class="tested-info" aria-label="Testing details">
-      <strong>Tested on the current release</strong>
+      <strong>{guide.testing.verification === "independently-tested" ? "Tested on the current release" : "Verification details"}</strong>
       <dl>
         <div><dt>Version</dt><dd>{guide.testing.gameVersion}</dd></div>
         <div><dt>Last tested</dt><dd>{guide.testing.lastTested}</dd></div>

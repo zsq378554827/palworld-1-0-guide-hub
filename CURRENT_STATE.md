@@ -72,6 +72,11 @@
 - 首页未伪造视频、时长或工具功能；当前只突出已上线并独立复测的 `Fast Early-Game Start Route`，其余位置使用现有正式攻略和原创 WebP 视觉。
 - 首页 1440×1024 与 390×844 视觉复核通过；Videos/Tools 锚点、视频详情跳转和移动端吸顶导航通过；0 个 broken link、0 个缺失图片、0 个控制台错误。
 - 首页重构后 `npm run build` 通过，Astro 继续生成 25 个站点页面；详细视觉 QA 记录在 `design-qa.md`。
+- 2026-07-12 新增第二个视频攻略 `Palworld 1.0 Ultimate Worker Pal Build Guide`，页面包含完整八节英文攻略、七个章节、FAQ、内链、canonical、OG 图、sitemap 和单个 `VideoObject`。
+- 第二个站内播放器继续使用无需登录的自托管 HLS：1920×1080、60fps、H.264/AAC、36 个 6 秒 fMP4 分片，总计约 127 MB，最大分片约 5.46 MB，全片解码通过。
+- 第二个页面本地未登录播放 QA 通过：时长 215.43 秒、`readyState=4`、1920×1080、播放时间从 0 增至 3.8 秒；126 秒章节跳转后播放到 127.8 秒；0 iframe；390px 无横向溢出。
+- 页面明确标注该流程由授权源视频展示，当前 1.0 独立复测仍待完成；没有把源片版本标记或第三方演示写成当前版本实测。
+- YouTube 备份 `ye8-_T6UVcY` 已上传并保持 Private，等待最终 Unlisted 保存；网站代码和公开页面不使用 YouTube 播放器或公开备份链接。
 
 ## Current Priorities
 
@@ -80,6 +85,7 @@
 3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功。
 4. 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。
 5. 后续视频默认使用站点控制的 HLS/视频托管实现无需登录播放；YouTube 继续固定 Unlisted 作为备份，不以 YouTube 流量为目标。
+6. 对 `Ultimate Worker Pal Build` 的 Yakumo 概率、Applied Technique farming、精确百分比和补丁敏感机制安排当前 1.0 独立复测；页面在复测前继续保持 source-footage 标签。
 
 ## Current Blockers
 
@@ -115,6 +121,7 @@
 - `/faq/` 已升级为完整 FAQ 主页面；重复的 `/guides/palworld-1-0-faq/` canonical 到 `/faq/` 并从 sitemap 排除。
 - 24 个构建页面 title/meta 无重复；23 个正式 canonical URL 进入 sitemap，内部链接检查无 broken link。
 - 25 个构建页面 title/meta 无重复；首个视频攻略 URL 已进入 sitemap，并包含单个 `VideoObject` JSON-LD。
+- 26 个构建页面通过；第二个视频攻略 title/meta/H1/canonical/OG 独立，URL 已进入 sitemap，公开 HTML 不含 YouTube iframe/链接，并包含单个 `VideoObject` JSON-LD。
 - Patch Notes、Sunreach、World Tree、New Pals、MOD Warning、Server Setup、First Hour 已加入原创 WebP 插画或信息图及 alt text。
 - Patch Notes、Sunreach、World Tree、New Pals、Server Setup、Best Server Settings 已加入可操作表格或检查框架。
 - Beginner、Multiplayer、Performance 已完成正式深度更新，加入分阶段路线、决策表、故障诊断、Source note、内链和原创 WebP 视觉。

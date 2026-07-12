@@ -10,6 +10,16 @@
 
 ## 2026-07-12
 
+### 第二个视频攻略：Ultimate Worker Pal
+
+- 新增 `Palworld 1.0 Ultimate Worker Pal Build Guide`，覆盖六项工作速度因素、Depresso、Yakumo 被动转移、Pal Surgery Table、Souls、四星、Labor Research、Applied Technique books、Transporting、Nocturnal 和 SAN 支持。
+- 新增 3:35 英文 4K 本地化成片对应的站内 1080p60 HLS：36 个 6 秒 fMP4 分片，总计约 127 MB，最大分片约 5.46 MB；站内不使用 YouTube iframe。
+- 新页面加入独立 title/meta/H1、八节正文、七个章节、FAQ、内链、canonical、站内 OG 缩略图、sitemap 和单个 `VideoObject`。
+- 将测试信息标题改为按验证状态显示：独立复测页面显示 `Tested on the current release`，仅源视频展示的页面显示 `Verification details`。
+- 页面明确披露 AI 英语配音和授权本地化，允许保留非关键游戏 UI 中文，但操作关键内容均由英文配音、字幕或调用卡覆盖。
+- `npm run build` 通过，页面总数由 25 增至 26；本地未登录播放、126 秒章节跳转、0 iframe、390px 无横向溢出和单个 VideoObject 均通过。
+- YouTube 备份 `ye8-_T6UVcY` 上传和版权检查完成，编辑阶段保持 Private；公开站点不展示其链接。
+
 ### 首页攻略站重构
 
 - 按已确认的合并版设计重构首页信息架构，移除大面积宣传型 Hero 和重复文章卡墙。
