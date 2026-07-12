@@ -1,0 +1,22 @@
+---
+import type { Guide } from "../data/guides";
+
+type Props = { guide: Guide };
+const { guide } = Astro.props;
+const video = guide.video;
+if (!video) throw new Error("VideoGuideCard requires guide.video");
+---
+
+<a class="video-guide-card" href={`/${guide.slug}/`} aria-label={`Watch and read ${guide.title}`}>
+  <div class="video-card-image">
+    <img src={video.thumbnail} alt="" width="1280" height="720" loading="lazy" decoding="async" />
+    <span class="play-icon" aria-hidden="true"></span>
+    <span class="video-duration">{video.displayDuration}</span>
+  </div>
+  <div class="video-card-copy">
+    <p class="eyebrow">Video guide</p>
+    <h3>{guide.title}</h3>
+    <p>{guide.description}</p>
+    <strong>Watch video and open written steps →</strong>
+  </div>
+</a>

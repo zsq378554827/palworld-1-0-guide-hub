@@ -1,11 +1,13 @@
 ---
 import GuideCard from "../components/GuideCard.astro";
+import VideoGuideCard from "../components/VideoGuideCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { featuredGuides, guides } from "../data/guides";
+import { featuredGuides, guides, videoGuides } from "../data/guides";
 import { site } from "../data/site";
 
 const featured = featuredGuides();
 const latest = guides;
+const videos = videoGuides();
 ---
 
 <BaseLayout
@@ -30,6 +32,19 @@ const latest = guides;
       <p class="hero-note">Palworld 1.0 is live. The official release changelog is published, and testing-dependent advice remains clearly marked.</p>
     </div>
   </section>
+
+  {videos.length > 0 && (
+    <section class="section-wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Watch and follow</p>
+        <h2>Featured video guide</h2>
+        <p>Watch the full route, then use the written steps, coordinates, and verification notes on the guide page.</p>
+      </div>
+      <div class="video-card-grid">
+        {videos.filter((guide) => guide.video?.featured).slice(0, 1).map((guide) => <VideoGuideCard guide={guide} />)}
+      </div>
+    </section>
+  )}
 
   <section class="section-wrap">
     <div class="section-heading">

@@ -15,6 +15,29 @@ export type GuideFaq = {
   answer: string;
 };
 
+export type GuideVideo = {
+  provider: "youtube";
+  id: string;
+  title: string;
+  description: string;
+  duration: string;
+  displayDuration: string;
+  thumbnail: string;
+  uploadDate: string;
+  featured?: boolean;
+  chapters: { startSeconds: number; label: string }[];
+};
+
+export type GuideTesting = {
+  gameVersion: string;
+  lastTested: string;
+  platform: string;
+  mode: string;
+  mods: string;
+  verification: "independently-tested" | "shown-in-source-footage" | "needs-retest";
+  note?: string;
+};
+
 export type Guide = {
   title: string;
   slug: string;
@@ -43,6 +66,8 @@ export type Guide = {
     caption: string;
   };
   relatedLinks?: { label: string; href: string }[];
+  video?: GuideVideo;
+  testing?: GuideTesting;
 };
 
 export const liveReleaseNotice =
@@ -2368,6 +2393,177 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    title: "Palworld 1.0 Fast Early-Game Start Route",
+    slug: "guides/palworld-1-0-fast-early-game-start-route",
+    category: "guides",
+    categoryLabel: "Video Guide",
+    description:
+      "A tested Palworld 1.0 early-game route covering fast-travel unlocks, Sakurajima captive-Pal camps, high-value loot, Alpha Dumud, Killamari movement, and a practical starter base location.",
+    shortAnswer:
+      "Unlock several fast-travel points through respawning, enter Sakurajima from Ice Wind Island, use a Palbox to reset four hostile camps, collect captive workers and high-value loot, then add Alpha Dumud, Killamari movement, and a nearby main-base clearing.",
+    playerAdvice: [
+      "Treat the Palbox camp reset as a patch-sensitive mechanic and retest it after major Palworld updates.",
+      "The captive Pal at each camp is random, so judge the route by total loot and worker options rather than expecting one specific Pal.",
+      "The video uses localized source footage; rely on this page's current-release test note rather than the build marker visible in the footage.",
+    ],
+    lastUpdated: "July 12, 2026",
+    readingTime: "8 min read + 4:33 video",
+    tags: ["video guide", "early game", "Sakurajima", "starter route"],
+    statusNotice:
+      "This route and the Palbox camp-reset method were independently retested on the current Palworld 1.0 release on July 12, 2026. Future patches may change individual steps.",
+    updateNotice:
+      "Current-release verification is complete for the route and camp-reset method. Recheck this page after major hotfixes or balance patches.",
+    confirmedChanges: [
+      "The full route was retested on the current Palworld 1.0 release on July 12, 2026.",
+      "The Palbox camp-reset method and the four-camp sequence worked during the current-release retest.",
+    ],
+    pendingUpdates: [
+      "Captive Pal results and chest contents remain random.",
+      "Patch-sensitive mechanics should be retested after major Palworld updates.",
+    ],
+    sourceNotes: [
+      "The embedded video is an authorized English localization of source footage and uses AI-generated English narration.",
+      "The footage may show a source-build marker and non-English game UI; the route was separately retested on the current Palworld 1.0 release.",
+    ],
+    lastVerified: "July 12, 2026",
+    video: {
+      provider: "youtube",
+      id: "rt31UfvpsfQ",
+      title: "Palworld 1.0 Fast Early-Game Start Route (4K Guide)",
+      description:
+        "Watch the complete Palworld 1.0 early-game route with timestamp-aligned English narration, subtitles, coordinates, Pal names, and action callouts.",
+      duration: "PT4M33S",
+      displayDuration: "4:33",
+      thumbnail: "/assets/video-guides/palworld-1-0-fast-early-game-route.webp",
+      uploadDate: "2026-07-12T14:45:00+08:00",
+      featured: true,
+      chapters: [
+        { startSeconds: 0, label: "Route overview" },
+        { startSeconds: 6, label: "Unlock multiple fast-travel points" },
+        { startSeconds: 18, label: "Reach Sakurajima" },
+        { startSeconds: 53, label: "Clear hostile camps with a Palbox" },
+        { startSeconds: 84, label: "Loot four captive-Pal camps" },
+        { startSeconds: 189, label: "Catch Alpha Dumud" },
+        { startSeconds: 218, label: "Find Killamari for movement" },
+        { startSeconds: 249, label: "Choose the main-base location" },
+      ],
+    },
+    testing: {
+      gameVersion: "Palworld 1.0 current release",
+      lastTested: "July 12, 2026",
+      platform: "PC / Steam",
+      mode: "Single-player world",
+      mods: "None",
+      verification: "independently-tested",
+      note: "The footage comes from an earlier source build; the route and camp mechanic were retested separately on the current 1.0 release.",
+    },
+    sections: [
+      {
+        heading: "1. Unlock fast travel before committing to a route",
+        paragraphs: [
+          "At the start of the run, open the pause menu, choose the respawn option, and select different respawn points. Most starting points include a nearby fast-travel statue, so repeating this process can unlock several travel anchors immediately.",
+          "Do this before gathering heavily or building a permanent base. The objective is to create a flexible travel network for the rest of the route.",
+        ],
+      },
+      {
+        heading: "2. Enter Sakurajima from Ice Wind Island",
+        paragraphs: [
+          "Respawn at Ice Wind Island, open the map, and travel toward coordinates -512, 215. Activate the fast-travel statue near the large mansion before entering the camp.",
+          "The area is dangerous for a new character. Avoid fighting high-level enemies directly and keep unnecessary materials out of your inventory before the attempt.",
+        ],
+      },
+      {
+        heading: "3. Use the Palbox camp-reset method",
+        bullets: [
+          "Gather enough wood and stone to build a Palbox.",
+          "Place the Palbox so the hostile camp falls inside the base boundary.",
+          "Use the Palbox to teleport away, then teleport back.",
+          "During the verified test, hostile enemies were removed while the captive Pal and treasure chests remained.",
+          "Dismantle the temporary base from the map before moving to the next camp; the materials return to your inventory.",
+        ],
+      },
+      {
+        heading: "4. Run the four captive-Pal camps",
+        table: {
+          headers: ["Stop", "Coordinates / landmark", "Purpose"],
+          rows: [
+            ["Camp 1", "-512, 215 — mansion fast-travel area", "Activate travel, reset the camp, free the captive, and loot every chest."],
+            ["Camp 2", "605, 216 — near Moonflower Tower Entrance", "Rebuild the Palbox, reset the camp, check the captive, and collect loot."],
+            ["Camp 3", "635, 240", "Repeat the reset and evaluate the random captive Pal."],
+            ["Camp 4", "695, 181", "Use the final captive and chest roll before leaving Sakurajima."],
+          ],
+        },
+        paragraphs: [
+          "Captive Pals are random. The video run found Flopie, Tocotoco, and Wixen results, but those examples are not guaranteed. For early production, prioritize useful Work Suitability—especially Handiwork level 2 or higher—over a specific name.",
+        ],
+      },
+      {
+        heading: "5. Keep the loot that accelerates the opening hours",
+        paragraphs: [
+          "Open every chest around each camp. The demonstrated route produced high-tier Spheres, schematics, food, and equipment, but chest contents are random and should not be treated as guaranteed drops.",
+          "The route is strongest when several rewards combine: one useful worker, capture supplies, sellable gear, and an early schematic can save more time than chasing a single perfect Pal.",
+        ],
+      },
+      {
+        heading: "6. Add Alpha Dumud as an early combat Pal",
+        paragraphs: [
+          "Return to the central part of Ice Wind Island and find the level 14 Alpha Dumud shown in the video. Lower its health with another Pal and throw a Sphere; a back throw can improve the capture chance.",
+          "Dumud gives the route a dependable combat option while the rescued worker Pals handle early production.",
+        ],
+      },
+      {
+        heading: "7. Use Killamari for early movement",
+        paragraphs: [
+          "A dungeon entrance is located beside the Alpha Dumud area. Enter and look for Killamari. If it does not spawn, leave and re-enter the dungeon; the demonstration usually needed only one or two resets.",
+          "At player level 9, unlock Killamari's Gloves in the Technology menu. Killamari can then act as a glider, and pairing it with Croajiro provides useful movement before obtaining a flying mount.",
+        ],
+      },
+      {
+        heading: "8. Build in the large Ice Wind Island clearing",
+        paragraphs: [
+          "Finish the route at the large circular clearing in the same region. The ground is wide and flat, with wood, ore, and several early Pal options nearby.",
+          "Treat this as a practical tested location for this route, not a universal best-base claim. Your world settings, group size, production goals, and future patches can change the best long-term choice.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Does the Palbox camp-reset method work in Palworld 1.0?",
+        answer:
+          "It worked during an independent current-release retest on July 12, 2026. Because this is patch-sensitive behavior, retest it after major hotfixes.",
+      },
+      {
+        question: "Are the captive Pals and chest rewards guaranteed?",
+        answer:
+          "No. Captive Pals and chest contents are random. Use the route for multiple chances at workers, Spheres, schematics, and gear rather than expecting one result.",
+      },
+      {
+        question: "Why does the footage show a different build marker?",
+        answer:
+          "The video is an authorized localization of source footage. The route and camp mechanic were retested separately on the current Palworld 1.0 release, which is the verification used by this page.",
+      },
+      {
+        question: "Is the Ice Wind Island clearing the best base in Palworld 1.0?",
+        answer:
+          "It is a practical location for this tested route, not a universal best-base claim. Long-term needs differ between solo worlds, multiplayer groups, and server settings.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Embedded Palworld 1.0 early-game video guide",
+        href: "https://youtu.be/rt31UfvpsfQ",
+      },
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+    ],
+    relatedLinks: [
+      { label: "Palworld 1.0 Beginner Guide", href: "/guides/palworld-1-0-beginner-guide/" },
+      { label: "Palworld 1.0 First Hour Checklist", href: "/guides/palworld-1-0-first-hour-checklist/" },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {
@@ -2384,6 +2580,10 @@ export function getGuidesByTag(tag: string) {
 
 export function featuredGuides() {
   return guides.filter((guide) => guide.featured);
+}
+
+export function videoGuides() {
+  return guides.filter((guide) => guide.video);
 }
 
 export const categoryMeta: Record<GuideCategory, { title: string; description: string; path: string }> = {

@@ -1,12 +1,30 @@
 # CHANGELOG
 
-更新时间：2026-07-11
+更新时间：2026-07-12
 
 ## 记录规则
 
 - 每完成一个阶段就追加记录。
 - 记录用户能理解的变化，不只写代码文件名。
 - 重要决策同步到 `PROJECT_CONTEXT.md`。
+
+## 2026-07-12
+
+### 首个视频攻略
+
+- 新增 `Palworld 1.0 Fast Early-Game Start Route` 完整英文图文攻略和 4:33 英文配音视频。
+- 视频托管于 YouTube，但永久设置为 Unlisted；保留站内嵌入，不以 YouTube 公开流量为目标。
+- 新增点击后加载的 `youtube-nocookie.com` 播放器、站内自有缩略图和 8 个章节跳转按钮。
+- 新增当前 Palworld 1.0 独立复测信息，明确源视频版本标记与当前版本验证不是同一件事。
+- 首页新增单个真实 Featured video guide 卡片；旧文章和导航结构保持不变。
+- 新视频页加入独立 canonical、Open Graph、sitemap 和单个 `VideoObject` JSON-LD。
+
+### 验证
+
+- `npm run build` 通过，Astro 页面总数由 24 增至 25。
+- 新视频页在 390px 和 1280px 均无横向溢出；点击前无 iframe，点击后仅创建一个隐私增强 YouTube iframe，刷新后恢复无 iframe。
+- 首页在 390px 和 1280px 均无横向溢出，仅显示一个真实视频卡；旧 Beginner Guide 未注入视频播放器或 `VideoObject`。
+- 构建产物中的新 URL、canonical、OG 图、sitemap 和视频结构化数据检查通过。
 
 ## 2026-07-11
 

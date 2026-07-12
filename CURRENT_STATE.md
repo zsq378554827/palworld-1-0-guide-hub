@@ -1,6 +1,6 @@
 # CURRENT_STATE
 
-更新时间：2026-07-11
+更新时间：2026-07-12
 
 ## Project
 
@@ -57,6 +57,10 @@
 - 2026-07-10 第三轮新增 6 篇安全范围页面：Sunreach Guide、World Tree Guide、New Pals Overview、MODs Warning and Compatibility Guide、Server Owner Checklist、First Hour Checklist；文章总数由 10 篇增至 16 篇，未新增组件、设计、广告或图片。
 - 2026-07-10 第三轮初步 QA 通过：`npm run build` 构建页面由 18 个增至 24 个；24 个 title/meta 均唯一；27 个内部链接无缺失；6 个新 URL 均进入 sitemap，并包含 canonical、July 10、Source note、内部相关链接、非官方声明和实测边界。
 - 2026-07-10 第三轮 Playwright QA 通过：6 个新页面在 390px 手机端和 1280px 桌面端均无页面级横向溢出；H1、更新时间、Source note 和 `Needs in-game verification.` 均正常，Sunreach 首屏已完成手机/桌面目视检查。
+- 2026-07-12 新增首个完整视频攻略 `Palworld 1.0 Fast Early-Game Start Route`：YouTube 视频固定为 Unlisted，仅用于攻略站嵌入；同页提供完整英文图文攻略、章节跳转和当前 1.0 版本复测说明。
+- 视频采用站内缩略图和点击后加载的 `youtube-nocookie.com` iframe，访问页面时不会立即联系 YouTube；允许站内嵌入但不把视频设为 YouTube 公开内容。
+- 新页面加入 `VideoObject` JSON-LD、独立 canonical/OG 图和 sitemap；首页新增一个真实 Featured video guide 卡片，没有制造虚假视频数量。
+- 本地 `npm run build` 通过，页面总数由 24 增至 25；390px/1280px 首页与视频页无横向溢出，旧攻略未注入视频播放器或视频结构化数据。
 
 ## Current Priorities
 
@@ -64,6 +68,7 @@
 2. 等可靠玩家实测后再评估 Best Pals、Best Weapons、Best Base Locations 和精确服务器倍率内容。
 3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功。
 4. 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。
+5. 后续视频继续固定使用 Unlisted + 隐私增强点击加载，不以 YouTube 流量为目标。
 
 ## Current Blockers
 
@@ -98,6 +103,7 @@
 - Google Search Console 已提交并重新提交 `https://palworld-1-0-guide-hub.pages.dev/sitemap.xml`；GSC 弹窗确认提交成功，但当前表格即时状态仍为“无法抓取”，站点端检查正常，需稍后复查。
 - `/faq/` 已升级为完整 FAQ 主页面；重复的 `/guides/palworld-1-0-faq/` canonical 到 `/faq/` 并从 sitemap 排除。
 - 24 个构建页面 title/meta 无重复；23 个正式 canonical URL 进入 sitemap，内部链接检查无 broken link。
+- 25 个构建页面 title/meta 无重复；首个视频攻略 URL 已进入 sitemap，并包含单个 `VideoObject` JSON-LD。
 - Patch Notes、Sunreach、World Tree、New Pals、MOD Warning、Server Setup、First Hour 已加入原创 WebP 插画或信息图及 alt text。
 - Patch Notes、Sunreach、World Tree、New Pals、Server Setup、Best Server Settings 已加入可操作表格或检查框架。
 - Beginner、Multiplayer、Performance 已完成正式深度更新，加入分阶段路线、决策表、故障诊断、Source note、内链和原创 WebP 视觉。

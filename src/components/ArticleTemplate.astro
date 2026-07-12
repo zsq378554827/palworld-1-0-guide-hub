@@ -1,6 +1,7 @@
 ---
 import type { Guide } from "../data/guides";
 import { guides } from "../data/guides";
+import GuideVideo from "./GuideVideo.astro";
 
 type Props = {
   guide: Guide;
@@ -39,6 +40,22 @@ const related = guides
     <p>{guide.updateNotice}</p>
     <span>Last verified: {guide.lastVerified}</span>
   </aside>
+
+  {guide.testing && (
+    <aside class="tested-info" aria-label="Testing details">
+      <strong>Tested on the current release</strong>
+      <dl>
+        <div><dt>Version</dt><dd>{guide.testing.gameVersion}</dd></div>
+        <div><dt>Last tested</dt><dd>{guide.testing.lastTested}</dd></div>
+        <div><dt>Platform</dt><dd>{guide.testing.platform}</dd></div>
+        <div><dt>Mode</dt><dd>{guide.testing.mode}</dd></div>
+        <div><dt>MODs</dt><dd>{guide.testing.mods}</dd></div>
+      </dl>
+      {guide.testing.note && <p>{guide.testing.note}</p>}
+    </aside>
+  )}
+
+  {guide.video && <GuideVideo video={guide.video} />}
 
   {guide.visual && (
     <figure class="article-visual">

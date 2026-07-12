@@ -1,6 +1,6 @@
 # TODO
 
-更新时间：2026-07-11
+更新时间：2026-07-12
 
 ## 工作模式
 
@@ -33,11 +33,13 @@
 | 已完成 | 第三轮新增 6 篇安全范围页面 | 高 | Codex | Sunreach、World Tree、New Pals Overview、MOD Warning、Server Owner Checklist、First Hour Checklist；24 个页面 build、链接、SEO、390px/1280px QA 通过 |
 | 已完成 | 发布后文案、FAQ、配图和实用性优化 | 高 | Codex | 清除发布前措辞；完整 `/faq/`；7 个重点页原创视觉；重点页表格/checklist；重复 FAQ canonical 与 sitemap 去重 |
 | 已完成 | 深化剩余旧页面 | 高 | Codex | Beginner、Multiplayer、Performance 深度更新；Guides、Server、About 入口页增强；新增 3 张原创/自制 WebP 视觉 |
+| 已完成 | 首个 Unlisted 视频攻略功能 | 高 | Codex | 新增完整英文图文攻略、点击加载隐私增强播放器、章节跳转、当前 1.0 复测说明、VideoObject SEO 和首页真实视频卡；YouTube 永不公开 |
 | 已完成 | 接入 Analytics 和 Search Console | 中 | Codex | Cloudflare Web Analytics 已接入；GSC URL-prefix 资源已通过 HTML 文件验证；sitemap 已提交 |
 | 未开始 | 复查 GSC sitemap 抓取状态 | 中 | Codex | 已重新提交 `sitemap.xml`，GSC 返回提交成功；表格即时状态仍为“无法抓取”；站点端检查 `/sitemap.xml` 对 Googlebot 返回 200 和 `application/xml` |
 | 已完成 | Palworld 1.0 patch notes 更新日准备 | 高 | Codex | 已预留文章更新字段；文章页新增 Update Notice；已创建 `UPDATE_DAY_CHECKLIST.md`；build 通过 |
 | 已完成 | 新建 New Pals Overview / World Tree Guide 独立页面 | 中 | Codex | 已按官方 changelog 创建安全概览，不写未验证完整名单、路线、Boss 或排名 |
 | 暂缓 | Best Pals / Best Weapons / Best Base Locations | 中 | Codex | 需要可靠玩家实测，发布日不写死 |
+| 进行中 | 视频攻略生产模板前向验证 | 中 | Codex | 本轮首个视频已完成；下个不同类型视频继续验证 Unlisted、SRT、站内嵌入和部署全链路 |
 
 ## 状态说明
 

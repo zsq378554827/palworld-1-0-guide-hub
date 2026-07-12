@@ -1,0 +1,63 @@
+---
+import type { GuideVideo } from "../data/guides";
+
+type Props = {
+  video: GuideVideo;
+};
+
+const { video } = Astro.props;
+---
+
+<section class="guide-video" aria-labelledby="video-guide-heading" data-guide-video data-video-id={video.id}>
+  <div class="video-heading">
+    <div>
+      <p class="eyebrow">4K English video guide</p>
+      <h2 id="video-guide-heading">{video.title}</h2>
+    </div>
+    <span>{video.displayDuration}</span>
+  </div>
+  <p>{video.description}</p>
+  <div class="video-frame" data-video-frame>
+    <button class="video-facade" type="button" data-video-start="0" aria-label={`Play ${video.title}`}>
+      <img src={video.thumbnail} alt="Palworld 1.0 fast early-game route video thumbnail" width="1280" height="720" loading="eager" decoding="async" />
+      <span class="play-icon" aria-hidden="true"></span>
+      <span class="play-label">Play video guide</span>
+    </button>
+  </div>
+  <div class="video-chapters" aria-label="Video chapters">
+    <h3>Jump to a step</h3>
+    <div>
+      {video.chapters.map((chapter) => (
+        <button type="button" data-video-start={chapter.startSeconds}>
+          <span>{Math.floor(chapter.startSeconds / 60)}:{String(chapter.startSeconds % 60).padStart(2, "0")}</span>
+          {chapter.label}
+        </button>
+      ))}
+    </div>
+  </div>
+  <noscript>
+    <p><a href={`https://youtu.be/${video.id}`}>Watch this video guide on YouTube.</a></p>
+  </noscript>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-guide-video]").forEach((root) => {
+    const frame = root.querySelector<HTMLElement>("[data-video-frame]");
+    const videoId = root.dataset.videoId;
+    if (!frame || !videoId) return;
+
+    const loadVideo = (start = 0) => {
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&start=${start}`;
+      iframe.title = "Palworld 1.0 video guide";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      frame.replaceChildren(iframe);
+      frame.scrollIntoView({ behavior: "smooth", block: "center" });
+    };
+
+    root.querySelectorAll<HTMLButtonElement>("[data-video-start]").forEach((button) => {
+      button.addEventListener("click", () => loadVideo(Number(button.dataset.videoStart ?? 0)));
+    });
+  });
+</script>

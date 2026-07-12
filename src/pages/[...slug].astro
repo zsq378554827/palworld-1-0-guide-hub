@@ -2,6 +2,7 @@
 import ArticleTemplate from "../components/ArticleTemplate.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { guides } from "../data/guides";
+import { absoluteUrl } from "../data/site";
 
 export function getStaticPaths() {
   return guides.map((guide) => ({
@@ -11,8 +12,27 @@ export function getStaticPaths() {
 }
 
 const { guide } = Astro.props;
+const structuredData = guide.video
+  ? {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: guide.video.title,
+      description: guide.video.description,
+      thumbnailUrl: [absoluteUrl(guide.video.thumbnail)],
+      uploadDate: guide.video.uploadDate,
+      duration: guide.video.duration,
+      embedUrl: `https://www.youtube-nocookie.com/embed/${guide.video.id}`,
+    }
+  : undefined;
 ---
 
-<BaseLayout title={guide.title} description={guide.description} canonical={guide.canonical ?? `/${guide.slug}/`} type="article">
+<BaseLayout
+  title={guide.title}
+  description={guide.description}
+  canonical={guide.canonical ?? `/${guide.slug}/`}
+  image={guide.video?.thumbnail}
+  type="article"
+  structuredData={structuredData}
+>
   <ArticleTemplate guide={guide} />
 </BaseLayout>
