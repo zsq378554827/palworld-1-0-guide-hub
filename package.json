@@ -10,7 +10,8 @@
     "generate:assets": "node scripts/generate-assets.mjs"
   },
   "dependencies": {
-    "astro": "^5.11.0"
+    "astro": "^5.11.0",
+    "hls.js": "^1.6.16"
   },
   "devDependencies": {
     "sharp": "^0.35.3",

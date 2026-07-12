@@ -21,7 +21,8 @@ const structuredData = guide.video
       thumbnailUrl: [absoluteUrl(guide.video.thumbnail)],
       uploadDate: guide.video.uploadDate,
       duration: guide.video.duration,
-      embedUrl: `https://www.youtube-nocookie.com/embed/${guide.video.id}`,
+      contentUrl: guide.video.streamUrl ? absoluteUrl(guide.video.streamUrl) : undefined,
+      embedUrl: guide.video.provider === "youtube" ? `https://www.youtube-nocookie.com/embed/${guide.video.id}` : undefined,
     }
   : undefined;
 ---

@@ -29,6 +29,14 @@
 - 线上静态验收通过：初始页面 0 个 iframe，点击后创建 1 个 `youtube-nocookie.com` iframe；VideoObject 1 个，sitemap 条目 1 个。
 - Playwright 内的 YouTube 播放器触发登录确认非机器人提示；已记录为 YouTube 自动化环境限制，不把视频改为 Public。
 
+### 无需登录播放修复
+
+- 真实访客截图证实 YouTube 嵌入会要求登录，修正此前“仅自动化环境限制”的判断。
+- 将站内播放器从 YouTube iframe 改为站点自托管 HLS；YouTube Unlisted 继续保留为备份。
+- 新增 1080p、60fps、H.264/AAC 网页播放版：46 个 6 秒 fMP4 分片，总计约 200 MB，最大单个分片小于 5.5 MB。
+- 新播放器使用原生 `<video>` 控件；Safari 原生 HLS，其他现代浏览器使用 `hls.js`，访客不需要 YouTube 或 Google 登录。
+- 本地未登录验证通过：时长 272.68 秒、画面 1920×1080、播放时间实际增加、0 iframe、0:53 章节跳转成功、390px 无横向溢出。
+
 ## 2026-07-11
 
 ### 发布后内容与视觉优化

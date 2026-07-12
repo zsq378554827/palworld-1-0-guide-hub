@@ -16,8 +16,9 @@ export type GuideFaq = {
 };
 
 export type GuideVideo = {
-  provider: "youtube";
+  provider: "youtube" | "self-hosted";
   id: string;
+  streamUrl?: string;
   title: string;
   description: string;
   duration: string;
@@ -2428,9 +2429,10 @@ export const guides: Guide[] = [
     ],
     lastVerified: "July 12, 2026",
     video: {
-      provider: "youtube",
+      provider: "self-hosted",
       id: "rt31UfvpsfQ",
-      title: "Palworld 1.0 Fast Early-Game Start Route (4K Guide)",
+      streamUrl: "/media/palworld-1-0-fast-early-game-route/master.m3u8",
+      title: "Palworld 1.0 Fast Early-Game Start Route (English Video Guide)",
       description:
         "Watch the complete Palworld 1.0 early-game route with timestamp-aligned English narration, subtitles, coordinates, Pal names, and action callouts.",
       duration: "PT4M33S",

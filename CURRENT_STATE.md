@@ -63,6 +63,9 @@
 - 本地 `npm run build` 通过，页面总数由 24 增至 25；390px/1280px 首页与视频页无横向溢出，旧攻略未注入视频播放器或视频结构化数据。
 - 2026-07-12 commit `00232a7` 已推送到 GitHub `main` 并触发 Cloudflare Pages 自动部署；线上新攻略返回 200，视频 ID、canonical、站内缩略图、单个 `VideoObject` 和 sitemap 条目均验证通过。
 - 线上点击播放器会创建一个 `youtube-nocookie.com` iframe；Playwright 自动化环境被 YouTube 要求登录确认非机器人，此为 YouTube 自动化访问验证，不是视频被设为私享或禁止嵌入。
+- 2026-07-12 真实访客截图确认 YouTube 嵌入同样要求登录，推翻“仅自动化环境限制”的判断；站内播放器已改为自托管 HLS，不再依赖 YouTube。
+- 新网页播放版为 1920×1080、60fps、H.264/AAC、约 8 Mbps、46 个 6 秒 fMP4 分片，总计约 200 MB；全部分片小于 5.5 MB，全片解码通过。
+- 未登录本地浏览器验证：视频时长 272.68 秒、实际画面 1920×1080、播放时间持续增加、0 个 iframe；0:53 章节跳转成功，390px 手机端无横向溢出。
 
 ## Current Priorities
 
@@ -70,7 +73,7 @@
 2. 等可靠玩家实测后再评估 Best Pals、Best Weapons、Best Base Locations 和精确服务器倍率内容。
 3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功。
 4. 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。
-5. 后续视频继续固定使用 Unlisted + 隐私增强点击加载，不以 YouTube 流量为目标。
+5. 后续视频默认使用站点控制的 HLS/视频托管实现无需登录播放；YouTube 继续固定 Unlisted 作为备份，不以 YouTube 流量为目标。
 
 ## Current Blockers
 

@@ -40,6 +40,7 @@
 | 已完成 | 新建 New Pals Overview / World Tree Guide 独立页面 | 中 | Codex | 已按官方 changelog 创建安全概览，不写未验证完整名单、路线、Boss 或排名 |
 | 暂缓 | Best Pals / Best Weapons / Best Base Locations | 中 | Codex | 需要可靠玩家实测，发布日不写死 |
 | 进行中 | 视频攻略生产模板前向验证 | 中 | Codex | 本轮首个视频已完成；下个不同类型视频继续验证 Unlisted、SRT、站内嵌入和部署全链路 |
+| 已完成 | 修复 YouTube 嵌入登录要求 | 高 | Codex | 改为站内 H.264/AAC HLS 原生播放器；未登录播放、章节跳转、0 iframe 和移动端检查通过 |
 
 ## 状态说明
 

@@ -8,22 +8,28 @@ type Props = {
 const { video } = Astro.props;
 ---
 
-<section class="guide-video" aria-labelledby="video-guide-heading" data-guide-video data-video-id={video.id}>
+<section class="guide-video" aria-labelledby="video-guide-heading" data-guide-video data-stream-url={video.streamUrl}>
   <div class="video-heading">
     <div>
-      <p class="eyebrow">4K English video guide</p>
+      <p class="eyebrow">1080p60 direct-play video guide</p>
       <h2 id="video-guide-heading">{video.title}</h2>
     </div>
     <span>{video.displayDuration}</span>
   </div>
   <p>{video.description}</p>
   <div class="video-frame" data-video-frame>
-    <button class="video-facade" type="button" data-video-start="0" aria-label={`Play ${video.title}`}>
-      <img src={video.thumbnail} alt="Palworld 1.0 fast early-game route video thumbnail" width="1280" height="720" loading="eager" decoding="async" />
-      <span class="play-icon" aria-hidden="true"></span>
-      <span class="play-label">Play video guide</span>
-    </button>
+    <video
+      controls
+      playsinline
+      preload="metadata"
+      poster={video.thumbnail}
+      aria-label={video.title}
+      data-guide-player
+    >
+      <p>Your browser cannot play this video.</p>
+    </video>
   </div>
+  <p class="video-playback-note" data-video-status>Plays directly on this site. No YouTube or Google login required.</p>
   <div class="video-chapters" aria-label="Video chapters">
     <h3>Jump to a step</h3>
     <div>
@@ -36,28 +42,52 @@ const { video } = Astro.props;
     </div>
   </div>
   <noscript>
-    <p><a href={`https://youtu.be/${video.id}`}>Watch this video guide on YouTube.</a></p>
+    <p>Enable JavaScript to play this video guide.</p>
   </noscript>
 </section>
 
 <script>
-  document.querySelectorAll<HTMLElement>("[data-guide-video]").forEach((root) => {
-    const frame = root.querySelector<HTMLElement>("[data-video-frame]");
-    const videoId = root.dataset.videoId;
-    if (!frame || !videoId) return;
+  import Hls from "hls.js";
 
-    const loadVideo = (start = 0) => {
-      const iframe = document.createElement("iframe");
-      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0&start=${start}`;
-      iframe.title = "Palworld 1.0 video guide";
-      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      iframe.allowFullscreen = true;
-      frame.replaceChildren(iframe);
-      frame.scrollIntoView({ behavior: "smooth", block: "center" });
-    };
+  document.querySelectorAll<HTMLElement>("[data-guide-video]").forEach((root) => {
+    const player = root.querySelector<HTMLVideoElement>("[data-guide-player]");
+    const status = root.querySelector<HTMLElement>("[data-video-status]");
+    const streamUrl = root.dataset.streamUrl;
+    if (!player || !streamUrl) return;
+
+    if (player.canPlayType("application/vnd.apple.mpegurl")) {
+      player.src = streamUrl;
+    } else if (Hls.isSupported()) {
+      const hls = new Hls({
+        capLevelToPlayerSize: true,
+        enableWorker: true,
+      });
+      hls.loadSource(streamUrl);
+      hls.attachMedia(player);
+      hls.on(Hls.Events.ERROR, (_event, data) => {
+        if (!data.fatal) return;
+        if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+          hls.startLoad();
+        } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+          hls.recoverMediaError();
+        } else if (status) {
+          status.textContent = "The video could not load. Please refresh the page and try again.";
+        }
+      });
+    } else if (status) {
+      status.textContent = "This browser does not support the site video player. Try a current version of Chrome, Safari, Edge, or Firefox.";
+    }
 
     root.querySelectorAll<HTMLButtonElement>("[data-video-start]").forEach((button) => {
-      button.addEventListener("click", () => loadVideo(Number(button.dataset.videoStart ?? 0)));
+      button.addEventListener("click", async () => {
+        player.currentTime = Number(button.dataset.videoStart ?? 0);
+        player.scrollIntoView({ behavior: "smooth", block: "center" });
+        try {
+          await player.play();
+        } catch {
+          // The browser may require a second direct click on the native play control.
+        }
+      });
     });
   });
 </script>
