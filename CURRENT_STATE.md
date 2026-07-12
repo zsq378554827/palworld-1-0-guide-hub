@@ -82,6 +82,8 @@
 - 2026-07-12 完成视频/文字内容架构拆分：新增 `/videos/` 独立版块和两个独立视频页；首页 Videos 区域显示两条真实视频，主导航直达 `/videos/`。
 - 两个原文字攻略 URL 保持不变并移除播放器与 `VideoObject`，每篇文章和对应视频页使用描述性链接双向跳转；视频元数据从 `guides.ts` 拆到 `videos.ts`。
 - 本地构建增至 29 个页面；两条 HLS 均真实播放和章节跳转通过，390px/1280px 无横向溢出；文字攻略页播放器和 `VideoObject` 均为 0。
+- 架构拆分 commit `b2d82ad` 已推送 `main` 并自动部署为 Cloudflare Pages production `90ed9aa2`；线上两个视频页、两个文字页、视频索引、HLS manifest 和 sitemap 均返回 200。
+- 线上未登录实播复验：早期路线 0:53 跳转后播放到 56.36 秒，Worker Pal 2:06 跳转后播放到 129.51 秒；两条均 `readyState=4`、1920×1080、0 iframe、0 控制台错误，390px 无横向溢出。
 
 ## Current Priorities
 

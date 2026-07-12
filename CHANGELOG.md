@@ -18,6 +18,8 @@
 - 将视频元数据从 `src/data/guides.ts` 拆分到 `src/data/videos.ts`，sitemap 同时收录视频索引、视频详情和文字攻略 URL。
 - 首页将视频版块和最新文字攻略版块分开；两条真实视频均进入首页和 `/videos/`，未生成虚假卡片或计数。
 - `npm run build` 通过并生成 29 个页面；两条 HLS 实播、章节跳转、390px/1280px、0 横向溢出、文字页 0 播放器/0 VideoObject 均通过。
+- commit `b2d82ad` 已由 GitHub push 自动部署为 Cloudflare Pages production `90ed9aa2`；线上六个相关页面/端点与两个 HLS manifest 均返回 200。
+- 线上未登录实播通过：早期路线 0:53 章节后播放到 56.36 秒，Worker Pal 2:06 章节后播放到 129.51 秒；均为 1920×1080、`readyState=4`、0 iframe、0 控制台错误，390px 无横向溢出。
 
 ### 第二个视频攻略：Ultimate Worker Pal
 
