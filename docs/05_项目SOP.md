@@ -47,8 +47,9 @@ npm run build
 
 1. 先调用 `/Users/zousunquan/.codex/skills/localize-short-video/` 完成授权、最高画质下载、英文化和 master QA。
 2. 用 Skill 的 `build_web_hls.py` 生成 H.264/AAC HLS；确保每个静态文件低于 Cloudflare Pages 限制并完整解码。
-3. 将 HLS 放入 `public/media/<video-slug>/`，在 `guides.ts` 写入 stream URL、时长、缩略图和章节。
-4. 使用 `GuideVideo.astro` 的原生播放器；无需登录场景保持 0 iframe，不公开 YouTube 备份链接。
-5. 输出完整英文图文攻略、当前版本验证、source disclosure、VideoObject `contentUrl`、OG 和 sitemap。
-6. `npm run build` 后检查 390px/1280px、旧文章回归、title/meta、canonical 和最大媒体文件。
-7. push `main`，等待 Cloudflare production；未登录线上浏览器必须证明 `currentTime` 增加并测试一个章节跳转。
+3. 将 HLS 放入 `public/media/<video-slug>/`，在 `src/data/videos.ts` 写入 stream URL、时长、缩略图、章节、验证说明和对应文字攻略路径。
+4. 在 `/videos/` 新增真实视频卡；每条视频使用 `/videos/<video-slug>/` 独立详情页和 `GuideVideo.astro` 原生播放器。无需登录场景保持 0 iframe，不公开 YouTube 备份链接。
+5. 在 `guides.ts` 单独维护完整英文文字攻略。视频页只放播放器、简介、章节、验证/披露和文字攻略 CTA；文字页放完整步骤、FAQ、来源和对应视频 CTA，不嵌播放器。
+6. 两个 URL 使用不同 title/meta/H1 和自引用 canonical；`VideoObject` 只在视频页出现且恰好 1 个，文字攻略页必须为 0；两页都进入 sitemap 并双向内链。
+7. `npm run build` 后检查 390px/1280px、视频索引真实数量、旧文章回归、title/meta、canonical、最大媒体文件、文字页 0 player/0 VideoObject。
+8. push `main`，等待 Cloudflare production；未登录线上浏览器必须证明两条视频 `currentTime` 增加并各测试一个章节跳转。

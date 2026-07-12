@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import VideoGuideCard from "../../components/VideoGuideCard.astro";
+import { videos } from "../../data/videos";
+---
+
+<BaseLayout
+  title="Palworld 1.0 Video Guides"
+  description="Watch English Palworld 1.0 video guides directly on this site with no login, timestamped chapters, clear verification notes, and separate links to complete written walkthroughs."
+  canonical="/videos/"
+>
+  <section class="video-library-hero" aria-labelledby="video-library-title">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <span>Videos</span>
+    </nav>
+    <p class="eyebrow">Direct-play English guides</p>
+    <h1 id="video-library-title">Palworld 1.0 Video Guides</h1>
+    <p>
+      Watch every guide directly on this site without a YouTube or Google login. Video walkthroughs and
+      detailed written guides are kept as separate resources, with links between the two.
+    </p>
+  </section>
+
+  <section class="video-library" aria-labelledby="all-videos-title">
+    <div class="video-library-heading">
+      <div>
+        <p class="eyebrow">All videos</p>
+        <h2 id="all-videos-title">Choose a walkthrough</h2>
+      </div>
+      <span>{videos.length} English video guides</span>
+    </div>
+    <div class="video-library-grid">
+      {videos.map((video) => <VideoGuideCard video={video} />)}
+    </div>
+  </section>
+</BaseLayout>

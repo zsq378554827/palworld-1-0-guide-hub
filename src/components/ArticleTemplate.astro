@@ -1,7 +1,6 @@
 ---
 import type { Guide } from "../data/guides";
 import { guides } from "../data/guides";
-import GuideVideo from "./GuideVideo.astro";
 
 type Props = {
   guide: Guide;
@@ -54,8 +53,6 @@ const related = guides
       {guide.testing.note && <p>{guide.testing.note}</p>}
     </aside>
   )}
-
-  {guide.video && <GuideVideo video={guide.video} />}
 
   {guide.visual && (
     <figure class="article-visual">

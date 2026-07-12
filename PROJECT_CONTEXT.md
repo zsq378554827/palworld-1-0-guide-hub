@@ -23,6 +23,7 @@ Palworld 1.0 Guide Hub 是一个面向英文用户的 Palworld Version 1.0 专�
 - 不做登录、会员、评论、后台。
 - 全页面具备 SEO title、description、canonical、Open Graph。
 - 视频攻略使用站点控制的 H.264/AAC HLS，访客无需 YouTube/Google 登录；YouTube 仅保留 Unlisted 后台备份。
+- 视频与完整文字攻略是两种独立内容类型：视频集中在 `/videos/`，每条视频使用独立视频页；文字攻略保留独立文章页，双方互链但不在文章页嵌入播放器。
 - 所有文章页面显示 Last Updated。
 - Footer 显示非官方声明。
 - 首版包含 8 个核心页面和 10 篇文章初版。
@@ -94,6 +95,7 @@ Project_02_palworld_1_0_guide_hub/
 - 已补齐 GitHub App 对 `zsq378554827/palworld-1-0-guide-hub` 的仓库授权。
 - 已验证 GitHub push 自动触发 Cloudflare Pages production deployment。
 - 已上线首个完整英文视频攻略，并验证未登录浏览器实际播放、章节跳转、移动端和 VideoObject SEO。
+- 已将两条视频迁移到独立 Videos 版块；首页、导航、sitemap、结构化数据和两个文字攻略页均完成内容类型拆分。
 
 ## 待完成
 
@@ -121,6 +123,7 @@ Project_02_palworld_1_0_guide_hub/
 | 2026-07-07 | 不使用官方 Logo 或官方图片 | 降低版权和商标风险，符合用户要求 |
 | 2026-07-07 | 1.0 未发布细节只写预备版 | 避免编造未确认内容，正式 patch notes 发布后再更新 |
 | 2026-07-12 | 站内视频使用自托管 HLS，YouTube 仅作 Unlisted 备份 | Unlisted iframe 仍可能要求访客登录，不能满足无需登录播放 |
+| 2026-07-12 | 视频页与完整文字攻略页使用不同 URL，并建立独立 `/videos/` 版块 | 便于用户按媒介浏览，避免播放器、长文和 VideoObject 在同一文章页混杂，也让两种搜索意图各自拥有清晰 SEO 页面 |
 
 ## 复盘
 

@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getGuideBySlug, videoGuides } from "../data/guides";
-
-const featuredVideo = videoGuides().find((guide) => guide.video?.featured) ?? videoGuides()[0];
+import VideoGuideCard from "../components/VideoGuideCard.astro";
+import { getGuideBySlug } from "../data/guides";
+import { videos } from "../data/videos";
 
 const taskLinks = [
   {
@@ -56,7 +56,7 @@ const latestGuideSpecs = [
   {
     slug: "guides/palworld-1-0-ultimate-worker-pal-build",
     image: "/assets/video-guides/palworld-1-0-ultimate-worker-pal-build.jpg",
-    label: "Video Guide",
+    label: "Written Guide",
   },
   {
     slug: "palworld-1-0/palworld-1-0-patch-notes-explained",
@@ -186,25 +186,6 @@ const guideGroups = [
       </div>
     </div>
 
-    {featuredVideo?.video && (
-      <a class="home-featured-video" href={`/${featuredVideo.slug}/`} aria-label={`Watch ${featuredVideo.title}`}>
-        <div class="featured-video-media">
-          <img
-            src={featuredVideo.video.thumbnail}
-            alt="Palworld 1.0 fast early-game route video thumbnail"
-            width="1280"
-            height="720"
-          />
-          <span class="video-duration">{featuredVideo.video.displayDuration}</span>
-        </div>
-        <div class="featured-video-copy">
-          <span class="content-label">Tested video guide</span>
-          <h2>{featuredVideo.title}</h2>
-          <p>{featuredVideo.video.description}</p>
-          <strong>Watch the route and open written steps</strong>
-        </div>
-      </a>
-    )}
   </section>
 
   <nav class="home-category-nav" aria-label="Browse guide categories">
@@ -213,35 +194,28 @@ const guideGroups = [
     ))}
   </nav>
 
-  <section class="home-content-section" id="videos" aria-labelledby="latest-guides-title">
+  <section class="home-content-section" id="videos" aria-labelledby="video-guides-title">
     <div class="home-section-heading">
       <div>
-        <p class="home-kicker">Watch, then follow the written steps</p>
-        <h2 id="latest-guides-title">Latest video and guide updates</h2>
+        <p class="home-kicker">Direct play · No login required</p>
+        <h2 id="video-guides-title">Video Guides</h2>
       </div>
-      <a href="/guides/">View all guides</a>
+      <a href="/videos/">View all videos</a>
     </div>
+    <div class="video-library-grid home-video-grid">
+      {videos.map((video) => <VideoGuideCard video={video} />)}
+    </div>
+  </section>
 
-    <div class="latest-content-grid">
-      {featuredVideo?.video && (
-        <a class="latest-lead" href={`/${featuredVideo.slug}/`}>
-          <div class="latest-lead-media">
-            <img
-              src={featuredVideo.video.thumbnail}
-              alt="Palworld 1.0 early-game route with route labels and English narration"
-              width="1280"
-              height="720"
-              loading="lazy"
-            />
-            <span class="video-duration">{featuredVideo.video.displayDuration}</span>
-          </div>
-          <span class="content-label">Video guide · Independently retested</span>
-          <h3>{featuredVideo.title}</h3>
-          <p>Watch the route, then use coordinates, timestamps, safety notes, and the current-release test record.</p>
-          <strong>Watch and read</strong>
-        </a>
-      )}
-
+  <section class="home-content-section" aria-labelledby="latest-guides-title">
+    <div class="home-section-heading">
+      <div>
+        <p class="home-kicker">Step-by-step articles</p>
+        <h2 id="latest-guides-title">Latest written guide updates</h2>
+      </div>
+      <a href="/guides/">View all written guides</a>
+    </div>
+    <div class="latest-written-grid">
       <div class="latest-guide-list">
         {latestGuides.map(({ guide, image, label }) => guide && (
           <a class="latest-guide-row" href={`/${guide.slug}/`}>

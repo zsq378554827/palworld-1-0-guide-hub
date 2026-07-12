@@ -15,20 +15,6 @@ export type GuideFaq = {
   answer: string;
 };
 
-export type GuideVideo = {
-  provider: "youtube" | "self-hosted";
-  id: string;
-  streamUrl?: string;
-  title: string;
-  description: string;
-  duration: string;
-  displayDuration: string;
-  thumbnail: string;
-  uploadDate: string;
-  featured?: boolean;
-  chapters: { startSeconds: number; label: string }[];
-};
-
 export type GuideTesting = {
   gameVersion: string;
   lastTested: string;
@@ -67,7 +53,6 @@ export type Guide = {
     caption: string;
   };
   relatedLinks?: { label: string; href: string }[];
-  video?: GuideVideo;
   testing?: GuideTesting;
 };
 
@@ -2398,7 +2383,7 @@ export const guides: Guide[] = [
     title: "Palworld 1.0 Fast Early-Game Start Route",
     slug: "guides/palworld-1-0-fast-early-game-start-route",
     category: "guides",
-    categoryLabel: "Video Guide",
+    categoryLabel: "Early-Game Guide",
     description:
       "A tested Palworld 1.0 early-game route covering fast-travel unlocks, Sakurajima captive-Pal camps, high-value loot, Alpha Dumud, Killamari movement, and a practical starter base location.",
     shortAnswer:
@@ -2409,7 +2394,7 @@ export const guides: Guide[] = [
       "The video uses localized source footage; rely on this page's current-release test note rather than the build marker visible in the footage.",
     ],
     lastUpdated: "July 12, 2026",
-    readingTime: "8 min read + 4:33 video",
+    readingTime: "8 min read",
     tags: ["video guide", "early game", "Sakurajima", "starter route"],
     statusNotice:
       "This route and the Palbox camp-reset method were independently retested on the current Palworld 1.0 release on July 12, 2026. Future patches may change individual steps.",
@@ -2424,33 +2409,10 @@ export const guides: Guide[] = [
       "Patch-sensitive mechanics should be retested after major Palworld updates.",
     ],
     sourceNotes: [
-      "The embedded video is an authorized English localization of source footage and uses AI-generated English narration.",
+      "The companion video is an authorized English localization of source footage and uses AI-generated English narration.",
       "The footage may show a source-build marker and non-English game UI; the route was separately retested on the current Palworld 1.0 release.",
     ],
     lastVerified: "July 12, 2026",
-    video: {
-      provider: "self-hosted",
-      id: "rt31UfvpsfQ",
-      streamUrl: "/media/palworld-1-0-fast-early-game-route/master.m3u8",
-      title: "Palworld 1.0 Fast Early-Game Start Route (English Video Guide)",
-      description:
-        "Watch the complete Palworld 1.0 early-game route with timestamp-aligned English narration, subtitles, coordinates, Pal names, and action callouts.",
-      duration: "PT4M33S",
-      displayDuration: "4:33",
-      thumbnail: "/assets/video-guides/palworld-1-0-fast-early-game-route.webp",
-      uploadDate: "2026-07-12T14:45:00+08:00",
-      featured: true,
-      chapters: [
-        { startSeconds: 0, label: "Route overview" },
-        { startSeconds: 6, label: "Unlock multiple fast-travel points" },
-        { startSeconds: 18, label: "Reach Sakurajima" },
-        { startSeconds: 53, label: "Clear hostile camps with a Palbox" },
-        { startSeconds: 84, label: "Loot four captive-Pal camps" },
-        { startSeconds: 189, label: "Catch Alpha Dumud" },
-        { startSeconds: 218, label: "Find Killamari for movement" },
-        { startSeconds: 249, label: "Choose the main-base location" },
-      ],
-    },
     testing: {
       gameVersion: "Palworld 1.0 current release",
       lastTested: "July 12, 2026",
@@ -2558,6 +2520,7 @@ export const guides: Guide[] = [
       },
     ],
     relatedLinks: [
+      { label: "Watch the 4:33 English video guide", href: "/videos/palworld-1-0-fast-early-game-route/" },
       { label: "Palworld 1.0 Beginner Guide", href: "/guides/palworld-1-0-beginner-guide/" },
       { label: "Palworld 1.0 First Hour Checklist", href: "/guides/palworld-1-0-first-hour-checklist/" },
     ],
@@ -2566,7 +2529,7 @@ export const guides: Guide[] = [
     title: "Palworld 1.0 Ultimate Worker Pal Build Guide",
     slug: "guides/palworld-1-0-ultimate-worker-pal-build",
     category: "guides",
-    categoryLabel: "Video Guide",
+    categoryLabel: "Base-Building Guide",
     description:
       "Build a high-speed Palworld worker Pal with Work Suitability, condensation, Pal Souls, work-speed passives, labor research, Applied Technique books, and job-specific adjustments.",
     shortAnswer:
@@ -2577,7 +2540,7 @@ export const guides: Guide[] = [
       "Transporting is the exception: movement-speed passives usually matter more than a pure work-speed setup.",
     ],
     lastUpdated: "July 12, 2026",
-    readingTime: "9 min read + 3:35 video",
+    readingTime: "9 min read",
     tags: ["video guide", "worker Pal", "work speed", "base building", "Depresso", "Yakumo"],
     statusNotice:
       "This authorized localized video demonstrates the complete worker-Pal build in source footage. The exact passive-transfer odds, percentage bonuses, book locations, and patch-sensitive mechanics still need an independent current-release retest.",
@@ -2592,32 +2555,11 @@ export const guides: Guide[] = [
       "Reconfirm exact percentages, passive-transfer behavior, Applied Technique book farming, and world-setting labels after major patches.",
     ],
     sourceNotes: [
-      "The embedded video is an authorized English localization with AI-generated English narration, burned-in English subtitles, and English action callouts.",
+      "The companion video is an authorized English localization with AI-generated English narration, burned-in English subtitles, and English action callouts.",
       "Incidental non-English game-interface text may remain in the source footage; every action-critical step is translated or summarized in English on screen and in the written guide.",
       "Claims shown in source footage are labeled separately from independent current-release testing.",
     ],
     lastVerified: "July 12, 2026",
-    video: {
-      provider: "self-hosted",
-      id: "palworld-worker-pal-7659780246475967794",
-      streamUrl: "/media/palworld-1-0-ultimate-worker-pal-build/master.m3u8",
-      title: "Palworld 1.0 Ultimate Worker Pal Build (English Video Guide)",
-      description:
-        "Watch the complete worker-Pal upgrade route with timestamp-aligned English narration, burned-in subtitles, passive names, work-speed factors, book-farming steps, and job-specific callouts.",
-      duration: "PT3M35S",
-      displayDuration: "3:35",
-      thumbnail: "/assets/video-guides/palworld-1-0-ultimate-worker-pal-build.jpg",
-      uploadDate: "2026-07-12T21:00:00+08:00",
-      chapters: [
-        { startSeconds: 0, label: "The six work-speed factors" },
-        { startSeconds: 27, label: "Choose the worker base Pal" },
-        { startSeconds: 59, label: "Transfer a passive with Yakumo" },
-        { startSeconds: 93, label: "Add passives and stack upgrades" },
-        { startSeconds: 126, label: "Farm Applied Technique books" },
-        { startSeconds: 150, label: "Adapt the build to other jobs" },
-        { startSeconds: 192, label: "Nocturnal workers and SAN support" },
-      ],
-    },
     testing: {
       gameVersion: "Authorized source footage; current 1.0 retest pending",
       lastTested: "Not independently retested",
@@ -2745,6 +2687,7 @@ export const guides: Guide[] = [
       },
     ],
     relatedLinks: [
+      { label: "Watch the 3:35 English video guide", href: "/videos/palworld-1-0-ultimate-worker-pal-build/" },
       { label: "Palworld 1.0 Base Building Changes", href: "/base-building/" },
       { label: "Palworld 1.0 Beginner Guide", href: "/guides/palworld-1-0-beginner-guide/" },
       { label: "Palworld 1.0 Fast Early-Game Route", href: "/guides/palworld-1-0-fast-early-game-start-route/" },
@@ -2766,10 +2709,6 @@ export function getGuidesByTag(tag: string) {
 
 export function featuredGuides() {
   return guides.filter((guide) => guide.featured);
-}
-
-export function videoGuides() {
-  return guides.filter((guide) => guide.video);
 }
 
 export const categoryMeta: Record<GuideCategory, { title: string; description: string; path: string }> = {

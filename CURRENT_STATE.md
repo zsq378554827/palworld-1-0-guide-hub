@@ -79,6 +79,9 @@
 - YouTube 备份 `ye8-_T6UVcY` 已上传并保持 Private，等待最终 Unlisted 保存；网站代码和公开页面不使用 YouTube 播放器或公开备份链接。
 - commit `67281ab` 已推送 `main` 并由 Cloudflare Pages 自动部署为 production deployment `c68c4a53`。
 - 线上未登录播放验收通过：HLS manifest 和首个 fMP4 分片均返回 200 与正确 Content-Type；视频 `readyState=4`、播放到 4.78 秒、时长 215.43 秒、1920×1080；126 秒章节跳转成功；0 iframe、0 控制台错误、390px 无横向溢出。
+- 2026-07-12 完成视频/文字内容架构拆分：新增 `/videos/` 独立版块和两个独立视频页；首页 Videos 区域显示两条真实视频，主导航直达 `/videos/`。
+- 两个原文字攻略 URL 保持不变并移除播放器与 `VideoObject`，每篇文章和对应视频页使用描述性链接双向跳转；视频元数据从 `guides.ts` 拆到 `videos.ts`。
+- 本地构建增至 29 个页面；两条 HLS 均真实播放和章节跳转通过，390px/1280px 无横向溢出；文字攻略页播放器和 `VideoObject` 均为 0。
 
 ## Current Priorities
 
@@ -123,7 +126,7 @@
 - `/faq/` 已升级为完整 FAQ 主页面；重复的 `/guides/palworld-1-0-faq/` canonical 到 `/faq/` 并从 sitemap 排除。
 - 24 个构建页面 title/meta 无重复；23 个正式 canonical URL 进入 sitemap，内部链接检查无 broken link。
 - 25 个构建页面 title/meta 无重复；首个视频攻略 URL 已进入 sitemap，并包含单个 `VideoObject` JSON-LD。
-- 26 个构建页面通过；第二个视频攻略 title/meta/H1/canonical/OG 独立，URL 已进入 sitemap，公开 HTML 不含 YouTube iframe/链接，并包含单个 `VideoObject` JSON-LD。
+- 29 个构建页面通过；`/videos/`、两个独立视频页和两个独立文字攻略页均有不同 canonical/title/meta；每个视频页仅含一个 `VideoObject`，文字攻略页为 0。
 - Patch Notes、Sunreach、World Tree、New Pals、MOD Warning、Server Setup、First Hour 已加入原创 WebP 插画或信息图及 alt text。
 - Patch Notes、Sunreach、World Tree、New Pals、Server Setup、Best Server Settings 已加入可操作表格或检查框架。
 - Beginner、Multiplayer、Performance 已完成正式深度更新，加入分阶段路线、决策表、故障诊断、Source note、内链和原创 WebP 视觉。

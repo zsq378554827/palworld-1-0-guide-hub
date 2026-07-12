@@ -1,13 +1,11 @@
 ---
-import type { Guide } from "../data/guides";
+import type { VideoGuide } from "../data/videos";
 
-type Props = { guide: Guide };
-const { guide } = Astro.props;
-const video = guide.video;
-if (!video) throw new Error("VideoGuideCard requires guide.video");
+type Props = { video: VideoGuide };
+const { video } = Astro.props;
 ---
 
-<a class="video-guide-card" href={`/${guide.slug}/`} aria-label={`Watch and read ${guide.title}`}>
+<a class="video-guide-card" href={`/videos/${video.slug}/`} aria-label={`Watch ${video.title}`}>
   <div class="video-card-image">
     <img src={video.thumbnail} alt="" width="1280" height="720" loading="lazy" decoding="async" />
     <span class="play-icon" aria-hidden="true"></span>
@@ -15,8 +13,8 @@ if (!video) throw new Error("VideoGuideCard requires guide.video");
   </div>
   <div class="video-card-copy">
     <p class="eyebrow">Video guide</p>
-    <h3>{guide.title}</h3>
-    <p>{guide.description}</p>
-    <strong>Watch video and open written steps →</strong>
+    <h3>{video.title}</h3>
+    <p>{video.description}</p>
+    <strong>Watch video guide →</strong>
   </div>
 </a>

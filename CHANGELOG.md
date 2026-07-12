@@ -10,6 +10,15 @@
 
 ## 2026-07-12
 
+### 视频与文字攻略分区
+
+- 新增独立 `/videos/` 视频攻略版块，将现有两条视频集中展示；主导航 Videos 改为独立入口。
+- 新增两个独立视频详情页，保留站内 HLS 播放、章节、验证说明、AI 配音披露、独立 canonical/OG 和单个 `VideoObject`。
+- 原有两个 `/guides/` URL 保留为完整文字攻略，移除播放器和视频结构化数据；视频页与文字页使用描述性链接双向跳转。
+- 将视频元数据从 `src/data/guides.ts` 拆分到 `src/data/videos.ts`，sitemap 同时收录视频索引、视频详情和文字攻略 URL。
+- 首页将视频版块和最新文字攻略版块分开；两条真实视频均进入首页和 `/videos/`，未生成虚假卡片或计数。
+- `npm run build` 通过并生成 29 个页面；两条 HLS 实播、章节跳转、390px/1280px、0 横向溢出、文字页 0 播放器/0 VideoObject 均通过。
+
 ### 第二个视频攻略：Ultimate Worker Pal
 
 - 新增 `Palworld 1.0 Ultimate Worker Pal Build Guide`，覆盖六项工作速度因素、Depresso、Yakumo 被动转移、Pal Surgery Table、Souls、四星、Labor Research、Applied Technique books、Transporting、Nocturnal 和 SAN 支持。
