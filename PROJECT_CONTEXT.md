@@ -1,6 +1,6 @@
 # PROJECT_CONTEXT
 
-更新时间：2026-07-07
+更新时间：2026-07-12
 
 ## 项目一句话
 
@@ -22,6 +22,7 @@ Palworld 1.0 Guide Hub 是一个面向英文用户的 Palworld Version 1.0 专�
 - 英文页面，深色游戏感，卡片式布局，移动端优先。
 - 不做登录、会员、评论、后台。
 - 全页面具备 SEO title、description、canonical、Open Graph。
+- 视频攻略使用站点控制的 H.264/AAC HLS，访客无需 YouTube/Google 登录；YouTube 仅保留 Unlisted 后台备份。
 - 所有文章页面显示 Last Updated。
 - Footer 显示非官方声明。
 - 首版包含 8 个核心页面和 10 篇文章初版。
@@ -56,7 +57,9 @@ Palworld 1.0 Guide Hub 是一个面向英文用户的 Palworld Version 1.0 专�
 - 后端：无
 - 数据库：无
 - 部署：Cloudflare Pages 静态站；当前显示 Git Provider Yes，构建命令 `npm run build`，输出目录 `dist`；GitHub push 自动触发已验证成功
-- 第三方服务：首版无
+- 视频播放：原生 `<video>` + `hls.js`；Safari 使用原生 HLS。
+- 视频存储：少量视频先使用 Cloudflare Pages 小分片 HLS；数量增长前评估 R2/Stream 成本。
+- 第三方服务：Cloudflare Pages、Cloudflare Web Analytics、Google Search Console；YouTube Unlisted 仅备份。
 
 ## 目录结构
 
@@ -90,6 +93,7 @@ Project_02_palworld_1_0_guide_hub/
 - 已删除旧 Direct Upload Pages 项目，并重建同名 GitHub 集成 Pages 项目。
 - 已补齐 GitHub App 对 `zsq378554827/palworld-1-0-guide-hub` 的仓库授权。
 - 已验证 GitHub push 自动触发 Cloudflare Pages production deployment。
+- 已上线首个完整英文视频攻略，并验证未登录浏览器实际播放、章节跳转、移动端和 VideoObject SEO。
 
 ## 待完成
 
@@ -116,6 +120,7 @@ Project_02_palworld_1_0_guide_hub/
 | 2026-07-07 | 使用 Astro 静态站和本地 TS 数据文件管理文章 | 首版内容量小，便于快速上线和后续批量扩展 |
 | 2026-07-07 | 不使用官方 Logo 或官方图片 | 降低版权和商标风险，符合用户要求 |
 | 2026-07-07 | 1.0 未发布细节只写预备版 | 避免编造未确认内容，正式 patch notes 发布后再更新 |
+| 2026-07-12 | 站内视频使用自托管 HLS，YouTube 仅作 Unlisted 备份 | Unlisted iframe 仍可能要求访客登录，不能满足无需登录播放 |
 
 ## 复盘
 
