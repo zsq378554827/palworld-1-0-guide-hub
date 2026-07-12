@@ -36,6 +36,9 @@
 - 新增 1080p、60fps、H.264/AAC 网页播放版：46 个 6 秒 fMP4 分片，总计约 200 MB，最大单个分片小于 5.5 MB。
 - 新播放器使用原生 `<video>` 控件；Safari 原生 HLS，其他现代浏览器使用 `hls.js`，访客不需要 YouTube 或 Google 登录。
 - 本地未登录验证通过：时长 272.68 秒、画面 1920×1080、播放时间实际增加、0 iframe、0:53 章节跳转成功、390px 无横向溢出。
+- commit `b1c0cde` 已由 Cloudflare Pages 自动部署，production deployment short id `7c81ca68`。
+- 线上未登录播放通过：`readyState=4`，播放时间增加到 6.9 秒，0 iframe、0 控制台错误；0:53 章节跳转和 390px 手机端检查通过。
+- 从公开攻略页移除 YouTube 直链，Unlisted 视频只作为后台备份。
 
 ## 2026-07-11
 

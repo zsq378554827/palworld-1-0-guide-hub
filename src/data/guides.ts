@@ -2553,10 +2553,6 @@ export const guides: Guide[] = [
     ],
     sourceLinks: [
       {
-        label: "Embedded Palworld 1.0 early-game video guide",
-        href: "https://youtu.be/rt31UfvpsfQ",
-      },
-      {
         label: "Pocketpair official Palworld v1.0 release changelog on Steam",
         href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
       },

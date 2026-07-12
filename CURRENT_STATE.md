@@ -66,6 +66,8 @@
 - 2026-07-12 真实访客截图确认 YouTube 嵌入同样要求登录，推翻“仅自动化环境限制”的判断；站内播放器已改为自托管 HLS，不再依赖 YouTube。
 - 新网页播放版为 1920×1080、60fps、H.264/AAC、约 8 Mbps、46 个 6 秒 fMP4 分片，总计约 200 MB；全部分片小于 5.5 MB，全片解码通过。
 - 未登录本地浏览器验证：视频时长 272.68 秒、实际画面 1920×1080、播放时间持续增加、0 个 iframe；0:53 章节跳转成功，390px 手机端无横向溢出。
+- commit `b1c0cde` 已部署为 Cloudflare Pages production deployment `7c81ca68`；线上未登录浏览器验证 `readyState=4`、实际播放到 6.9 秒、0 iframe、0 控制台错误，0:53 章节跳转后继续播放，390px 无横向溢出。
+- 攻略页不再公开展示 YouTube 直链；Unlisted 视频只保留为后台备份。
 
 ## Current Priorities
 
