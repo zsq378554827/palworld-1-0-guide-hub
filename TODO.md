@@ -1,6 +1,6 @@
 # TODO
 
-更新时间：2026-07-12
+更新时间：2026-07-13
 
 ## 工作模式
 
@@ -44,7 +44,9 @@
 | 已完成 | 首页攻略站信息架构与 UI 重构 | 高 | Codex | 任务入口 + 真实视频主卡 + 分类导航 + 最新攻略 + 清单框架 + 分组攻略；1440/390 QA、链接、图片和 build 均通过 |
 | 已完成 | 第二个 Ultimate Worker Pal 视频攻略上线 | 高 | Codex | commit `67281ab`、Cloudflare production `c68c4a53`；英文攻略、1080p60 HLS、SEO、线上未登录播放和章节跳转均通过；YouTube 最终 Unlisted 单独确认 |
 | 已完成 | 视频与文字攻略独立分区 | 高 | Codex | commit `b2d82ad`、Cloudflare production `90ed9aa2`；新增 `/videos/` 和两个独立视频页，两篇文字攻略移除播放器/VideoObject，线上双视频实播与章节跳转通过 |
+| 已完成 | 第三个 Level 8 Worker Pals 视频完整上线 | 高 | Codex | 4K 英文化成片、SRT、缩略图、YouTube Unlisted、1080p60 HLS、独立视频页、独立文字攻略页、首页右上推荐位、SEO 与本地 QA 均完成；等待本次 push 后记录 production deployment |
 | 未开始 | 独立复测 Ultimate Worker Pal 精确机制 | 高 | 用户/Codex | 复测 Yakumo 概率、Technique book farming、精确数值和补丁敏感步骤；完成前页面保持 source-footage 标签 |
+| 未开始 | 独立复测 Level 8 Worker Pals 坐标与补丁敏感数值 | 高 | 用户/Codex | 页面已明确标注 source-footage；后续复测 World Tree 解锁、坐标、Work Suitability 和伙伴技能行为 |
 
 ## 状态说明
 

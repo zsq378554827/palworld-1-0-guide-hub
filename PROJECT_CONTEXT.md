@@ -1,6 +1,6 @@
 # PROJECT_CONTEXT
 
-更新时间：2026-07-12
+更新时间：2026-07-13
 
 ## 项目一句话
 
@@ -96,6 +96,8 @@ Project_02_palworld_1_0_guide_hub/
 - 已验证 GitHub push 自动触发 Cloudflare Pages production deployment。
 - 已上线首个完整英文视频攻略，并验证未登录浏览器实际播放、章节跳转、移动端和 VideoObject SEO。
 - 已将两条视频迁移到独立 Videos 版块；首页、导航、sitemap、结构化数据和两个文字攻略页均完成内容类型拆分。
+- 已上线第三条 `Level 8 Worker Pals & Locations` 英文视频攻略：YouTube 备份为 Unlisted，站内使用无需登录的 1080p60 HLS；视频页和完整文字攻略页继续分离。
+- 首页按用户提供的 1488×1058 参考图完成同尺寸对照，第三条视频位于右上主推荐位，三条真实视频集中在独立 `Latest Video Guides` 版块。
 
 ## 待完成
 
@@ -124,6 +126,7 @@ Project_02_palworld_1_0_guide_hub/
 | 2026-07-07 | 1.0 未发布细节只写预备版 | 避免编造未确认内容，正式 patch notes 发布后再更新 |
 | 2026-07-12 | 站内视频使用自托管 HLS，YouTube 仅作 Unlisted 备份 | Unlisted iframe 仍可能要求访客登录，不能满足无需登录播放 |
 | 2026-07-12 | 视频页与完整文字攻略页使用不同 URL，并建立独立 `/videos/` 版块 | 便于用户按媒介浏览，避免播放器、长文和 VideoObject 在同一文章页混杂，也让两种搜索意图各自拥有清晰 SEO 页面 |
+| 2026-07-13 | 首页主推荐位始终取 `videos.ts` 中唯一 `featured` 视频，视频库只展示真实已上线内容 | 以后新增视频时只需更新数据，不破坏参考图布局，也不会制造虚假卡片 |
 
 ## 复盘
 

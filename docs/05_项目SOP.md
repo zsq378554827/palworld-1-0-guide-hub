@@ -52,4 +52,6 @@ npm run build
 5. 在 `guides.ts` 单独维护完整英文文字攻略。视频页只放播放器、简介、章节、验证/披露和文字攻略 CTA；文字页放完整步骤、FAQ、来源和对应视频 CTA，不嵌播放器。
 6. 两个 URL 使用不同 title/meta/H1 和自引用 canonical；`VideoObject` 只在视频页出现且恰好 1 个，文字攻略页必须为 0；两页都进入 sitemap 并双向内链。
 7. `npm run build` 后检查 390px/1280px、视频索引真实数量、旧文章回归、title/meta、canonical、最大媒体文件、文字页 0 player/0 VideoObject。
-8. push `main`，等待 Cloudflare production；未登录线上浏览器必须证明两条视频 `currentTime` 增加并各测试一个章节跳转。
+8. push `main`，等待 Cloudflare production；未登录线上浏览器必须证明全部新增视频可加载，并至少对本次新增视频验证 `currentTime` 增加和章节跳转。
+9. YouTube 只作后台备份：发布前选择 `Unlisted/不公开列出`，保存后必须在 Studio 内容列表读取最终可见性；不把备份链接加入公开站点。若自定义缩略图被账号功能验证拦截，记录限制并继续使用站内缩略图，不得改成 Public。
+10. 首页若有用户提供的布局参考图，先做同尺寸截图对照；新视频只替换唯一 featured 主卡，视频、工具和完整文字攻略继续保持独立版块。

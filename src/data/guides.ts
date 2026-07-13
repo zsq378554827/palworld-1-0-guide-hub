@@ -2693,6 +2693,195 @@ export const guides: Guide[] = [
       { label: "Palworld 1.0 Fast Early-Game Route", href: "/guides/palworld-1-0-fast-early-game-start-route/" },
     ],
   },
+  {
+    title: "Palworld 1.0 Level 8 Worker Pals and Locations Guide",
+    slug: "guides/palworld-1-0-level-8-worker-pals-locations",
+    category: "guides",
+    categoryLabel: "Worker Pal Locations",
+    description:
+      "Find Palworld 1.0 Level 8 worker Pals by role, including Solenne, Aegidron, Dandilord, Shaolong, Renjishi, Celesdir Noct, Bastigor, Orserk, and Jetragon.",
+    shortAnswer:
+      "The source footage shows nine Level 8 work specialists: Solenne for Handiwork, Aegidron for Mining, Dandilord for Planting, Shaolong for Watering, Renjishi for Kindling, Celesdir Noct for Lumbering, Bastigor for Cooling, Orserk for Electricity Generation, and Jetragon for Gathering. Knocklem reaches Level 7 Transporting and Mining in the footage; no Level 8 Transporting Pal is confirmed there. Panthalus is a bonus base defender with no Work Suitability.",
+    playerAdvice: [
+      "Complete the Sunreach main quest before planning a World Tree capture route; the source footage shows the region locked until that progression step is complete.",
+      "Treat every coordinate as a source-footage map marker, not a permanent spawn guarantee. Recheck it after major patches or if your current map differs.",
+      "Choose workers by the bottleneck at your own base. A Level 8 specialist still needs enough room, food, pathing, and support to deliver real output.",
+    ],
+    lastUpdated: "July 13, 2026",
+    readingTime: "10 min read",
+    featured: true,
+    tags: ["video guide", "worker Pals", "Level 8 Work Suitability", "World Tree", "Pal locations"],
+    statusNotice:
+      "This guide is based on authorized source footage recorded on build v1.0.0.100427. Work levels, partner-skill descriptions, regions, and visible map markers are translated from that footage; they have not been independently retested on a newer build.",
+    updateNotice:
+      "Recheck coordinates, spawn regions, Work Suitability levels, and partner-skill values after major Palworld patches. Map markers below use the visible marker when narration and map text differ slightly.",
+    confirmedChanges: [
+      "The source footage visibly shows nine different Level 8 work specialties across the listed Pals.",
+      "The source footage visibly shows Knocklem at Level 7 Transporting and Level 7 Mining, not Level 8 Transporting.",
+      "The companion video replaces the source numbering, subtitles, role summaries, coordinates, and action-critical explanations with English.",
+    ],
+    pendingUpdates: [
+      "Independently retest every location and Work Suitability value on the newest public Palworld build.",
+      "Confirm whether a Level 8 Transporting Pal exists in a later build or outside the route shown in the footage.",
+      "Retest the exact World Tree unlock requirement and partner-skill behavior after future balance updates.",
+    ],
+    sourceNotes: [
+      "The companion video is an authorized English localization with AI-generated English narration, burned-in English subtitles, and English action callouts.",
+      "Where narration and the visible map marker differ by a few coordinates, this guide uses the visible map marker and labels it approximate.",
+      "The original source skips a list number. This guide removes the mistaken numbering and organizes every Pal by work role instead.",
+      "Incidental non-English game-interface text may remain in the footage; every action-critical work level, effect, location, and caveat is translated on screen and below.",
+    ],
+    lastVerified: "July 13, 2026",
+    testing: {
+      gameVersion: "Authorized source footage: v1.0.0.100427",
+      lastTested: "Not independently retested on a newer build",
+      platform: "PC / Steam source footage",
+      mode: "Paldex, map, capture-location, and combat demonstrations",
+      mods: "Not documented in the source",
+      verification: "shown-in-source-footage",
+      note: "All coordinates and patch-sensitive values are presented as source-footage evidence until a fresh current-build retest is completed.",
+    },
+    visual: {
+      src: "/assets/video-guides/palworld-1-0-level-8-worker-pals-locations.jpg",
+      alt: "English-localized Palworld 1.0 video frame showing Shaolong and the Level 8 Watering guide callout",
+      caption: "The separate video guide provides timestamped English narration, subtitles, role callouts, and chapter jumps for every Pal in this list.",
+    },
+    sections: [
+      {
+        heading: "Quick list: Level 8 worker Pals by job",
+        paragraphs: [
+          "This table follows the visible source footage without reproducing its skipped numbering. Coordinates use the map marker visible in the footage when the spoken value differs slightly.",
+        ],
+        table: {
+          headers: ["Pal", "Top work role shown", "Source-footage location", "Important note"],
+          rows: [
+            ["Solenne", "Handiwork Lv.8", "Southwest World Tree forest", "Small, Dark, nocturnal; Medicine Production Lv.2 is also shown."],
+            ["Aegidron", "Mining Lv.8", "World Tree: -1926, 1342", "Very large body; leave enough base space and clear paths."],
+            ["Dandilord", "Planting Lv.8", "World Tree: about -1680, 1647", "Handiwork Lv.6, Medicine Production Lv.6, Gathering Lv.5, and Transporting Lv.3 are also shown."],
+            ["Shaolong", "Watering Lv.8", "Southeast World Tree waterfalls", "Flying mount; the footage does not establish a maximum flight-speed ranking."],
+            ["Renjishi", "Kindling Lv.8", "World Tree: -1589, 1580", "Handiwork Lv.6 and Gathering Lv.5 are also shown."],
+            ["Celesdir Noct", "Lumbering Lv.8", "World Tree: about -1926, 1403", "Gathering Lv.4 is also shown; its active partner effect has a health-drain tradeoff."],
+            ["Bastigor", "Cooling Lv.8", "World Tree frozen region", "The source presents this as a major 1.0 work upgrade."],
+            ["Orserk", "Electricity Generation Lv.8", "World Tree red region", "The source presents this as another major 1.0 work upgrade."],
+            ["Jetragon", "Gathering Lv.8", "Main Palpagos map: about -544, -1335", "The visible map marker is used instead of the slightly different narrated coordinate."],
+          ],
+        },
+      },
+      {
+        heading: "Unlock the World Tree route first",
+        paragraphs: [
+          "Most Pals in this route appear in the World Tree region. The source footage says the area cannot be entered until the Sunreach main quest is complete, so finish that progression requirement before spending time on coordinates inside the region.",
+          "Once access is available, group the route by subregion: southwest forest for Solenne, southeast waterfalls for Shaolong, frozen terrain for Bastigor, and red or deep-red terrain for Orserk and Knocklem. Use the coordinate markers for the more specific Aegidron, Dandilord, Renjishi, and Celesdir Noct stops.",
+        ],
+      },
+      {
+        heading: "Solenne and Aegidron: Handiwork and Mining",
+        paragraphs: [
+          "Solenne is the compact Handiwork specialist. The footage shows Handiwork Lv.8 and Medicine Production Lv.2, while its Dark typing and nocturnal behavior make it attractive for bases that need work to continue at night. Search the forest at the southwest edge of the World Tree.",
+          "Aegidron is the Mining specialist at Lv.8. The visible marker is -1926, 1342. Its main practical drawback is size: a worker that cannot reach storage, ore, or a station will not deliver its paper advantage, so use wide routes and avoid crowded production lanes.",
+        ],
+      },
+      {
+        heading: "Dandilord, Shaolong, and Renjishi: core production roles",
+        paragraphs: [
+          "Dandilord covers Planting Lv.8 and several secondary jobs. Its displayed partner skill adds poison buildup to the player's attacks and protects the player and Pals from poison, including World Tree gas. The visible map marker is approximately -1680, 1647.",
+          "Shaolong covers Watering Lv.8 and can be used as a flying mount. Search the southeast World Tree around the waterfalls. The source gives a positive riding impression but does not compare top speed, so this guide does not label it the fastest mount.",
+          "Renjishi covers Kindling Lv.8, with Handiwork Lv.6 and Gathering Lv.5 also shown. Its partner skill adds burn buildup to the player's attacks. The visible marker is -1589, 1580.",
+        ],
+      },
+      {
+        heading: "Celesdir Noct: understand the 40% attack tradeoff",
+        paragraphs: [
+          "Celesdir Noct is the Lumbering Lv.8 specialist and also shows Gathering Lv.4. The partner-skill description says the Pal fighting beside the player gradually loses health while gaining 40% attack.",
+          "The source creator clarifies that benched party Pals do not continuously lose health; the drain applies to the Pal actively fighting beside the player. Treat that exact behavior and percentage as patch-sensitive until it is independently retested. The visible map marker is approximately -1926, 1403.",
+        ],
+      },
+      {
+        heading: "Bastigor, Orserk, and Jetragon: Cooling, power, and Gathering",
+        paragraphs: [
+          "Bastigor is shown with Cooling Lv.8 and is found across the World Tree's frozen region. Orserk is shown with Electricity Generation Lv.8 in the red World Tree region. Both are presented as existing Pals that received major work upgrades in the 1.0 footage.",
+          "Jetragon is shown with Gathering Lv.8. The source map places it on the main Palpagos map at approximately -544, -1335. The narration uses a nearby but different coordinate, so this guide follows the visible map marker rather than claiming a single exact spawn pixel.",
+        ],
+      },
+      {
+        heading: "Transporting caveat: Knocklem is Level 7 in this footage",
+        paragraphs: [
+          "The source does not confirm a Level 8 Transporting Pal. Its highest Transporting example is Knocklem, shown at Transporting Lv.7 and Mining Lv.7 in the deep-red World Tree region.",
+          "This distinction matters because the source title and opening can sound like every major job reaches Level 8. The footage itself stops at Level 7 for Transporting, so this page and the localized video state that caveat directly.",
+        ],
+      },
+      {
+        heading: "Bonus base defender: Panthalus",
+        paragraphs: [
+          "Panthalus is not a worker in the footage and has no Work Suitability. It is included as a bonus base-defense option: when deployed at a base, it rises into the air and acts like a flying carrier against attackers.",
+          "The source says Panthalus becomes available after the Sunreach main quest. Treat the exact unlock and defensive behavior as source-footage guidance until they are retested on the newest build.",
+        ],
+      },
+      {
+        heading: "How to choose which worker to catch first",
+        bullets: [
+          "Catch Solenne first if manual production and crafting queues are your bottleneck.",
+          "Prioritize Aegidron when ore throughput matters and your base has room for a very large worker.",
+          "Use Dandilord, Shaolong, and Renjishi to strengthen a complete crop, Watering, and Kindling production chain.",
+          "Choose Celesdir Noct when Lumbering throughput matters, but separate its base role from its health-drain combat effect.",
+          "Add Bastigor and Orserk when refrigerators, power generation, or advanced production are stalling.",
+          "Use Jetragon for Gathering only after confirming the current spawn marker in your build.",
+          "Do not plan around Level 8 Transporting from this footage; Knocklem is the verified Level 7 example shown here.",
+        ],
+      },
+      {
+        heading: "Verification and coordinate policy",
+        paragraphs: [
+          "The footage carries the build marker v1.0.0.100427. This page translates what is visibly demonstrated, but it does not silently promote source claims into independent current-patch tests.",
+          "Coordinates are deliberately labeled source-footage markers or approximate when the narration and on-screen map differ. After a hotfix, compare your current Paldex habitat view and map before committing to a long World Tree route.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Which Pal has Level 8 Handiwork in Palworld 1.0?",
+        answer:
+          "The source footage shows Solenne with Handiwork Lv.8. It is also small, Dark, nocturnal, and shown with Medicine Production Lv.2.",
+      },
+      {
+        question: "Which Pal has Level 8 Mining?",
+        answer:
+          "Aegidron is shown with Mining Lv.8 at a World Tree map marker of -1926, 1342. Its large body needs generous pathing space at a base.",
+      },
+      {
+        question: "Is there a Level 8 Transporting Pal in this guide?",
+        answer:
+          "No. The creator says no Level 8 Transporting Pal was found in this route. Knocklem is the highest example shown, at Transporting Lv.7 and Mining Lv.7.",
+      },
+      {
+        question: "Does Celesdir Noct drain the health of every party Pal?",
+        answer:
+          "The source creator says the health drain applies to the Pal actively fighting beside the player, while benched party Pals remain safe. This patch-sensitive behavior still needs a fresh independent retest.",
+      },
+      {
+        question: "Why do some coordinates differ from the original narration?",
+        answer:
+          "The visible map markers differ by a few points from the spoken coordinates in several scenes. This guide uses the visible marker and labels it approximate instead of hiding the discrepancy.",
+      },
+      {
+        question: "Is Panthalus a worker Pal?",
+        answer:
+          "No. The footage shows no Work Suitability for Panthalus. It is included as a bonus aerial base-defense Pal, not as a Level 8 worker.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+    ],
+    relatedLinks: [
+      { label: "Watch the 3:12 English Level 8 worker Pal video", href: "/videos/palworld-1-0-level-8-worker-pals-locations/" },
+      { label: "Build an Ultimate Worker Pal", href: "/guides/palworld-1-0-ultimate-worker-pal-build/" },
+      { label: "Palworld 1.0 World Tree Guide", href: "/palworld-1-0/palworld-1-0-world-tree-guide/" },
+      { label: "Palworld 1.0 Patch Notes Explained", href: "/palworld-1-0/palworld-1-0-patch-notes-explained/" },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {

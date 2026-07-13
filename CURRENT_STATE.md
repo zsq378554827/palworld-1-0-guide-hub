@@ -1,6 +1,6 @@
 # CURRENT_STATE
 
-更新时间：2026-07-12
+更新时间：2026-07-13
 
 ## Project
 
@@ -21,6 +21,7 @@
 - MVP 首版已通过 Cloudflare Pages 上线，GitHub `main` 已推送。
 - 旧的 Direct Upload Pages 项目已删除，并已重建为同名 GitHub 集成 Pages 项目；Cloudflare 显示 `Git Provider: Yes`。
 - GitHub App 已授权 `zsq378554827/palworld-1-0-guide-hub`，Cloudflare Pages GitHub push 自动部署已验证成功。
+- 第三条 Level 8 Worker Pals 视频、独立文字攻略、站内 HLS 和参考图首页布局已完成，本次 push 后等待 Cloudflare production 总验收。
 
 ## Completed
 
@@ -31,6 +32,9 @@
 - `npm run build` 通过，生成 18 个 HTML 页面。
 - SEO 抽查通过：18 个 HTML 页面核心 SEO 字段无缺失，10 篇文章均有 Last Updated。
 - Playwright 首页视觉检查通过：390px 手机和 1280px 桌面 viewport 均无页面级横向溢出。
+- 2026-07-13 第三条视频本地交付完成：4K 英文成片对应 1080p60 HLS，32 分片、全片解码通过；YouTube `_1daH8dpyWw` 明确为 Unlisted。
+- 新增独立视频页和 Level 8 Worker Pals 完整文字攻略页；31 页面 build 通过，视频页 1 个 VideoObject，文字页 0 VideoObject + Article/FAQPage，两个 URL 均进入 sitemap。
+- 首页按 `/Users/zousunquan/Downloads/已生成图像 1 (1).png` 完成 1488px 同尺寸对照：新视频位于右上主推荐位，三条视频集中在独立版块，工具和书面攻略保持独立；390px/1488px 无横向溢出。
 - 2026-07-07 质量复查完成：内部链接 HTTP 检查 22 项通过；18 个页面 title/description 无重复；10 篇文章均包含 Short answer、实用建议、FAQ、指定 patch notes 更新提示、Last Updated 和非官方声明。
 - 390px 手机、768px 平板、1280px 桌面共 54 次页面 viewport 检查通过，无横向溢出。
 - 首页文章卡已改为整卡可点击，首页展示全部 10 篇 MVP 文章。

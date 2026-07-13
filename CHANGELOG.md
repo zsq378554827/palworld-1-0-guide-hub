@@ -1,12 +1,25 @@
 # CHANGELOG
 
-更新时间：2026-07-12
+更新时间：2026-07-13
 
 ## 记录规则
 
 - 每完成一个阶段就追加记录。
 - 记录用户能理解的变化，不只写代码文件名。
 - 重要决策同步到 `PROJECT_CONTEXT.md`。
+
+## 2026-07-13
+
+### 第三个视频攻略：Level 8 Worker Pals & Locations
+
+- 新增 3:12 英文视频 `Palworld 1.0 Level 8 Worker Pals & Locations`，覆盖 Solenne、Aegidron、Dandilord、Shaolong、Renjishi、Celesdir Noct、Bastigor、Orserk、Jetragon、Knocklem 和 Panthalus。
+- 明确修正源片跳号、地图/口播坐标轻微不一致、Knocklem 仅为 Lv.7 Transporting、Panthalus 无 Work Suitability 等易误导点。
+- 新增 1080p60 H.264/AAC HLS：32 个 6 秒 fMP4 分片，总计约 152 MB，最大分片 5,538,820 bytes，全片解码通过。
+- 新增独立视频页和完整英文文字攻略页；视频页拥有 12 个章节、一个 `VideoObject`、canonical、OG 和验证披露，文字页拥有 Article/FAQPage、十节正文、FAQ、内链并保持 0 player/0 VideoObject。
+- YouTube 备份 `_1daH8dpyWw` 已上传并在内容列表明确显示 `不公开列出`；账号功能验证未完成，因此 YouTube 自定义缩略图不可用，站内缩略图不受影响。
+- 首页按用户参考图恢复左侧六任务 + 右侧主视频布局；新视频进入右上主推荐位，三条真实视频集中到紧凑的独立视频版块，工具和书面攻略继续保持独立区块。
+- 1488×1057 与 390×844 视觉/响应式 QA 通过；桌面与手机均无横向溢出，详细对照记录见 `design-qa.md`。
+- `npm run build` 通过并生成 31 个页面；新视频页 HLS `readyState=4`、191.48 秒、1920×1080、0 iframe，2:10 章节跳转到 130 秒成功。
 
 ## 2026-07-12
 

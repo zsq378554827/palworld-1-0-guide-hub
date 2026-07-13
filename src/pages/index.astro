@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import VideoGuideCard from "../components/VideoGuideCard.astro";
-import { getGuideBySlug } from "../data/guides";
 import { videos } from "../data/videos";
 
 const taskLinks = [
@@ -52,48 +51,6 @@ const categoryLinks = [
   { label: "Troubleshooting", href: "/guides/palworld-1-0-performance-settings/" },
 ];
 
-const latestGuideSpecs = [
-  {
-    slug: "guides/palworld-1-0-ultimate-worker-pal-build",
-    image: "/assets/video-guides/palworld-1-0-ultimate-worker-pal-build.jpg",
-    label: "Written Guide",
-  },
-  {
-    slug: "palworld-1-0/palworld-1-0-patch-notes-explained",
-    image: "/assets/palworld-1-0-update-categories-infographic.webp",
-    label: "Version 1.0",
-  },
-  {
-    slug: "guides/palworld-1-0-first-hour-checklist",
-    image: "/assets/palworld-1-0-first-hour-timeline.webp",
-    label: "Getting Started",
-  },
-  {
-    slug: "server/palworld-1-0-server-owner-checklist",
-    image: "/assets/palworld-1-0-server-update-checklist.webp",
-    label: "Server",
-  },
-  {
-    slug: "guides/palworld-1-0-mods-warning-compatibility-guide",
-    image: "/assets/palworld-1-0-mod-cleanup-flowchart.webp",
-    label: "MOD Safety",
-  },
-  {
-    slug: "palworld-1-0/palworld-1-0-sunreach-guide",
-    image: "/assets/palworld-1-0-sunreach-floating-islands.webp",
-    label: "Regions",
-  },
-  {
-    slug: "palworld-1-0/palworld-1-0-world-tree-guide",
-    image: "/assets/palworld-1-0-world-tree-progression.webp",
-    label: "World & Story",
-  },
-];
-
-const latestGuides = latestGuideSpecs
-  .map((item) => ({ ...item, guide: getGuideBySlug(item.slug) }))
-  .filter((item) => item.guide);
-
 const tools = [
   {
     number: "A",
@@ -129,6 +86,7 @@ const guideGroups = [
       ["First Hour Checklist", "/guides/palworld-1-0-first-hour-checklist/"],
       ["Fast Early-Game Route", "/guides/palworld-1-0-fast-early-game-start-route/"],
       ["Ultimate Worker Pal Build", "/guides/palworld-1-0-ultimate-worker-pal-build/"],
+      ["Level 8 Worker Pal Locations", "/guides/palworld-1-0-level-8-worker-pals-locations/"],
     ],
     all: ["View new player guides", "/guides/"],
   },
@@ -160,6 +118,8 @@ const guideGroups = [
     all: ["View all Version 1.0 guides", "/palworld-1-0/"],
   },
 ];
+
+const featuredVideo = videos.find((video) => video.featured) ?? videos[0];
 ---
 
 <BaseLayout
@@ -169,9 +129,8 @@ const guideGroups = [
 >
   <section class="home-dashboard" aria-labelledby="home-title">
     <div class="home-task-panel">
-      <p class="home-kicker">Updated for Palworld 1.0</p>
       <h1 id="home-title">What do you need help with?</h1>
-      <p class="home-intro">Choose a task and get to the right guide in seconds.</p>
+      <p class="home-intro">Pick a task to get the right help in minutes.</p>
       <div class="task-grid">
         {taskLinks.map((task) => (
           <a class="task-card" href={task.href}>
@@ -186,6 +145,21 @@ const guideGroups = [
       </div>
     </div>
 
+    {featuredVideo && (
+      <a class="home-featured-video" href={`/videos/${featuredVideo.slug}/`} aria-label={`Watch ${featuredVideo.title}`}>
+        <div class="featured-video-media">
+          <img src={featuredVideo.thumbnail} alt="" width="1280" height="720" loading="eager" decoding="async" />
+          <span class="play-icon" aria-hidden="true"></span>
+          <span class="video-duration">{featuredVideo.displayDuration}</span>
+        </div>
+        <div class="featured-video-copy">
+          <p class="eyebrow">Featured video guide</p>
+          <h2>{featuredVideo.title}</h2>
+          <p>{featuredVideo.description}</p>
+          <strong>Watch the direct-play video →</strong>
+        </div>
+      </a>
+    )}
   </section>
 
   <nav class="home-category-nav" aria-label="Browse guide categories">
@@ -197,37 +171,12 @@ const guideGroups = [
   <section class="home-content-section" id="videos" aria-labelledby="video-guides-title">
     <div class="home-section-heading">
       <div>
-        <p class="home-kicker">Direct play · No login required</p>
-        <h2 id="video-guides-title">Video Guides</h2>
+        <h2 id="video-guides-title">Latest Video Guides</h2>
       </div>
       <a href="/videos/">View all videos</a>
     </div>
     <div class="video-library-grid home-video-grid">
       {videos.map((video) => <VideoGuideCard video={video} />)}
-    </div>
-  </section>
-
-  <section class="home-content-section" aria-labelledby="latest-guides-title">
-    <div class="home-section-heading">
-      <div>
-        <p class="home-kicker">Step-by-step articles</p>
-        <h2 id="latest-guides-title">Latest written guide updates</h2>
-      </div>
-      <a href="/guides/">View all written guides</a>
-    </div>
-    <div class="latest-written-grid">
-      <div class="latest-guide-list">
-        {latestGuides.map(({ guide, image, label }) => guide && (
-          <a class="latest-guide-row" href={`/${guide.slug}/`}>
-            <img src={image} alt="" width="1440" height="810" loading="lazy" decoding="async" />
-            <span>
-              <small>{label}</small>
-              <strong>{guide.title}</strong>
-              <em>{guide.readingTime} · Updated {guide.lastUpdated}</em>
-            </span>
-          </a>
-        ))}
-      </div>
     </div>
   </section>
 

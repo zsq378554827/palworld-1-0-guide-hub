@@ -23,6 +23,39 @@ export type VideoGuide = {
 
 export const videos: VideoGuide[] = [
   {
+    slug: "palworld-1-0-level-8-worker-pals-locations",
+    title: "Palworld 1.0 Level 8 Worker Pals & Locations",
+    description:
+      "Find nine Level 8 work specialists in Palworld 1.0, with English narration, exact on-screen role summaries, source-map coordinates, a Transporting caveat, and a bonus base defender.",
+    duration: "PT3M12S",
+    displayDuration: "3:12",
+    thumbnail: "/assets/video-guides/palworld-1-0-level-8-worker-pals-locations.jpg",
+    uploadDate: "2026-07-13T09:48:00+08:00",
+    streamUrl: "/media/palworld-1-0-level-8-worker-pals-locations/master.m3u8",
+    featured: true,
+    chapters: [
+      { startSeconds: 0, label: "Level 8 worker route overview" },
+      { startSeconds: 6, label: "Solenne — Handiwork" },
+      { startSeconds: 31, label: "Aegidron — Mining" },
+      { startSeconds: 46, label: "Dandilord — Planting" },
+      { startSeconds: 62, label: "Shaolong — Watering" },
+      { startSeconds: 76, label: "Renjishi — Kindling" },
+      { startSeconds: 90, label: "Celesdir Noct — Lumbering" },
+      { startSeconds: 118, label: "Bastigor — Cooling" },
+      { startSeconds: 130, label: "Orserk — Electricity Generation" },
+      { startSeconds: 141, label: "Jetragon — Gathering" },
+      { startSeconds: 154, label: "Knocklem — Transporting caveat" },
+      { startSeconds: 168, label: "Panthalus — bonus base defense" },
+    ],
+    guidePath: "/guides/palworld-1-0-level-8-worker-pals-locations/",
+    guideTitle: "Read the complete Level 8 worker Pal guide",
+    verificationLabel: "Source-footage guide",
+    verificationText:
+      "The authorized source footage shows the listed work levels, partner-skill descriptions, regions, and map markers in build v1.0.0.100427. These patch-sensitive values and locations have not been independently retested on a newer build.",
+    sourceDisclosure:
+      "This is an authorized English localization with AI-generated English narration, burned-in English subtitles, and translated action-critical callouts. Source-map markers are labeled as footage evidence rather than independent current-patch testing.",
+  },
+  {
     slug: "palworld-1-0-fast-early-game-route",
     title: "Palworld 1.0 Fast Early-Game Start Route",
     description:
@@ -32,7 +65,6 @@ export const videos: VideoGuide[] = [
     thumbnail: "/assets/video-guides/palworld-1-0-fast-early-game-route.webp",
     uploadDate: "2026-07-12T14:45:00+08:00",
     streamUrl: "/media/palworld-1-0-fast-early-game-route/master.m3u8",
-    featured: true,
     chapters: [
       { startSeconds: 0, label: "Route overview" },
       { startSeconds: 6, label: "Unlock multiple fast-travel points" },
