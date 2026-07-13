@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import VideoGuideCard from "../components/VideoGuideCard.astro";
 import { videos } from "../data/videos";
+import { absoluteUrl, site } from "../data/site";
 
 const taskLinks = [
   {
@@ -120,12 +121,26 @@ const guideGroups = [
 ];
 
 const featuredVideo = videos.find((video) => video.featured) ?? videos[0];
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  alternateName: "Palworld Guide Hub",
+  url: absoluteUrl("/"),
+  description: site.description,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${absoluteUrl("/guides/")}?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
 ---
 
 <BaseLayout
   title="Palworld 1.0 Guides, Videos, Checklists & Server Help"
-  description="Choose the Palworld 1.0 help you need: a tested early-game video, beginner and returning-player guides, official changelog explanations, server checklists, MOD safety, performance fixes, and practical planning tools."
+  description="Palworld 1.0 guides for beginners, returning players, performance fixes, servers, MOD safety, videos, checklists, and official update help."
   canonical="/"
+  structuredData={structuredData}
 >
   <section class="home-dashboard" aria-labelledby="home-title">
     <div class="home-task-panel">

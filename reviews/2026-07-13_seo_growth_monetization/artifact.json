@@ -1,0 +1,777 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Palworld 攻略站自然流量与变现计划",
+    "description": "基于 Search Console、Cloudflare Web Analytics、代码仓库和公开搜索结果的 90 天增长与变现计划。",
+    "generatedAt": "2026-07-13T04:20:18Z",
+    "sources": [
+      {
+        "id": "gsc",
+        "label": "Google Search Console：Palworld 站点（2026-07-13 读取）",
+        "href": "https://search.google.com/search-console?resource_id=https%3A%2F%2Fpalworld-1-0-guide-hub.pages.dev%2F"
+      },
+      {
+        "id": "cloudflare",
+        "label": "Cloudflare Web Analytics：Palworld 站点，过去 3 天（2026-07-13 读取）"
+      },
+      {
+        "id": "repo-audit",
+        "label": "GitHub 仓库与 2026-07-13 本地构建审计",
+        "href": "https://github.com/zsq378554827/palworld-1-0-guide-hub"
+      },
+      {
+        "id": "live-site",
+        "label": "Palworld 1.0 Guide Hub 线上站点",
+        "href": "https://palworld-1-0-guide-hub.pages.dev/"
+      },
+      {
+        "id": "google-video",
+        "label": "Google Search Central：Video SEO best practices",
+        "href": "https://developers.google.com/search/docs/appearance/video"
+      },
+      {
+        "id": "google-sitemap",
+        "label": "Google Search Central：Build and submit a sitemap",
+        "href": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+      },
+      {
+        "id": "shockbyte",
+        "label": "Shockbyte Partnerships",
+        "href": "https://shockbyte.com/partners"
+      },
+      {
+        "id": "ftc",
+        "label": "FTC：Advertisement Endorsements",
+        "href": "https://www.ftc.gov/news-events/topics/truth-advertising/advertisement-endorsements"
+      },
+      {
+        "id": "execution-plan",
+        "label": "2026-07-13 Palworld SEO 增长与变现 90 天执行计划"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# Palworld 攻略站自然流量与变现计划"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "body": "## Executive Summary\n\n- **站点已经进入 Google 的首轮排名测试。** GSC 已有 217 次曝光、10 次自然点击、4.6% CTR、平均排名 8.4；主查询 `palworld 1.0 guide` 获得 57 次曝光和 4 次点击。\n- **速度不是当前瓶颈。** Cloudflare 近 3 天记录 104 PV、46 visits，LCP P75 约 700ms，INP 与 CLS 均为良好；更紧急的是 sitemap 仍显示‘无法抓取’、内容覆盖窄和查询簇不足。\n- **未来 30 天不应继续泛写大词。** 先围绕已经出现的 guide / laggy / performance / patch note 查询，扩展具体问题词，并优先发布发布后真实玩家正在问的资源、地点、设置和故障页面。\n- **变现顺序建议是服务器 affiliate → 轻量广告 → 数字产品。** 先把服务器高意图页面和转化跟踪做完；达到稳定自然流量后再接广告，避免现在用广告牺牲体验却几乎没有收入。"
+      },
+      {
+        "id": "traction",
+        "type": "markdown",
+        "sourceId": "gsc",
+        "body": "## 流量已启动，但仍处于样本极小的测试期\n\nGSC 当前覆盖 2026 年 7 月 7 日至 7 月 10 日：217 次曝光、10 次点击、4.6% CTR、平均排名 8.4。`palworld 1.0 guide` 是首个明确获得点击的核心查询；`palworld 1.0 laggy`、`palworld 1.0 performance`、`palworld patch note 1.0` 已出现曝光但尚未点击。\n\n**含义：** Google 已经理解站点主题，也愿意给首页或核心页第一页附近的测试位置。下一步应该扩大相关长尾覆盖并提高标题点击率，而不是重做视觉或换技术栈。"
+      },
+      {
+        "id": "bottleneck",
+        "type": "markdown",
+        "body": "## 性能健康，收录链路仍是第一风险\n\nCloudflare 近 3 天记录 46 次访问和 104 次页面浏览；LCP P75 约 700ms，99% 的 LCP 样本为良好，INP 与 CLS 样本均为良好。站点本身足够快。\n\n但 Search Console 的 sitemap 报告在 2026 年 7 月 13 日仍显示 `/sitemap.xml`‘无法抓取’、类型未知、发现网页数 0；同时首页概览的‘网页’索引报告仍在处理。线上 sitemap 对普通浏览器和 Googlebot User-Agent 都返回 200 与 XML，因此需要继续查清 Google 端错误，而不能把它当作已解决。"
+      },
+      {
+        "id": "audit-intro",
+        "type": "markdown",
+        "body": "## 页面基础完整，但需要一轮 CTR 与信息架构修整\n\n31 个构建页面全部只有一个 H1，文章页已有 Article、FAQPage 与 BreadcrumbList，视频页有独立 watch page 和 VideoObject。主要机会不是补‘有没有’，而是减少搜索结果截断、增强聚合页语义、修复无效站内搜索，并让视频章节更容易被 Google 理解。\n\n下图是按 31 个页面统一口径计算的静态审计标记。`无结构化数据`主要落在首页、分类页和工具页，不等于错误，只代表可补 WebSite、CollectionPage 或 ItemList 的机会。"
+      },
+      {
+        "id": "seo-flags-block",
+        "type": "chart",
+        "chartId": "seo-flags"
+      },
+      {
+        "id": "seven-day",
+        "type": "markdown",
+        "body": "## 接下来 7 天：先修 6 个高影响点\n\n1. **查清并修复 sitemap‘无法抓取’。** 在 GSC 打开 sitemap 详情，记录具体抓取错误；用 URL Inspection 检查 sitemap 中 5 个代表性 URL；修复后重新提交并以‘已成功 + 已发现网页’验收。\n2. **重写 14 个过长 title 和 21 个过长 description。** 先改首页、Guides、Server、FAQ 和 3 个视频页；标题前半段保留查询词，站名只在需要时保留。\n3. **修复假搜索框。** 当前 Header 的表单提交 `?q=` 到 `/guides/`，页面不处理查询。要么实现本地静态搜索，要么在完成前移除，避免用户和搜索引擎遇到伪功能。\n4. **补首页 WebSite + site name、分类页 CollectionPage/ItemList。** 同时给聚合页增加 150–300 字独特说明和清晰的主题内链。\n5. **为 3 个视频补 video sitemap 与 Clip 章节结构化数据。** 保留独立 watch page、稳定缩略图与 HLS URL；把章节按钮映射成可抓取的关键时刻。\n6. **把视频从 Git/Pages 迁移方案排进本月。** 当前 120 个媒体文件、约 466MB 被 Git 跟踪，继续每周加视频会迅速拖累 clone、部署和成本；优先评估 R2 + CDN 或 Stream。"
+      },
+      {
+        "id": "weekly-execution-intro",
+        "type": "markdown",
+        "body": "## 13 周执行路径：先修抓取，再扩内容，再放大变现\n\n下表把 90 天拆成每周必须交付的结果。每一周都以前一周的验收结果为依赖：sitemap、真实搜索和基础 SEO 未通过前，不把主要精力转向大批量内容；Affiliate 未完成实测、披露和跟踪前，不上线商业 CTA。"
+      },
+      {
+        "id": "weekly-plan-block",
+        "type": "table",
+        "tableId": "weekly-plan"
+      },
+      {
+        "id": "content-plan",
+        "type": "markdown",
+        "body": "## 30 天：围绕已出现查询建立 4 个内容簇\n\n### A. 新手与首日问题（每周 2 篇）\n\n优先：true beginner guide、first base location、hardwood location、early flying Pal、fast XP、technology priorities。每页只解决一个搜索任务，并与 Beginner / First Hour / Fast Route 互链。\n\n### B. 性能与故障（每周 1–2 篇）\n\n优先：Palworld 1.0 laggy、stutter、crash、server rubber-banding、memory leak、best FPS settings。现有 Performance Settings 做 hub，新页面承接单一症状词。\n\n### C. 服务器与商业意图（每周 1 篇）\n\n优先：self-host vs rented server、how much RAM、3/5/10 player presets、PalWorldSettings.ini troubleshooting、best hosting criteria。先做真实测试框架，再放 affiliate CTA。\n\n### D. 1.0 新内容与地点（每周 2 篇）\n\n优先发布上线后真实出现的问题：hardwood、Level 8 worker Pal 单页、具体 Pal 位置、World Tree 解锁、Sunreach 资源、工作适应性、补丁后的数值变化。避免只做‘overview’。\n\n**30 天产出目标：** 新增 16–20 个单一意图页面，更新 8 个现有页；每个新页在发布 24 小时内进入 sitemap、从 2 个 hub 获取内链，并在 GSC 记录首个曝光日期。"
+      },
+      {
+        "id": "content-calendar-intro",
+        "type": "markdown",
+        "body": "## 具体文章排期：18 个页面覆盖 4 个查询簇\n\n排期优先处理已经出现曝光的性能词、发布后真实资源/地点问题和服务器商业意图。每页只承接一个主任务，并在发布当天从 2 个 hub 和至少 2 个相关页面获得内链；涉及坐标、数值或服务器性能的页面必须标记验证状态。"
+      },
+      {
+        "id": "content-calendar-block",
+        "type": "table",
+        "tableId": "content-calendar"
+      },
+      {
+        "id": "monetization",
+        "type": "markdown",
+        "body": "## 变现路线：先高意图 affiliate，再广告，再数字产品\n\n### 第 1 阶段（现在到 1,000 次自然访问/月）\n\n- 申请 2–3 个明确支持 Palworld 的服务器合作计划，只选择能亲自测试、条款允许在站内展示的服务。\n- 在 Server Setup、Server Owner Checklist、Best Server Settings 和新的 self-host vs rented 页面加入同一套测试型 CTA。\n- 每个 affiliate 链接前放清晰披露，并记录 `affiliate_click`、页面、供应商和位置。\n- 不做‘虚假 Top 10’；先用价格、内存、地区、备份、MOD、退款和面板体验的可验证表格。\n\n### 第 2 阶段（1,000–10,000 次自然访问/月）\n\n- 测试 AdSense 或同类轻量广告，先只放文章中段和文末两个位置；观察 RPM、跳出、LCP 和视频播放率。\n- 保留无广告的首页首屏与视频播放器周围，避免影响核心体验。\n\n### 第 3 阶段（10,000+ 次自然访问/月或形成邮件受众）\n\n- 出售低价数字产品：服务器设置预设包、开服/升级检查表、可打印 1.0 progression checklist。\n- 再评估更高门槛广告网络、赞助视频或主机商直接合作。\n\n**不要现在做：** 付费墙、会员系统、泛外设 affiliate、满屏广告。它们会分散尚未形成的搜索主题权威。"
+      },
+      {
+        "id": "monetization-gates-intro",
+        "type": "markdown",
+        "body": "## 变现阶段门：达到条件再进入下一步\n\nAffiliate 可以先准备，但推荐必须经过条款核对、真实体验或清楚标注未测试，并在链接附近披露。广告和数字产品都用流量或需求证据触发；没有达到阶段门时，继续把时间投入内容和商业意图页面。"
+      },
+      {
+        "id": "monetization-gates-block",
+        "type": "table",
+        "tableId": "monetization-gates"
+      },
+      {
+        "id": "scorecard",
+        "type": "markdown",
+        "body": "## 90 天目标与每周看板\n\n每周固定记录：GSC clicks、impressions、CTR、平均排名、已索引页面数；Cloudflare search/organic visits、top landing pages、PV/visit；内容发布数、进入 Top 20 的页面数；affiliate clicks、outbound CTR、成交与 EPC。\n\n### 建议目标\n\n- 7 天：sitemap 成功抓取；修复假搜索；完成首批 title/meta 优化。\n- 30 天：累计 45–50 个可索引内容页；自然曝光 ≥ 3,000；自然点击 ≥ 120；至少 10 个查询进入 Top 20。\n- 60 天：自然访问 ≥ 1,000/月；服务器商业页 affiliate outbound CTR ≥ 3%。\n- 90 天：自然访问 ≥ 3,000/月；至少 1 个可验证 affiliate 转化；根据真实 RPM 决定是否接广告。\n\n这些是运营目标，不是流量承诺；如果 30 天曝光未达到目标，应缩小主题、重做低 CTR 页标题，并优先更新已有曝光页，而不是继续盲目扩量。"
+      },
+      {
+        "id": "questions",
+        "type": "markdown",
+        "body": "## Further Questions\n\n- 现有 10 次自然点击分别落在哪些页面？GSC‘网页’维度读取超时，下一轮应导出页面表核对。\n- 46 次近 3 天访问中，有多少来自自然搜索、直接访问和我们的验收浏览？Cloudflare 当前概览未完成来源拆分。\n- 服务器 affiliate 的目标地区是北美、欧洲还是全球？这会改变供应商、价格和落地页结构。\n- 是否愿意购买一个长期品牌域名？建议在内容规模扩大前完成，减少后续迁移成本。"
+      },
+      {
+        "id": "caveats",
+        "type": "markdown",
+        "body": "## Caveats and Assumptions\n\n- GSC 仅有 4 天左右数据，且报表有延迟；当前 217 impressions / 10 clicks 不足以判断稳定趋势。\n- Cloudflare 数据包含真实访问，也可能包含用户本人或开发验收流量；已排除自动程序，但不能等同于自然搜索访问。\n- title/description 长度是审计标记，不是 Google 的硬性排名阈值；目标是减少截断和提高点击率，不是机械追求字符数。\n- affiliate 供应商必须在申请后复核佣金、链接展示、地域、退款与披露条款；上线前需要真实体验或明确‘未测试’。"
+      }
+    ],
+    "charts": [
+      {
+        "id": "seo-flags",
+        "type": "bar",
+        "title": "31 个页面的 SEO 审计标记",
+        "description": "构建产物统一静态检查；占全部 31 个 HTML 页面的比例",
+        "dataset": "seo_flags",
+        "encodings": {
+          "x": {
+            "field": "flag",
+            "type": "nominal",
+            "title": "审计项"
+          },
+          "y": {
+            "field": "share",
+            "type": "quantitative",
+            "title": "页面占比",
+            "format": "percent"
+          }
+        },
+        "options": {
+          "orientation": "horizontal",
+          "valueLabels": true,
+          "legend": false
+        },
+        "source": {
+          "id": "repo-audit-chart",
+          "label": "2026-07-13 构建产物静态审计的 31 页面汇总",
+          "href": "https://github.com/zsq378554827/palworld-1-0-guide-hub",
+          "query": {
+            "sql": "WITH audit_flags(flag,count,total_pages,severity,rank) AS (VALUES ('Meta description > 160 字符',21,31,'CTR opportunity',1),('Title > 60 字符',14,31,'CTR opportunity',2),('正文 < 500 词',10,31,'Content depth review',3),('无结构化数据',9,31,'Enhancement opportunity',4)) SELECT flag,count,total_pages,ROUND(count*1.0/total_pages,3) AS share,severity,rank FROM audit_flags ORDER BY rank;",
+            "description": "把 31 个构建页面的静态审计计数转换成可视化占比。",
+            "engine": "SQLite",
+            "language": "sql",
+            "executed_at": "2026-07-13T03:57:40Z",
+            "tables_used": [],
+            "filters": [
+              "仅统计 dist 中的 31 个 index.html",
+              "正文词数阈值 500；title 阈值 60 字符；description 阈值 160 字符"
+            ],
+            "metric_definitions": {
+              "share": "触发该审计标记的页面数除以 31 个构建页面。"
+            }
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "weekly-plan",
+        "title": "90 天每周执行计划",
+        "subtitle": "2026 年 7 月 14 日至 10 月 11 日；每周以前一阶段验收为依赖",
+        "dataset": "weekly_plan",
+        "source": {
+          "id": "weekly-plan-source",
+          "label": "90 天执行计划的 13 周排期",
+          "query": {
+            "sql": "SELECT \"order\", week, period, focus, deliverables, gate, owner FROM weekly_plan ORDER BY \"order\" ASC;",
+            "description": "从已复核的执行计划快照读取 13 周排期。",
+            "engine": "Artifact snapshot",
+            "language": "sql",
+            "executed_at": "2026-07-13T04:20:18Z",
+            "tables_used": [
+              "weekly_plan"
+            ],
+            "filters": [
+              "执行周期为 2026-07-14 至 2026-10-11",
+              "仅包含当前 Palworld 站点的 SEO、内容和变现动作"
+            ],
+            "metric_definitions": {
+              "order": "13 周执行顺序；前一周验收是后一周的默认依赖。"
+            }
+          }
+        },
+        "density": "comfortable",
+        "defaultSort": {
+          "field": "order",
+          "direction": "asc"
+        },
+        "columns": [
+          {
+            "field": "order",
+            "label": "序号",
+            "type": "number"
+          },
+          {
+            "field": "week",
+            "label": "周次",
+            "type": "text"
+          },
+          {
+            "field": "period",
+            "label": "时间",
+            "type": "text"
+          },
+          {
+            "field": "focus",
+            "label": "本周重点",
+            "type": "text"
+          },
+          {
+            "field": "deliverables",
+            "label": "具体交付",
+            "type": "text"
+          },
+          {
+            "field": "gate",
+            "label": "验收条件",
+            "type": "text"
+          },
+          {
+            "field": "owner",
+            "label": "负责人",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "content-calendar",
+        "title": "30 天内容发布排期",
+        "subtitle": "18 个单一意图页面；每页均需事实复核、内链和发布后检查",
+        "dataset": "content_calendar",
+        "source": {
+          "id": "content-calendar-source",
+          "label": "90 天执行计划的 30 天内容排期",
+          "query": {
+            "sql": "SELECT \"order\", batch, page, intent, must_include, dependency FROM content_calendar ORDER BY \"order\" ASC;",
+            "description": "从已复核的执行计划快照读取 18 个单一意图页面排期。",
+            "engine": "Artifact snapshot",
+            "language": "sql",
+            "executed_at": "2026-07-13T04:20:18Z",
+            "tables_used": [
+              "content_calendar"
+            ],
+            "filters": [
+              "仅包含首个 30 天冲刺的页面",
+              "页面按新手、性能、服务器商业意图和 1.0 新内容四个簇选择"
+            ],
+            "metric_definitions": {
+              "order": "18 个页面的计划发布顺序。"
+            }
+          }
+        },
+        "density": "compact",
+        "defaultSort": {
+          "field": "order",
+          "direction": "asc"
+        },
+        "columns": [
+          {
+            "field": "order",
+            "label": "序号",
+            "type": "number"
+          },
+          {
+            "field": "batch",
+            "label": "批次",
+            "type": "text"
+          },
+          {
+            "field": "page",
+            "label": "目标页面",
+            "type": "text"
+          },
+          {
+            "field": "intent",
+            "label": "搜索任务",
+            "type": "text"
+          },
+          {
+            "field": "must_include",
+            "label": "必须包含",
+            "type": "text"
+          },
+          {
+            "field": "dependency",
+            "label": "依赖",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "monetization-gates",
+        "title": "变现阶段门",
+        "subtitle": "只有满足进入条件才上线下一阶段，避免过早牺牲体验",
+        "dataset": "monetization_gates",
+        "source": {
+          "id": "monetization-gates-source",
+          "label": "90 天执行计划的变现阶段门",
+          "query": {
+            "sql": "SELECT \"order\", stage, entry, action, stop FROM monetization_gates ORDER BY \"order\" ASC;",
+            "description": "从已复核的执行计划快照读取 Affiliate、广告和数字产品的阶段门。",
+            "engine": "Artifact snapshot",
+            "language": "sql",
+            "executed_at": "2026-07-13T04:20:18Z",
+            "tables_used": [
+              "monetization_gates"
+            ],
+            "filters": [
+              "当前目标为自然流量优先，不上线未经测试的推荐",
+              "广告评估的内部控制线为近 30 天自然访问至少 1,000"
+            ],
+            "metric_definitions": {
+              "order": "从 Affiliate 准备到数字产品验证的阶段顺序。"
+            }
+          }
+        },
+        "density": "comfortable",
+        "defaultSort": {
+          "field": "order",
+          "direction": "asc"
+        },
+        "columns": [
+          {
+            "field": "order",
+            "label": "序号",
+            "type": "number"
+          },
+          {
+            "field": "stage",
+            "label": "阶段",
+            "type": "text"
+          },
+          {
+            "field": "entry",
+            "label": "进入条件",
+            "type": "text"
+          },
+          {
+            "field": "action",
+            "label": "执行动作",
+            "type": "text"
+          },
+          {
+            "field": "stop",
+            "label": "暂停/回退",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "status": "ready",
+    "generatedAt": "2026-07-13T04:20:18Z",
+    "datasets": {
+      "seo_flags": [
+        {
+          "flag": "Meta description > 160 字符",
+          "count": 21,
+          "total_pages": 31,
+          "share": 0.677,
+          "severity": "CTR opportunity",
+          "rank": 1
+        },
+        {
+          "flag": "Title > 60 字符",
+          "count": 14,
+          "total_pages": 31,
+          "share": 0.452,
+          "severity": "CTR opportunity",
+          "rank": 2
+        },
+        {
+          "flag": "正文 < 500 词",
+          "count": 10,
+          "total_pages": 31,
+          "share": 0.323,
+          "severity": "Content depth review",
+          "rank": 3
+        },
+        {
+          "flag": "无结构化数据",
+          "count": 9,
+          "total_pages": 31,
+          "share": 0.29,
+          "severity": "Enhancement opportunity",
+          "rank": 4
+        }
+      ],
+      "weekly_plan": [
+        {
+          "order": 1,
+          "week": "W1",
+          "period": "7/14–7/20",
+          "focus": "抓取与技术止血",
+          "deliverables": "导出数据基线；诊断并修 sitemap；实现真实搜索；完成首批 title/meta、聚合页和视频 SEO；完成媒体迁移评估",
+          "gate": "GSC sitemap 成功且发现网页 >0；5 个搜索词结果正确；构建与移动端 QA 通过",
+          "owner": "Codex；媒体方案由用户共同决策"
+        },
+        {
+          "order": 2,
+          "week": "W2",
+          "period": "7/21–7/27",
+          "focus": "第一批内容与 Affiliate 候选",
+          "deliverables": "发布 Hardwood、True Beginner、First Base、Laggy Fix、Best FPS 5 页；更新 2 个旧页；筛选 3 个服务器计划",
+          "gate": "5 页上线 200、进入 sitemap、每页有 2 个 hub 入链；候选条款可追溯",
+          "owner": "Codex + 用户"
+        },
+        {
+          "order": 3,
+          "week": "W3",
+          "period": "7/28–8/3",
+          "focus": "性能簇与服务器商业意图",
+          "deliverables": "发布 Stutter、Crash、Rubber-banding、Server RAM、Self-host vs Rented 5 页；完成披露草案；启动 2 家服务器实测",
+          "gate": "故障页有诊断闭环；商业页不做未测试排名；付费测试先获用户确认",
+          "owner": "Codex + 用户"
+        },
+        {
+          "order": 4,
+          "week": "W4",
+          "period": "8/4–8/10",
+          "focus": "配置与 1.0 地点内容",
+          "deliverables": "发布 3/5/10 Player Settings、INI Troubleshooting、World Tree、Sunreach 4 页；制作 2 个商业页；完成点击跟踪方案",
+          "gate": "配置可回滚；地点事实标注验证状态；测试点击能被记录",
+          "owner": "Codex + 用户"
+        },
+        {
+          "order": 5,
+          "week": "W5",
+          "period": "8/11–8/17",
+          "focus": "完成 30 天内容冲刺并上线 CTA",
+          "deliverables": "发布 3 个 Level 8 Worker 单页和 Work Suitability hub；完成 8 个旧页更新；在 5 个商业相关页上线克制 CTA；做 30 天复盘",
+          "gate": "累计新增 18 页；无孤儿页；CTA 披露可见且可追踪",
+          "owner": "Codex + 用户复测"
+        },
+        {
+          "order": 6,
+          "week": "W6",
+          "period": "8/18–8/24",
+          "focus": "索引与 CTR 优化",
+          "deliverables": "复盘新页首曝光；改 3–5 个高曝光低 CTR 页面；补强最有潜力的内容簇；开始媒体迁移试点",
+          "gate": "每个新页有 7/14 天跟踪记录；修改前后 title/meta 留档",
+          "owner": "Codex"
+        },
+        {
+          "order": 7,
+          "week": "W7",
+          "period": "8/25–8/31",
+          "focus": "内容簇补洞与服务器实测结论",
+          "deliverables": "按 GSC 新查询补 2–3 页或更新现有页；完成服务器测试记录；优化 CTA 上下文",
+          "gate": "只扩展已出现需求；推荐明确区分已测试与未测试",
+          "owner": "Codex + 用户"
+        },
+        {
+          "order": 8,
+          "week": "W8",
+          "period": "9/1–9/7",
+          "focus": "第二轮内容更新",
+          "deliverables": "更新排名 11–20 的页面；合并重复意图；完善 hub 入口和相关攻略；复核 Affiliate 数据",
+          "gate": "无关键词内耗；至少完成 3 个近排名页的实质更新",
+          "owner": "Codex"
+        },
+        {
+          "order": 9,
+          "week": "W9",
+          "period": "9/8–9/14",
+          "focus": "60 天阶段门",
+          "deliverables": "完成 60 天复盘；按近 30 天自然访问和商业页数据决定是否评估广告；完成媒体正式迁移或记录延期原因",
+          "gate": "广告决定有数据依据；未达 1,000 自然访问/月则不测试广告",
+          "owner": "用户 + Codex"
+        },
+        {
+          "order": 10,
+          "week": "W10",
+          "period": "9/15–9/21",
+          "focus": "高潜页面精修",
+          "deliverables": "给 Top 20 页面补图表、FAQ、直接答案和内链；清理过时补丁信息；发布免费服务器检查表",
+          "gate": "更新由查询数据触发；检查表有可记录的点击或下载入口",
+          "owner": "Codex"
+        },
+        {
+          "order": 11,
+          "week": "W11",
+          "period": "9/22–9/28",
+          "focus": "变现与需求验证",
+          "deliverables": "比较 Affiliate 页面/位置表现；优化低 CTR CTA；根据检查表数据决定数字产品方向",
+          "gate": "点击不足 20 不做强结论；无需求证据不开发付费产品",
+          "owner": "用户 + Codex"
+        },
+        {
+          "order": 12,
+          "week": "W12",
+          "period": "9/29–10/5",
+          "focus": "数字产品 MVP 或继续免费验证",
+          "deliverables": "若需求成立，制作服务器预设包/进度检查表最小版本；否则继续免费并更新内容",
+          "gate": "付费 MVP 有明确用户、交付格式、定价假设和售后边界",
+          "owner": "用户 + Codex"
+        },
+        {
+          "order": 13,
+          "week": "W13",
+          "period": "10/6–10/11",
+          "focus": "90 天复盘与下一季度",
+          "deliverables": "把页面分为保留、合并、重写、扩展；核算内容成本和 Affiliate 结果；形成下一季度计划",
+          "gate": "明确继续投入、收缩或转向；结论写回项目文档",
+          "owner": "用户 + Codex"
+        }
+      ],
+      "content_calendar": [
+        {
+          "order": 1,
+          "batch": "W2",
+          "page": "Palworld 1.0 Hardwood Location and Farming Route",
+          "intent": "找位置并快速采集",
+          "must_include": "地图/路线、采集条件、替代来源、版本说明",
+          "dependency": "游戏内复测或明确来源"
+        },
+        {
+          "order": 2,
+          "batch": "W2",
+          "page": "Palworld 1.0 True Beginner Guide",
+          "intent": "完全新手从零开始",
+          "must_include": "前 30/60/120 分钟路线、避坑、下一步",
+          "dependency": "Beginner / First Hour"
+        },
+        {
+          "order": 3,
+          "batch": "W2",
+          "page": "Best First Base Location in Palworld 1.0",
+          "intent": "选择第一个基地",
+          "must_include": "评价标准、3 个候选、适用人群、搬家时机",
+          "dependency": "地点事实复核"
+        },
+        {
+          "order": 4,
+          "batch": "W2",
+          "page": "Palworld 1.0 Laggy Fix",
+          "intent": "解决游戏卡顿",
+          "must_include": "症状分类、客户端/服务器分流、验证步骤",
+          "dependency": "Performance hub"
+        },
+        {
+          "order": 5,
+          "batch": "W2",
+          "page": "Best FPS Settings for Palworld 1.0",
+          "intent": "提高 FPS",
+          "must_include": "逐项设置、质量影响、低/中/高配置",
+          "dependency": "实机或可靠测试说明"
+        },
+        {
+          "order": 6,
+          "batch": "W3",
+          "page": "Palworld 1.0 Stutter Fix",
+          "intent": "解决间歇性顿卡",
+          "must_include": "帧时间症状、缓存/驱动/设置、回退",
+          "dependency": "Performance hub"
+        },
+        {
+          "order": 7,
+          "batch": "W3",
+          "page": "Palworld 1.0 Crash Fix",
+          "intent": "解决启动或游玩崩溃",
+          "must_include": "错误分支、日志位置、验证和恢复",
+          "dependency": "官方 known issues"
+        },
+        {
+          "order": 8,
+          "batch": "W3",
+          "page": "Palworld Server Rubber-banding Fix",
+          "intent": "解决联机回弹/延迟",
+          "must_include": "网络、tick、CPU、玩家数、排查顺序",
+          "dependency": "服务器实测"
+        },
+        {
+          "order": 9,
+          "batch": "W3",
+          "page": "How Much RAM Does a Palworld Server Need?",
+          "intent": "选择服务器规格",
+          "must_include": "3/5/10 人表、MOD/存档余量、升级信号",
+          "dependency": "服务器实测/文档"
+        },
+        {
+          "order": 10,
+          "batch": "W3",
+          "page": "Self-Hosted vs Rented Palworld Server",
+          "intent": "决定自建或租用",
+          "must_include": "成本、时间、性能、风险、适用人群",
+          "dependency": "Affiliate 条款与测试"
+        },
+        {
+          "order": 11,
+          "batch": "W4",
+          "page": "Best Palworld Server Settings for 3, 5, and 10 Players",
+          "intent": "查找多人配置",
+          "must_include": "三套预设、修改方法、回滚、风险",
+          "dependency": "现有 Settings 页"
+        },
+        {
+          "order": 12,
+          "batch": "W4",
+          "page": "PalWorldSettings.ini Troubleshooting",
+          "intent": "解决配置不生效",
+          "must_include": "路径、语法、重启、覆盖顺序、备份",
+          "dependency": "服务器实测"
+        },
+        {
+          "order": 13,
+          "batch": "W4",
+          "page": "How to Unlock the World Tree in Palworld 1.0",
+          "intent": "查找解锁路线",
+          "must_include": "前置、路线、失败条件、版本说明",
+          "dependency": "游戏内复测"
+        },
+        {
+          "order": 14,
+          "batch": "W4",
+          "page": "Sunreach Resource Guide",
+          "intent": "查找区域资源",
+          "must_include": "资源表、路线、危险、相关 Pal/工具",
+          "dependency": "游戏内复测"
+        },
+        {
+          "order": 15,
+          "batch": "W5",
+          "page": "Level 8 Lumbering Pal Location",
+          "intent": "找特定工作 Pal",
+          "must_include": "坐标、解锁、工作适应性、替代方案",
+          "dependency": "当前视频/独立复测"
+        },
+        {
+          "order": 16,
+          "batch": "W5",
+          "page": "Level 8 Mining Pal Location",
+          "intent": "找特定工作 Pal",
+          "must_include": "坐标、解锁、工作适应性、替代方案",
+          "dependency": "当前视频/独立复测"
+        },
+        {
+          "order": 17,
+          "batch": "W5",
+          "page": "Level 8 Handiwork Pal Location",
+          "intent": "找特定工作 Pal",
+          "must_include": "坐标、解锁、工作适应性、替代方案",
+          "dependency": "当前视频/独立复测"
+        },
+        {
+          "order": 18,
+          "batch": "W5",
+          "page": "Palworld 1.0 Work Suitability Guide",
+          "intent": "理解工作适应性",
+          "must_include": "等级含义、分工、基地搭配、相关单页",
+          "dependency": "现有 Worker 内容"
+        }
+      ],
+      "monetization_gates": [
+        {
+          "order": 1,
+          "stage": "Affiliate 准备",
+          "entry": "已有 2–3 个服务器高意图页面",
+          "action": "申请计划、核对条款、实测、准备披露和 sub-ID/事件",
+          "stop": "条款不清、无法测试或只能写虚假排名"
+        },
+        {
+          "order": 2,
+          "stage": "Affiliate 上线",
+          "entry": "至少 1 家通过审核；披露完成；测试点击可追踪",
+          "action": "在 5 个相关页面加入克制 CTA",
+          "stop": "链接失效、披露不可见或供应商体验不达标"
+        },
+        {
+          "order": 3,
+          "stage": "CTA 优化",
+          "entry": "单页 ≥20 个商业访问或累计 ≥20 个 Affiliate 点击",
+          "action": "比较页面和位置，优化文案与上下文",
+          "stop": "小样本不做强结论；不以诱导点击换 CTR"
+        },
+        {
+          "order": 4,
+          "stage": "广告评估",
+          "entry": "近 30 天自然访问 ≥1,000；LCP P75 保持良好",
+          "action": "评估文章中段和文末两个轻量广告位",
+          "stop": "未达流量线，或广告伤害 LCP、视频、Affiliate"
+        },
+        {
+          "order": 5,
+          "stage": "数字产品",
+          "entry": "免费检查表/设置包已有明确点击或下载需求",
+          "action": "制作低价服务器预设包或进度检查表 MVP",
+          "stop": "无需求证据，或必须先做会员/后台才能成立"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "gsc",
+      "label": "Google Search Console：Palworld 站点（2026-07-13 读取）",
+      "href": "https://search.google.com/search-console?resource_id=https%3A%2F%2Fpalworld-1-0-guide-hub.pages.dev%2F"
+    },
+    {
+      "id": "cloudflare",
+      "label": "Cloudflare Web Analytics：Palworld 站点，过去 3 天（2026-07-13 读取）"
+    },
+    {
+      "id": "repo-audit",
+      "label": "GitHub 仓库与 2026-07-13 本地构建审计",
+      "href": "https://github.com/zsq378554827/palworld-1-0-guide-hub"
+    },
+    {
+      "id": "live-site",
+      "label": "Palworld 1.0 Guide Hub 线上站点",
+      "href": "https://palworld-1-0-guide-hub.pages.dev/"
+    },
+    {
+      "id": "google-video",
+      "label": "Google Search Central：Video SEO best practices",
+      "href": "https://developers.google.com/search/docs/appearance/video"
+    },
+    {
+      "id": "google-sitemap",
+      "label": "Google Search Central：Build and submit a sitemap",
+      "href": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap"
+    },
+    {
+      "id": "shockbyte",
+      "label": "Shockbyte Partnerships",
+      "href": "https://shockbyte.com/partners"
+    },
+    {
+      "id": "ftc",
+      "label": "FTC：Advertisement Endorsements",
+      "href": "https://www.ftc.gov/news-events/topics/truth-advertising/advertisement-endorsements"
+    },
+    {
+      "id": "execution-plan",
+      "label": "2026-07-13 Palworld SEO 增长与变现 90 天执行计划"
+    }
+  ]
+}

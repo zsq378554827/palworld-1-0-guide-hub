@@ -23,6 +23,15 @@ const structuredData = [
     uploadDate: video.uploadDate,
     duration: video.duration,
     contentUrl: absoluteUrl(video.streamUrl),
+    inLanguage: "en",
+    isFamilyFriendly: true,
+    hasPart: video.chapters.map((chapter, index) => ({
+      "@type": "Clip",
+      name: chapter.label,
+      startOffset: chapter.startSeconds,
+      endOffset: video.chapters[index + 1]?.startSeconds ?? video.durationSeconds,
+      url: `${absoluteUrl(canonical)}?t=${chapter.startSeconds}`,
+    })),
   },
   {
     "@context": "https://schema.org",
@@ -37,7 +46,7 @@ const structuredData = [
 ---
 
 <BaseLayout
-  title={`${video.title} Video Guide`}
+  title={`${video.title} Video`}
   description={video.description}
   canonical={canonical}
   image={video.thumbnail}

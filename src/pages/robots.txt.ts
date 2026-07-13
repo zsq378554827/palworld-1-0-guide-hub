@@ -6,6 +6,7 @@ export function GET() {
 Allow: /
 
 Sitemap: ${absoluteUrl("/sitemap.xml")}
+Sitemap: ${absoluteUrl("/video-sitemap.xml")}
 `,
     {
       headers: {

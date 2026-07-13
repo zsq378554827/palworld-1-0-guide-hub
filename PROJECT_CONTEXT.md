@@ -59,7 +59,7 @@ Palworld 1.0 Guide Hub 是一个面向英文用户的 Palworld Version 1.0 专�
 - 数据库：无
 - 部署：Cloudflare Pages 静态站；当前显示 Git Provider Yes，构建命令 `npm run build`，输出目录 `dist`；GitHub push 自动触发已验证成功
 - 视频播放：原生 `<video>` + `hls.js`；Safari 使用原生 HLS。
-- 视频存储：少量视频先使用 Cloudflare Pages 小分片 HLS；数量增长前评估 R2/Stream 成本。
+- 视频存储：现有三条视频暂由 Cloudflare Pages 提供；第四条视频前迁移到 R2 Standard + 自有媒体子域名 + Cloudflare Cache，Git 不再继续累积新视频媒体。
 - 第三方服务：Cloudflare Pages、Cloudflare Web Analytics、Google Search Console；YouTube Unlisted 仅备份。
 
 ## 目录结构
@@ -127,6 +127,7 @@ Project_02_palworld_1_0_guide_hub/
 | 2026-07-12 | 站内视频使用自托管 HLS，YouTube 仅作 Unlisted 备份 | Unlisted iframe 仍可能要求访客登录，不能满足无需登录播放 |
 | 2026-07-12 | 视频页与完整文字攻略页使用不同 URL，并建立独立 `/videos/` 版块 | 便于用户按媒介浏览，避免播放器、长文和 VideoObject 在同一文章页混杂，也让两种搜索意图各自拥有清晰 SEO 页面 |
 | 2026-07-13 | 首页主推荐位始终取 `videos.ts` 中唯一 `featured` 视频，视频库只展示真实已上线内容 | 以后新增视频时只需更新数据，不破坏参考图布局，也不会制造虚假卡片 |
+| 2026-07-13 | 第四条视频前把 HLS 迁移到 R2 Standard + 自有媒体子域名 + Cloudflare Cache | 当前 3 条视频已让 Git 跟踪媒体达到约 465.7MB；R2 可原样承接 HLS、当前规模在 Standard 免费额度内，并比 Stream 更适合现有本地转码流程；迁移需用户先确认域名和资源创建 |
 
 ## 复盘
 

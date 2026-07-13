@@ -157,6 +157,78 @@ main {
   border-color: rgba(53, 201, 181, 0.7);
 }
 
+.guide-search-form {
+  max-width: 720px;
+  margin-top: 24px;
+}
+
+.guide-search-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--soft);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.guide-search-form > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.guide-search-form input,
+.guide-search-form button {
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.guide-search-form input {
+  min-width: 0;
+  padding: 0 14px;
+  background: rgba(16, 34, 53, 0.9);
+  color: var(--text);
+}
+
+.guide-search-form button {
+  padding: 0 20px;
+  background: var(--teal);
+  color: #06131a;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.search-results-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.search-results-heading > a {
+  margin-bottom: 22px;
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.search-result-item {
+  min-width: 0;
+}
+
+.search-result-item .video-guide-card {
+  min-height: 100%;
+  grid-template-columns: 1fr;
+}
+
+.search-empty {
+  padding: 18px;
+  border: 1px solid rgba(245, 199, 102, 0.4);
+  border-radius: 8px;
+  background: rgba(245, 199, 102, 0.08);
+  color: var(--soft);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1881,6 +1953,15 @@ details p {
   }
 }
 
+@media (max-width: 860px) {
+  .site-search {
+    display: block;
+    width: 100%;
+    max-width: none;
+    padding-bottom: 12px;
+  }
+}
+
 @media (max-width: 720px) {
   .home-video-grid .video-guide-card {
     grid-template-columns: 1fr;
@@ -1953,6 +2034,19 @@ details p {
 }
 
 @media (max-width: 520px) {
+  .guide-search-form > div {
+    grid-template-columns: 1fr;
+  }
+
+  .search-results-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .search-results-heading > a {
+    margin: -12px 0 20px;
+  }
+
   .video-library-hero,
   .video-library,
   .video-page-shell {

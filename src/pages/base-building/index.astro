@@ -2,14 +2,24 @@
 import GuideCard from "../../components/GuideCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getGuidesByTag } from "../../data/guides";
+import { collectionStructuredData } from "../../data/site";
 
 const baseRelated = getGuidesByTag("base-building");
+const title = "Palworld 1.0 Base Building Guide";
+const description = "Palworld 1.0 base building changes, including Aquatic Construction, Work Suitability level 10, wave raids, defenses, and an old-base checklist.";
+const structuredData = collectionStructuredData(
+  title,
+  description,
+  "/base-building/",
+  baseRelated.map((guide) => ({ name: guide.title, path: `/${guide.slug}/` })),
+);
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Base Building Changes Explained"
-  description="Official Palworld 1.0 base building changes explained, including Aquatic Construction, Work Suitability level 10, wave raids, ammunition-free defenses, Base Pal work changes, and an old-base checklist."
+  title={title}
+  description={description}
   canonical="/base-building/"
+  structuredData={structuredData}
 >
   <section class="page-hero compact">
     <p class="eyebrow">Base Building</p>

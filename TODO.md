@@ -11,10 +11,10 @@
 
 ## 当前优先级
 
-1. 跟踪 Pocketpair 官方 known issues / hotfix 公告，并同步受影响页面。
-2. 等可靠玩家实测后再决定 Best Pals、Best Weapons、Best Base Locations 和精确服务器倍率内容。
-3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功；`sitemap.xml` 已重新提交，站点端检查正常。
-4. 后续如绑定自定义域名，同步更新 Cloudflare Pages `PUBLIC_SITE_URL`。
+1. 部署并重新提交标准/视频 sitemap，持续复查 GSC，直到显示成功和已发现网页。
+2. 技术验收通过后启动 18 篇内容冲刺，先建立关键词—页面映射，避免主查询冲突。
+3. 内容高意图页具备后，再建立 affiliate 测试、披露和点击追踪闭环；暂不接满屏广告。
+4. 第四条视频前按已确定的 R2 Standard + 自有媒体子域名方案完成迁移；未经用户确认不创建付费资源或购买域名。
 
 ## 待办列表
 
@@ -35,7 +35,6 @@
 | 已完成 | 深化剩余旧页面 | 高 | Codex | Beginner、Multiplayer、Performance 深度更新；Guides、Server、About 入口页增强；新增 3 张原创/自制 WebP 视觉 |
 | 已完成 | 首个 Unlisted 视频攻略功能 | 高 | Codex | 新增完整英文图文攻略、点击加载隐私增强播放器、章节跳转、当前 1.0 复测说明、VideoObject SEO 和首页真实视频卡；YouTube 永不公开 |
 | 已完成 | 接入 Analytics 和 Search Console | 中 | Codex | Cloudflare Web Analytics 已接入；GSC URL-prefix 资源已通过 HTML 文件验证；sitemap 已提交 |
-| 未开始 | 复查 GSC sitemap 抓取状态 | 中 | Codex | 已重新提交 `sitemap.xml`，GSC 返回提交成功；表格即时状态仍为“无法抓取”；站点端检查 `/sitemap.xml` 对 Googlebot 返回 200 和 `application/xml` |
 | 已完成 | Palworld 1.0 patch notes 更新日准备 | 高 | Codex | 已预留文章更新字段；文章页新增 Update Notice；已创建 `UPDATE_DAY_CHECKLIST.md`；build 通过 |
 | 已完成 | 新建 New Pals Overview / World Tree Guide 独立页面 | 中 | Codex | 已按官方 changelog 创建安全概览，不写未验证完整名单、路线、Boss 或排名 |
 | 暂缓 | Best Pals / Best Weapons / Best Base Locations | 中 | Codex | 需要可靠玩家实测，发布日不写死 |
@@ -45,6 +44,15 @@
 | 已完成 | 第二个 Ultimate Worker Pal 视频攻略上线 | 高 | Codex | commit `67281ab`、Cloudflare production `c68c4a53`；英文攻略、1080p60 HLS、SEO、线上未登录播放和章节跳转均通过；YouTube 最终 Unlisted 单独确认 |
 | 已完成 | 视频与文字攻略独立分区 | 高 | Codex | commit `b2d82ad`、Cloudflare production `90ed9aa2`；新增 `/videos/` 和两个独立视频页，两篇文字攻略移除播放器/VideoObject，线上双视频实播与章节跳转通过 |
 | 已完成 | 第三个 Level 8 Worker Pals 视频完整上线 | 高 | Codex | commit `85a028b`、Cloudflare production `bd06e946`；4K 成片、SRT、缩略图、YouTube Unlisted、HLS、独立视频/文字页、首页右上推荐位、SEO、线上实播与 2:10 章节均通过 |
+| 已完成 | 自然流量、SEO 与变现总复查 | 高 | Codex | GSC 217 impressions / 10 clicks / 4.6% CTR / 平均排名 8.4；Cloudflare 3 天 104 PV / 46 visits；报告输入保存在 `reviews/2026-07-13_seo_growth_monetization/artifact.json` |
+| 已完成 | 制定 SEO 增长与变现 90 天详细执行计划 | 高 | Codex | `docs/07_SEO增长与变现90天执行计划.md`；含 35 个具体任务、18 个新页、8 个旧页更新、周节奏、阶段门和验收口径 |
+| 进行中 | 诊断并修复 GSC sitemap“无法抓取” | 高 | Codex | T02/T03 完成：GET/HEAD/Googlebot/XML/30 URL canonical/IPv4/IPv6 均通过；已增加 lastmod、缓存和 video sitemap；待部署重提并以 GSC“成功 + 发现网页 >0”完成 T04 |
+| 已完成 | 修复 Header 伪搜索 | 高 | Codex | `/guides/?q=` 已索引全部文字攻略和视频；支持结果数、无结果、清空、键盘提交；7 个查询用例通过 |
+| 已完成 | 首批 title/meta CTR 优化 | 高 | Codex | 31 个正式页面 title ≤60、description ≤160，均无重复；全量清单见第一周 `TECHNICAL_QA.md` |
+| 已完成 | 补聚合页和视频 SEO 增强 | 中 | Codex | 首页 WebSite；5 个聚合页 CollectionPage/ItemList；video sitemap 3 条；3 个视频页共 27 个 Clip |
+| 未开始 | 30 天四内容簇冲刺 | 高 | Codex | 新增 16–20 个单一意图页并更新 8 个旧页；新手、性能、服务器商业意图、1.0 新内容各自成簇 |
+| 未开始 | 服务器 affiliate 验证闭环 | 中 | 用户/Codex | 申请 2–3 个计划；真实测试、条款复核、FTC 披露、`affiliate_click`、outbound CTR 与 EPC 看板 |
+| 已完成 | 视频媒体迁移方案 | 高 | 用户/Codex | 已选 R2 Standard + 自有媒体子域名 + Cache；第四条视频前执行，当前不创建付费资源；含迁移、7 天双源观察和回滚清单 |
 | 未开始 | 独立复测 Ultimate Worker Pal 精确机制 | 高 | 用户/Codex | 复测 Yakumo 概率、Technique book farming、精确数值和补丁敏感步骤；完成前页面保持 source-footage 标签 |
 | 未开始 | 独立复测 Level 8 Worker Pals 坐标与补丁敏感数值 | 高 | 用户/Codex | 页面已明确标注 source-footage；后续复测 World Tree 解锁、坐标、Work Suitability 和伙伴技能行为 |
 
@@ -60,10 +68,11 @@
 
 - Palworld 1.0 完整官方 changelog 已发布，无 patch notes 缺失阻塞。
 - 无 Cloudflare 部署阻塞；GitHub push 已可自动触发 Cloudflare Pages production deployment。
-- Search Console sitemap 已提交并重新提交，GSC 返回提交成功；表格即时状态仍显示“无法抓取”，站点端无明显阻塞，需稍后复查 Google 后台状态。
+- Search Console 当前仍显示 sitemap“无法读取”、发现网页 0。站点端所有可复现检查通过；首页与 Performance 已收录，另 3 个代表 URL 显示 Google 尚无法识别，需完成本次部署、重提和 24 小时复查。
 
 ## 下次打开项目先做
 
 - 读取 `CURRENT_STATE.md` 和 `TODO.md`。
+- 先复查 GSC sitemap 是否变为“成功 + 发现网页 >0”；若成功，记录 T04 完成并开始 C01 关键词—页面映射。
 - 如果是内容更新任务，优先读取 `src/data/guides.ts`。
 - 如果是 SEO 或页面结构任务，优先读取 `src/layouts/BaseLayout.astro`、`src/components/` 和对应页面。

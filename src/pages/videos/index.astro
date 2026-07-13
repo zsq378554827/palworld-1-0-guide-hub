@@ -2,12 +2,23 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import VideoGuideCard from "../../components/VideoGuideCard.astro";
 import { videos } from "../../data/videos";
+import { collectionStructuredData } from "../../data/site";
+
+const title = "Palworld 1.0 Video Guides";
+const description = "Watch direct-play English Palworld 1.0 video guides with chapters, verification notes, and links to complete written walkthroughs. No login required.";
+const structuredData = collectionStructuredData(
+  title,
+  description,
+  "/videos/",
+  videos.map((video) => ({ name: video.title, path: `/videos/${video.slug}/` })),
+);
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Video Guides"
-  description="Watch English Palworld 1.0 video guides directly on this site with no login, timestamped chapters, clear verification notes, and separate links to complete written walkthroughs."
+  title={title}
+  description={description}
   canonical="/videos/"
+  structuredData={structuredData}
 >
   <section class="video-library-hero" aria-labelledby="video-library-title">
     <nav class="breadcrumbs" aria-label="Breadcrumb">

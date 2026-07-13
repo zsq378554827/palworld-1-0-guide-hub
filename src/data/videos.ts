@@ -8,6 +8,7 @@ export type VideoGuide = {
   title: string;
   description: string;
   duration: string;
+  durationSeconds: number;
   displayDuration: string;
   thumbnail: string;
   uploadDate: string;
@@ -26,8 +27,9 @@ export const videos: VideoGuide[] = [
     slug: "palworld-1-0-level-8-worker-pals-locations",
     title: "Palworld 1.0 Level 8 Worker Pals & Locations",
     description:
-      "Find nine Level 8 work specialists in Palworld 1.0, with English narration, exact on-screen role summaries, source-map coordinates, a Transporting caveat, and a bonus base defender.",
+      "Find nine Level 8 worker Pals in Palworld 1.0 with English narration, role summaries, source-map coordinates, a Transporting caveat, and a bonus defender.",
     duration: "PT3M12S",
+    durationSeconds: 192,
     displayDuration: "3:12",
     thumbnail: "/assets/video-guides/palworld-1-0-level-8-worker-pals-locations.jpg",
     uploadDate: "2026-07-13T09:48:00+08:00",
@@ -61,6 +63,7 @@ export const videos: VideoGuide[] = [
     description:
       "Watch the complete Palworld 1.0 early-game route with timestamp-aligned English narration, subtitles, coordinates, Pal names, and action callouts.",
     duration: "PT4M33S",
+    durationSeconds: 273,
     displayDuration: "4:33",
     thumbnail: "/assets/video-guides/palworld-1-0-fast-early-game-route.webp",
     uploadDate: "2026-07-12T14:45:00+08:00",
@@ -87,8 +90,9 @@ export const videos: VideoGuide[] = [
     slug: "palworld-1-0-ultimate-worker-pal-build",
     title: "Palworld 1.0 Ultimate Worker Pal Build",
     description:
-      "Watch the complete worker-Pal upgrade route with timestamp-aligned English narration, burned-in subtitles, passive names, work-speed factors, book-farming steps, and job-specific callouts.",
+      "Watch the Palworld 1.0 worker-Pal upgrade route with English narration, subtitles, passives, work-speed factors, book farming, and job-specific steps.",
     duration: "PT3M35S",
+    durationSeconds: 215,
     displayDuration: "3:35",
     thumbnail: "/assets/video-guides/palworld-1-0-ultimate-worker-pal-build.jpg",
     uploadDate: "2026-07-12T21:00:00+08:00",

@@ -83,7 +83,7 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Beginner Guide",
     description:
-      "Practical Palworld 1.0 beginner guide with a first-hour route, starter-base checklist, capture and mission priorities, technology decisions, multiplayer advice, and safe next steps.",
+      "Palworld 1.0 beginner guide with a first-hour route, starter-base checklist, capture priorities, technology choices, multiplayer advice, and safe next steps.",
     shortAnswer:
       "Follow the reworked main mission, gather only what solves the next problem, capture a varied early team, build a small flexible base, activate watchtowers as you explore, and delay permanent builds or rare-resource spending until you understand Version 1.0's systems.",
     playerAdvice: [
@@ -906,7 +906,7 @@ export const guides: Guide[] = [
     category: "server",
     categoryLabel: "Multiplayer",
     description:
-      "Practical Palworld 1.0 multiplayer guide covering co-op formats, host decisions, guild roles, voice chat, backups, clean connection testing, group rules, and troubleshooting.",
+      "Palworld 1.0 multiplayer guide for co-op formats, hosting, guild roles, voice chat, backups, connection tests, group rules, and troubleshooting.",
     shortAnswer:
       "Choose the right host format, agree on world and progression rules, keep backups, match game versions, test the server unmodded, and verify joining, saving, restart persistence, guild permissions, and chat before treating a multiplayer world as stable.",
     playerAdvice: [
@@ -1056,7 +1056,7 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Performance",
     description:
-      "Palworld 1.0 performance troubleshooting guide with a repeatable benchmark method, symptom diagnosis, safe graphics-setting order, multiplayer separation, and crash checklist.",
+      "Palworld 1.0 performance settings and fixes for FPS, stutter, crashes, graphics testing, multiplayer diagnosis, and repeatable benchmarks.",
     shortAnswer:
       "Create a repeatable test scene, record the symptom, separate FPS from server or network delay, change one graphics category at a time, and keep the change only when the same test shows a measurable improvement without new instability.",
     playerAdvice: [
@@ -1203,7 +1203,7 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "FAQ",
     description:
-      "Palworld 1.0 FAQ with official answers about release status, old saves, new characters, MOD cleanup, Sunreach, the World Tree, new Pals, servers, and multiplayer.",
+      "Palworld 1.0 FAQ with official answers about release status, old saves, fresh characters, MOD cleanup, Sunreach, new Pals, servers, and multiplayer.",
     shortAnswer:
       "Palworld 1.0 is live. Existing saves can continue, Pocketpair recommends a fresh character for the reworked experience, old MOD files should be removed, and the update adds Sunreach, the World Tree, 72 Pals, revised servers, and multiplayer changes.",
     playerAdvice: [
@@ -1317,7 +1317,7 @@ export const guides: Guide[] = [
     category: "palworld-1-0",
     categoryLabel: "Patch Notes",
     description:
-      "Palworld 1.0 patch notes explained with official details on Sunreach, the World Tree, 72 new Pals, combat, bases, raids, multiplayer, performance, saves, and MODs.",
+      "Palworld 1.0 patch notes explained: Sunreach, World Tree, 72 new Pals, combat, bases, raids, multiplayer, performance, saves, and MODs.",
     shortAnswer:
       "Palworld 1.0 is live. Pocketpair's official release changelog confirms Sunreach, the World Tree, 72 additional Pals, a level cap of 80, reworked missions, combat and base systems, wave-based raids, multiplayer upgrades, optimization work, and a large bug-fix pass.",
     playerAdvice: [
@@ -1575,7 +1575,7 @@ export const guides: Guide[] = [
     category: "palworld-1-0",
     categoryLabel: "Sunreach",
     description:
-      "Official-source Palworld 1.0 Sunreach guide covering the floating islands, confirmed content, Soralite, towers, new Pals, and details that still need verification.",
+      "Palworld 1.0 Sunreach guide covering the floating islands, confirmed content, Soralite, towers, new Pals, and details that still need verification.",
     shortAnswer:
       "Sunreach is a new group of floating islands above Palpagos with its own long-established civilization, new Pals, tower bosses, settlements, and Soralite resources that require specialized mining equipment.",
     playerAdvice: [
@@ -1829,7 +1829,7 @@ export const guides: Guide[] = [
     category: "palworld-1-0",
     categoryLabel: "New Pals",
     description:
-      "Official Palworld 1.0 new Pals overview covering the 47 new Pals, 25 variants, Awakening, Mutation, skill changes, work updates, and facts still needing testing.",
+      "Palworld 1.0 new Pals overview covering 47 new Pals, 25 variants, Awakening, Mutation, skill changes, work updates, and facts that still need testing.",
     shortAnswer:
       "Palworld 1.0 adds 47 new Pals and 25 variant Pals, bringing the official total to 287, while also introducing Awakening, Mutation, new Active and Passive Skills, revised Partner Skills, and expanded Work Suitability.",
     playerAdvice: [
@@ -1971,7 +1971,7 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "MOD Safety",
     description:
-      "Official Palworld 1.0 MOD warning and compatibility guide covering backups, manual cleanup, Workshop MODs, file verification, clean launch testing, and safe reinstallation.",
+      "Palworld 1.0 MOD compatibility guide covering backups, manual cleanup, Workshop MODs, file verification, clean-launch tests, and safe reinstallation.",
     shortAnswer:
       "Back up important saves, manually remove old MOD files and loaders, unsubscribe from Workshop MODs, verify game files, launch Palworld 1.0 unmodded, and only reinstall MODs whose creators confirm Version 1.0 compatibility.",
     playerAdvice: [
@@ -2110,7 +2110,7 @@ export const guides: Guide[] = [
     category: "server",
     categoryLabel: "Server Checklist",
     description:
-      "Palworld 1.0 server owner checklist for backups, MOD cleanup, version matching, settings review, save testing, guild permissions, voice chat, and safe reopening.",
+      "Palworld 1.0 server owner checklist for backups, MOD cleanup, version matching, settings, save tests, guild permissions, and safe reopening.",
     shortAnswer:
       "Before reopening a Palworld 1.0 server, back up the complete world, remove unsupported MODs, update server and clients, review changed defaults, test saving and restart persistence, verify guild permissions, and document rollback rules.",
     playerAdvice: [
@@ -2244,7 +2244,7 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "First Hour",
     description:
-      "A cautious Palworld 1.0 first-hour checklist for new and returning players covering missions, capture, a starter base, Pals, settings, saves, MODs, and multiplayer.",
+      "Palworld 1.0 first-hour checklist for missions, captures, a starter base, Pals, settings, saves, MODs, and multiplayer.",
     shortAnswer:
       "In your first Palworld 1.0 hour, follow the reworked main mission, learn the revised capture and Pal systems, build a flexible starter base, check settings and saves, and avoid committing to unverified tier lists or permanent routes.",
     playerAdvice: [
@@ -2385,7 +2385,7 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Early-Game Guide",
     description:
-      "A tested Palworld 1.0 early-game route covering fast-travel unlocks, Sakurajima captive-Pal camps, high-value loot, Alpha Dumud, Killamari movement, and a practical starter base location.",
+      "Tested Palworld 1.0 early-game route for fast travel, Sakurajima captive-Pal camps, Alpha Dumud, Killamari movement, and a starter base location.",
     shortAnswer:
       "Unlock several fast-travel points through respawning, enter Sakurajima from Ice Wind Island, use a Palbox to reset four hostile camps, collect captive workers and high-value loot, then add Alpha Dumud, Killamari movement, and a nearby main-base clearing.",
     playerAdvice: [
@@ -2531,7 +2531,7 @@ export const guides: Guide[] = [
     category: "guides",
     categoryLabel: "Base-Building Guide",
     description:
-      "Build a high-speed Palworld worker Pal with Work Suitability, condensation, Pal Souls, work-speed passives, labor research, Applied Technique books, and job-specific adjustments.",
+      "Build a fast Palworld 1.0 worker Pal with Work Suitability, condensation, Pal Souls, passives, labor research, books, and job-specific adjustments.",
     shortAnswer:
       "Start with a small Pal suited to the job, stack Work Suitability, four condensation stars, Pal Soul work-speed upgrades, four useful passives, and matching Pal Labor Research. Use Applied Technique books for the final job-level increase, prioritize movement speed for Transporting, and add Nocturnal or SAN support when the base must run through the night.",
     playerAdvice: [

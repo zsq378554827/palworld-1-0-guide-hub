@@ -10,6 +10,17 @@
 
 ## 2026-07-13
 
+### 第一周技术 SEO 改造
+
+- 固定 GSC 与 Cloudflare 近 7 天数据基线，并保存 GSC 查询、页面、国家、设备等原始 CSV；基线口径区分生产域名和预览部署流量。
+- 完成 sitemap 全链路诊断：GET、HEAD、Googlebot、XML、robots、30 个 URL/canonical、IPv4/IPv6 均通过；标准 sitemap 增加 lastmod、XML 转义和缓存，并新增包含 3 个视频的 video sitemap。
+- 将 Header 伪搜索升级为真实静态搜索，支持 guides/videos 全量索引、`/guides/?q=`、结果数、无结果、清空、查询回填和键盘提交。
+- 完成 31 个正式页面 title/meta 重写：title 全部不超过 60 字符、description 全部不超过 160 字符，二者均无重复。
+- 首页新增 WebSite/SearchAction；Guides、Server、Videos、Palworld、Base Building 新增 CollectionPage/ItemList。
+- 三个视频页把现有章节映射为 27 个 Clip；`?t=` URL 能真实定位播放器时间，并新增章节 URL 同步。
+- 视频托管方案确定为 R2 Standard + 自有媒体子域名 + Cloudflare Cache；第四条视频前执行，当前不创建付费资源，迁移保留 7 天双源观察和 Pages 回滚。
+- `npm run build` 通过；标准/视频 sitemap 均通过 XML 校验，内部链接无缺失，7 组搜索和 130 秒视频 Clip 真实浏览器验收通过。
+
 ### 第三个视频攻略：Level 8 Worker Pals & Locations
 
 - 新增 3:12 英文视频 `Palworld 1.0 Level 8 Worker Pals & Locations`，覆盖 Solenne、Aegidron、Dandilord、Shaolong、Renjishi、Celesdir Noct、Bastigor、Orserk、Jetragon、Knocklem 和 Panthalus。

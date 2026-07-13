@@ -2,14 +2,24 @@
 import GuideCard from "../../components/GuideCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getGuidesByCategory } from "../../data/guides";
+import { collectionStructuredData } from "../../data/site";
 
 const serverGuides = getGuidesByCategory("server");
+const title = "Palworld 1.0 Server Guides";
+const description = "Palworld 1.0 server guides for setup, backups, updates, multiplayer tests, settings, guild permissions, MOD cleanup, and safe reopening.";
+const structuredData = collectionStructuredData(
+  title,
+  description,
+  "/server/",
+  serverGuides.map((guide) => ({ name: guide.title, path: `/${guide.slug}/` })),
+);
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Server Guides: Setup, Settings and Multiplayer"
-  description="Practical Palworld 1.0 server guides for backups, updates, multiplayer testing, safe settings frameworks, guild permissions, MOD cleanup, and server-owner checklists."
+  title={title}
+  description={description}
   canonical="/server/"
+  structuredData={structuredData}
 >
   <section class="page-hero compact">
     <p class="eyebrow">Server</p>

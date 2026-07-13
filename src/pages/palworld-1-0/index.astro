@@ -2,15 +2,25 @@
 import GuideCard from "../../components/GuideCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getGuidesByCategory, guides } from "../../data/guides";
+import { collectionStructuredData } from "../../data/site";
 
 const versionGuides = getGuidesByCategory("palworld-1-0");
 const supporting = guides.filter((guide) => guide.category !== "palworld-1-0").slice(0, 4);
+const title = "Palworld 1.0 Hub";
+const description = "Palworld 1.0 hub for official patch notes, World Tree, Sunreach, new Pals, beginner guidance, returning players, servers, and FAQ.";
+const structuredData = collectionStructuredData(
+  title,
+  description,
+  "/palworld-1-0/",
+  versionGuides.map((guide) => ({ name: guide.title, path: `/${guide.slug}/` })),
+);
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Hub"
-  description="A focused Palworld Version 1.0 hub for official patch notes, World Tree, Sunreach, new Pals, beginner guidance, returning players, servers, and FAQ."
+  title={title}
+  description={description}
   canonical="/palworld-1-0/"
+  structuredData={structuredData}
 >
   <section class="page-hero compact">
     <p class="eyebrow">Version 1.0</p>

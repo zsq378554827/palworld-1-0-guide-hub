@@ -20,3 +20,32 @@ export function canonicalPath(path = "/") {
   return absoluteUrl(normalized);
 }
 
+type CollectionItem = {
+  name: string;
+  path: string;
+};
+
+export function collectionStructuredData(
+  name: string,
+  description: string,
+  path: string,
+  items: CollectionItem[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url: absoluteUrl(path),
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: items.length,
+      itemListElement: items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        url: absoluteUrl(item.path),
+      })),
+    },
+  };
+}

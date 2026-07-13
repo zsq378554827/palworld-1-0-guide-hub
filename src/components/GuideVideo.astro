@@ -55,6 +55,15 @@ const { video } = Astro.props;
     const streamUrl = root.dataset.streamUrl;
     if (!player || !streamUrl) return;
 
+    const requestedStart = Number(new URLSearchParams(window.location.search).get("t") ?? 0);
+    const initialStart = Number.isFinite(requestedStart) && requestedStart >= 0 ? requestedStart : 0;
+
+    if (initialStart > 0) {
+      player.addEventListener("loadedmetadata", () => {
+        if (initialStart < player.duration) player.currentTime = initialStart;
+      }, { once: true });
+    }
+
     if (player.canPlayType("application/vnd.apple.mpegurl")) {
       player.src = streamUrl;
     } else if (Hls.isSupported()) {
@@ -80,7 +89,11 @@ const { video } = Astro.props;
 
     root.querySelectorAll<HTMLButtonElement>("[data-video-start]").forEach((button) => {
       button.addEventListener("click", async () => {
-        player.currentTime = Number(button.dataset.videoStart ?? 0);
+        const start = Number(button.dataset.videoStart ?? 0);
+        player.currentTime = start;
+        const chapterUrl = new URL(window.location.href);
+        chapterUrl.searchParams.set("t", String(start));
+        window.history.replaceState({}, "", chapterUrl);
         player.scrollIntoView({ behavior: "smooth", block: "center" });
         try {
           await player.play();

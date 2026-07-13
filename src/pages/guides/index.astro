@@ -1,20 +1,39 @@
 ---
 import GuideCard from "../../components/GuideCard.astro";
+import VideoGuideCard from "../../components/VideoGuideCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getGuidesByCategory } from "../../data/guides";
+import { getGuidesByCategory, guides } from "../../data/guides";
+import { videos } from "../../data/videos";
+import { collectionStructuredData } from "../../data/site";
 
 const pageGuides = getGuidesByCategory("guides");
+const title = "Palworld 1.0 Guides";
+const description = "Search Palworld 1.0 guides and videos for beginners, saves, MOD cleanup, performance, servers, locations, patch notes, and worker Pals.";
+const structuredData = collectionStructuredData(
+  title,
+  description,
+  "/guides/",
+  pageGuides.map((guide) => ({ name: guide.title, path: `/${guide.slug}/` })),
+);
 ---
 
 <BaseLayout
-  title="Palworld 1.0 Player Guides: Beginner, Saves, MODs and Performance"
-  description="Browse practical Palworld 1.0 player guides for beginners, returning players, first-hour planning, saves, MOD cleanup, performance troubleshooting, and official changelog questions."
+  title={title}
+  description={description}
   canonical="/guides/"
+  structuredData={structuredData}
 >
   <section class="page-hero compact">
     <p class="eyebrow">Guides</p>
     <h1>Palworld 1.0 Guides</h1>
     <p>Choose the problem you need to solve now: starting safely, returning to an old world, cleaning MODs, improving performance, or planning the first hour.</p>
+    <form class="guide-search-form" action="/guides/" method="get" role="search">
+      <label for="guide-search-input">Search every written and video guide</label>
+      <div>
+        <input id="guide-search-input" name="q" type="search" placeholder="Try performance, server, Worker Pal…" autocomplete="off" />
+        <button type="submit">Search</button>
+      </div>
+    </form>
   </section>
 
   <section class="section-wrap guide-landing-intro">
@@ -38,10 +57,77 @@ const pageGuides = getGuidesByCategory("guides");
     </div>
   </section>
 
-  <section class="section-wrap">
-    <div class="section-heading"><p class="eyebrow">All player guides</p><h2>Continue with a focused checklist</h2></div>
-    <div class="card-grid">
-      {pageGuides.map((guide) => <GuideCard guide={guide} />)}
+  <section class="section-wrap" data-search-results>
+    <div class="search-results-heading">
+      <div class="section-heading">
+        <p class="eyebrow" data-search-kicker>All player guides</p>
+        <h2 data-search-title>Continue with a focused checklist</h2>
+        <p data-search-status>{pageGuides.length} written guides</p>
+      </div>
+      <a href="/guides/" data-search-clear hidden>Clear search</a>
+    </div>
+    <p class="search-empty" data-search-empty hidden>No matching guide or video was found. Try a broader term such as “server”, “performance”, or “Pal”.</p>
+    <div class="card-grid search-result-grid">
+      {guides.map((guide) => (
+        <div
+          class="search-result-item"
+          data-search-item
+          data-default-visible={guide.category === "guides" ? "true" : "false"}
+          data-search-text={[guide.title, guide.description, guide.categoryLabel, guide.slug, ...guide.tags].join(" ")}
+          hidden={guide.category !== "guides"}
+        >
+          <GuideCard guide={guide} />
+        </div>
+      ))}
+      {videos.map((video) => (
+        <div
+          class="search-result-item"
+          data-search-item
+          data-default-visible="false"
+          data-search-text={[video.title, video.description, video.slug, "video", ...video.chapters.map((chapter) => chapter.label)].join(" ")}
+          hidden
+        >
+          <VideoGuideCard video={video} />
+        </div>
+      ))}
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const searchRoot = document.querySelector<HTMLElement>("[data-search-results]");
+  const query = new URLSearchParams(window.location.search).get("q")?.trim() ?? "";
+
+  if (searchRoot) {
+    const normalize = (value: string) => value.toLocaleLowerCase().normalize("NFKD");
+    const terms = normalize(query).split(/\s+/).filter(Boolean);
+    const items = Array.from(searchRoot.querySelectorAll<HTMLElement>("[data-search-item]"));
+    const title = searchRoot.querySelector<HTMLElement>("[data-search-title]");
+    const kicker = searchRoot.querySelector<HTMLElement>("[data-search-kicker]");
+    const status = searchRoot.querySelector<HTMLElement>("[data-search-status]");
+    const empty = searchRoot.querySelector<HTMLElement>("[data-search-empty]");
+    const clear = searchRoot.querySelector<HTMLElement>("[data-search-clear]");
+
+    let visibleCount = 0;
+    items.forEach((item) => {
+      const searchableText = normalize(item.dataset.searchText ?? "");
+      const matches = terms.length > 0
+        ? terms.every((term) => searchableText.includes(term))
+        : item.dataset.defaultVisible === "true";
+      item.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    document.querySelectorAll<HTMLInputElement>('input[name="q"]').forEach((input) => {
+      input.value = query;
+    });
+
+    if (terms.length > 0) {
+      if (kicker) kicker.textContent = "Search results";
+      if (title) title.textContent = `Results for “${query}”`;
+      if (status) status.textContent = `${visibleCount} ${visibleCount === 1 ? "result" : "results"} across written and video guides`;
+      if (clear) clear.hidden = false;
+      if (empty) empty.hidden = visibleCount !== 0;
+    }
+  }
+</script>

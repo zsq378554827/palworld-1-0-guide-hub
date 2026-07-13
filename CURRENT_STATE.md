@@ -91,14 +91,36 @@
 - 架构拆分 commit `b2d82ad` 已推送 `main` 并自动部署为 Cloudflare Pages production `90ed9aa2`；线上两个视频页、两个文字页、视频索引、HLS manifest 和 sitemap 均返回 200。
 - 线上未登录实播复验：早期路线 0:53 跳转后播放到 56.36 秒，Worker Pal 2:06 跳转后播放到 129.51 秒；两条均 `readyState=4`、1920×1080、0 iframe、0 控制台错误，390px 无横向溢出。
 
+## 2026-07-13 SEO Growth Audit
+
+- 已完成一次基于真实数据的自然流量、内容结构和变现复查；可交互报告已在当前 Codex 任务中渲染，完整可复现输入保存在 `reviews/2026-07-13_seo_growth_monetization/artifact.json`。
+- 已把审计结论拆成 2026-07-14 至 2026-10-11 的 90 天执行计划，包含 35 个具体任务、18 个新页面排期、单页生产 SOP、每周节奏、变现阶段门和复盘规则；主执行文档为 `docs/07_SEO增长与变现90天执行计划.md`。
+- Google Search Console 当前累计 217 次曝光、10 次自然搜索点击、CTR 4.6%、平均排名 8.4；核心查询 `palworld 1.0 guide` 为 57 次曝光、4 次点击。
+- Cloudflare Web Analytics 过去 3 天为 104 PV、46 visits；LCP P75 约 700ms，INP/CLS 样本为良好，页面性能不是当前主要增长瓶颈。
+- GSC 的 `/sitemap.xml` 在 2026-07-13 仍显示“无法抓取”、类型未知、发现网页 0；站点端对普通 UA 和 Googlebot UA 均返回 200 与 XML，仍需继续诊断 Google 端错误。
+- 本地 `npm run build` 通过并生成 31 个页面；静态审计标记为：21 个 description 超过 160 字符、14 个 title 超过 60 字符、10 个页面正文少于 500 词、9 个页面没有结构化数据。
+- Header 搜索框当前只把 `?q=` 提交到 `/guides/`，目标页面不处理查询，属于未完成的伪搜索功能，应实现或暂时移除。
+- Git 当前跟踪 120 个视频媒体文件，约 465.7 MB；继续扩展视频前，应规划迁移到 R2/CDN 或 Stream，避免仓库和 Pages 部署继续膨胀。
+- 建议变现顺序：服务器托管 affiliate → 稳定自然流量后测试轻量广告 → 形成受众后测试服务器预设包/检查表等数字产品。
+
+## 2026-07-13 Week 1 Technical Execution
+
+- T01 已完成：GSC 原始 CSV 与 Cloudflare 近 7 天基线已固定到 `reviews/2026-07-13_week1_execution/`。GSC 为 217 impressions / 10 clicks / 4.6% CTR / 8.4 平均排名；Cloudflare 为 105 PV / 47 visits，其中生产域名 41、预览域名 6，Google 16、Direct 31。
+- T02 已完成：GSC sitemap 仅显示“无法读取”，无更具体错误；GET、HEAD、Googlebot UA、XML、robots、30 URL canonical、IPv4/IPv6 均通过。URL Inspection 显示首页和 Performance 已收录，Fast Route、Level 8 视频和 Server Setup 尚无法被 Google 识别。
+- T03 代码已完成：标准 sitemap 增加 lastmod、转义与缓存；robots 同时声明标准和视频 sitemap。待本次部署后重新提交，T04 仍以 GSC“成功 + 发现网页 >0”为唯一完成条件。
+- T05 已完成：Header 与 Guides 页搜索真实处理 `/guides/?q=`，索引全部文字攻略和视频，支持结果数、无结果、清空、查询回填和键盘提交；7 个查询用例通过。
+- T06 已完成：31 个正式页面 title 全部 ≤60、description 全部 ≤160，二者均无重复；完整清单见 `TECHNICAL_QA.md`。
+- T07 已完成：首页输出 WebSite/SearchAction；Guides、Server、Videos、Palworld、Base Building 输出与真实条目一致的 CollectionPage/ItemList。
+- T08 已完成：新增 3 条 video sitemap 记录；3 个视频页分别输出 8、12、7 个 Clip；`?t=` URL 能真实定位播放器章节。
+- T09 已完成决策：第四条视频前迁移到 R2 Standard + 自有媒体子域名 + Cloudflare Cache；当前不创建付费资源，三条现有视频暂留 Pages，并冻结继续向 Git 增加视频媒体。
+
 ## Current Priorities
 
-1. 跟踪 Pocketpair 官方 known issues / hotfix 公告，不用媒体或玩家传闻替代官方事实。
-2. 等可靠玩家实测后再评估 Best Pals、Best Weapons、Best Base Locations 和精确服务器倍率内容。
-3. 稍后复查 Google Search Console sitemap 状态是否从“无法抓取”变为成功。
-4. 后续如绑定自定义域名，同步更新 `PUBLIC_SITE_URL`。
-5. 后续视频默认使用站点控制的 HLS/视频托管实现无需登录播放；YouTube 继续固定 Unlisted 作为备份，不以 YouTube 流量为目标。
-6. 对 `Ultimate Worker Pal Build` 的 Yakumo 概率、Applied Technique farming、精确百分比和补丁敏感机制安排当前 1.0 独立复测；页面在复测前继续保持 source-footage 标签。
+1. 完成本次部署并在 GSC 重新提交 sitemap；每 24 小时复查，直到 T04 达到“成功 + 发现网页 >0”。
+2. T04 通过后启动 C01 关键词—页面映射，再进入第一批 18 篇内容冲刺和 8 个旧页更新。
+3. Affiliate 第一阶段只做服务器托管：先申请/测试/披露/跟踪，再在高意图页放 CTA；近 30 天自然访问未到 1,000 前不测试广告。
+4. 第四条视频前由用户确认自有域名和 R2 资源创建，再按迁移决策文档执行双源迁移与 7 天观察。
+5. 继续跟踪 Pocketpair 官方 known issues / hotfix，并完成现有两个 source-footage 攻略的独立复测。
 
 ## Current Blockers
 
@@ -135,6 +157,7 @@
 - 24 个构建页面 title/meta 无重复；23 个正式 canonical URL 进入 sitemap，内部链接检查无 broken link。
 - 25 个构建页面 title/meta 无重复；首个视频攻略 URL 已进入 sitemap，并包含单个 `VideoObject` JSON-LD。
 - 29 个构建页面通过；`/videos/`、两个独立视频页和两个独立文字攻略页均有不同 canonical/title/meta；每个视频页仅含一个 `VideoObject`，文字攻略页为 0。
+- 2026-07-13 第一周技术 SEO 本地验收通过：31 个正式页面 title/meta 合规且无重复，30 个 canonical URL 进入标准 sitemap，3 个视频进入 video sitemap，5 个聚合页结构化数据和 27 个 Clip 通过静态/浏览器检查；T04 仍等待部署后 GSC 外部状态。
 - Patch Notes、Sunreach、World Tree、New Pals、MOD Warning、Server Setup、First Hour 已加入原创 WebP 插画或信息图及 alt text。
 - Patch Notes、Sunreach、World Tree、New Pals、Server Setup、Best Server Settings 已加入可操作表格或检查框架。
 - Beginner、Multiplayer、Performance 已完成正式深度更新，加入分阶段路线、决策表、故障诊断、Source note、内链和原创 WebP 视觉。

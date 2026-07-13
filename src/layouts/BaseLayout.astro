@@ -22,7 +22,8 @@ const {
   structuredData,
 } = Astro.props;
 
-const pageTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
+const brandSuffix = " | Palworld Guide";
+const pageTitle = title.includes(site.name) || title.length > 42 ? title : `${title}${brandSuffix}`;
 const canonicalUrl = canonicalPath(canonical);
 const imageUrl = absoluteUrl(image);
 ---
