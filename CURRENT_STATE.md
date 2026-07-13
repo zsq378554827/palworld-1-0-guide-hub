@@ -107,12 +107,13 @@
 
 - T01 已完成：GSC 原始 CSV 与 Cloudflare 近 7 天基线已固定到 `reviews/2026-07-13_week1_execution/`。GSC 为 217 impressions / 10 clicks / 4.6% CTR / 8.4 平均排名；Cloudflare 为 105 PV / 47 visits，其中生产域名 41、预览域名 6，Google 16、Direct 31。
 - T02 已完成：GSC sitemap 仅显示“无法读取”，无更具体错误；GET、HEAD、Googlebot UA、XML、robots、30 URL canonical、IPv4/IPv6 均通过。URL Inspection 显示首页和 Performance 已收录，Fast Route、Level 8 视频和 Server Setup 尚无法被 Google 识别。
-- T03 代码已完成：标准 sitemap 增加 lastmod、转义与缓存；robots 同时声明标准和视频 sitemap。待本次部署后重新提交，T04 仍以 GSC“成功 + 发现网页 >0”为唯一完成条件。
+- T03 已完成：标准 sitemap 增加 lastmod、转义与缓存；robots 同时声明标准和视频 sitemap；commit `b359d4f` 已部署为 production `ce69d834`，线上 GET/HEAD/Googlebot/XML/30 URL 全部通过，两个 sitemap 已在 GSC 重提并收到成功提交弹窗。
 - T05 已完成：Header 与 Guides 页搜索真实处理 `/guides/?q=`，索引全部文字攻略和视频，支持结果数、无结果、清空、查询回填和键盘提交；7 个查询用例通过。
 - T06 已完成：31 个正式页面 title 全部 ≤60、description 全部 ≤160，二者均无重复；完整清单见 `TECHNICAL_QA.md`。
 - T07 已完成：首页输出 WebSite/SearchAction；Guides、Server、Videos、Palworld、Base Building 输出与真实条目一致的 CollectionPage/ItemList。
 - T08 已完成：新增 3 条 video sitemap 记录；3 个视频页分别输出 8、12、7 个 Clip；`?t=` URL 能真实定位播放器章节。
 - T09 已完成决策：第四条视频前迁移到 R2 Standard + 自有媒体子域名 + Cloudflare Cache；当前不创建付费资源，三条现有视频暂留 Pages，并冻结继续向 Git 增加视频媒体。
+- T04 仍在进行中：GSC 表格即时状态仍为“无法抓取”、发现网页 0；单 URL 索引请求遇到当日配额上限。已建立每天 09:30 自动复查，成功前不启动内容冲刺和 Affiliate。
 
 ## Current Priorities
 

@@ -46,7 +46,7 @@
 | 已完成 | 第三个 Level 8 Worker Pals 视频完整上线 | 高 | Codex | commit `85a028b`、Cloudflare production `bd06e946`；4K 成片、SRT、缩略图、YouTube Unlisted、HLS、独立视频/文字页、首页右上推荐位、SEO、线上实播与 2:10 章节均通过 |
 | 已完成 | 自然流量、SEO 与变现总复查 | 高 | Codex | GSC 217 impressions / 10 clicks / 4.6% CTR / 平均排名 8.4；Cloudflare 3 天 104 PV / 46 visits；报告输入保存在 `reviews/2026-07-13_seo_growth_monetization/artifact.json` |
 | 已完成 | 制定 SEO 增长与变现 90 天详细执行计划 | 高 | Codex | `docs/07_SEO增长与变现90天执行计划.md`；含 35 个具体任务、18 个新页、8 个旧页更新、周节奏、阶段门和验收口径 |
-| 进行中 | 诊断并修复 GSC sitemap“无法抓取” | 高 | Codex | T02/T03 完成：GET/HEAD/Googlebot/XML/30 URL canonical/IPv4/IPv6 均通过；已增加 lastmod、缓存和 video sitemap；待部署重提并以 GSC“成功 + 发现网页 >0”完成 T04 |
+| 进行中 | 诊断并修复 GSC sitemap“无法抓取” | 高 | Codex | T02/T03 完成并部署为 `ce69d834`；标准/视频 sitemap 已重提，GSC 即时仍无法抓取；单 URL 请求遇到每日配额；已安排每天 09:30 复查，以“成功 + 发现网页 >0”完成 T04 |
 | 已完成 | 修复 Header 伪搜索 | 高 | Codex | `/guides/?q=` 已索引全部文字攻略和视频；支持结果数、无结果、清空、键盘提交；7 个查询用例通过 |
 | 已完成 | 首批 title/meta CTR 优化 | 高 | Codex | 31 个正式页面 title ≤60、description ≤160，均无重复；全量清单见第一周 `TECHNICAL_QA.md` |
 | 已完成 | 补聚合页和视频 SEO 增强 | 中 | Codex | 首页 WebSite；5 个聚合页 CollectionPage/ItemList；video sitemap 3 条；3 个视频页共 27 个 Clip |

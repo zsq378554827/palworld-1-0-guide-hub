@@ -78,4 +78,6 @@ Header 搜索框用键盘输入 `server setup` 并按 Enter 后，URL 正确变�
 
 ## 尚未完成的外部验收
 
-本地和站点端技术项已通过；T04 仍必须等待本次部署并重新提交后，确认 GSC 状态为“成功”且发现网页数大于 0。Google 的处理状态不能由本地构建代替。
+commit `b359d4f` 已部署为 Cloudflare Pages production `ce69d834`。30 个 sitemap URL 在线检查全部为 200、canonical 一致、title/meta/H1 合规；线上搜索 `worker pal` 返回 4 个正确结果，线上视频 `?t=130` 为 `readyState=4`、191.48 秒、1920×1080 并定位到 130 秒。
+
+标准和视频 sitemap 已在 GSC 重新提交并收到成功提交弹窗，但即时状态仍为“无法抓取”；单 URL 索引请求因当天配额已满未成功。因此 T04 仍必须等待 Google 重新处理，不能用生产验收代替 GSC“成功 + 发现网页 >0”。

@@ -47,3 +47,13 @@
 ## T04 验收规则
 
 只有 GSC 状态变为“成功”且发现网页数大于 0，才把 T04 标为完成。若重新提交后仍处于处理中，应记录提交时间并继续按 24 小时节奏复查，不能把“已提交”误写成“已成功抓取”。
+
+## 部署与重新提交
+
+- commit：`b359d4f`
+- Cloudflare Pages production：`ce69d834`
+- 线上复验：标准 sitemap 与视频 sitemap 的 GET、HEAD、Googlebot 均为 200 / `application/xml`，相同端点的 ETag 一致；标准 30 URL、视频 3 URL，XML 均通过。
+- 2026-07-13 在 GSC 重新提交 `sitemap.xml`，弹窗确认“已成功提交站点地图”；表格提交日期更新为 7 月 13 日，但即时状态仍为“无法抓取”、发现网页 0。
+- 同日首次提交 `video-sitemap.xml`，GSC 同样确认已成功提交；即时状态仍为“无法抓取”、发现网页/视频 0。
+- 尝试为 Fast Early-Game 文字攻略请求索引时，GSC 返回“超出了每日配额”；未继续重复请求，下一次在配额恢复后再处理该页和 Level 8 Worker Pals 视频页。
+- 已建立每天 09:30 的 `复查 Palworld GSC Sitemap` 自动复查；只有标准 sitemap 变为“成功”且发现网页大于 0，才会把 T04 标为完成并进入内容冲刺。

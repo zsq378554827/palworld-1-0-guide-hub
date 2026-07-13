@@ -20,6 +20,7 @@
 - 三个视频页把现有章节映射为 27 个 Clip；`?t=` URL 能真实定位播放器时间，并新增章节 URL 同步。
 - 视频托管方案确定为 R2 Standard + 自有媒体子域名 + Cloudflare Cache；第四条视频前执行，当前不创建付费资源，迁移保留 7 天双源观察和 Pages 回滚。
 - `npm run build` 通过；标准/视频 sitemap 均通过 XML 校验，内部链接无缺失，7 组搜索和 130 秒视频 Clip 真实浏览器验收通过。
+- commit `b359d4f` 已部署为 Cloudflare Pages production `ce69d834`；线上 30 个 URL、结构化数据、搜索、视频章节和两个 sitemap 均通过。GSC 已接受两个 sitemap 的重新提交，但即时状态仍待 Google 处理；单 URL 索引请求因当日配额已满延期。
 
 ### 第三个视频攻略：Level 8 Worker Pals & Locations
 
