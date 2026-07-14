@@ -1,12 +1,23 @@
 # CHANGELOG
 
-更新时间：2026-07-13
+更新时间：2026-07-14
 
 ## 记录规则
 
 - 每完成一个阶段就追加记录。
 - 记录用户能理解的变化，不只写代码文件名。
 - 重要决策同步到 `PROJECT_CONTEXT.md`。
+
+## 2026-07-14
+
+### 第四个视频攻略：Ultimate Pal Builds 正式上线
+
+- 新增 4:29 英文视频 `Palworld 1.0 Ultimate Pal Builds: Worker, Mount & Combat` 的独立视频页和独立完整文字攻略页；首页第三条 featured 按用户参考图保持不变，第四条只进入独立视频版块。
+- 新增站内缩略图、18 个章节 Clip、单个 VideoObject、Article/FAQPage、唯一 title/meta/H1、canonical、OG、标准 sitemap、video sitemap 和双向内链。
+- 按用户本次决定继续使用前三条相同的 Cloudflare Pages 静态 HLS：45 个 6 秒 fMP4 分片、约 164.25 MB、最大 5,552,584 bytes、全片解码通过；R2 本次未启用。
+- commit `bf0015c` 已由 GitHub push 自动部署为 Cloudflare Pages production `45e7af6b`。新页面、缩略图、HLS、分片和两个 sitemap 均返回 200 与正确 MIME。
+- 线上未登录播放通过：`readyState=4`、269.37 秒、1920×1080、0 iframe，播放时间从 0 前进；3:18 章节跳转后继续播放；390px 无横向溢出和控制台错误。
+- 本次 157 MB 媒体部署约 5 分钟后才完成资源传播；下一个视频开始前启用 R2 Standard，并迁移四条现有 HLS，避免继续扩大 Git 仓库和 Pages 部署时间。
 
 ## 2026-07-13
 

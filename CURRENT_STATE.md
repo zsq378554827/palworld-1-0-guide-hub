@@ -1,6 +1,6 @@
 # CURRENT_STATE
 
-更新时间：2026-07-13
+更新时间：2026-07-14
 
 ## Project
 
@@ -22,6 +22,7 @@
 - 旧的 Direct Upload Pages 项目已删除，并已重建为同名 GitHub 集成 Pages 项目；Cloudflare 显示 `Git Provider: Yes`。
 - GitHub App 已授权 `zsq378554827/palworld-1-0-guide-hub`，Cloudflare Pages GitHub push 自动部署已验证成功。
 - 第三条 Level 8 Worker Pals 视频、独立文字攻略、站内 HLS 和参考图首页布局已完成，并已通过 Cloudflare production 总验收。
+- 第四条 Ultimate Pal Builds 已按前三条相同的 Cloudflare Pages 静态 HLS 方式上线并通过生产总验收；R2 本次未启用，下一个视频发布前再启用并迁移四条现有 HLS。
 
 ## Completed
 
@@ -37,6 +38,13 @@
 - 首页按 `/Users/zousunquan/Downloads/已生成图像 1 (1).png` 完成 1488px 同尺寸对照：新视频位于右上主推荐位，三条视频集中在独立版块，工具和书面攻略保持独立；390px/1488px 无横向溢出。
 - commit `85a028b` 已由 GitHub push 自动部署为 Cloudflare Pages production `bd06e946`；生产域名上的首页、视频索引、独立视频页、独立文字攻略页、HLS 和 sitemap 均返回 200，HLS MIME 正确。
 - 线上 Chrome 实播通过：`readyState=4`、191.48 秒、1920×1080、0 iframe；2:10 Orserk 章节精确跳到 130 秒并继续播放，时间在 2.5 秒观察窗内前进约 2.53 秒；390px 首页和文字页无横向溢出，文字页保持 0 player/0 VideoObject。
+- 2026-07-13 第四条视频本地站点交付完成：新增 `/videos/palworld-1-0-ultimate-pal-builds/` 与 `/guides/palworld-1-0-ultimate-pal-builds/`，保持首页第三条 featured 不变，第四条只进入独立视频版块。
+- 第四条 1080p60 HLS 在 Git 仓库外生成：45 个分片、约 164.25 MB、最大 5,552,584 bytes、全片解码通过；本地 `npm run build` 生成 33 页，18 个 Clip、VideoObject/Article/FAQPage、canonical、OG、两个 sitemap 和内链均通过。
+- 第四条本地未登录实播通过：`readyState=4`、269.37 秒、1920×1080、0 iframe、播放时间持续增加；3:18 章节跳到 198 秒后继续播放，390px 无横向溢出。
+- 2026-07-14 用户决定本次继续沿用 Pages 静态 HLS；47 个第四条媒体文件与仓库外原始 HLS 的 SHA-256 全部一致后加入 `public/media/`，R2 Function 与 `wrangler.toml` 未提交，不会拦截静态 `/media/...`。
+- commit `bf0015c` 已由 GitHub push 自动部署为 Cloudflare Pages production `45e7af6b`；新视频页、独立文字页、缩略图、HLS、init、分片和两个 sitemap 均返回 200 与正确 MIME。
+- 第四条线上未登录实播通过：269.37 秒、1920×1080、`readyState=4`、时间从 0 前进、0 iframe；3:18 章节跳转后继续播放，390px 无横向溢出、0 控制台错误；文字页保持 0 player/0 VideoObject。
+- 本次约 157 MB 媒体 push 后，Cloudflare 新部署记录先出现但资源约 5 分钟后才可用；不能在部署记录刚出现时把缺失资源回退页误判为上线成功。
 - 2026-07-07 质量复查完成：内部链接 HTTP 检查 22 项通过；18 个页面 title/description 无重复；10 篇文章均包含 Short answer、实用建议、FAQ、指定 patch notes 更新提示、Last Updated 和非官方声明。
 - 390px 手机、768px 平板、1280px 桌面共 54 次页面 viewport 检查通过，无横向溢出。
 - 首页文章卡已改为整卡可点击，首页展示全部 10 篇 MVP 文章。
@@ -112,7 +120,7 @@
 - T06 已完成：31 个正式页面 title 全部 ≤60、description 全部 ≤160，二者均无重复；完整清单见 `TECHNICAL_QA.md`。
 - T07 已完成：首页输出 WebSite/SearchAction；Guides、Server、Videos、Palworld、Base Building 输出与真实条目一致的 CollectionPage/ItemList。
 - T08 已完成：新增 3 条 video sitemap 记录；3 个视频页分别输出 8、12、7 个 Clip；`?t=` URL 能真实定位播放器章节。
-- T09 已完成决策：第四条视频前迁移到 R2 Standard + 自有媒体子域名 + Cloudflare Cache；当前不创建付费资源，三条现有视频暂留 Pages，并冻结继续向 Git 增加视频媒体。
+- T09 已完成决策：第四条视频前迁移到 R2 Standard + Pages Function 同源媒体路由 + Cloudflare Cache；自有媒体子域名降为可选优化。当前不创建付费资源，三条现有视频暂留 Pages，并冻结继续向 Git 增加视频媒体。
 - T04 仍在进行中：GSC 表格即时状态仍为“无法抓取”、发现网页 0；单 URL 索引请求遇到当日配额上限。已建立每天 09:30 自动复查，成功前不启动内容冲刺和 Affiliate。
 
 ## Current Priorities
@@ -120,7 +128,7 @@
 1. 完成本次部署并在 GSC 重新提交 sitemap；每 24 小时复查，直到 T04 达到“成功 + 发现网页 >0”。
 2. T04 通过后启动 C01 关键词—页面映射，再进入第一批 18 篇内容冲刺和 8 个旧页更新。
 3. Affiliate 第一阶段只做服务器托管：先申请/测试/披露/跟踪，再在高意图页放 CTA；近 30 天自然访问未到 1,000 前不测试广告。
-4. 第四条视频前由用户确认自有域名和 R2 资源创建，再按迁移决策文档执行双源迁移与 7 天观察。
+4. 下一个视频发布前启用 R2 Standard，创建 `palworld-guide-media`，按迁移决策文档迁移四条现有 HLS 并观察 7 天；无需自有域名。
 5. 继续跟踪 Pocketpair 官方 known issues / hotfix，并完成现有两个 source-footage 攻略的独立复测。
 
 ## Current Blockers

@@ -1,6 +1,6 @@
 # TODO
 
-更新时间：2026-07-13
+更新时间：2026-07-14
 
 ## 工作模式
 
@@ -14,7 +14,7 @@
 1. 部署并重新提交标准/视频 sitemap，持续复查 GSC，直到显示成功和已发现网页。
 2. 技术验收通过后启动 18 篇内容冲刺，先建立关键词—页面映射，避免主查询冲突。
 3. 内容高意图页具备后，再建立 affiliate 测试、披露和点击追踪闭环；暂不接满屏广告。
-4. 第四条视频前按已确定的 R2 Standard + 自有媒体子域名方案完成迁移；未经用户确认不创建付费资源或购买域名。
+4. 第四条本次已按 Pages 静态 HLS 上线；下一个视频发布前启用 R2 Standard + Pages Function 同源 `/media/...`，迁移四条现有 HLS，无需购买域名。
 
 ## 待办列表
 
@@ -44,6 +44,7 @@
 | 已完成 | 第二个 Ultimate Worker Pal 视频攻略上线 | 高 | Codex | commit `67281ab`、Cloudflare production `c68c4a53`；英文攻略、1080p60 HLS、SEO、线上未登录播放和章节跳转均通过；YouTube 最终 Unlisted 单独确认 |
 | 已完成 | 视频与文字攻略独立分区 | 高 | Codex | commit `b2d82ad`、Cloudflare production `90ed9aa2`；新增 `/videos/` 和两个独立视频页，两篇文字攻略移除播放器/VideoObject，线上双视频实播与章节跳转通过 |
 | 已完成 | 第三个 Level 8 Worker Pals 视频完整上线 | 高 | Codex | commit `85a028b`、Cloudflare production `bd06e946`；4K 成片、SRT、缩略图、YouTube Unlisted、HLS、独立视频/文字页、首页右上推荐位、SEO、线上实播与 2:10 章节均通过 |
+| 已完成 | 第四个 Ultimate Pal Build 视频完整上线 | 高 | Codex | commit `bf0015c`、Cloudflare production `45e7af6b`；YouTube Unlisted + 英文 SRT、Pages 静态 HLS、独立视频/文字页、SEO、线上未登录播放、3:18 章节和 390px 均通过。 |
 | 已完成 | 自然流量、SEO 与变现总复查 | 高 | Codex | GSC 217 impressions / 10 clicks / 4.6% CTR / 平均排名 8.4；Cloudflare 3 天 104 PV / 46 visits；报告输入保存在 `reviews/2026-07-13_seo_growth_monetization/artifact.json` |
 | 已完成 | 制定 SEO 增长与变现 90 天详细执行计划 | 高 | Codex | `docs/07_SEO增长与变现90天执行计划.md`；含 35 个具体任务、18 个新页、8 个旧页更新、周节奏、阶段门和验收口径 |
 | 进行中 | 诊断并修复 GSC sitemap“无法抓取” | 高 | Codex | T02/T03 完成并部署为 `ce69d834`；标准/视频 sitemap 已重提，GSC 即时仍无法抓取；单 URL 请求遇到每日配额；已安排每天 09:30 复查，以“成功 + 发现网页 >0”完成 T04 |
@@ -52,7 +53,7 @@
 | 已完成 | 补聚合页和视频 SEO 增强 | 中 | Codex | 首页 WebSite；5 个聚合页 CollectionPage/ItemList；video sitemap 3 条；3 个视频页共 27 个 Clip |
 | 未开始 | 30 天四内容簇冲刺 | 高 | Codex | 新增 16–20 个单一意图页并更新 8 个旧页；新手、性能、服务器商业意图、1.0 新内容各自成簇 |
 | 未开始 | 服务器 affiliate 验证闭环 | 中 | 用户/Codex | 申请 2–3 个计划；真实测试、条款复核、FTC 披露、`affiliate_click`、outbound CTR 与 EPC 看板 |
-| 已完成 | 视频媒体迁移方案 | 高 | 用户/Codex | 已选 R2 Standard + 自有媒体子域名 + Cache；第四条视频前执行，当前不创建付费资源；含迁移、7 天双源观察和回滚清单 |
+| 进行中 | 视频媒体迁移方案 | 高 | 用户/Codex | 第四条按用户决定暂时继续 Pages；下一个视频前启用 R2 Standard + Pages Function 同源 `/media/...`，迁移四条现有 HLS并执行 7 天双源观察。 |
 | 未开始 | 独立复测 Ultimate Worker Pal 精确机制 | 高 | 用户/Codex | 复测 Yakumo 概率、Technique book farming、精确数值和补丁敏感步骤；完成前页面保持 source-footage 标签 |
 | 未开始 | 独立复测 Level 8 Worker Pals 坐标与补丁敏感数值 | 高 | 用户/Codex | 页面已明确标注 source-footage；后续复测 World Tree 解锁、坐标、Work Suitability 和伙伴技能行为 |
 
@@ -68,6 +69,7 @@
 
 - Palworld 1.0 完整官方 changelog 已发布，无 patch notes 缺失阻塞。
 - 无 Cloudflare 部署阻塞；GitHub push 已可自动触发 Cloudflare Pages production deployment。
+- 第四条视频已上线，无 R2 阻塞；R2 启用与四条旧媒体迁移是下一个视频发布前的前置任务。
 - Search Console 当前仍显示 sitemap“无法读取”、发现网页 0。站点端所有可复现检查通过；首页与 Performance 已收录，另 3 个代表 URL 显示 Google 尚无法识别，需完成本次部署、重提和 24 小时复查。
 
 ## 下次打开项目先做
