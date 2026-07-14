@@ -24,6 +24,45 @@ export type VideoGuide = {
 
 export const videos: VideoGuide[] = [
   {
+    slug: "palworld-1-0-ultimate-pal-builds",
+    title: "Palworld 1.0 Ultimate Pal Builds: Worker, Mount & Combat",
+    description:
+      "Build an endgame worker, Jetragon travel mount, five-jump Hartalis, and combat Hartalis with timestamped English narration and exact upgrade steps.",
+    duration: "PT4M29S",
+    durationSeconds: 269,
+    displayDuration: "4:29",
+    thumbnail: "/assets/video-guides/palworld-1-0-ultimate-pal-builds.jpg",
+    uploadDate: "2026-07-13T16:32:00+08:00",
+    streamUrl: "/media/palworld-1-0-ultimate-pal-builds/master.m3u8",
+    chapters: [
+      { startSeconds: 0, label: "Three endgame Pal builds" },
+      { startSeconds: 7, label: "Best worker passives" },
+      { startSeconds: 14, label: "Ancient Relic Recycler" },
+      { startSeconds: 39, label: "Farm Ancient Relics" },
+      { startSeconds: 62, label: "Artisan and Work Slave" },
+      { startSeconds: 73, label: "Choose Bakemi or another compact worker" },
+      { startSeconds: 93, label: "Finish the worker build" },
+      { startSeconds: 110, label: "Mount build overview" },
+      { startSeconds: 121, label: "Jetragon location and passives" },
+      { startSeconds: 145, label: "Solo versus multiplayer mount setup" },
+      { startSeconds: 162, label: "Summon and build Hartalis" },
+      { startSeconds: 178, label: "Five-jump Hartalis setup" },
+      { startSeconds: 198, label: "Combat Hartalis passives" },
+      { startSeconds: 217, label: "Potential Fruits and Ability Glasses" },
+      { startSeconds: 226, label: "Arena fruit route" },
+      { startSeconds: 235, label: "Four stars, Pal Souls, and Trust" },
+      { startSeconds: 243, label: "Wild boss damage test" },
+      { startSeconds: 254, label: "Reuse the formula on any favorite" },
+    ],
+    guidePath: "/guides/palworld-1-0-ultimate-pal-builds/",
+    guideTitle: "Read the complete worker, mount, and combat build guide",
+    verificationLabel: "Source-footage build guide",
+    verificationText:
+      "The authorized footage shows build v1.0.0.100427. The passives, locations, upgrade screens, and demonstrations are translated from that footage and remain patch-sensitive until independently retested on a newer public build.",
+    sourceDisclosure:
+      "This is an authorized English localization with expressive AI-generated English narration, burned-in English subtitles, and translated action-critical callouts. Incidental game-interface text may remain non-English.",
+  },
+  {
     slug: "palworld-1-0-level-8-worker-pals-locations",
     title: "Palworld 1.0 Level 8 Worker Pals & Locations",
     description:

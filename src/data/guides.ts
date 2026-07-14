@@ -2882,6 +2882,205 @@ export const guides: Guide[] = [
       { label: "Palworld 1.0 Patch Notes Explained", href: "/palworld-1-0/palworld-1-0-patch-notes-explained/" },
     ],
   },
+  {
+    title: "Palworld 1.0 Ultimate Pal Builds: Worker, Mount and Combat Guide",
+    slug: "guides/palworld-1-0-ultimate-pal-builds",
+    category: "guides",
+    categoryLabel: "Endgame Pal Builds",
+    description:
+      "Build a Palworld 1.0 endgame worker, Jetragon travel mount, five-jump Hartalis mount, and combat Hartalis with passives, Fruits, Pal Souls, and Trust.",
+    shortAnswer:
+      "Use the Ancient Relic Recycler to obtain the build-defining passives, finish a compact worker with surgery, Starfruit, and Pal Souls, build Jetragon for air and sea travel, add Skymarcher to Hartalis for five mounted jumps, and complete a combat Hartalis with four damage passives, Potential Fruits, four stars, max Pal Soul upgrades, and Trust +10.",
+    playerAdvice: [
+      "Choose the Pal you actually want to use before spending rare passives, Starfruit, Fruits, Pal Souls, or condensation materials.",
+      "Use Runner for a solo world only when you can lower Pal stamina drain; Eternal Engine is the safer multiplayer choice when server settings are fixed.",
+      "Treat coordinates and exact percentage values as source-footage evidence from build v1.0.0.100427 until they are independently retested on a newer build.",
+    ],
+    lastUpdated: "July 13, 2026",
+    readingTime: "10 min read",
+    featured: true,
+    tags: ["video guide", "endgame build", "Jetragon", "Hartalis", "Bakemi", "Ancient Relic Recycler"],
+    statusNotice:
+      "This guide translates authorized footage recorded on build v1.0.0.100427. The demonstrated passives, coordinates, item effects, and upgrade routes are patch-sensitive and have not been independently retested on a newer public build.",
+    updateNotice:
+      "Recheck Recycler rewards, passive values, boss locations, Arena rewards, and mount behavior after major Palworld hotfixes or balance patches.",
+    confirmedChanges: [
+      "The source footage visibly demonstrates separate worker, mount, and combat build workflows.",
+      "The localized video provides timestamp-aligned English narration, subtitles, official English names, coordinates, passive summaries, and action-critical callouts.",
+      "Pocketpair's official server technology list includes the Ancient Relic Recycler and Ability Glasses names used in this guide.",
+    ],
+    pendingUpdates: [
+      "Independently retest the full build route on the newest public Palworld release.",
+      "Reconfirm the exact Demon’s Hand, movement, damage, stamina, rank, Fruit, and Trust effects after future balance updates.",
+      "Recheck the visible Jetragon and Arena coordinates if the world map changes.",
+    ],
+    sourceNotes: [
+      "The companion video is an authorized English localization with expressive AI-generated English narration, burned-in English subtitles, and translated action-critical overlays.",
+      "Incidental non-English game-interface text may remain in the footage. Every menu choice, passive, coordinate, and upgrade needed to follow the route is translated or summarized in English.",
+      "Descriptions below distinguish what the footage shows from independent current-patch verification.",
+    ],
+    lastVerified: "July 13, 2026",
+    testing: {
+      gameVersion: "Authorized source footage: v1.0.0.100427",
+      lastTested: "Not independently retested on a newer build",
+      platform: "PC / Steam source footage",
+      mode: "Solo settings, base work, travel, Arena, and boss demonstrations",
+      mods: "Not documented in the source",
+      verification: "shown-in-source-footage",
+      note: "Use the build order as a documented source-footage method and recheck patch-sensitive values before spending rare resources.",
+    },
+    visual: {
+      src: "/assets/video-guides/palworld-1-0-ultimate-pal-builds.jpg",
+      alt: "Hartalis in Palworld with an English Ultimate Pal Builds thumbnail for worker, mount, and combat setups",
+      caption: "The separate 4:29 video guide shows each build step with English narration, subtitles, chapter jumps, and on-screen callouts.",
+    },
+    sections: [
+      {
+        heading: "Build overview: three jobs, three different priorities",
+        paragraphs: [
+          "The footage divides an endgame roster into three jobs: a base worker, a travel mount, and a combat Pal. The expensive part is not choosing a popular species; it is matching passives, upgrade items, rank, and settings to the job the Pal must perform.",
+          "The same Pal can fill more than one role, but do not assume one passive set is optimal for every role. Hartalis is the example: its mount build emphasizes movement and extra jumps, while its combat build replaces those passives with damage effects.",
+        ],
+        table: {
+          headers: ["Role", "Example in the footage", "Core priority", "Final checks"],
+          rows: [
+            ["Base worker", "Bakemi or another compact favorite", "Work Speed, uptime, and clean pathing", "Four passives, job Technique, Starfruit, Pal Souls"],
+            ["Air and sea travel", "Jetragon", "Movement speed and usable stamina", "Legend, Dimensional Leap, Swift, Runner or Eternal Engine"],
+            ["Land traversal", "Hartalis", "Movement speed plus five mounted jumps", "Dimensional Leap, Swift, Runner, Skymarcher"],
+            ["Combat", "Hartalis", "Damage passives and maximum potential", "Fruits, four stars, Pal Souls, Trust +10"],
+          ],
+        },
+      },
+      {
+        heading: "1. Build the worker passive core",
+        paragraphs: [
+          "The demonstrated worker core uses Demon’s Hand, Remarkable Craftsmanship, Artisan, and either Work Slave or Nocturnal. The source shows Demon’s Hand at +90% Work Speed, Remarkable Craftsmanship at +75%, and Artisan at +50%; these exact percentages are patch-sensitive.",
+          "Demon’s Hand is presented as more than a speed passive: the footage says it adds a blue aura, prevents nearby World Tree ore and trees from disappearing, and increases SAN drain. Judge the real production gain against the extra SAN support your base may need.",
+        ],
+      },
+      {
+        heading: "2. Farm the Ancient Relic Recycler rewards",
+        paragraphs: [
+          "The footage unlocks the Ancient Relic Recycler at Technology Level 74 and feeds it Ancient Relics. The demonstrated sources are World Tree Pal Expeditions and defeating Pals inside the World Tree.",
+          "Recycle the Relics until you obtain Demon’s Hand, Remarkable Craftsmanship, movement passives, damage passives, Applied Technique books, or Starfruit needed by the chosen build. Reward availability can change, so confirm the current Recycler pool before committing a large stockpile.",
+        ],
+        bullets: [
+          "Dispatch a World Tree Pal Expedition and collect the Ancient Relics.",
+          "Use World Tree combat as the second Relic source shown in the footage.",
+          "Keep the exact passive and item goal visible before recycling.",
+          "Stop when the target build is complete instead of spending every Relic automatically.",
+        ],
+      },
+      {
+        heading: "3. Finish a compact night worker",
+        paragraphs: [
+          "The footage buys Artisan from a Defense Force merchant around 74, -478 and adds Work Slave at the Pal Surgery Table. It then chooses Bakemi because it is small, Dark, and naturally active at night. The broader rule is to choose a worker that reaches its station reliably and stays active during the hours your base needs.",
+          "Install all four passives at the Pal Surgery Table, apply the matching Handiwork Technique, use Starfruit to raise rank, and finish with Pal Soul Work Speed upgrades. Before spending the final resources, verify that the worker does not stall on walls, storage, other Pals, food, or station placement.",
+        ],
+      },
+      {
+        heading: "4. Build Jetragon for air and sea travel",
+        paragraphs: [
+          "The source map places the Level 70 Alpha Jetragon around -544, -1335. It demonstrates Jetragon continuing to float safely on water after stamina runs out, which lets this build cover air and sea travel without a separate swimming mount.",
+          "Keep Legend, then add Dimensional Leap and Swift. Choose Runner in a solo world where Pal stamina drain can be reduced in World Settings. On multiplayer or a server you do not control, use Eternal Engine for the more reliable stamina reserve.",
+        ],
+        table: {
+          headers: ["Passive", "Source-footage role", "When to use it"],
+          rows: [
+            ["Legend", "+20% movement in the footage", "Keep as the base movement passive"],
+            ["Dimensional Leap", "+50% movement in the footage", "Primary Recycler movement upgrade"],
+            ["Swift", "+30% movement in the footage", "Primary Recycler movement upgrade"],
+            ["Runner", "+20% movement in the footage", "Solo with reduced stamina drain"],
+            ["Eternal Engine", "Extra stamina", "Multiplayer or fixed server settings"],
+          ],
+        },
+      },
+      {
+        heading: "5. Turn Hartalis into a five-jump land mount",
+        paragraphs: [
+          "Craft a Hartalis Slab, summon the Level 70 boss shown in the footage, and win the fight. The mount build uses Dimensional Leap, Swift, Runner, and Skymarcher.",
+          "Hartalis already has a triple mounted jump in the demonstration. Skymarcher adds two more, producing five chained jumps. The practical payoff is terrain control: climb or clear many cliffs without stopping to switch mounts.",
+          "The footage says movement speed for this mount setup depends on passives and rank. Treat that statement as a source-build mechanic and recheck it after balance updates before spending rare rank materials.",
+        ],
+      },
+      {
+        heading: "6. Rebuild Hartalis for combat",
+        paragraphs: [
+          "The combat version replaces the movement set with Savior, Twin-Edged Holy Blade, God of Destruction, and Demon God. Savior is shown as native to Hartalis, while the other three are obtained through the Recycler route in the footage.",
+          "Do not overwrite a finished mount casually. If you want both jobs available at the same time, maintain separate Hartalis builds so mount movement and combat damage do not compete for the same four passive slots.",
+        ],
+      },
+      {
+        heading: "7. Max potential, rank, Pal Souls, and Trust",
+        paragraphs: [
+          "Use Life, Power, and Stout Fruits to raise the three potentials shown by Ability Glasses. The example Hartalis displays 96 Health potential, so the footage uses four Life Fruits to reach 100.",
+          "The Arena route is shown around 63, 118. Earn Battle Tickets, then trade with the entrance merchant for the required Fruits. Finish the combat build at four stars, maximize every relevant Pal Soul stat upgrade, and raise Trust to +10.",
+        ],
+        bullets: [
+          "Equip Ability Glasses and record all three potential values before buying Fruits.",
+          "Buy only the deficit for Life, Power, and Stout potential.",
+          "Reach four condensation stars.",
+          "Max the Pal Soul stat upgrades used by the combat build.",
+          "Raise Trust to +10, then perform a controlled damage test.",
+        ],
+      },
+      {
+        heading: "8. Copy the method, not necessarily the Pal",
+        paragraphs: [
+          "The final boss test demonstrates a completed build, but the transferable lesson is the role-based formula. Pick a favorite Pal, decide whether it will work, travel, or fight, and then spend only on passives and upgrades that serve that role.",
+          "Before publishing or sharing a build, record the game build, world settings, mode, source of each passive, and whether every value was independently tested. That prevents a source-footage route from being mistaken for a permanent current-patch guarantee.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What are the best worker passives in this Palworld 1.0 build?",
+        answer:
+          "The footage uses Demon’s Hand, Remarkable Craftsmanship, Artisan, and either Work Slave or Nocturnal. Exact effects and percentages are patch-sensitive.",
+      },
+      {
+        question: "Should Jetragon use Runner or Eternal Engine?",
+        answer:
+          "Use Runner when solo settings let you reduce Pal stamina drain. Use Eternal Engine on multiplayer or fixed servers where extra stamina is more dependable.",
+      },
+      {
+        question: "How does Hartalis reach five mounted jumps?",
+        answer:
+          "The footage shows Hartalis with a native triple jump. Adding Skymarcher gives two more mounted jumps, for five total.",
+      },
+      {
+        question: "Which passives does the combat Hartalis use?",
+        answer:
+          "Savior, Twin-Edged Holy Blade, God of Destruction, and Demon God. Savior is shown as native to Hartalis in the source footage.",
+      },
+      {
+        question: "Where does the video get Potential Fruits?",
+        answer:
+          "It uses the Arena around 63, 118, earns Battle Tickets, and trades with the entrance merchant for Life, Power, and Stout Fruits.",
+      },
+      {
+        question: "Has this entire build been independently retested on the newest Palworld version?",
+        answer:
+          "No. It is translated from authorized footage marked v1.0.0.100427. The page labels coordinates, values, and mechanics as source-footage guidance until a newer-build retest is complete.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+      {
+        label: "Pocketpair official server technology IDs",
+        href: "https://docs.palworldgame.com/settings-and-operation/technologyids/",
+      },
+    ],
+    relatedLinks: [
+      { label: "Watch the 4:29 English Ultimate Pal Builds video", href: "/videos/palworld-1-0-ultimate-pal-builds/" },
+      { label: "Palworld 1.0 Ultimate Worker Pal Build", href: "/guides/palworld-1-0-ultimate-worker-pal-build/" },
+      { label: "Palworld 1.0 Level 8 Worker Pal Locations", href: "/guides/palworld-1-0-level-8-worker-pals-locations/" },
+      { label: "Palworld 1.0 World Tree Guide", href: "/palworld-1-0/palworld-1-0-world-tree-guide/" },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {
