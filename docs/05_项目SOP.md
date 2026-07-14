@@ -47,12 +47,15 @@ npm run build
 
 1. 先调用 `/Users/zousunquan/.codex/skills/localize-short-video/` 完成授权、最高画质下载、英文化和 master QA。
 2. 用 Skill 的 `build_web_hls.py` 生成 H.264/AAC HLS；确保每个静态文件低于托管限制并完整解码。正式扩量方案将 HLS 保存在 Git 仓库外并上传私有 R2。
+   - 音频验收必须逐层执行：独立英文人声轨用于检查台词与时间轴，最终混音用于检查人声确实混入，正式 master 用于检查封装后的实际音轨，网站 HLS 用于检查转码后的实际播放音轨。四者不能互相替代。
+   - 最终 master 和网站 HLS 都必须单独提取音频并反向转写；若 HLS 无英文段落、只识别到背景音乐或与预期时间轴明显不符，禁止部署。
 3. 默认由 Pages Function 通过 `MEDIA_BUCKET` 读取私有 R2；没有自有域名时继续使用现有 `pages.dev/media/...`。只有用户明确选择临时回退时，才把一条 HLS 放入 `public/media/<video-slug>/` 随 Pages 部署，并记录仓库体积和下次迁移门槛。
 4. 在 `/videos/` 新增真实视频卡；每条视频使用 `/videos/<video-slug>/` 独立详情页和 `GuideVideo.astro` 原生播放器。无需登录场景保持 0 iframe，不公开 YouTube 备份链接。
 5. 在 `guides.ts` 单独维护完整英文文字攻略。视频页只放播放器、简介、章节、验证/披露和文字攻略 CTA；文字页放完整步骤、FAQ、来源和对应视频 CTA，不嵌播放器。
 6. 两个 URL 使用不同 title/meta/H1 和自引用 canonical；`VideoObject` 只在视频页出现且恰好 1 个，文字攻略页必须为 0；两页都进入 sitemap 并双向内链。
 7. `npm run build` 后检查 390px/1280px、视频索引真实数量、旧文章回归、title/meta、canonical、最大媒体文件、文字页 0 player/0 VideoObject。
 8. push `main`，等待 Cloudflare production；未登录线上浏览器必须证明全部新增视频可加载，并至少对本次新增视频验证 `currentTime` 增加和章节跳转。
+   - `readyState=4`、`currentTime` 前进和全片解码只证明媒体能播，不能证明英文配音存在。上线后还必须抓取生产 HLS 的实际 manifest/分片，提取音频并反向转写；同时确认播放器 `muted=false`、`volume>0`。
 9. YouTube 只作后台备份：发布前选择 `Unlisted/不公开列出`，保存后必须在 Studio 内容列表读取最终可见性；不把备份链接加入公开站点。若自定义缩略图被账号功能验证拦截，记录限制并继续使用站内缩略图，不得改成 Public。
 10. 首页若有用户提供的布局参考图，先做同尺寸截图对照；新视频只替换唯一 featured 主卡，视频、工具和完整文字攻略继续保持独立版块。
 11. 只有用户明确启用 R2/Stream 后才创建 bucket 或可能计费的资源。R2 未启用时可以完成本地 HLS、页面、SEO 和播放验收，但不得提交会让 production 媒体 404 的版本。

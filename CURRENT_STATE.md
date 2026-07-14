@@ -23,6 +23,7 @@
 - GitHub App 已授权 `zsq378554827/palworld-1-0-guide-hub`，Cloudflare Pages GitHub push 自动部署已验证成功。
 - 第三条 Level 8 Worker Pals 视频、独立文字攻略、站内 HLS 和参考图首页布局已完成，并已通过 Cloudflare production 总验收。
 - 第四条 Ultimate Pal Builds 已按前三条相同的 Cloudflare Pages 静态 HLS 方式上线并通过生产总验收；R2 本次未启用，下一个视频发布前再启用并迁移四条现有 HLS。
+- 2026-07-14 用户复核发现第四条最初上线版本只有背景音乐。已确认根因是最终混音没有写入已生成的英文人声，而旧 QA 误把独立人声轨的反向转写当作最终混音验证；修复版已改用版本化 HLS 路径 `palworld-1-0-ultimate-pal-builds-v2` 防止旧分片缓存。
 
 ## Completed
 
@@ -44,6 +45,8 @@
 - 2026-07-14 用户决定本次继续沿用 Pages 静态 HLS；47 个第四条媒体文件与仓库外原始 HLS 的 SHA-256 全部一致后加入 `public/media/`，R2 Function 与 `wrangler.toml` 未提交，不会拦截静态 `/media/...`。
 - commit `bf0015c` 已由 GitHub push 自动部署为 Cloudflare Pages production `45e7af6b`；新视频页、独立文字页、缩略图、HLS、init、分片和两个 sitemap 均返回 200 与正确 MIME。
 - 第四条线上未登录实播通过：269.37 秒、1920×1080、`readyState=4`、时间从 0 前进、0 iframe；3:18 章节跳转后继续播放，390px 无横向溢出、0 控制台错误；文字页保持 0 player/0 VideoObject。
+- 第四条配音修复版重新混入 37 段时间对齐英文人声，背景音乐/游戏音效在人声期间动态闪避；正式版约 -16.1 LUFS，完整反向转写覆盖 0:00–4:27。修复后 master 全片解码通过，2560×1440/60fps/HEVC/AAC/269.37 秒，SHA-256 `21638c9682d068a325d13a4b9280d919e609947725e381e3e48b7a2fc8ad8273`。
+- 修复版 1080p60 HLS 为 45 个分片、164,622,669 bytes、最大分片 5,562,101 bytes；HLS 自身完整反向转写识别为 English（概率 1.0），不再以独立人声轨代替网站交付物验收。本地未登录浏览器确认未静音、音量 1、`readyState=4`、时间前进，3:18 章节跳转后继续播放。
 - 本次约 157 MB 媒体 push 后，Cloudflare 新部署记录先出现但资源约 5 分钟后才可用；不能在部署记录刚出现时把缺失资源回退页误判为上线成功。
 - 2026-07-07 质量复查完成：内部链接 HTTP 检查 22 项通过；18 个页面 title/description 无重复；10 篇文章均包含 Short answer、实用建议、FAQ、指定 patch notes 更新提示、Last Updated 和非官方声明。
 - 390px 手机、768px 平板、1280px 桌面共 54 次页面 viewport 检查通过，无横向溢出。

@@ -33,7 +33,7 @@ export const videos: VideoGuide[] = [
     displayDuration: "4:29",
     thumbnail: "/assets/video-guides/palworld-1-0-ultimate-pal-builds.jpg",
     uploadDate: "2026-07-13T16:32:00+08:00",
-    streamUrl: "/media/palworld-1-0-ultimate-pal-builds/master.m3u8",
+    streamUrl: "/media/palworld-1-0-ultimate-pal-builds-v2/master.m3u8",
     chapters: [
       { startSeconds: 0, label: "Three endgame Pal builds" },
       { startSeconds: 7, label: "Best worker passives" },
