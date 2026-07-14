@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AdvancedTipsSection from "../components/AdvancedTipsSection.astro";
 import VideoGuideCard from "../components/VideoGuideCard.astro";
 import { videos } from "../data/videos";
 import { absoluteUrl, site } from "../data/site";
@@ -194,6 +195,8 @@ const structuredData = {
       {videos.map((video) => <VideoGuideCard video={video} />)}
     </div>
   </section>
+
+  <AdvancedTipsSection />
 
   <section class="home-content-section home-tools" id="tools" aria-labelledby="tools-title">
     <div class="home-section-heading">

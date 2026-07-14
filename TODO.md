@@ -52,6 +52,7 @@
 | 已完成 | 修复 Header 伪搜索 | 高 | Codex | `/guides/?q=` 已索引全部文字攻略和视频；支持结果数、无结果、清空、键盘提交；7 个查询用例通过 |
 | 已完成 | 首批 title/meta CTR 优化 | 高 | Codex | 31 个正式页面 title ≤60、description ≤160，均无重复；全量清单见第一周 `TECHNICAL_QA.md` |
 | 已完成 | 补聚合页和视频 SEO 增强 | 中 | Codex | 首页 WebSite；5 个聚合页 CollectionPage/ItemList；video sitemap 3 条；3 个视频页共 27 个 Clip |
+| 已完成 | 将 5 张截图整理为单篇图文攻略并增加首页入口 | 高 | Codex | 完整内容仅放在独立 `/guides/palworld-1-0-tips/`，首页视频下方只保留 1 张可扩展的图文攻略入口卡；文章含 5 章 16 条内容、16 张原创 WebP、语义 H2/H3、FAQ、Article/Breadcrumb、Guides 搜索、sitemap 与内链；修正捕获奖励为前 5 次，未复测数值显式标注；34 页 build 和 390/768/1440 QA 通过。 |
 | 未开始 | 30 天四内容簇冲刺 | 高 | Codex | 新增 16–20 个单一意图页并更新 8 个旧页；新手、性能、服务器商业意图、1.0 新内容各自成簇 |
 | 未开始 | 服务器 affiliate 验证闭环 | 中 | 用户/Codex | 申请 2–3 个计划；真实测试、条款复核、FTC 披露、`affiliate_click`、outbound CTR 与 EPC 看板 |
 | 进行中 | 视频媒体迁移方案 | 高 | 用户/Codex | 第四条按用户决定暂时继续 Pages；下一个视频前启用 R2 Standard + Pages Function 同源 `/media/...`，迁移四条现有 HLS并执行 7 天双源观察。 |

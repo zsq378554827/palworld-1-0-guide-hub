@@ -2,11 +2,13 @@
 import GuideCard from "../../components/GuideCard.astro";
 import VideoGuideCard from "../../components/VideoGuideCard.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { advancedTipsGuide } from "../../data/advancedTips";
 import { getGuidesByCategory, guides } from "../../data/guides";
 import { videos } from "../../data/videos";
 import { collectionStructuredData } from "../../data/site";
 
-const pageGuides = getGuidesByCategory("guides");
+const pageGuides = [...getGuidesByCategory("guides"), advancedTipsGuide];
+const searchableGuides = [...guides, advancedTipsGuide];
 const title = "Palworld 1.0 Guides";
 const description = "Search Palworld 1.0 guides and videos for beginners, saves, MOD cleanup, performance, servers, locations, patch notes, and worker Pals.";
 const structuredData = collectionStructuredData(
@@ -68,7 +70,7 @@ const structuredData = collectionStructuredData(
     </div>
     <p class="search-empty" data-search-empty hidden>No matching guide or video was found. Try a broader term such as “server”, “performance”, or “Pal”.</p>
     <div class="card-grid search-result-grid">
-      {guides.map((guide) => (
+      {searchableGuides.map((guide) => (
         <div
           class="search-result-item"
           data-search-item

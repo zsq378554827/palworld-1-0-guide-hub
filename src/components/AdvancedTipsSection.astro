@@ -1,0 +1,46 @@
+---
+import { advancedTipsGuide } from "../data/advancedTips";
+
+const illustratedGuides = [
+  {
+    title: advancedTipsGuide.title,
+    description: advancedTipsGuide.description,
+    href: `/${advancedTipsGuide.slug}/`,
+    image: advancedTipsGuide.visual?.src ?? "/assets/advanced-tips/01-world-settings.webp",
+    alt: advancedTipsGuide.visual?.alt ?? "Palworld 1.0 illustrated strategy guide",
+    meta: "16 illustrated tips · 5 chapters · 14 min read",
+    topics: ["Progression", "Combat", "Endgame"],
+  },
+];
+---
+
+<section class="home-content-section illustrated-guides-home" id="illustrated-guides" aria-labelledby="illustrated-guides-title">
+  <div class="home-section-heading">
+    <div>
+      <p class="home-kicker">Image-led walkthroughs</p>
+      <h2 id="illustrated-guides-title">Illustrated strategy guides</h2>
+    </div>
+    <a href="/guides/">View all guides</a>
+  </div>
+
+  <div class="illustrated-guide-list">
+    {illustratedGuides.map((guide) => (
+      <a class="illustrated-guide-card" href={guide.href}>
+        <div class="illustrated-guide-media">
+          <img src={guide.image} alt={guide.alt} width="1200" height="675" loading="lazy" decoding="async" />
+          <span>Illustrated guide</span>
+        </div>
+        <div class="illustrated-guide-copy">
+          <p class="content-label">Featured field manual</p>
+          <h3>{guide.title}</h3>
+          <p>{guide.description}</p>
+          <div class="illustrated-guide-topics" aria-label="Guide topics">
+            {guide.topics.map((topic) => <span>{topic}</span>)}
+          </div>
+          <small>{guide.meta}</small>
+          <strong>Read the complete illustrated guide →</strong>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

@@ -10,6 +10,16 @@
 
 ## 2026-07-14
 
+### 单篇 16 条进阶技巧图文攻略与首页紧凑入口
+
+- 将用户提供的 5 张攻略截图整理为一篇包含 5 章、16 条可检索内容和 16 张对应配图的英文攻略；完整技巧仅在独立文章内展示。
+- 首页视频版块下方改为紧凑的 Illustrated strategy guides 区域，当前只显示 1 张文章入口卡、0 张技巧明细卡；后续图文内容可继续增加同尺寸入口，不再把整篇文章铺满首页。
+- 新增独立支柱页 `/guides/palworld-1-0-tips/`，使用 Short answer、5 个 H2 章节、16 个 H3 技巧、FAQ、官方来源和上下文内链覆盖 progression、combat、mounts、breeding、World Tree、automation、expeditions 等搜索意图。
+- 新增 16 张原创 1200×675 WebP 配图，统一为深蓝/青绿/琥珀色的游戏攻略视觉，不包含文字、第三方 Logo 或水印；所有图片均有描述性 alt text，并逐条匹配对应攻略。
+- 把截图中已过时的“前 12 次捕获奖励”按 Pocketpair 官方 v1.0 changelog 修正为前 5 次；固定等级、百分比、奖励池与 100% 继承等未独立复测信息均标记为 `Needs current-build test`。
+- 支柱页已加入 Guides 索引与搜索、标准 sitemap、canonical、Article 和 BreadcrumbList JSON-LD；title 58 字符、description 126 字符，图片正文与首页摘要保持不同信息深度。
+- `npm run build` 通过并生成 34 个页面；文章内 16/16 图片、内部锚点、搜索入口和 sitemap 通过静态检查。Playwright 在 390/768/1440 三档验证首页紧凑入口与支柱页无横向溢出、缺图或 broken image。
+
 ### 修复第四个视频只有背景音乐、没有英文配音
 
 - 用户实际播放发现第四条视频没有英文解说。诊断确认英文人声文件本身完整，但制作阶段的最终混音未写入该人声；此前 QA 又错误地反向转写了独立人声轨，因此产生了假通过。

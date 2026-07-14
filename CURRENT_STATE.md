@@ -24,6 +24,7 @@
 - 第三条 Level 8 Worker Pals 视频、独立文字攻略、站内 HLS 和参考图首页布局已完成，并已通过 Cloudflare production 总验收。
 - 第四条 Ultimate Pal Builds 已按前三条相同的 Cloudflare Pages 静态 HLS 方式上线并通过生产总验收；R2 本次未启用，下一个视频发布前再启用并迁移四条现有 HLS。
 - 2026-07-14 用户复核发现第四条最初上线版本只有背景音乐。已确认根因是最终混音没有写入已生成的英文人声，而旧 QA 误把独立人声轨的反向转写当作最终混音验证；修复版已改用版本化 HLS 路径 `palworld-1-0-ultimate-pal-builds-v2` 防止旧分片缓存。
+- 2026-07-14 已完成截图攻略的 SEO 化图文落地：5 张截图整理为一篇包含 5 章、16 条技巧和 16 张对应配图的独立支柱页 `/guides/palworld-1-0-tips/`；首页视频下方仅保留 1 张紧凑图文攻略入口卡，便于后续继续增加同类文章。发布前本地构建与响应式 QA 已通过。
 
 ## Completed
 
@@ -50,6 +51,10 @@
 - 修复随 commit `9283092` 部署为 Cloudflare Pages production `a6acbaf0`。生产 HLS 与本地 HLS 提取音频的 SHA-256 完全一致，production HLS 完整反向转写识别为 English（概率 1.0，覆盖 0:00–4:27）；线上未登录播放器未静音、音量 1、时间正常前进，3:18 章节跳转后继续播放。
 - 修正版 YouTube 后台备份 `upMe6PaKgXg` 已复核为 Unlisted，英语（美国）SRT 已发布；旧的无配音备份 `VxtDWL6Cv78` 已改为 Private 隔离。公开网站不使用或展示 YouTube 备份链接。
 - 本次约 157 MB 媒体 push 后，Cloudflare 新部署记录先出现但资源约 5 分钟后才可用；不能在部署记录刚出现时把缺失资源回退页误判为上线成功。
+- 新增 16 张原创 1200×675 WebP 攻略配图，逐条对应世界设置、捕获奖励、属性、坐骑、地图标记、元素联动、繁育、终局区域、建造自动化与远征等内容；图片不含第三方 Logo、水印或文字，并为页面提供描述性 alt text。
+- 新增 `16 Palworld 1.0 Tips for Progression, Combat & Endgame` 支柱页：包含 Short answer、5 个 H2 章节、16 个 H3 技巧、FAQ、官方来源、验证状态、上下文内链、Article 与 BreadcrumbList JSON-LD，并进入 Guides 搜索和 sitemap。
+- 已把源图中已过时的“前 12 次捕获奖励”修正为官方 1.0 的前 5 次；固定等级、百分比、奖励池和 100% 词条继承等未独立复测结论均显式标为 `Needs current-build test`，不作为官方事实发布。
+- 新图文内容本地 `npm run build` 通过并生成 34 个页面；独立文章的 16/16 图片存在且唯一，title 58 字符、description 126 字符、canonical、结构化数据与 sitemap 均通过静态检查。首页只输出 1 张图文攻略入口卡、0 张技巧明细卡；Playwright 在 390/768/1440 三档验证首页和支柱页均无横向溢出、缺图或 broken image，搜索结果和章节锚点可用；本地仅出现 Cloudflare Insights 对 localhost 的预期 CORS 报错。
 - 2026-07-07 质量复查完成：内部链接 HTTP 检查 22 项通过；18 个页面 title/description 无重复；10 篇文章均包含 Short answer、实用建议、FAQ、指定 patch notes 更新提示、Last Updated 和非官方声明。
 - 390px 手机、768px 平板、1280px 桌面共 54 次页面 viewport 检查通过，无横向溢出。
 - 首页文章卡已改为整卡可点击，首页展示全部 10 篇 MVP 文章。
@@ -176,6 +181,7 @@
 - Patch Notes、Sunreach、World Tree、New Pals、Server Setup、Best Server Settings 已加入可操作表格或检查框架。
 - Beginner、Multiplayer、Performance 已完成正式深度更新，加入分阶段路线、决策表、故障诊断、Source note、内链和原创 WebP 视觉。
 - Guides、Server、About 三个入口页已更新正式发布后文案、阅读路径、入口导航和原创/自制配图。
+- 首页视频下方只显示 1 张紧凑的 Illustrated strategy guides 入口卡；5 章 16 条完整内容仅放在独立支柱页，后续新增图文攻略时可继续增加同尺寸入口卡，不再把文章正文铺满首页。
 
 ## Do Not Do Now
 

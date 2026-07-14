@@ -6,6 +6,7 @@ const staticPaths = [
   "/",
   "/palworld-1-0/",
   "/guides/",
+  "/guides/palworld-1-0-tips/",
   "/videos/",
   "/server/",
   "/base-building/",
@@ -25,7 +26,7 @@ const isoDate = (value: string) => new Date(value).toISOString().slice(0, 10);
 
 export function GET() {
   const urls = [
-    ...staticPaths.map((path) => ({ path, lastmod: "2026-07-13" })),
+    ...staticPaths.map((path) => ({ path, lastmod: "2026-07-14" })),
     ...guides
       .filter((guide) => !guide.canonical || guide.canonical === `/${guide.slug}/`)
       .map((guide) => ({ path: `/${guide.slug}/`, lastmod: isoDate(guide.lastUpdated) })),
