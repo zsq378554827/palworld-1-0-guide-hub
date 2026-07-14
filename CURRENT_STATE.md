@@ -47,6 +47,8 @@
 - 第四条线上未登录实播通过：269.37 秒、1920×1080、`readyState=4`、时间从 0 前进、0 iframe；3:18 章节跳转后继续播放，390px 无横向溢出、0 控制台错误；文字页保持 0 player/0 VideoObject。
 - 第四条配音修复版重新混入 37 段时间对齐英文人声，背景音乐/游戏音效在人声期间动态闪避；正式版约 -16.1 LUFS，完整反向转写覆盖 0:00–4:27。修复后 master 全片解码通过，2560×1440/60fps/HEVC/AAC/269.37 秒，SHA-256 `21638c9682d068a325d13a4b9280d919e609947725e381e3e48b7a2fc8ad8273`。
 - 修复版 1080p60 HLS 为 45 个分片、164,622,669 bytes、最大分片 5,562,101 bytes；HLS 自身完整反向转写识别为 English（概率 1.0），不再以独立人声轨代替网站交付物验收。本地未登录浏览器确认未静音、音量 1、`readyState=4`、时间前进，3:18 章节跳转后继续播放。
+- 修复随 commit `9283092` 部署为 Cloudflare Pages production `a6acbaf0`。生产 HLS 与本地 HLS 提取音频的 SHA-256 完全一致，production HLS 完整反向转写识别为 English（概率 1.0，覆盖 0:00–4:27）；线上未登录播放器未静音、音量 1、时间正常前进，3:18 章节跳转后继续播放。
+- 修正版 YouTube 后台备份 `upMe6PaKgXg` 已复核为 Unlisted，英语（美国）SRT 已发布；旧的无配音备份 `VxtDWL6Cv78` 已改为 Private 隔离。公开网站不使用或展示 YouTube 备份链接。
 - 本次约 157 MB 媒体 push 后，Cloudflare 新部署记录先出现但资源约 5 分钟后才可用；不能在部署记录刚出现时把缺失资源回退页误判为上线成功。
 - 2026-07-07 质量复查完成：内部链接 HTTP 检查 22 项通过；18 个页面 title/description 无重复；10 篇文章均包含 Short answer、实用建议、FAQ、指定 patch notes 更新提示、Last Updated 和非官方声明。
 - 390px 手机、768px 平板、1280px 桌面共 54 次页面 viewport 检查通过，无横向溢出。

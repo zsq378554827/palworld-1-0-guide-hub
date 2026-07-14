@@ -17,6 +17,8 @@
 - 复用已验证画面、只替换音频，保持 2560×1440、60fps 和 269.37 秒；正式版全片解码通过，SHA-256 更新为 `21638c9682d068a325d13a4b9280d919e609947725e381e3e48b7a2fc8ad8273`。
 - 重新生成 45 段 1080p60 HLS，并把公开媒体路径改为 `palworld-1-0-ultimate-pal-builds-v2`，防止浏览器继续命中旧的纯背景分片。视频页 URL、SEO、章节和文字攻略均保持不变。
 - 将“最终混音、正式 master、网站 HLS 必须分别反向转写”加入项目 SOP 与 `localize-short-video` Skill；文件可解码、播放器时间前进不再被视为英文配音通过的证据。
+- commit `9283092` 已部署为 Cloudflare Pages production `a6acbaf0`；production HLS 与本地 HLS 音频哈希一致，完整英语反向转写、未静音播放时间前进和 3:18 章节跳转均通过。
+- YouTube 修正版备份 `upMe6PaKgXg` 已设为 Unlisted 并发布英语（美国）SRT；旧无配音备份 `VxtDWL6Cv78` 已改为 Private 隔离，网站继续只使用无需登录的站内 HLS。
 
 ### 第四个视频攻略：Ultimate Pal Builds 正式上线
 

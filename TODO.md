@@ -45,7 +45,7 @@
 | 已完成 | 视频与文字攻略独立分区 | 高 | Codex | commit `b2d82ad`、Cloudflare production `90ed9aa2`；新增 `/videos/` 和两个独立视频页，两篇文字攻略移除播放器/VideoObject，线上双视频实播与章节跳转通过 |
 | 已完成 | 第三个 Level 8 Worker Pals 视频完整上线 | 高 | Codex | commit `85a028b`、Cloudflare production `bd06e946`；4K 成片、SRT、缩略图、YouTube Unlisted、HLS、独立视频/文字页、首页右上推荐位、SEO、线上实播与 2:10 章节均通过 |
 | 已完成 | 第四个 Ultimate Pal Build 视频完整上线 | 高 | Codex | commit `bf0015c`、Cloudflare production `45e7af6b`；YouTube Unlisted + 英文 SRT、Pages 静态 HLS、独立视频/文字页、SEO、线上未登录播放、3:18 章节和 390px 均通过。 |
-| 已完成 | 修复第四条网站视频缺少英文配音 | 最高 | Codex | 根因是最终混音漏入英文人声且旧 QA 误测独立人声轨；已重混正式版、重建版本化 HLS v2，并对最终 master 与 HLS 分别做完整英文反向转写、全片解码和本地未登录播放/章节验收。 |
+| 已完成 | 修复第四条网站视频缺少英文配音 | 最高 | Codex | commit `9283092`、production `a6acbaf0`；已重混正式版、重建版本化 HLS v2，并对 master、本地/生产 HLS 分别完成英语反向转写、全片解码、未静音播放与章节验收；YouTube 修正版 `upMe6PaKgXg` 为 Unlisted，旧版已 Private。 |
 | 已完成 | 自然流量、SEO 与变现总复查 | 高 | Codex | GSC 217 impressions / 10 clicks / 4.6% CTR / 平均排名 8.4；Cloudflare 3 天 104 PV / 46 visits；报告输入保存在 `reviews/2026-07-13_seo_growth_monetization/artifact.json` |
 | 已完成 | 制定 SEO 增长与变现 90 天详细执行计划 | 高 | Codex | `docs/07_SEO增长与变现90天执行计划.md`；含 35 个具体任务、18 个新页、8 个旧页更新、周节奏、阶段门和验收口径 |
 | 进行中 | 诊断并修复 GSC sitemap“无法抓取” | 高 | Codex | T02/T03 完成并部署为 `ce69d834`；标准/视频 sitemap 已重提，GSC 即时仍无法抓取；单 URL 请求遇到每日配额；已安排每天 09:30 复查，以“成功 + 发现网页 >0”完成 T04 |
