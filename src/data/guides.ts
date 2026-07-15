@@ -3081,6 +3081,207 @@ export const guides: Guide[] = [
       { label: "Palworld 1.0 World Tree Guide", href: "/palworld-1-0/palworld-1-0-world-tree-guide/" },
     ],
   },
+  {
+    title: "Palworld 1.0 Max Stat Knocklem Ignis Build: 21K Attack and 15K Defense",
+    slug: "guides/palworld-1-0-max-stat-knocklem-ignis-build",
+    category: "guides",
+    categoryLabel: "Combat Pal Build",
+    description:
+      "Palworld 1.0 Knocklem Ignis build guide explaining the source-footage 21K attack and 15K defense stat stack, including support Pals, Orserk stacks, accessories, consumables, and passive routes.",
+    shortAnswer:
+      "The source footage reaches the huge stat panel by stacking multiple layers: fire and attack support Pals, Orserk stack maintenance, Knocklem Ignis Iron Guardian Mode, element-matched accessories, Core Badges, consumable buffs, enhancement-gun stat upgrades, and either burst or tank passives.",
+    playerAdvice: [
+      "Treat the 21,465 attack and 15,022 defense panel as source-footage evidence, not a guaranteed current-patch result until you reproduce it in your own build.",
+      "Build the formula layer by layer. Missing one support Pal, food buff, accessory, or passive can make the final panel look completely different.",
+      "Use the same method on another favorite Pal only after you swap the element support Pals and accessories to match that Pal's damage type.",
+    ],
+    lastUpdated: "July 15, 2026",
+    readingTime: "8 min read",
+    tags: ["video guide", "combat build", "Knocklem Ignis", "Orserk", "support Pals", "passives"],
+    statusNotice:
+      "This guide translates authorized source footage recorded on build v1.0.0.100427. Exact buff values, coordinates, item behavior, and stack rules are patch-sensitive and should be retested before spending rare resources.",
+    updateNotice:
+      "Recheck support-Pal multipliers, Orserk stack behavior, food buffs, accessories, and passive values after Palworld balance patches.",
+    confirmedChanges: [
+      "The localized video provides English narration, subtitles, chapter jumps, and translated action-critical callouts for the full source-footage build.",
+      "The footage visibly shows a 21,465 attack and 15,022 defense stat panel for Knocklem Ignis.",
+      "The build depends on stacked support effects rather than Knocklem Ignis alone.",
+    ],
+    pendingUpdates: [
+      "Independently reproduce the full stat panel on the newest public Palworld release.",
+      "Reconfirm the exact Orserk stack-maintenance behavior and whether every shown hit source still maintains stacks.",
+      "Recheck the shown Trial Tower, badge, food, and enhancement-gun routes after future map or item patches.",
+    ],
+    sourceNotes: [
+      "The companion video is an authorized English localization with expressive ElevenLabs English narration, burned-in English subtitles, and translated action-critical overlays.",
+      "Incidental non-English game-interface text may remain in places where covering it would hide source-footage evidence. This page restates the required gameplay choices in English.",
+      "This page separates what the footage shows from what still needs independent current-build testing.",
+    ],
+    lastVerified: "July 15, 2026",
+    testing: {
+      gameVersion: "Authorized source footage: v1.0.0.100427",
+      lastTested: "Not independently retested on a newer build",
+      platform: "PC / Steam source footage",
+      mode: "Solo combat-build demonstration",
+      mods: "Not documented in the source",
+      verification: "shown-in-source-footage",
+      note: "Use this as a documented source-footage stat-stack formula and verify current-patch values before treating it as a final best-in-slot build.",
+    },
+    visual: {
+      src: "/assets/video-guides/palworld-1-0-max-stat-knocklem-ignis-build.jpg",
+      alt: "Knocklem Ignis Palworld 1.0 max stat build thumbnail showing English attack, defense, and work speed labels",
+      caption: "The separate 3:22 video guide shows the full stat-stack sequence with English narration, subtitles, chapter jumps, and on-screen callouts.",
+    },
+    sections: [
+      {
+        heading: "Build overview: why the panel gets so high",
+        paragraphs: [
+          "The opening panel is the result of stacked buffs, not a normal unbuffed Pal stat screen. The footage shows Knocklem Ignis at 21,465 attack and 15,022 defense after combining party support, partner-skill effects, accessories, consumables, and passives.",
+          "For an English-speaking viewer, the important lesson is the formula. If you copy only the Pal species without copying the buff layers, the result will not match the source-footage panel.",
+        ],
+        table: {
+          headers: ["Layer", "What the footage uses", "Why it matters"],
+          rows: [
+            ["Base Pal", "Knocklem Ignis", "Provides the combat body and Iron Guardian Mode boost"],
+            ["Support Pals", "Rooby, Finsider Ignis, Celesdir Noct, and Orserk", "Adds fire damage, weakness damage, raw attack, and stack-based multipliers"],
+            ["Accessories", "Charms, Batons, Marshal Badge, and Fortress Badge", "Adds player and Pal attack/defense bonuses"],
+            ["Consumables", "Mammorest Curry, Potato Chawanmushi, and High-Grade Enhancement Gun", "Adds temporary attack, defense, and core-stat boosts"],
+            ["Passives", "Burst or tank route", "Determines whether the finished build favors damage or survival"],
+          ],
+        },
+      },
+      {
+        heading: "1. Start with support Pals, not the main Pal",
+        paragraphs: [
+          "The video first explains the support stack because that is where much of the final panel comes from. Rooby supports fire damage, Finsider Ignis supports fire weakness damage, and Celesdir Noct adds a large raw-attack layer while draining HP over time.",
+          "This means the build is element-sensitive. If you move the formula to a different element, replace the fire support pieces with matching support Pals instead of copying the list blindly.",
+        ],
+        bullets: [
+          "Use Rooby when the demonstrated fire-damage setup is the goal.",
+          "Use Finsider Ignis for the fire weakness-damage layer shown in the footage.",
+          "Use Celesdir Noct for raw attack, but account for the HP drain.",
+          "Do not judge Knocklem Ignis alone before the support stack is active.",
+        ],
+      },
+      {
+        heading: "2. Maintain the Orserk multiplier",
+        paragraphs: [
+          "The footage then adds Orserk as the major stack-based multiplier. It describes the stack as building through bullet hits and shows the full stack reaching 30.",
+          "The source narration also says the translated description is misleading and that additional hit sources can help maintain the stack. Treat that interaction as patch-sensitive: verify it before building a permanent team around it.",
+        ],
+        bullets: [
+          "Use Orserk as the multiplier layer after the basic support Pals are set.",
+          "Confirm that your current build can maintain stacks before testing final damage.",
+          "If the stack falls off, the stat panel and real combat output will drop sharply.",
+        ],
+      },
+      {
+        heading: "3. Add Knocklem Ignis Iron Guardian Mode",
+        paragraphs: [
+          "After the support stack, activate Knocklem Ignis' partner skill, Iron Guardian Mode. In the footage, this adds a major attack and defense boost on top of the already stacked support effects.",
+          "This is why the order matters: the Pal's own partner skill is one layer in a larger formula, not the entire build by itself.",
+        ],
+      },
+      {
+        heading: "4. Match accessories to the element and role",
+        paragraphs: [
+          "The accessory layer uses Charms, Batons, and two Core Badges. The video keeps Marshal Badge for player and Pal attack and Fortress Badge for player and Pal defense.",
+          "For the flexible slots, change the Charm and Baton based on the element you are actually using. The demonstrated setup is fire-focused, so a different element should not keep fire-specific assumptions.",
+        ],
+        table: {
+          headers: ["Slot", "Video role", "Practical note"],
+          rows: [
+            ["Marshal Badge", "Player and Pal attack", "Keep for the high-attack version"],
+            ["Fortress Badge", "Player and Pal defense", "Keep for the high-defense layer"],
+            ["Charm", "Element or stat support", "Swap to match the active element"],
+            ["Baton", "Element or stat support", "Swap to match the active element"],
+          ],
+        },
+      },
+      {
+        heading: "5. Add consumables and enhancement-gun upgrades",
+        paragraphs: [
+          "The footage lists Mammorest Curry for attack, Potato Chawanmushi for defense, and the High-Grade Enhancement Gun for core-stat increases. These buffs explain why a normal stat screen may look much lower without preparation.",
+          "Record whether your test uses food, enhancement-gun upgrades, world settings, and the same party support. Otherwise two players can compare panels that were built under different conditions.",
+        ],
+      },
+      {
+        heading: "6. Choose the passive route",
+        paragraphs: [
+          "The video ends by separating a burst route from a tank route. The burst setup is for Raid Bosses or most hard field bosses, while the tank route is for situations where surviving longer matters more than the highest possible burst.",
+        ],
+        table: {
+          headers: ["Route", "Passive set from the video", "Best use"],
+          rows: [
+            ["Burst", "Serenity, Eternal Flame, Demon God, and Diamond Body", "Raid bosses and most hard field bosses when damage matters most"],
+            ["Tank", "Immortal, Remarkable Physique, Demon God, and Serenity", "One-on-one extreme boss attempts or fights where survival is the bottleneck"],
+          ],
+        },
+      },
+      {
+        heading: "7. What to verify before copying the build",
+        paragraphs: [
+          "Before you spend rare resources, reproduce the stack in a controlled test: same Pal, same passives, same support team, same food, same accessories, same enhancement state, and same game build.",
+          "If you use this on another favorite Pal, keep the structure but replace the element-specific pieces. The formula is more useful than a single exact roster.",
+        ],
+        bullets: [
+          "Check the game build shown by your client before testing.",
+          "Test the stat panel before and after every support layer.",
+          "Confirm Orserk stacks are actually staying active.",
+          "Document food buffs and accessory swaps.",
+          "Retest after hotfixes that mention Pals, partner skills, accessories, food, or combat balance.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Is 21,465 attack and 15,022 defense guaranteed?",
+        answer:
+          "No. Those numbers are shown in authorized source footage. They depend on a full buff stack and should be independently reproduced on your current build before being treated as guaranteed.",
+      },
+      {
+        question: "Which Pal is used for the max-stat showcase?",
+        answer:
+          "The video uses Knocklem Ignis as the main Pal and stacks support effects around it.",
+      },
+      {
+        question: "Why does the build use Rooby and Finsider Ignis?",
+        answer:
+          "The demonstrated setup is fire-focused. Rooby and Finsider Ignis support the fire-damage and fire-weakness-damage layers used by the source footage.",
+      },
+      {
+        question: "What does Orserk do in this build?",
+        answer:
+          "The footage uses Orserk as a stack-based multiplier layer. The exact stack-maintenance behavior is patch-sensitive and should be verified on the current release.",
+      },
+      {
+        question: "Which passive route should I choose?",
+        answer:
+          "Use the burst route when damage is the goal: Serenity, Eternal Flame, Demon God, and Diamond Body. Use the tank route when survival is the bottleneck: Immortal, Remarkable Physique, Demon God, and Serenity.",
+      },
+      {
+        question: "Is the video public on YouTube?",
+        answer:
+          "No. The site uses direct HLS playback with no login requirement. YouTube is only used as an unlisted backup when available.",
+      },
+    ],
+    sourceLinks: [
+      {
+        label: "Pocketpair official Palworld v1.0 release changelog on Steam",
+        href: "https://store.steampowered.com/news/app/1623730/view/1837955055355658",
+      },
+      {
+        label: "Watch the 3:22 English max-stat Knocklem Ignis video",
+        href: "/videos/palworld-1-0-max-stat-knocklem-ignis-build/",
+      },
+    ],
+    relatedLinks: [
+      { label: "Watch the 3:22 English max-stat Knocklem Ignis video", href: "/videos/palworld-1-0-max-stat-knocklem-ignis-build/" },
+      { label: "Palworld 1.0 Ultimate Pal Builds", href: "/guides/palworld-1-0-ultimate-pal-builds/" },
+      { label: "Palworld 1.0 Level 8 Worker Pal Locations", href: "/guides/palworld-1-0-level-8-worker-pals-locations/" },
+      { label: "Palworld 1.0 World Tree Guide", href: "/palworld-1-0/palworld-1-0-world-tree-guide/" },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string) {

@@ -24,6 +24,40 @@ export type VideoGuide = {
 
 export const videos: VideoGuide[] = [
   {
+    slug: "palworld-1-0-max-stat-knocklem-ignis-build",
+    title: "Palworld 1.0 Max Stat Knocklem Ignis Build",
+    description:
+      "Watch the English-localized Palworld 1.0 Knocklem Ignis build showing a source-footage 21K attack and 15K defense stat stack with support Pals, accessories, food buffs, and passives.",
+    duration: "PT3M22S",
+    durationSeconds: 202,
+    displayDuration: "3:22",
+    thumbnail: "/assets/video-guides/palworld-1-0-max-stat-knocklem-ignis-build.jpg",
+    uploadDate: "2026-07-15T12:35:00+08:00",
+    streamUrl: "/media/palworld-1-0-max-stat-knocklem-ignis-build/master.m3u8",
+    featured: true,
+    chapters: [
+      { startSeconds: 0, label: "21K attack and 15K defense showcase" },
+      { startSeconds: 15, label: "Why the build depends on stacked buffs" },
+      { startSeconds: 22, label: "Support Pal stack: Rooby, Finsider Ignis, and Celesdir Noct" },
+      { startSeconds: 40, label: "Orserk multiplier and stack maintenance" },
+      { startSeconds: 69, label: "Add Knocklem Ignis Iron Guardian Mode" },
+      { startSeconds: 93, label: "Choose element-matched support Pals" },
+      { startSeconds: 99, label: "Accessories: Charms, Batons, and Core Badges" },
+      { startSeconds: 128, label: "Trial Tower blueprints and badge coordinates" },
+      { startSeconds: 139, label: "Consumables and enhancement gun buffs" },
+      { startSeconds: 150, label: "Burst passive route for raid and field bosses" },
+      { startSeconds: 165, label: "Tank passive route for harder survival checks" },
+      { startSeconds: 196, label: "Copy the stat-stack formula to another favorite Pal" },
+    ],
+    guidePath: "/guides/palworld-1-0-max-stat-knocklem-ignis-build/",
+    guideTitle: "Read the complete max-stat Knocklem Ignis build guide",
+    verificationLabel: "Source-footage stat build",
+    verificationText:
+      "The authorized footage shows build v1.0.0.100427 and a source-footage stat showcase of 21,465 attack and 15,022 defense. The buff stack, coordinates, item names, and exact values are patch-sensitive until independently retested on a newer public build.",
+    sourceDisclosure:
+      "This is an authorized English localization with expressive ElevenLabs English narration, burned-in English subtitles, and translated action-critical overlays. Incidental game-interface text may remain where covering it would obscure gameplay evidence.",
+  },
+  {
     slug: "palworld-1-0-ultimate-pal-builds",
     title: "Palworld 1.0 Ultimate Pal Builds: Worker, Mount & Combat",
     description:
